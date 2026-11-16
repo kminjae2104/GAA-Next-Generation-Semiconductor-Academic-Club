@@ -10,6 +10,7 @@ import zipfile
 
 import analyze
 import generate
+import run_study
 
 ROOT=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(ROOT/'python'/'automation'))
@@ -23,6 +24,52 @@ def curves():
 
 
 class Validation(unittest.TestCase):
+    def test_equilibrium_gate_restores_both_carriers_before_drain_bias(self):
+        lines=generate.deck(generate.PARAMETERS,gate_initialization='equilibrium').splitlines()
+        zero=next(i for i,s in enumerate(lines) if 'carriers=0' in s)
+        two=next(i for i,s in enumerate(lines) if 'carriers=2' in s)
+        drain=next(i for i,s in enumerate(lines) if s=='solve vdrain=0.01')
+        self.assertLess(zero,two);self.assertLess(two,drain)
+        self.assertFalse(any('vdrain' in s for s in lines[zero:two]))
+        self.assertEqual(sum(s.startswith('solve name=gate vstep=-0.02') for s in lines),1)
+
+    def test_anisotropic_mesh_preserves_oxide_normal_spacing(self):
+        a=generate.deck(generate.PARAMETERS).splitlines()
+        b=generate.deck(generate.PARAMETERS,mesh_style='anisotropic').splitlines()
+        changed=[(x,y) for x,y in zip(a,b) if x!=y]
+        self.assertEqual(len(changed),4)
+        for x,y in changed:
+            self.assertTrue(x.startswith('constr.mesh region='));self.assertIn('0.00025',y)
+
+    def test_native_log_checks_bias_and_terminal_short(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/'native.log';exports=dict(gate=[(0,0)],source=[(0,-1e-9)],drain=[(0,1e-9)])
+            p.write_text('f 3 "gate" "source" "drain"\nd 0 0 0 0 0 -1e-9 0.05 0.05 1e-9\n')
+            self.assertTrue(analyze.validate_native_log(p,.05,exports)['native_export_match'])
+            with self.assertRaises(ValueError):analyze.validate_native_log(p,.6,exports)
+            p.write_text('f 4 "gate" "source" "drain" "unlinked_gate"\n')
+            with self.assertRaises(ValueError):analyze.validate_native_log(p,.05,exports)
+
+    def test_solver_selection_changes_only_method_statements(self):
+        a=generate.deck(generate.PARAMETERS).splitlines()
+        b=generate.deck(generate.PARAMETERS,linear_solver='bicgst').splitlines()
+        self.assertEqual(len(a),len(b))
+        for x,y in zip(a,b):
+            if x!=y:
+                self.assertTrue(x.startswith('method '));self.assertIn('bicgst',y)
+        with self.assertRaises(ValueError):generate.deck(generate.PARAMETERS,linear_solver='unknown')
+
+    def test_large_structure_is_preserved_with_hash(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)/'job'/'results';root.mkdir(parents=True)
+            source=root/'sample.str';data=b'x'*(8*1024*1024+1);source.write_bytes(data)
+            run_study.retain_large_structures(root)
+            record=json.loads((root/'retained_structures.json').read_text())[0]
+            self.assertFalse(source.exists())
+            self.assertEqual(Path(record['remote_preserved_path']).read_bytes(),data)
+            self.assertEqual(record['sha256'],hashlib.sha256(data).hexdigest())
+            self.assertEqual(record['local_byte_verification'],'NOT_DOWNLOADED')
+
     def test_reference_slope_and_kcl(self):
         value=analyze.metric(curves(),.04)
         self.assertAlmostEqual(value['SS_mV_dec'],80,places=7)

@@ -42,12 +42,19 @@ def geometry(p):
     return boxes
 
 
-def deck(p, fine=False, smoke=False):
+def deck(p, fine=False, smoke=False, linear_solver='default',mesh_style='isotropic',processors=1,quantum_mode='none',gate_initialization='biased'):
+    if linear_solver not in ['default','bicgst','direct']:raise ValueError('Unsupported linear solver')
+    solver='' if linear_solver=='default' else ' '+linear_solver
+    if mesh_style not in ['isotropic','anisotropic']:raise ValueError('Unsupported mesh style')
+    if processors not in [1,2,4]:raise ValueError('Unsupported processor bound')
+    if quantum_mode not in ['none','bqp']:raise ValueError('Unsupported quantum mode')
+    if gate_initialization not in ['biased','equilibrium']:raise ValueError('Unsupported gate initialization')
+    quantum=' bqp.n bqp.ngamma=1.4 bqp.nalpha=0.3' if quantum_mode=='bqp' else ''
     # A two-layer-oxide diagnostic mesh is used only for the short smoke test.
     # Full and fine performance sweeps keep the specified 4-/8-layer oxide mesh.
     f=2 if smoke else 0.5 if fine else 1
     regions=geometry(p)
-    lines=['# Generated GAA; nm converted to micrometers. DD diagnostic model.',
+    lines=['# Generated GAA; nm converted to micrometers. '+('BQP-corrected DD candidate.' if quantum else 'Classical DD model.'),
            '# See the repository reference index and design/targets document.',
            'go devedit simflags="-3d"','work.area x1=-0.004 y1=-0.004 x2=0.014 y2=0.014']
     for r in regions:
@@ -62,13 +69,17 @@ def deck(p, fine=False, smoke=False):
             'constr.mesh max.angle=90 max.ratio=300 max.height=0.003 max.width=0.003 min.height=0.00002 min.width=0.00002']
     for r in regions:
         step={'Silicon':0.001,'Silicon Oxide':0.00025,'Aluminum':0.003}[r['material']]*f
-        lines.append('constr.mesh region=%d default max.height=%.9g max.width=%.9g'%(r['id'],step,step))
+        height=width=step
+        if mesh_style=='anisotropic' and r['name'].startswith('oxide_'):
+            if r['name'] in ['oxide_left','oxide_right']:height=.001*f
+            else:width=.001*f
+        lines.append('constr.mesh region=%d default max.height=%.9g max.width=%.9g'%(r['id'],height,width))
     e,l,c=[p[k]/1000 for k in ['extension_nm','gate_nm','contact_nm']]
     for z in [-c,0,e,e+l/2,e+l,2*e+l,2*e+l+c]:
         step=0.001*f if e<=z<=e+l else 0.002*f
         lines.append('z.plane z=%.9g spacing=%.9g'%(z,step))
     lines+=['z.plane maximum.spacing=%.9g maximum.ratio=1.5'%(0.002*f),
-            'Mesh Mode=MeshBuild','structure outf=geometry.str','go atlas',
+            'Mesh Mode=MeshBuild','structure outf=geometry.str','go atlas'+(' simflags="-P %d"'%processors if processors>1 else ''),
             'mesh infile=geometry.str',
             'doping uniform region=1 n.type conc=%.9g'%p['donor_cm3'],
             'doping uniform region=2 p.type conc=%.9g'%p['acceptor_cm3'],
@@ -77,15 +88,21 @@ def deck(p, fine=False, smoke=False):
             'contact name=gate_right workfunction=%.9g common=gate short'%p['workfunction_eV'],
             'contact name=gate_top workfunction=%.9g common=gate short'%p['workfunction_eV'],
             'contact name=gate_bottom workfunction=%.9g common=gate short'%p['workfunction_eV'],
-            'models fermi conmob fldmob srh bgn temperature=%.9g print'%p['temperature_K'],
-            'method gummel newton trap maxtrap=10 itlimit=50','solve init',
-            'save outf=equilibrium.str','method newton trap maxtrap=10 itlimit=50']
+            'models fermi conmob fldmob srh bgn'+quantum+' temperature=%.9g print'%p['temperature_K']]
+    if gate_initialization=='equilibrium':
+        lines+=['method gummel newton'+solver+' carriers=0 trap maxtrap=10 itlimit=50','solve init',
+                'solve name=gate vstep=-0.02 vfinal=%.9g'%p['gate_start_V'],
+                'save outf=equilibrium.str',
+                'method gummel newton'+solver+' gum.init=5 carriers=2 trap maxtrap=10 itlimit=50']
+    else:
+        lines+=['method gummel newton'+solver+' trap maxtrap=10 itlimit=50','solve init',
+                'save outf=equilibrium.str','method newton'+solver+' trap maxtrap=10 itlimit=50']
     for index,vd in enumerate([0.05] if smoke else p['vds_V']):
         name='low' if index==0 else 'high'
         if index:lines+=['load infile=equilibrium.str']
-        lines+=['solve vdrain=0.01','solve name=drain vstep=0.01 vfinal=%.9g'%vd,
-                'solve name=gate vstep=-0.02 vfinal=%.9g'%p['gate_start_V'],
-                'log outf=idvg_%s.log'%name,'solve vgate=%.9g'%p['gate_start_V'],
+        lines+=['solve vdrain=0.01','solve name=drain vstep=0.01 vfinal=%.9g'%vd]
+        if gate_initialization=='biased':lines+=['solve name=gate vstep=-0.02 vfinal=%.9g'%p['gate_start_V']]
+        lines+=['log outf=idvg_%s.log'%name,'solve vgate=%.9g'%p['gate_start_V'],
                 'solve name=gate vstep=%.9g vfinal=%.9g'%(0.1 if smoke else p['gate_step_V'],0.2 if smoke else p['gate_stop_V']),
                 'log off','save outf=final_%s.str'%name,
                 'extract init infile="idvg_%s.log"'%name]
@@ -98,15 +115,25 @@ def deck(p, fine=False, smoke=False):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=BASE/'tcad'/'v2_common_gate')
     p.add_argument('--fine',action='store_true');p.add_argument('--smoke',action='store_true')
+    p.add_argument('--linear-solver',choices=['default','bicgst','direct'],default='default')
+    p.add_argument('--mesh-style',choices=['isotropic','anisotropic'],default='isotropic')
+    p.add_argument('--processors',type=int,choices=[1,2,4],default=1)
+    p.add_argument('--quantum-mode',choices=['none','bqp'],default='none')
+    p.add_argument('--gate-initialization',choices=['biased','equilibrium'],default='biased')
     a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
     name='gaa_'+('fine' if a.fine else 'coarse')+('_smoke' if a.smoke else '')
     target=a.out/(name+'.in')
-    data=deck(PARAMETERS,a.fine,a.smoke)
+    data=deck(PARAMETERS,a.fine,a.smoke,a.linear_solver,a.mesh_style,a.processors,a.quantum_mode,a.gate_initialization)
     if target.exists() and target.read_text(encoding='utf-8')!=data:
         raise FileExistsError('Preserve old deck and use a new --out directory')
     target.write_text(data,encoding='utf-8',newline='\n')
     metadata=dict(parameters=PARAMETERS,regions=geometry(PARAMETERS),fine=a.fine,smoke=a.smoke,
                   model_revision='v2_explicit_common_gate',diagnostic_mesh_scale=2 if a.smoke else None,
+                  linear_solver=a.linear_solver,
+                  mesh_style=a.mesh_style,
+                  processors=a.processors,
+                  quantum_mode=a.quantum_mode,
+                  gate_initialization=a.gate_initialization,
                   sha256=hashlib.sha256(data.encode()).hexdigest(),simulator_execution='NOT_RUN')
     (a.out/(name+'.json')).write_text(json.dumps(metadata,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     print(target)

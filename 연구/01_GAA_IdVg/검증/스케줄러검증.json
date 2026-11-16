@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-11-16T06:39:35.010139+00:00",
+  "local_tests_passed": 23,
+  "dag_regressions": [
+    "successor starts before unrelated roots finish",
+    "maximum three concurrent processes",
+    "postcheck failure blocks only descendants",
+    "cycle rejected"
+  ],
+  "prepared_tasks": 9,
+  "per_task_limit_seconds": 4800,
+  "prepared_workflow_remote_submitted": false,
+  "existing_parallel_batch_unchanged": true,
+  "silvaco_validation": "NOT_ESTABLISHED_BY_LOCAL_TESTS"
+}

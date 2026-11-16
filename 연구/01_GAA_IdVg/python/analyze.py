@@ -5,9 +5,35 @@ import json
 import math
 from pathlib import Path
 import statistics
+import shlex
 
 
-def read_curve(path):
+def validate_native_log(path, expected_vds, exports):
+    """Validate the observed three-terminal SSF export layout, rejecting unknown layouts."""
+    names=None;rows=[]
+    for line in Path(path).read_text(errors='strict').splitlines():
+        if line.startswith('f '):
+            fields=shlex.split(line);names=fields[2:]
+            if int(fields[1])!=3 or names!=['gate','source','drain']:
+                raise ValueError('Unexpected terminal layout; gate shorting requires review')
+        elif line.startswith('d '):
+            values=list(map(float,line.split()[1:]))
+            if names is None or len(values)!=9 or not all(math.isfinite(v) for v in values):
+                raise ValueError('Unknown or nonfinite native log data')
+            if abs(values[3])>1e-8 or abs(values[6]-expected_vds)>1e-6:
+                raise ValueError('Native source/drain bias differs from intended Vds')
+            rows.append(values)
+    if not rows or len(rows)!=len(exports['drain']):raise ValueError('Native/export point counts differ')
+    for native,index in zip(rows,range(len(rows))):
+        for terminal,column in [('gate',0),('source',3),('drain',6)]:
+            vg,current=exports[terminal][index]
+            if abs(vg-native[0])>1e-7 or abs(current-native[column+2])>max(1e-20,abs(native[column+2])*1e-6):
+                raise ValueError('Native and exported terminal values disagree')
+    return dict(points=len(rows),source_voltage_V=0,drain_voltage_V=expected_vds,
+                terminals=names,native_export_match=True)
+
+
+def read_curve(path,min_points=6):
     rows=[]
     for number,line in enumerate(Path(path).read_text(errors='strict').splitlines(),1):
         text=line.strip()
@@ -23,7 +49,7 @@ def read_curve(path):
         if not all(math.isfinite(v) for v in (x,y)):raise ValueError('Nonfinite data')
         if rows and x<=rows[-1][0]:raise ValueError('Duplicate or decreasing gate bias')
         rows.append((x,y))
-    if len(rows)<6:raise ValueError('Insufficient curve points')
+    if len(rows)<min_points:raise ValueError('Insufficient curve points')
     return rows
 
 
@@ -81,9 +107,10 @@ def metric(curves,perimeter_um,step=.02):
 
 
 def analyze(folder,perimeter):
-    values={};raw={}
-    for name in ['low','high']:
+    values={};raw={};bias_checks={}
+    for name,vd in [('low',.05),('high',.6)]:
         raw[name]={t:read_curve(folder/(name+'_'+t+'.dat')) for t in ['drain','source','gate']}
+        bias_checks[name]=validate_native_log(folder/('idvg_'+name+'.log'),vd,raw[name])
         values[name]=metric(raw[name],perimeter)
     vl,vh=[values[k]['Vth_V'] for k in ['low','high']]
     dibl=(vl-vh)/.55*1000 if vl is not None and vh is not None else None
@@ -95,7 +122,7 @@ def analyze(folder,perimeter):
                  ss=all(v['SS_mV_dec'] is not None and 60<=v['SS_mV_dec']<=90 for v in values.values()),
                  kcl=all(v['kcl_pass'] for v in values.values()),
                  monotonic=all(not v['nonmonotonic_indices'] for v in values.values()))
-    return dict(perimeter_um=perimeter,metrics=values,DIBL_mV_V=dibl,engineering_targets=targets,
+    return dict(perimeter_um=perimeter,metrics=values,bias_checks=bias_checks,DIBL_mV_V=dibl,engineering_targets=targets,
                 engineering_targets_pass=all(targets.values()),
                 simulator_log_review='REQUIRED_SEPARATELY',mesh_validation='PENDING',
                 physical_validation='NOT_VALIDATED',raw_exports_only=True),raw

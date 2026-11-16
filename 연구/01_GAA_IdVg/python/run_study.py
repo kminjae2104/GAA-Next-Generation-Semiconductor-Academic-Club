@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import signal
@@ -16,6 +17,33 @@ def write(path, value):
     temp = path.with_suffix('.tmp')
     temp.write_text(json.dumps(value, indent=2, ensure_ascii=False), encoding='utf-8')
     temp.replace(path)
+
+
+def retain_large_structures(root):
+    """Preserve large raw structures beside results; return hashes instead of huge ZIPs."""
+    root=Path(root).resolve()
+    scope=root.parent if root.name=='results' else root.parent.parent
+    retained=scope/'retained_structures'
+    if root.name!='results':retained=retained/root.name
+    retained.resolve().relative_to(scope.resolve())
+    records=[]
+    for source in sorted(root.rglob('*.str')):
+        if source.is_symlink():raise ValueError('Symlink cannot be a retained raw structure')
+        if source.stat().st_size<=8*1024*1024:continue
+        relative=source.relative_to(root)
+        target=retained/relative
+        target.resolve().relative_to(scope.resolve())
+        target.parent.mkdir(parents=True,exist_ok=True)
+        if target.exists():raise FileExistsError('Preserve existing raw structure')
+        digest=hashlib.sha256()
+        with source.open('rb') as stream:
+            for part in iter(lambda:stream.read(1024*1024),b''):digest.update(part)
+        record=dict(original_result_path=relative.as_posix(),remote_preserved_path=str(target),
+                    bytes=source.stat().st_size,sha256=digest.hexdigest(),
+                    local_byte_verification='NOT_DOWNLOADED')
+        source.replace(target)
+        records.append(record)
+    write(root/'retained_structures.json',records)
 
 
 def run(argv, folder, timeout, env=None):
@@ -46,6 +74,19 @@ def main():
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--max-seconds', type=int, required=True)
     args = p.parse_args()
+    owned=[]
+    if os.name=='posix':
+        def terminate_owned(signum,frame):
+            for child in owned:
+                if child.poll() is not None:continue
+                try:os.killpg(child.pid,signal.SIGTERM)
+                except ProcessLookupError:continue
+                try:child.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    try:os.killpg(child.pid,signal.SIGKILL)
+                    except ProcessLookupError:pass
+            raise SystemExit(128+signum)
+        signal.signal(signal.SIGTERM,terminate_owned)
     root = args.output.resolve()
     code = Path(__file__).resolve().parent
     config = json.loads((code/'config.json').read_text())
@@ -63,6 +104,30 @@ def main():
     # Record tool-tree entries to select installed binaries; never read license contents.
     base=Path('/users/tools/Silvaco')
     envinfo['tool_root_entries'] = sorted(x.name for x in base.iterdir()) if base.is_dir() else []
+    if config['mode']=='preflight':
+        mem={}
+        if Path('/proc/meminfo').is_file():
+            for line in Path('/proc/meminfo').read_text().splitlines():
+                if line.startswith(('MemTotal:','MemAvailable:')):
+                    key,value,*_=line.split();mem[key.rstrip(':')]=int(value)
+        envinfo['available_resources']=dict(logical_cpus=os.cpu_count(),memory_kB=mem)
+        examples=base/'examples';hints=[];examined=0
+        if examples.is_dir():
+            for example in examples.rglob('*.in'):
+                if example.is_symlink() or example.stat().st_size>200000:continue
+                examined+=1
+                if examined>2500:break
+                content=example.read_text(errors='replace')
+                if 'bqp' not in content.lower():continue
+                selected=[line[:250] for line in content.splitlines()
+                          if any(s in line.lower() for s in ['go atlas','bqp','method ','qdir'])
+                          or re.search(r'^\s*set\s+(gamma|alpha)\b',line,re.I)]
+                item=dict(path=str(example),settings=selected[:15])
+                if example.name=='quantumex08.in':
+                    item['header']=content.splitlines()[:18]
+                hints.append(item)
+                if len(hints)>=12:break
+        write(root/'installed_quantum_examples.json',dict(examined=examined,examples=hints))
     write(root/'environment.json', envinfo)
     write(root/'progress.json', dict(stage='PREFLIGHT', executable=envinfo['executable']))
     if not envinfo['executable']:
@@ -94,21 +159,27 @@ def main():
         with (execution/'console.txt').open('xb') as stream:
             proc=subprocess.Popen(executable_cmd,cwd=str(execution),stdin=subprocess.DEVNULL,
                                   stdout=stream,stderr=subprocess.STDOUT,start_new_session=True)
+            owned.append(proc)
             timed_out=False
             stage_deadline=time.monotonic()+remaining
             while proc.poll() is None and time.monotonic()<stage_deadline:
                 diagnostic=[]
                 sizes={}
+                last_solver_lines=[]
+                last_bias=[]
                 for log in [execution/'console.txt',execution/'solver.out']:
                     if log.is_file():
                         sizes[log.name]=log.stat().st_size
                         with log.open('rb') as tail:
                             tail.seek(max(0,sizes[log.name]-8192))
                             lines=tail.read().decode('utf-8',errors='replace').splitlines()
+                        if log.name=='solver.out':
+                            last_solver_lines=[s[:180] for s in lines if s.strip()][-4:]
+                            last_bias=[s.strip()[:150] for s in lines if re.search(r'V\(.*\)\s*=',s)][-2:]
                         diagnostic.extend(s[:400] for s in lines if any(k in s.lower() for k in ['error','license','logged in','fatal','converg']))
                 write(root/'progress.json',dict(stage=stage,status='RUNNING',
                       elapsed_seconds=round(time.monotonic()-started,1),
-                      diagnostic_tail=diagnostic[-12:],output_sizes=sizes))
+                      diagnostic_tail=diagnostic[-3:],last_solver_lines=last_solver_lines,last_bias=last_bias,output_sizes=sizes))
                 try:proc.wait(timeout=min(5,max(.1,stage_deadline-time.monotonic())))
                 except subprocess.TimeoutExpired:pass
             if proc.poll() is None:
@@ -136,10 +207,12 @@ def main():
         write(folder/'process.json',result); stage_results.append(result)
         # Nonempty output alone is never a success claim; local analysis is still required.
         if timed_out or proc.returncode!=0 or missing or fatal:
+            retain_large_structures(root)
             write(root/'status.json',dict(status='EXECUTION_FAILED',stages=stage_results,
                                          physical_validation='NOT_VALIDATED'))
             return 5
         if time.monotonic()>=end: break
+    retain_large_structures(root)
     hashes={f.relative_to(root).as_posix():hashlib.sha256(f.read_bytes()).hexdigest()
             for f in root.rglob('*') if f.is_file() and f.name!='hashes.json'}
     write(root/'hashes.json',hashes)

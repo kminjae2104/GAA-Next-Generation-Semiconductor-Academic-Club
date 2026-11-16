@@ -96,7 +96,12 @@ def queue(a,runtime):
         config['model_revision']='v2_explicit_common_gate'
         config['parameters']=module.PARAMETERS
         config['diagnostic_mesh_scale']=2 if a.mode=='smoke' else None
-        deck=module.deck(module.PARAMETERS,fine=a.mode=='fine',smoke=a.mode=='smoke')
+        config['linear_solver']=a.linear_solver
+        config['mesh_style']=a.mesh_style
+        config['processors']=a.processors
+        config['quantum_mode']=a.quantum_mode
+        config['gate_initialization']=a.gate_initialization
+        deck=module.deck(module.PARAMETERS,fine=a.mode=='fine',smoke=a.mode=='smoke',linear_solver=a.linear_solver,mesh_style=a.mesh_style,processors=a.processors,quantum_mode=a.quantum_mode,gate_initialization=a.gate_initialization)
         name='gaa'
         deckpath=directory/(name+'.in');deckpath.write_text(deck,encoding='ascii',newline='\n');files.append(deckpath)
         outputs=['geometry.str','equilibrium.str','idvg_low.log','low_drain.dat','low_source.dat','low_gate.dat']
@@ -142,7 +147,12 @@ def main():
     a=s.add_parser('start');a.add_argument('--cloudflared',type=Path,required=True);a.add_argument('--ca-pem',type=Path)
     a.add_argument('--seconds',type=int,default=14400)
     s.add_parser('status')
-    a=s.add_parser('queue');a.add_argument('--job',required=True);a.add_argument('--mode',choices=['preflight','smoke','full','fine'],required=True);a.add_argument('--stage-timeout',type=int,default=240)
+    a=s.add_parser('queue');a.add_argument('--job',required=True);a.add_argument('--mode',choices=['preflight','smoke','full','fine'],required=True);a.add_argument('--stage-timeout',type=int,default=4800)
+    a.add_argument('--linear-solver',choices=['default','bicgst','direct'],default='default')
+    a.add_argument('--mesh-style',choices=['isotropic','anisotropic'],default='isotropic')
+    a.add_argument('--processors',type=int,choices=[1,2,4],default=1)
+    a.add_argument('--quantum-mode',choices=['none','bqp'],default='none')
+    a.add_argument('--gate-initialization',choices=['biased','equilibrium'],default='biased')
     a=s.add_parser('collect');a.add_argument('--job',required=True)
     s.add_parser('request-stop');s.add_parser('close')
     a=p.parse_args()

@@ -32,6 +32,9 @@ def summarize(folder):
         report['versions']=re.findall(r'(?:Version:|this is deckbuild version|devedit)\s+[^\n]{0,85}',text)[:5]
         report['mesh']=re.findall(r'Read [^\n]*(?:nodes|prisms)[^\n]*',text)[:4]
         report['equilibrium_file']=(execution/'equilibrium.str').is_file()
+        retained=folder/'retained_structures.json'
+        records=json.loads(retained.read_text()) if retained.is_file() else []
+        report['equilibrium_retained_on_server']=any(Path(v['original_result_path']).name=='equilibrium.str' for v in records)
         report['normal_atlas_finish']=bool(re.search(r'ATLAS version[^\n]*finished',text,re.I))
         console=(execution/'console.txt').read_text(errors='replace') if (execution/'console.txt').is_file() else ''
         report['license_diagnostic']=any(s in (text+'\n'+console).lower() for s in ['can not get license','problem communicating with license server','sflm retry:'])
