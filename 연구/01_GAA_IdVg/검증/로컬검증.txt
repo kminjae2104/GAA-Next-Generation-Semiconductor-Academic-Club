@@ -1,0 +1,27 @@
+Checked UTC: 2026-11-16T01:41:47.937887+00:00
+SYNTHETIC/LOCALHOST ONLY; SILVACO NOT RUN
+
+test_full_three_dimensional_output (test_validation.Validation.test_full_three_dimensional_output) ... ok
+test_geometry_faces_and_volume (test_validation.Validation.test_geometry_faces_and_volume) ... ok
+test_kcl_failure_detected (test_validation.Validation.test_kcl_failure_detected) ... ok
+test_missing_ss_window_explicit (test_validation.Validation.test_missing_ss_window_explicit) ... ok
+test_missing_step_rejected (test_validation.Validation.test_missing_step_rejected) ... ok
+test_nonfinite_and_corrupt_rows (test_validation.Validation.test_nonfinite_and_corrupt_rows) ... ok
+test_reference_slope_and_kcl (test_validation.Validation.test_reference_slope_and_kcl) ... ok
+test_result_hashes_and_path_escape (test_validation.Validation.test_result_hashes_and_path_escape) ... ok
+test_terminal_alignment_rejected (test_validation.Validation.test_terminal_alignment_rejected) ... ok
+test_zero_current_not_infinite_ratio (test_validation.Validation.test_zero_current_not_infinite_ratio) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.178s
+
+OK
+
+test_authenticated_status_and_stop (test_transport.Transport.test_authenticated_status_and_stop) ... ok
+test_credentials_runtime_refuses_git (test_transport.Transport.test_credentials_runtime_refuses_git) ... ok
+test_stopped_and_stale_events_not_live (test_transport.Transport.test_stopped_and_stale_events_not_live) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.717s
+
+OK

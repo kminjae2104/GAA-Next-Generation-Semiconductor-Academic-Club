@@ -1,0 +1,211 @@
+{
+  "parameters": {
+    "gate_nm": 40,
+    "width_nm": 10,
+    "height_nm": 10,
+    "oxide_nm": 1,
+    "gate_metal_nm": 3,
+    "extension_nm": 20,
+    "contact_nm": 5,
+    "acceptor_cm3": 1e+16,
+    "donor_cm3": 1e+20,
+    "workfunction_eV": 4.5,
+    "temperature_K": 300,
+    "vds_V": [
+      0.05,
+      0.6
+    ],
+    "gate_start_V": -0.2,
+    "gate_stop_V": 0.8,
+    "gate_step_V": 0.02,
+    "effective_perimeter_um": 0.04
+  },
+  "regions": [
+    {
+      "id": 1,
+      "name": "source_si",
+      "material": "Silicon",
+      "nm": [
+        0,
+        10,
+        0,
+        10,
+        0,
+        20
+      ],
+      "electrode": null
+    },
+    {
+      "id": 2,
+      "name": "channel",
+      "material": "Silicon",
+      "nm": [
+        0,
+        10,
+        0,
+        10,
+        20,
+        60
+      ],
+      "electrode": null
+    },
+    {
+      "id": 3,
+      "name": "drain_si",
+      "material": "Silicon",
+      "nm": [
+        0,
+        10,
+        0,
+        10,
+        60,
+        80
+      ],
+      "electrode": null
+    },
+    {
+      "id": 4,
+      "name": "source",
+      "material": "Aluminum",
+      "nm": [
+        0,
+        10,
+        0,
+        10,
+        -5,
+        0
+      ],
+      "electrode": 2
+    },
+    {
+      "id": 5,
+      "name": "drain",
+      "material": "Aluminum",
+      "nm": [
+        0,
+        10,
+        0,
+        10,
+        80,
+        85
+      ],
+      "electrode": 3
+    },
+    {
+      "id": 6,
+      "name": "oxide_left",
+      "material": "Silicon Oxide",
+      "nm": [
+        -1,
+        0,
+        -1,
+        11,
+        0,
+        80
+      ],
+      "electrode": null
+    },
+    {
+      "id": 7,
+      "name": "oxide_right",
+      "material": "Silicon Oxide",
+      "nm": [
+        10,
+        11,
+        -1,
+        11,
+        0,
+        80
+      ],
+      "electrode": null
+    },
+    {
+      "id": 8,
+      "name": "oxide_top",
+      "material": "Silicon Oxide",
+      "nm": [
+        0,
+        10,
+        -1,
+        0,
+        0,
+        80
+      ],
+      "electrode": null
+    },
+    {
+      "id": 9,
+      "name": "oxide_bottom",
+      "material": "Silicon Oxide",
+      "nm": [
+        0,
+        10,
+        10,
+        11,
+        0,
+        80
+      ],
+      "electrode": null
+    },
+    {
+      "id": 10,
+      "name": "gate",
+      "material": "Aluminum",
+      "nm": [
+        -4,
+        -1,
+        -4,
+        14,
+        20,
+        60
+      ],
+      "electrode": 1
+    },
+    {
+      "id": 11,
+      "name": "gate",
+      "material": "Aluminum",
+      "nm": [
+        11,
+        14,
+        -4,
+        14,
+        20,
+        60
+      ],
+      "electrode": 1
+    },
+    {
+      "id": 12,
+      "name": "gate",
+      "material": "Aluminum",
+      "nm": [
+        -1,
+        11,
+        -4,
+        -1,
+        20,
+        60
+      ],
+      "electrode": 1
+    },
+    {
+      "id": 13,
+      "name": "gate",
+      "material": "Aluminum",
+      "nm": [
+        -1,
+        11,
+        11,
+        14,
+        20,
+        60
+      ],
+      "electrode": 1
+    }
+  ],
+  "fine": false,
+  "smoke": true,
+  "sha256": "4a2a7b775a092483731d0b48c768ef537954203c87e15471e4c3f2dc3c6374c2",
+  "simulator_execution": "NOT_RUN"
+}

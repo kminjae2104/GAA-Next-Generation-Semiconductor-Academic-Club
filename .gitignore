@@ -1,0 +1,10 @@
+.local/
+__pycache__/
+*.pyc
+.venv/
+*.str
+*.zip
+*.lic
+token.txt
+bootstrap.txt
+연구/**/실행원본/
