@@ -36,3 +36,15 @@ test_stopped_and_stale_events_not_live (test_transport.Transport.test_stopped_an
 Ran 4 tests in 0.698s
 
 OK
+
+Classifier regression UTC 2026-11-16T02:09:03.721616+00:00
+test_authenticated_status_and_stop (test_transport.Transport.test_authenticated_status_and_stop) ... ok
+test_compact_summary_filters_no_error_without_claiming_physics (test_transport.Transport.test_compact_summary_filters_no_error_without_claiming_physics) ... ok
+test_credentials_runtime_refuses_git (test_transport.Transport.test_credentials_runtime_refuses_git) ... ok
+test_real_finish_overrides_only_spurious_no_error_flag (test_transport.Transport.test_real_finish_overrides_only_spurious_no_error_flag) ... ok
+test_stopped_and_stale_events_not_live (test_transport.Transport.test_stopped_and_stale_events_not_live) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.756s
+
+OK

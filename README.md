@@ -2,7 +2,7 @@
 
 개인적으로 GAA 소자 구조를 만들고 치수를 바꾸어 성능을 평가하는 연구 저장소다. Git·VS Code·Codex로 입력과 분석을 관리하고, 학내 Linux의 Silvaco DevEdit 3D/ATLAS에서 3차원 구조·전기 특성을 계산한다.
 
-**2026-11-16: 원격 agent 등록·진단 회수와 실제3D 구조/평형 계산까지 관찰했다. DC 시험은 시간 제한·라이선스 경고로 미완료였고 수정 r03을 제출했다. Id–Vg는 아직 없다.** 비공개 상태를 유지하며 부원 권한은 아직 변경하지 않았다. live 상태는 `control.py status`, 결과 요약은 runtime의 `latest_summary.json`을 확인한다.
+**2026-11-16: 실제3D 구조·평형 계산과 저 Vds의 짧은5점 Id–Vg 시험(r03)을 완료했다. 저/고 Vds 전체 sweep을 제출했으며 최종 성능·메시·양자 보정 검증은 미완료다.** 비공개 상태를 유지하며 부원 권한은 아직 변경하지 않았다. live 상태는 `control.py status`, 결과 요약은 runtime의 `latest_summary.json`을 확인한다.
 
 ## 읽는 순서
 

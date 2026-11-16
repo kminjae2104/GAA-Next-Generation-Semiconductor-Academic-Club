@@ -14,6 +14,19 @@ import watch_job
 
 
 class Transport(unittest.TestCase):
+    def test_real_finish_overrides_only_spurious_no_error_flag(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);execution=root/'gaa'/'execution';execution.mkdir(parents=True)
+            (execution/'solver.out').write_text('ATLAS version 5.34.0.R finished at test time\n')
+            (execution/'console.txt').write_text('Warning: Problem communicating with license server.\nCommunications with license server restored.\n')
+            relay.write_json(root/'status.json',dict(status='EXECUTION_FAILED',stages=[dict(
+                stage='gaa',returncode=0,timeout=False,seconds=1,missing=[],
+                fatal_lines=['SFLM Transport Error: No Error'])]))
+            summary=watch_job.summarize(root)
+            self.assertEqual(summary['status'],'COMPLETED_WITH_LICENSE_WARNINGS')
+            self.assertEqual(summary['runner_status'],'EXECUTION_FAILED')
+            self.assertEqual(summary['physical_validation'],'NOT_VALIDATED')
+
     def test_compact_summary_filters_no_error_without_claiming_physics(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)

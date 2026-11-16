@@ -20,7 +20,7 @@ def module(name,path):
 
 def summarize(folder):
     status=json.loads((folder/'status.json').read_text())
-    report=dict(status=status['status'],stages=[],physical_validation='NOT_VALIDATED')
+    report=dict(status=status['status'],runner_status=status['status'],stages=[],physical_validation='NOT_VALIDATED')
     for stage in status.get('stages',[]):
         relevant=[s for s in stage.get('fatal_lines',[]) if 'transport error: no error' not in s.lower()]
         report['stages'].append(dict(stage=stage['stage'],returncode=stage['returncode'],
@@ -33,7 +33,11 @@ def summarize(folder):
         report['mesh']=re.findall(r'Read [^\n]*(?:nodes|prisms)[^\n]*',text)[:4]
         report['equilibrium_file']=(execution/'equilibrium.str').is_file()
         report['normal_atlas_finish']=bool(re.search(r'ATLAS version[^\n]*finished',text,re.I))
-        report['license_diagnostic']=any(s in text.lower() for s in ['can not get license','license server'])
+        console=(execution/'console.txt').read_text(errors='replace') if (execution/'console.txt').is_file() else ''
+        report['license_diagnostic']=any(s in (text+'\n'+console).lower() for s in ['can not get license','problem communicating with license server','sflm retry:'])
+        stages_ok=bool(report['stages']) and all(s['returncode']==0 and not s['timeout'] and not s['missing'] and not s['errors'] for s in report['stages'])
+        if stages_ok and report['normal_atlas_finish']:
+            report['status']='COMPLETED_WITH_LICENSE_WARNINGS' if report['license_diagnostic'] else 'COMPLETED'
         if (execution/'high_drain.dat').is_file():
             analysis=module('gaa_analyze',control.STUDY/'python'/'analyze.py')
             try:
