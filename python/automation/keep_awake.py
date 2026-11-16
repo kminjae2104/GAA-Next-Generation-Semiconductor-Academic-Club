@@ -16,7 +16,7 @@ def main():
     a=p.parse_args()
     if sys.platform!='win32':p.error('Windows relay host only')
     deadline=datetime.fromisoformat(json.loads((a.root/'session.json').read_text())['deadline_utc'])
-    deadline=min(deadline,datetime.now(timezone.utc)+timedelta(hours=6))
+    deadline=min(deadline,datetime.now(timezone.utc)+timedelta(hours=24))
     set_state=ctypes.windll.kernel32.SetThreadExecutionState
     set_state.argtypes=[ctypes.c_uint32]
     set_state.restype=ctypes.c_uint32

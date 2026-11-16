@@ -1,4 +1,4 @@
-"""Own a temporary relay/tunnel pair and close both within six hours."""
+"""Own a temporary relay/tunnel pair with an explicitly selected lifetime."""
 import argparse
 import base64
 from datetime import datetime, timedelta, timezone
@@ -32,7 +32,7 @@ def bootstrap_command(url,agent_sha,ca_pem=None,deadline=None):
           'log=d/"agent_'+agent_sha[:12]+'.console"; '
           'lf=log.open("ab"); '
           'p=subprocess.Popen([sys.executable,str(f),"--stdin-config"],stdin=subprocess.PIPE,stdout=lf,stderr=subprocess.STDOUT,start_new_session=True); lf.close(); '
-          'p.stdin.write(json.dumps({"base_url":u,"token":t,"ca_pem":ca,"deadline_utc":'+(json.dumps(deadline) if deadline else 'None')+'}).encode()); p.stdin.close(); '
+          'p.stdin.write(json.dumps({"base_url":u,"token":t,"ca_pem":ca,"max_session_seconds":86400,"deadline_utc":'+(json.dumps(deadline) if deadline else 'None')+'}).encode()); p.stdin.close(); '
           'print("AGENT_STARTED",p.pid,"LOG",log)')
     return "python3 -c '"+code+"'"
 
@@ -52,7 +52,7 @@ def main():
     p.add_argument('--seconds',type=int,default=21600)
     p.add_argument('--ca-pem',type=Path)
     a=p.parse_args()
-    if not 1<=a.seconds<=21600:raise ValueError('Maximum relay lifetime is 6 hours')
+    if not 1<=a.seconds<=86400:raise ValueError('Maximum relay lifetime is 24 hours')
     if relay.digest(a.cloudflared)!=EXPECTED_CF_SHA:raise ValueError('Cloudflare official release SHA256 mismatch')
     relay.initialize(a.root)
     ca_pem=a.ca_pem.read_text(encoding='ascii') if a.ca_pem else None

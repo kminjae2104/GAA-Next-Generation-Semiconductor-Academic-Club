@@ -1,0 +1,49 @@
+{
+  "mode": "fine",
+  "stage_timeout": null,
+  "required": {
+    "gaa": [
+      "geometry.str",
+      "equilibrium.str",
+      "idvg_low.log",
+      "low_drain.dat",
+      "low_source.dat",
+      "low_gate.dat",
+      "idvg_high.log",
+      "high_drain.dat",
+      "high_source.dat",
+      "high_gate.dat"
+    ]
+  },
+  "parameters": {
+    "gate_nm": 40,
+    "width_nm": 10,
+    "height_nm": 10,
+    "oxide_nm": 1,
+    "gate_metal_nm": 3,
+    "extension_nm": 20,
+    "contact_nm": 5,
+    "acceptor_cm3": 1e+16,
+    "donor_cm3": 1e+20,
+    "workfunction_eV": 4.6,
+    "temperature_K": 300,
+    "vds_V": [
+      0.05,
+      0.6
+    ],
+    "gate_start_V": -0.2,
+    "gate_stop_V": 0.8,
+    "gate_step_V": 0.02,
+    "effective_perimeter_um": 0.04
+  },
+  "linear_solver": "bicgst",
+  "mesh_style": "anisotropic",
+  "processors": 4,
+  "quantum_mode": "none",
+  "gate_initialization": "equilibrium",
+  "mesh_scale": 0.5,
+  "diagnostic_mesh": false,
+  "engineering_targets_unchanged": true,
+  "sha256": "f93aaedd4357b102e3571e01c9376ce6234b3082c46b33a2cd391762fe2a24fb",
+  "simulator_execution": "NOT_RUN"
+}

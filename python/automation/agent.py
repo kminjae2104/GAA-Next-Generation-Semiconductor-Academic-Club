@@ -155,7 +155,7 @@ def main(config):
         raise ValueError('A verified HTTPS relay URL is required')
     if not re.fullmatch(r'[0-9a-f]{64}', config['token']):
         raise ValueError('Invalid task token')
-    lifetime=21600
+    lifetime=min(86400,int(config.get('max_session_seconds',21600)))
     if config.get('deadline_utc'):
         left=(datetime.fromisoformat(config['deadline_utc'])-datetime.now(timezone.utc)).total_seconds()
         if left<=0:
@@ -166,19 +166,25 @@ def main(config):
     post_event(config,status='AGENT_READY',hostname=platform.node(),user=getpass.getuser(),
                python=sys.version,executable=sys.executable,
                deckbuild_exists=os.access('/users/tools/Silvaco/bin/deckbuild',os.X_OK))
-    print('Agent connected. Waiting for study packages; maximum total lifetime 6 hours.',flush=True)
-    seen=set()
+    print('Agent connected. Session lifetime seconds: '+str(int(lifetime)),flush=True)
+    seen=set();last_heartbeat=0
     while time.monotonic()<end:
-        if json.loads(request(config,'/control')).get('stop'):
-            post_event(config,status='AGENT_STOPPED_BY_CONTROL')
-            return 0
-        descriptor=json.loads(request(config,'/next').decode('utf-8'))
-        job=descriptor.get('job')
-        if job and job not in seen:
-            seen.add(job)
-            rc=run_package(config,descriptor,end)
-            if rc==0 and descriptor.get('final',False):return 0
-            post_event(config,status='AWAITING_NEXT_PACKAGE',previous_job=job,returncode=rc)
+        try:
+            if json.loads(request(config,'/control')).get('stop'):
+                post_event(config,status='AGENT_STOPPED_BY_CONTROL')
+                return 0
+            descriptor=json.loads(request(config,'/next').decode('utf-8'))
+            job=descriptor.get('job')
+            if job and job not in seen:
+                seen.add(job)
+                rc=run_package(config,descriptor,end)
+                if rc==0 and descriptor.get('final',False):return 0
+                post_event(config,status='AWAITING_NEXT_PACKAGE',previous_job=job,returncode=rc)
+            if time.monotonic()-last_heartbeat>=30:
+                post_event(config,status='AGENT_HEARTBEAT',agent_pid=os.getpid(),completed_or_seen_jobs=len(seen))
+                last_heartbeat=time.monotonic()
+        except RuntimeError:
+            print('Temporary transport failure; retrying existing connection.',flush=True)
         time.sleep(min(15,max(0,end-time.monotonic())))
     print('Agent deadline reached. Remote artifacts preserved.',flush=True)
     return 2

@@ -22,7 +22,7 @@ def write(path, value):
 def retain_large_structures(root):
     """Preserve large raw structures beside results; return hashes instead of huge ZIPs."""
     root=Path(root).resolve()
-    scope=root.parent if root.name=='results' else root.parent.parent
+    scope=root.parent if root.name=='results' or root.name.startswith('attempt_') else root.parent.parent
     retained=scope/'retained_structures'
     if root.name!='results':retained=retained/root.name
     retained.resolve().relative_to(scope.resolve())
@@ -72,7 +72,7 @@ def run(argv, folder, timeout, env=None):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--output', type=Path, required=True)
-    p.add_argument('--max-seconds', type=int, required=True)
+    p.add_argument('--max-seconds', type=int, default=None)
     args = p.parse_args()
     owned=[]
     if os.name=='posix':
@@ -91,7 +91,7 @@ def main():
     code = Path(__file__).resolve().parent
     config = json.loads((code/'config.json').read_text())
     write(root/'run_config.json',config)
-    end = time.monotonic()+args.max_seconds-30
+    end = time.monotonic()+args.max_seconds-30 if args.max_seconds is not None else float('inf')
     deckbuild = shutil.which('deckbuild') or '/users/tools/Silvaco/bin/deckbuild'
     envinfo = dict(utc=datetime.now(timezone.utc).isoformat(), mode=config['mode'],
                    deckbuild=deckbuild, executable=os.access(deckbuild, os.X_OK),
@@ -154,7 +154,7 @@ def main():
         executable_cmd=[deckbuild,'-ascii','-run',source.name,'-outfile','solver.out']
         capture=folder/'capture'
         capture.mkdir()
-        remaining=max(1,min(config.get('stage_timeout',240),int(end-time.monotonic())))
+        remaining=min(config.get('stage_timeout') or float('inf'),max(1,end-time.monotonic()))
         started=time.monotonic()
         with (execution/'console.txt').open('xb') as stream:
             proc=subprocess.Popen(executable_cmd,cwd=str(execution),stdin=subprocess.DEVNULL,
@@ -200,8 +200,16 @@ def main():
                 fatal.append(line[:500])
         required=config.get('required',{}).get(stage,[])
         missing=[n for n in required if not (execution/n).is_file() or (execution/n).stat().st_size==0]
+        normal_finish=bool(re.search(r'ATLAS version[^\n]*finished',texts,re.I))
+        license_diagnostics=[]
+        # Keep license errors visible. With a normal finish and complete outputs,
+        # a separate numerical validator decides whether the produced data is usable.
+        if proc.returncode==0 and normal_finish and not missing:
+            license_diagnostics=[s for s in fatal if 'sflm programmer error: this job is not logged in.' in s.lower()]
+            fatal=[s for s in fatal if s not in license_diagnostics]
         result=dict(stage=stage,returncode=proc.returncode,timeout=timed_out,
                     seconds=round(time.monotonic()-started,3),missing=missing,
+                    normal_atlas_finish=normal_finish,license_diagnostics=license_diagnostics,
                     diagnostic_lines=errors[-40:],fatal_lines=fatal[-20:],
                     outputs={f.name:f.stat().st_size for f in execution.iterdir() if f.is_file()})
         write(folder/'process.json',result); stage_results.append(result)

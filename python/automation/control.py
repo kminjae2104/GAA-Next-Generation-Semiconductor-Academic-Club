@@ -38,7 +38,7 @@ def state(runtime):
     label='STOPPED' if stopped else 'EXPIRED' if expired else session.get('status','STARTING')
     if not stopped and not expired and event:
         label=('AGENT_RUNNING' if event.get('status') in ['STUDY_START','STUDY_RUNNING']
-               else 'AGENT_IDLE' if event.get('status') in ['AGENT_READY','AWAITING_NEXT_PACKAGE','RESULT_RETURNED']
+               else 'AGENT_IDLE' if event.get('status') in ['AGENT_READY','AGENT_HEARTBEAT','AWAITING_NEXT_PACKAGE','RESULT_RETURNED']
                else event.get('status','AGENT_STATUS_UNKNOWN'))
         if age is None or age>=90:label='AGENT_LIVENESS_UNVERIFIED'
     return dict(runtime=str(runtime),session_status=label,

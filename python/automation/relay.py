@@ -154,8 +154,8 @@ def initialize(root):
 
 
 def serve(root, port, seconds):
-    if not 1 <= seconds <= 21600:
-        raise ValueError('Relay lifetime must be at most 6 hours')
+    if not 1 <= seconds <= 86400:
+        raise ValueError('Relay lifetime must be at most 24 hours')
     server = Relay(root, port, seconds)
     write_json(Path(root) / 'state.json', dict(status='LISTENING_LOOPBACK_ONLY',
                address=server.server_address[0], port=server.server_address[1], seconds=seconds))

@@ -31,5 +31,18 @@ class Scheduler(unittest.TestCase):
     def test_cycle_rejected_before_execution(self):
         with self.assertRaises(ValueError):validate(dict(tasks=[task('A',after=['B']),task('B',after=['A'])]))
 
+    def test_unlimited_tasks_and_budget(self):
+        a=task('A',.02);a['timeout_seconds']=None
+        b=task('B',.02,['A']);b.pop('timeout_seconds')
+        with tempfile.TemporaryDirectory() as tmp:
+            s=run_plan(dict(max_parallel=3,tasks=[a,b]),tmp,Path(tmp)/'out')
+        self.assertTrue(all(v['status']=='SUCCEEDED' and not v['timeout'] for v in s.values()))
+
+    def test_explicit_timeout_is_still_enforced(self):
+        a=task('A',1);a['timeout_seconds']=.05
+        with tempfile.TemporaryDirectory() as tmp:
+            s=run_plan(dict(tasks=[a,task('B',after=['A'])]),tmp,Path(tmp)/'out')
+        self.assertEqual(s['A']['status'],'TIMED_OUT');self.assertEqual(s['B']['status'],'BLOCKED')
+
 
 if __name__=='__main__':unittest.main()

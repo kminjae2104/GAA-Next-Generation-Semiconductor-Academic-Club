@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-11-16T08:12:16.954657+00:00",
+  "local_health": {
+    "ready": true
+  },
+  "public_health": {
+    "ready": true
+  },
+  "agent_heartbeat_age_seconds": 0.3,
+  "deadline_utc": "2026-11-17T08:07:56.643517+00:00",
+  "input_or_display_changes": false,
+  "awake": {
+    "active": true,
+    "temporary_system_request": true,
+    "display_required": false,
+    "deadline_utc": "2026-11-17T08:07:56.643517+00:00"
+  },
+  "latest_snapshot": {
+    "job": "gaa_snapshot_20261116T081046Z",
+    "collected": "C:\\dev\\gaa\\.local\\collected\\gaa_snapshot_20261116T081046Z",
+    "scheduler_alive": true,
+    "task_counts": {
+      "SUCCEEDED": 6,
+      "PENDING": 25,
+      "RUNNING": 3
+    },
+    "snapshot_epoch": 1794816659.4306197
+  },
+  "completed_tasks": [
+    "eq_bicgst_smoke",
+    "bias_direct_smoke",
+    "bias_bicgst_smoke",
+    "eq_direct_smoke",
+    "eq_default_smoke",
+    "bias_default_smoke"
+  ],
+  "running_tasks": [
+    "eq_bicgst_screen",
+    "bias_direct_screen",
+    "bias_bicgst_screen"
+  ]
+}

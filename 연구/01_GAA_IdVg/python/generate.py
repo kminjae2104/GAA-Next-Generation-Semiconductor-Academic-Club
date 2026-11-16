@@ -42,7 +42,7 @@ def geometry(p):
     return boxes
 
 
-def deck(p, fine=False, smoke=False, linear_solver='default',mesh_style='isotropic',processors=1,quantum_mode='none',gate_initialization='biased'):
+def deck(p, fine=False, smoke=False, linear_solver='default',mesh_style='isotropic',processors=1,quantum_mode='none',gate_initialization='biased',mesh_scale=None):
     if linear_solver not in ['default','bicgst','direct']:raise ValueError('Unsupported linear solver')
     solver='' if linear_solver=='default' else ' '+linear_solver
     if mesh_style not in ['isotropic','anisotropic']:raise ValueError('Unsupported mesh style')
@@ -52,7 +52,8 @@ def deck(p, fine=False, smoke=False, linear_solver='default',mesh_style='isotrop
     quantum=' bqp.n bqp.ngamma=1.4 bqp.nalpha=0.3' if quantum_mode=='bqp' else ''
     # A two-layer-oxide diagnostic mesh is used only for the short smoke test.
     # Full and fine performance sweeps keep the specified 4-/8-layer oxide mesh.
-    f=2 if smoke else 0.5 if fine else 1
+    f=mesh_scale if mesh_scale is not None else 2 if smoke else 0.5 if fine else 1
+    if f not in [.5,1,2]:raise ValueError('Unsupported mesh scale')
     regions=geometry(p)
     lines=['# Generated GAA; nm converted to micrometers. '+('BQP-corrected DD candidate.' if quantum else 'Classical DD model.'),
            '# See the repository reference index and design/targets document.',
