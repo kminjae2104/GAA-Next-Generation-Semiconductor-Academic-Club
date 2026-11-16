@@ -61,7 +61,8 @@ class Validation(unittest.TestCase):
         self.assertEqual(len(g),13)
         channel=next(r for r in g if r['name']=='channel')
         self.assertEqual(channel['nm'],[0,10,0,10,20,60])
-        self.assertEqual(sum(r['electrode']==1 for r in g),4)
+        self.assertEqual(sum(r['name'].startswith('gate') for r in g),4)
+        self.assertEqual({r['electrode'] for r in g if r['electrode']},{1,2,3,4,5,6})
 
     def test_full_three_dimensional_output(self):
         text=generate.deck(generate.PARAMETERS)
@@ -69,6 +70,7 @@ class Validation(unittest.TestCase):
         self.assertIn('go devedit simflags="-3d"',text)
         self.assertIn('mesh infile=geometry.str',text)
         self.assertNotIn('cylindrical',text.lower())
+        self.assertEqual(text.count('common=gate short'),3)
 
     def test_result_hashes_and_path_escape(self):
         for name,corrupt in [('result.txt',False),('../escape.txt',False),('result.txt',True)]:

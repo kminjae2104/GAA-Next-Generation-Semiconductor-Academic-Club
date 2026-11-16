@@ -35,7 +35,13 @@ def state(runtime):
     if event.get('received_utc'):
         age=(datetime.now(timezone.utc)-datetime.fromisoformat(event['received_utc'])).total_seconds()
     expired=bool(session.get('deadline_utc') and datetime.fromisoformat(session['deadline_utc'])<=datetime.now(timezone.utc))
-    return dict(runtime=str(runtime),session_status='STOPPED' if stopped else 'EXPIRED' if expired else session.get('status','STARTING'),
+    label='STOPPED' if stopped else 'EXPIRED' if expired else session.get('status','STARTING')
+    if not stopped and not expired and event:
+        label=('AGENT_RUNNING' if event.get('status') in ['STUDY_START','STUDY_RUNNING']
+               else 'AGENT_IDLE' if event.get('status') in ['AGENT_READY','AWAITING_NEXT_PACKAGE','RESULT_RETURNED']
+               else event.get('status','AGENT_STATUS_UNKNOWN'))
+        if age is None or age>=90:label='AGENT_LIVENESS_UNVERIFIED'
+    return dict(runtime=str(runtime),session_status=label,
                 live_agent=bool(not stopped and not expired and age is not None and age<90
                                 and event.get('status') not in ['AGENT_STOPPED_BY_CONTROL','AGENT_EXPIRED']),
                 heartbeat_age_seconds=round(age,1) if age is not None else None,
@@ -87,6 +93,9 @@ def queue(a,runtime):
         generator=STUDY/'python'/'generate.py'
         spec=importlib.util.spec_from_file_location('gaa_generate',generator)
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        config['model_revision']='v2_explicit_common_gate'
+        config['parameters']=module.PARAMETERS
+        config['diagnostic_mesh_scale']=2 if a.mode=='smoke' else None
         deck=module.deck(module.PARAMETERS,fine=a.mode=='fine',smoke=a.mode=='smoke')
         name='gaa'
         deckpath=directory/(name+'.in');deckpath.write_text(deck,encoding='ascii',newline='\n');files.append(deckpath)

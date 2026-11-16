@@ -30,20 +30,22 @@ def geometry(p):
     for name,x1,x2,y1,y2 in [('left',-t,0,-t,h+t),('right',w,w+t,-t,h+t),
                             ('top',0,w,-t,0),('bottom',0,w,h,h+t)]:
         box('oxide_'+name,'Silicon Oxide',x1,x2,y1,y2,0,total)
-    for side,x1,x2,y1,y2 in [('left',-t-m,-t,-t-m,h+t+m),
+    for index,(side,x1,x2,y1,y2) in enumerate([('left',-t-m,-t,-t-m,h+t+m),
                             ('right',w+t,w+t+m,-t-m,h+t+m),
-                            ('top',-t,w+t,-t-m,-t),('bottom',-t,w+t,h+t,h+t+m)]:
-        box('gate','Aluminum',x1,x2,y1,y2,e,e+l,1)
+                            ('top',-t,w+t,-t-m,-t),('bottom',-t,w+t,h+t,h+t+m)]):
+        box('gate' if index==0 else 'gate_'+side,'Aluminum',x1,x2,y1,y2,e,e+l,1 if index==0 else index+3)
     for a,b in itertools.combinations(boxes,2):
         overlap=[min(a['nm'][i+1],b['nm'][i+1])-max(a['nm'][i],b['nm'][i]) for i in (0,2,4)]
         if all(v>1e-10 for v in overlap):raise ValueError('Overlapping region volumes')
     assert len({r['id'] for r in boxes})==13
-    assert {r['electrode'] for r in boxes if r['electrode']}=={1,2,3}
+    assert {r['electrode'] for r in boxes if r['electrode']}=={1,2,3,4,5,6}
     return boxes
 
 
 def deck(p, fine=False, smoke=False):
-    f=0.5 if fine else 1
+    # A two-layer-oxide diagnostic mesh is used only for the short smoke test.
+    # Full and fine performance sweeps keep the specified 4-/8-layer oxide mesh.
+    f=2 if smoke else 0.5 if fine else 1
     regions=geometry(p)
     lines=['# Generated GAA; nm converted to micrometers. DD diagnostic model.',
            '# See the repository reference index and design/targets document.',
@@ -72,6 +74,9 @@ def deck(p, fine=False, smoke=False):
             'doping uniform region=2 p.type conc=%.9g'%p['acceptor_cm3'],
             'doping uniform region=3 n.type conc=%.9g'%p['donor_cm3'],
             'contact name=gate workfunction=%.9g'%p['workfunction_eV'],
+            'contact name=gate_right workfunction=%.9g common=gate short'%p['workfunction_eV'],
+            'contact name=gate_top workfunction=%.9g common=gate short'%p['workfunction_eV'],
+            'contact name=gate_bottom workfunction=%.9g common=gate short'%p['workfunction_eV'],
             'models fermi conmob fldmob srh bgn temperature=%.9g print'%p['temperature_K'],
             'method gummel newton trap maxtrap=10 itlimit=50','solve init',
             'save outf=equilibrium.str','method newton trap maxtrap=10 itlimit=50']
@@ -91,7 +96,7 @@ def deck(p, fine=False, smoke=False):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=BASE/'tcad')
+    p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=BASE/'tcad'/'v2_common_gate')
     p.add_argument('--fine',action='store_true');p.add_argument('--smoke',action='store_true')
     a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
     name='gaa_'+('fine' if a.fine else 'coarse')+('_smoke' if a.smoke else '')
@@ -101,6 +106,7 @@ def main():
         raise FileExistsError('Preserve old deck and use a new --out directory')
     target.write_text(data,encoding='utf-8',newline='\n')
     metadata=dict(parameters=PARAMETERS,regions=geometry(PARAMETERS),fine=a.fine,smoke=a.smoke,
+                  model_revision='v2_explicit_common_gate',diagnostic_mesh_scale=2 if a.smoke else None,
                   sha256=hashlib.sha256(data.encode()).hexdigest(),simulator_execution='NOT_RUN')
     (a.out/(name+'.json')).write_text(json.dumps(metadata,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     print(target)

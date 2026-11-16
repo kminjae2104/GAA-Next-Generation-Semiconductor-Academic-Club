@@ -10,9 +10,20 @@ import urllib.request
 
 import control
 import relay
+import watch_job
 
 
 class Transport(unittest.TestCase):
+    def test_compact_summary_filters_no_error_without_claiming_physics(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            relay.write_json(root/'status.json',dict(status='EXECUTION_FAILED',stages=[dict(
+                stage='gaa',returncode=1,timeout=False,seconds=1,missing=['idvg_low.log'],
+                fatal_lines=['SFLM Transport Error: No Error','syntax error in test'])]))
+            summary=watch_job.summarize(root)
+            self.assertEqual(summary['stages'][0]['errors'],['syntax error in test'])
+            self.assertEqual(summary['physical_validation'],'NOT_VALIDATED')
+
     def test_authenticated_status_and_stop(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)/'runtime';relay.initialize(root)
@@ -43,6 +54,10 @@ class Transport(unittest.TestCase):
             relay.write_json(root/'session.json',dict(deadline_utc=(datetime.now(timezone.utc)+timedelta(hours=1)).isoformat()))
             relay.write_json(root/'latest_event.json',dict(status='AGENT_READY',received_utc=(datetime.now(timezone.utc)-timedelta(minutes=5)).isoformat()))
             self.assertFalse(control.state(root)['live_agent'])
+            self.assertEqual(control.state(root)['session_status'],'AGENT_LIVENESS_UNVERIFIED')
+            relay.write_json(root/'latest_event.json',dict(status='STUDY_RUNNING',received_utc=datetime.now(timezone.utc).isoformat()))
+            self.assertTrue(control.state(root)['live_agent'])
+            self.assertEqual(control.state(root)['session_status'],'AGENT_RUNNING')
             relay.write_json(root/'latest_event.json',dict(status='AGENT_STOPPED_BY_CONTROL',received_utc=datetime.now(timezone.utc).isoformat()))
             self.assertFalse(control.state(root)['live_agent'])
 

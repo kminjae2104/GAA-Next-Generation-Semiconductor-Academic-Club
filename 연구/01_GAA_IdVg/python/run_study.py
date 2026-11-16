@@ -85,7 +85,8 @@ def main():
         execution=folder/'execution'
         execution.mkdir()
         for f in folder.glob('*.in'): shutil.copy2(f,execution/f.name)
-        executable_cmd=[deckbuild,'-run','-ascii','-as',source.name,'-outfile','solver.out']
+        # Installed DeckBuild usage: -ascii -run <deck>; no legacy -as option.
+        executable_cmd=[deckbuild,'-ascii','-run',source.name,'-outfile','solver.out']
         capture=folder/'capture'
         capture.mkdir()
         remaining=max(1,min(config.get('stage_timeout',240),int(end-time.monotonic())))
@@ -94,8 +95,23 @@ def main():
             proc=subprocess.Popen(executable_cmd,cwd=str(execution),stdin=subprocess.DEVNULL,
                                   stdout=stream,stderr=subprocess.STDOUT,start_new_session=True)
             timed_out=False
-            try: proc.wait(timeout=remaining)
-            except subprocess.TimeoutExpired:
+            stage_deadline=time.monotonic()+remaining
+            while proc.poll() is None and time.monotonic()<stage_deadline:
+                diagnostic=[]
+                sizes={}
+                for log in [execution/'console.txt',execution/'solver.out']:
+                    if log.is_file():
+                        sizes[log.name]=log.stat().st_size
+                        with log.open('rb') as tail:
+                            tail.seek(max(0,sizes[log.name]-8192))
+                            lines=tail.read().decode('utf-8',errors='replace').splitlines()
+                        diagnostic.extend(s[:400] for s in lines if any(k in s.lower() for k in ['error','license','logged in','fatal','converg']))
+                write(root/'progress.json',dict(stage=stage,status='RUNNING',
+                      elapsed_seconds=round(time.monotonic()-started,1),
+                      diagnostic_tail=diagnostic[-12:],output_sizes=sizes))
+                try:proc.wait(timeout=min(5,max(.1,stage_deadline-time.monotonic())))
+                except subprocess.TimeoutExpired:pass
+            if proc.poll() is None:
                 timed_out=True
                 os.killpg(proc.pid,signal.SIGTERM)
                 try: proc.wait(timeout=5)
@@ -108,7 +124,7 @@ def main():
         for line in texts.splitlines():
             if any(s in line.lower() for s in ['error','license','not logged in','fatal','signal','converg']):
                 errors.append(line[:500])
-            if any(s in line.lower() for s in ['error #','error:','syntax error','not logged in',
+            if 'transport error: no error' not in line.lower() and any(s in line.lower() for s in ['error #','error:','syntax error','not logged in',
                                                'fatal','segmentation fault','failed to converge']):
                 fatal.append(line[:500])
         required=config.get('required',{}).get(stage,[])
