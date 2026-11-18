@@ -1,0 +1,99 @@
+
+*** this is deckbuild version 5.2.17.R ***
+
+# Generated GAA; nm converted to micrometers. Classical DD model.
+# See the repository reference index and design/targets document.
+go devedit simflags="-3d"
+
+                                 D E V E D I T
+
+                      Copyright (c) 1992-2016 SILVACO Inc.
+
+                              All rights reserved
+
+                devedit 2.8.26.R (Tue Jan 26 05:23:40 PST 2016)
+              libMeshBuild 1.24.23 (Tue Jan 26 05:22:55 PST 2016)
+                  libSSS 2.8.14 (Tue Jan 19 16:38:10 PST 2016)
+               libSVC_Misc 1.28.13 (Tue Jan 19 16:37:06 PST 2016)
+                 libsflm 7.10.1 (Tue May 19 19:52:32 PDT 2015)
+                 libSDB 1.12.36 (Wed Jan 13 04:01:54 PST 2016)
+               libGeometry 1.30.16 (Tue May 19 19:51:51 PDT 2015)
+               libCardDeck 1.32.22 (Fri Jan 22 18:42:45 PST 2016)
+                libDW_Set 1.28.13 (Tue Jan 19 16:36:26 PST 2016)
+               libSvcFile 1.14.19 (Tue May 19 19:51:56 PDT 2015)
+                 libsstl 1.10.11 (Tue May 19 19:51:57 PDT 2015)
+               libDW_Misc 1.40.20 (Tue Jan 19 16:14:10 PST 2016)
+                libQSilCore 1.2.8 (Wed May 13 18:39:12 PDT 2015)
+                libDW_crypt 3.0.0 (Mon May 18 04:43:00 PDT 2015)
+               libDW_Version 3.8.0 (Fri Oct  3 16:08:41 PDT 2014)
+
+                  MeshBuild Library based on MeshBuild v1.9.0
+   Copyright (c) 1991 Integrated Systems Laboratory, ETH Zurich, Switzerland
+
+             Executing on host: semicon1  Tue Nov 17 00:08:07 2026
+
+SFLM_SERVERS=semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu
+FLEXlm=/users/tools/Silvaco/etc/license
+FLEXlm=/users/tools/Silvaco/etc/license.dat
+FLEXlm=/users/tools/Silvaco/etc
+Current Server: FLEXlm=27000@semicon1
+
+DevEdit> work.area x1=-0.004 y1=-0.004 x2=0.014 y2=0.014
+DevEdit> region reg=1 name=source_si mat="Silicon" z1=0 z2=0.02 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=2 name=channel mat="Silicon" z1=0.02 z2=0.06 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=3 name=drain_si mat="Silicon" z1=0.06 z2=0.08 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=4 name=source mat="Aluminum" z1=-0.005 z2=0 elec.id=2 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=5 name=drain mat="Aluminum" z1=0.08 z2=0.085 elec.id=3 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=6 name=oxide_left mat="Silicon Oxide" z1=0 z2=0.08 points="-0.001,-0.001 0,-0.001 0,0.011 -0.001,0.011 -0.001,-0.001"
+DevEdit> region reg=7 name=oxide_right mat="Silicon Oxide" z1=0 z2=0.08 points="0.01,-0.001 0.011,-0.001 0.011,0.011 0.01,0.011 0.01,-0.001"
+DevEdit> region reg=8 name=oxide_top mat="Silicon Oxide" z1=0 z2=0.08 points="0,-0.001 0.01,-0.001 0.01,0 0,0 0,-0.001"
+DevEdit> region reg=9 name=oxide_bottom mat="Silicon Oxide" z1=0 z2=0.08 points="0,0.01 0.01,0.01 0.01,0.011 0,0.011 0,0.01"
+DevEdit> region reg=10 name=gate mat="Aluminum" z1=0.02 z2=0.06 elec.id=1 points="-0.004,-0.004 -0.001,-0.004 -0.001,0.014 -0.004,0.014 -0.004,-0.004"
+DevEdit> region reg=11 name=gate_right mat="Aluminum" z1=0.02 z2=0.06 elec.id=4 points="0.011,-0.004 0.014,-0.004 0.014,0.014 0.011,0.014 0.011,-0.004"
+DevEdit> region reg=12 name=gate_top mat="Aluminum" z1=0.02 z2=0.06 elec.id=5 points="-0.001,-0.004 0.011,-0.004 0.011,-0.001 -0.001,-0.001 -0.001,-0.004"
+DevEdit> region reg=13 name=gate_bottom mat="Aluminum" z1=0.02 z2=0.06 elec.id=6 points="-0.001,0.011 0.011,0.011 0.011,0.014 -0.001,0.014 -0.001,0.011"
+DevEdit> base.mesh height=0.0005 width=0.0005
+DevEdit> bound.cond !apply max.slope=28 max.ratio=300 rnd.unit=0.00001 line.straightening=1 align.points when=automatic
+DevEdit> constr.mesh max.angle=90 max.ratio=300 max.height=0.003 max.width=0.003 min.height=0.00002 min.width=0.00002
+DevEdit> constr.mesh region=1 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=2 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=3 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=4 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=5 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=6 default max.height=0.0005 max.width=0.000125
+DevEdit> constr.mesh region=7 default max.height=0.0005 max.width=0.000125
+DevEdit> constr.mesh region=8 default max.height=0.000125 max.width=0.0005
+DevEdit> constr.mesh region=9 default max.height=0.000125 max.width=0.0005
+DevEdit> constr.mesh region=10 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=11 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=12 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=13 default max.height=0.0015 max.width=0.0015
+DevEdit> z.plane z=-0.005 spacing=0.001
+DevEdit> z.plane z=0 spacing=0.001
+DevEdit> z.plane z=0.02 spacing=0.0005
+DevEdit> z.plane z=0.04 spacing=0.0005
+DevEdit> z.plane z=0.06 spacing=0.0005
+DevEdit> z.plane z=0.08 spacing=0.001
+DevEdit> z.plane z=0.085 spacing=0.001
+DevEdit> z.plane maximum.spacing=0.001 maximum.ratio=1.5
+DevEdit> Mesh Mode=MeshBuild
+Building initial tensor-product mesh...Done
+Refining on geometry... Done
+Refining on size... Done
+Refining on Impurities...Done
+Handling green points...Done
+Dividing to triangles... Done
+Testing Consistency of mesh... Done
+Mesh statistics:
+	Number of points = 3721
+	Number of triangles = 7232
+	Obtuse triangles 0 (0%)
+	Obtuse triangles in Semiconductor 0 (0%)
+DevEdit> structure outf=geometry.str
+DevEdit> structure outfile="/tmp/auto.8QrXxU"
+DevEdit> quit
+
+Parse complete:
+	Error(s)   = 0
+	Warning(s) = 0
+

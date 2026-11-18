@@ -1,0 +1,23 @@
+[
+  {
+    "original_result_path": "gaa/execution/equilibrium.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/bqp_full/retained_structures/attempt_01/gaa/execution/equilibrium.str",
+    "bytes": 15227619,
+    "sha256": "0b57ccfcacc0cff29286383cc01f1335a4e27cb9b47b88cb875b9d31c8c8e988",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_high.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/bqp_full/retained_structures/attempt_01/gaa/execution/final_high.str",
+    "bytes": 21739950,
+    "sha256": "dee6ed5eb9e9f788b2a08b4ec46d931b84e5896c66650acdab4183b1df4055a0",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_low.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/bqp_full/retained_structures/attempt_01/gaa/execution/final_low.str",
+    "bytes": 21768328,
+    "sha256": "4ba3fa5f1c2ba3f59adee32a275dbff5f5c16701716cff63f434b7f925664828",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  }
+]

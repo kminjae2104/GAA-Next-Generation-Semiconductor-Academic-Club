@@ -1,0 +1,50 @@
+{
+  "stage": "gaa",
+  "returncode": 1,
+  "timeout": false,
+  "seconds": 393.522,
+  "missing": [
+    "equilibrium.str",
+    "idvg_low.log",
+    "low_drain.dat",
+    "low_source.dat",
+    "low_gate.dat",
+    "idvg_high.log",
+    "high_drain.dat",
+    "high_source.dat",
+    "high_gate.dat"
+  ],
+  "normal_atlas_finish": false,
+  "license_diagnostics": [],
+  "diagnostic_lines": [
+    "FLEXlm=/users/tools/Silvaco/etc/license",
+    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+    "\tError(s)   = 0",
+    "Error: Unable to allocate memory.",
+    "Can not get license. Waiting...",
+    "Warning: Problem communicating with license server. ",
+    "SFLM Retry: SFLM Transport Error: No Error",
+    "Communications with license server restored. ",
+    "Warning: Problem communicating with license server. ",
+    "SFLM Retry: SFLM Transport Error: No Error",
+    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+    "SFLM: Current License Server: semicon1:3162/",
+    "Communications with license server restored. ",
+    "ATLAS waiting for license. ",
+    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+    "SFLM: Current License Server: semicon1:3162/",
+    "SFLM Programmer Error: This job is not logged in.",
+    "SFLM Transport Error: No Error",
+    "SFLM: Can not log into license server."
+  ],
+  "fatal_lines": [
+    "Error: Unable to allocate memory.",
+    "SFLM Programmer Error: This job is not logged in."
+  ],
+  "outputs": {
+    "gaa.in": 4735,
+    "console.txt": 1401,
+    "solver.out": 27883,
+    "geometry.str": 19413397
+  }
+}

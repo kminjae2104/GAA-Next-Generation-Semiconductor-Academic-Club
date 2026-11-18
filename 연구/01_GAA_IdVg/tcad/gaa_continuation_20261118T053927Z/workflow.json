@@ -1,0 +1,328 @@
+{
+  "job": "gaa_continuation_20261118T053927Z",
+  "max_parallel": 2,
+  "calculation_time_limit_seconds": null,
+  "physical_validation": "NOT_VALIDATED",
+  "tasks": [
+    {
+      "id": "dd45_screen",
+      "after": [],
+      "timeout_seconds": null,
+      "input_file": "dd45_screen/gaa.in",
+      "input_sha256": "9f68ac28097103a5ef245d321f05a4e2db2a1c1b8100658683254466aade3ce6",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd45_screen/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "screen"
+        ]
+      ]
+    },
+    {
+      "id": "dd45_full",
+      "after": [
+        "dd45_screen"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd45_full/gaa.in",
+      "input_sha256": "119d441dff2f43abaf08c42360d5ac88268f2dfb1bbc865d87ab914be413f8b2",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd45_full/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "full",
+          "--compare",
+          "{dependency:dd45_screen}"
+        ]
+      ]
+    },
+    {
+      "id": "dd45_fine",
+      "after": [
+        "dd45_full"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd45_fine/gaa.in",
+      "input_sha256": "e467c50fd452f42be084bae9d9766e9351ef3ee45392a090bc310be9da340454",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd45_fine/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "fine",
+          "--compare",
+          "{dependency:dd45_full}"
+        ]
+      ]
+    },
+    {
+      "id": "dd455_screen",
+      "after": [],
+      "timeout_seconds": null,
+      "input_file": "dd455_screen/gaa.in",
+      "input_sha256": "53217e329e574a82fcfa9613472087a1373a009b8b0febfaa0a3b3f756078624",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd455_screen/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "screen"
+        ]
+      ]
+    },
+    {
+      "id": "dd455_full",
+      "after": [
+        "dd455_screen"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd455_full/gaa.in",
+      "input_sha256": "061cba6a3fbe00fec453c91ae79c2b3bf39b88a2f867274ed054673661ac1f21",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd455_full/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "full",
+          "--compare",
+          "{dependency:dd455_screen}"
+        ]
+      ]
+    },
+    {
+      "id": "dd455_fine",
+      "after": [
+        "dd455_full"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd455_fine/gaa.in",
+      "input_sha256": "61d611c9e414dcabe8358aab3d7b86018f0786adc084ee0f9365df8ad6d5e324",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd455_fine/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "fine",
+          "--compare",
+          "{dependency:dd455_full}"
+        ]
+      ]
+    },
+    {
+      "id": "dd46_screen",
+      "after": [],
+      "timeout_seconds": null,
+      "input_file": "dd46_screen/gaa.in",
+      "input_sha256": "ac16ea8c862f7594fa62d41cc29e80a95079dd2b3ec75ee02459c740883e249e",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd46_screen/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "screen"
+        ]
+      ]
+    },
+    {
+      "id": "dd46_full",
+      "after": [
+        "dd46_screen"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd46_full/gaa.in",
+      "input_sha256": "9214772cef78af058923f72894edb7a31a6398afda008b98dce577ceb8e4a997",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd46_full/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "full",
+          "--compare",
+          "{dependency:dd46_screen}"
+        ]
+      ]
+    },
+    {
+      "id": "dd46_fine",
+      "after": [
+        "dd46_full"
+      ],
+      "timeout_seconds": null,
+      "input_file": "dd46_fine/gaa.in",
+      "input_sha256": "7b26086e13d92d3d207b7840b40264d94a2119bd1e700d6667931ca63d4391dd",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/dd46_fine/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "fine",
+          "--compare",
+          "{dependency:dd46_full}"
+        ]
+      ]
+    },
+    {
+      "id": "bqp45_screen",
+      "after": [],
+      "timeout_seconds": null,
+      "input_file": "bqp45_screen/gaa.in",
+      "input_sha256": "5473070682b99d43f42f13f68fd5b448f4a88daae5238512542875017d8129b6",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/bqp45_screen/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "screen"
+        ]
+      ]
+    },
+    {
+      "id": "bqp45_full",
+      "after": [
+        "bqp45_screen"
+      ],
+      "timeout_seconds": null,
+      "input_file": "bqp45_full/gaa.in",
+      "input_sha256": "975fe44a583d776e10599007803c474aefa0ccea34d1e01748233213bad55ca2",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/bqp45_full/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "full",
+          "--compare",
+          "{dependency:bqp45_screen}"
+        ]
+      ]
+    },
+    {
+      "id": "bqp45_fine",
+      "after": [
+        "bqp45_full"
+      ],
+      "timeout_seconds": null,
+      "input_file": "bqp45_fine/gaa.in",
+      "input_sha256": "6fbf60f519186e11a2f08bd2acafe44578d0dd8345e49a8a7c3b299ffcce6d10",
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/bqp45_fine/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_continuation.py",
+          "{output}",
+          "--mode",
+          "fine",
+          "--compare",
+          "{dependency:bqp45_full}"
+        ]
+      ]
+    }
+  ]
+}

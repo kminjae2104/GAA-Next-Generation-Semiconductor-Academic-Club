@@ -1,0 +1,942 @@
+{
+  "created_utc": "2026-11-18T03:35:07.364855+00:00",
+  "snapshot_kst": "2026-11-18 12:32:20 KST",
+  "current_remote_verified": true,
+  "remote_connection": "Fresh authenticated agent snapshot received and SHA verified",
+  "states": {
+    "SUCCEEDED": 24,
+    "FAILED": 8,
+    "BLOCKED": 2
+  },
+  "representative_cases": {
+    "eq_bicgst_full": {
+      "native_and_exports_recomputed": true,
+      "saved_metrics_match": true,
+      "process_and_finish_checked": true,
+      "config": {
+        "mode": "full",
+        "stage_timeout": null,
+        "required": {
+          "gaa": [
+            "geometry.str",
+            "equilibrium.str",
+            "idvg_low.log",
+            "low_drain.dat",
+            "low_source.dat",
+            "low_gate.dat",
+            "idvg_high.log",
+            "high_drain.dat",
+            "high_source.dat",
+            "high_gate.dat"
+          ]
+        },
+        "parameters": {
+          "gate_nm": 40,
+          "width_nm": 10,
+          "height_nm": 10,
+          "oxide_nm": 1,
+          "gate_metal_nm": 3,
+          "extension_nm": 20,
+          "contact_nm": 5,
+          "acceptor_cm3": 1e+16,
+          "donor_cm3": 1e+20,
+          "workfunction_eV": 4.5,
+          "temperature_K": 300,
+          "vds_V": [
+            0.05,
+            0.6
+          ],
+          "gate_start_V": -0.2,
+          "gate_stop_V": 0.8,
+          "gate_step_V": 0.02,
+          "effective_perimeter_um": 0.04
+        },
+        "linear_solver": "bicgst",
+        "mesh_style": "anisotropic",
+        "processors": 4,
+        "quantum_mode": "none",
+        "gate_initialization": "equilibrium",
+        "mesh_scale": 1,
+        "diagnostic_mesh": false,
+        "engineering_targets_unchanged": true
+      },
+      "recorded_mesh_comparison": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.009809333486565626,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.005372914702651488,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 9.673970397520992e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 0.007547891998136436,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.02286524450099343,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.004926398043708924,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 0.0001014801497753598,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.00394987202329844,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "eq_bicgst_fine": {
+      "native_and_exports_recomputed": true,
+      "saved_metrics_match": true,
+      "process_and_finish_checked": true,
+      "config": {
+        "mode": "fine",
+        "stage_timeout": null,
+        "required": {
+          "gaa": [
+            "geometry.str",
+            "equilibrium.str",
+            "idvg_low.log",
+            "low_drain.dat",
+            "low_source.dat",
+            "low_gate.dat",
+            "idvg_high.log",
+            "high_drain.dat",
+            "high_source.dat",
+            "high_gate.dat"
+          ]
+        },
+        "parameters": {
+          "gate_nm": 40,
+          "width_nm": 10,
+          "height_nm": 10,
+          "oxide_nm": 1,
+          "gate_metal_nm": 3,
+          "extension_nm": 20,
+          "contact_nm": 5,
+          "acceptor_cm3": 1e+16,
+          "donor_cm3": 1e+20,
+          "workfunction_eV": 4.5,
+          "temperature_K": 300,
+          "vds_V": [
+            0.05,
+            0.6
+          ],
+          "gate_start_V": -0.2,
+          "gate_stop_V": 0.8,
+          "gate_step_V": 0.02,
+          "effective_perimeter_um": 0.04
+        },
+        "linear_solver": "bicgst",
+        "mesh_style": "anisotropic",
+        "processors": 4,
+        "quantum_mode": "none",
+        "gate_initialization": "equilibrium",
+        "mesh_scale": 0.5,
+        "diagnostic_mesh": false,
+        "engineering_targets_unchanged": true
+      },
+      "recorded_mesh_comparison": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.0016910051750468375,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.002177603260370098,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 5.016010345983146e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 0.0007704150011846878,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.01312460625804811,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.002399171079862504,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 5.61283320580086e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0015262683286536571,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "wf4p55_full": {
+      "native_and_exports_recomputed": true,
+      "saved_metrics_match": true,
+      "process_and_finish_checked": true,
+      "config": {
+        "mode": "full",
+        "stage_timeout": null,
+        "required": {
+          "gaa": [
+            "geometry.str",
+            "equilibrium.str",
+            "idvg_low.log",
+            "low_drain.dat",
+            "low_source.dat",
+            "low_gate.dat",
+            "idvg_high.log",
+            "high_drain.dat",
+            "high_source.dat",
+            "high_gate.dat"
+          ]
+        },
+        "parameters": {
+          "gate_nm": 40,
+          "width_nm": 10,
+          "height_nm": 10,
+          "oxide_nm": 1,
+          "gate_metal_nm": 3,
+          "extension_nm": 20,
+          "contact_nm": 5,
+          "acceptor_cm3": 1e+16,
+          "donor_cm3": 1e+20,
+          "workfunction_eV": 4.55,
+          "temperature_K": 300,
+          "vds_V": [
+            0.05,
+            0.6
+          ],
+          "gate_start_V": -0.2,
+          "gate_stop_V": 0.8,
+          "gate_step_V": 0.02,
+          "effective_perimeter_um": 0.04
+        },
+        "linear_solver": "bicgst",
+        "mesh_style": "anisotropic",
+        "processors": 4,
+        "quantum_mode": "none",
+        "gate_initialization": "equilibrium",
+        "mesh_scale": 1,
+        "diagnostic_mesh": false,
+        "engineering_targets_unchanged": true
+      },
+      "recorded_mesh_comparison": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.008759723497107075,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.0055161927005262365,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 9.72301893413241e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 0.008541353954583997,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.022509726240379353,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.00500566044560695,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 0.00010153704789250817,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0036081303562767175,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "wf4p6_full": {
+      "native_and_exports_recomputed": true,
+      "saved_metrics_match": true,
+      "process_and_finish_checked": true,
+      "config": {
+        "mode": "full",
+        "stage_timeout": null,
+        "required": {
+          "gaa": [
+            "geometry.str",
+            "equilibrium.str",
+            "idvg_low.log",
+            "low_drain.dat",
+            "low_source.dat",
+            "low_gate.dat",
+            "idvg_high.log",
+            "high_drain.dat",
+            "high_source.dat",
+            "high_gate.dat"
+          ]
+        },
+        "parameters": {
+          "gate_nm": 40,
+          "width_nm": 10,
+          "height_nm": 10,
+          "oxide_nm": 1,
+          "gate_metal_nm": 3,
+          "extension_nm": 20,
+          "contact_nm": 5,
+          "acceptor_cm3": 1e+16,
+          "donor_cm3": 1e+20,
+          "workfunction_eV": 4.6,
+          "temperature_K": 300,
+          "vds_V": [
+            0.05,
+            0.6
+          ],
+          "gate_start_V": -0.2,
+          "gate_stop_V": 0.8,
+          "gate_step_V": 0.02,
+          "effective_perimeter_um": 0.04
+        },
+        "linear_solver": "bicgst",
+        "mesh_style": "anisotropic",
+        "processors": 4,
+        "quantum_mode": "none",
+        "gate_initialization": "equilibrium",
+        "mesh_scale": 1,
+        "diagnostic_mesh": false,
+        "engineering_targets_unchanged": true
+      },
+      "recorded_mesh_comparison": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.012076208355728233,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.005790199335225543,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 9.673970397519605e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 0.00754791260440868,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.028700287137011823,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.00499079141485005,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 0.00010148014977537367,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.003949838754721213,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "bqp_full": {
+      "native_and_exports_recomputed": true,
+      "saved_metrics_match": true,
+      "process_and_finish_checked": true,
+      "config": {
+        "mode": "full",
+        "stage_timeout": null,
+        "required": {
+          "gaa": [
+            "geometry.str",
+            "equilibrium.str",
+            "idvg_low.log",
+            "low_drain.dat",
+            "low_source.dat",
+            "low_gate.dat",
+            "idvg_high.log",
+            "high_drain.dat",
+            "high_source.dat",
+            "high_gate.dat"
+          ]
+        },
+        "parameters": {
+          "gate_nm": 40,
+          "width_nm": 10,
+          "height_nm": 10,
+          "oxide_nm": 1,
+          "gate_metal_nm": 3,
+          "extension_nm": 20,
+          "contact_nm": 5,
+          "acceptor_cm3": 1e+16,
+          "donor_cm3": 1e+20,
+          "workfunction_eV": 4.5,
+          "temperature_K": 300,
+          "vds_V": [
+            0.05,
+            0.6
+          ],
+          "gate_start_V": -0.2,
+          "gate_stop_V": 0.8,
+          "gate_step_V": 0.02,
+          "effective_perimeter_um": 0.04
+        },
+        "linear_solver": "bicgst",
+        "mesh_style": "anisotropic",
+        "processors": 4,
+        "quantum_mode": "bqp",
+        "gate_initialization": "equilibrium",
+        "mesh_scale": 1,
+        "diagnostic_mesh": false,
+        "engineering_targets_unchanged": true
+      },
+      "recorded_mesh_comparison": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.0075195455692385026,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.13998087094090386,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 0.0036338016084769553,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 0.21188133125431818,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.03444127265036815,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.18466304448750448,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 0.004745179082866244,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.4359518675784173,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    }
+  },
+  "recomputed": {
+    "eq_bicgst_full": {
+      "perimeter_um": 0.04,
+      "metrics": {
+        "low": {
+          "Ion_A": 9.13171067e-06,
+          "Ioff_A": 5.43747349e-11,
+          "Ion_A_per_um": 0.00022829276675,
+          "Ioff_A_per_um": 1.3593683725e-09,
+          "Ion_Ioff": 167940.32535136095,
+          "Vth_V": 0.11267606246338337,
+          "SS_mV_dec": 60.18013611262792,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 2.051999999905024e-11,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        },
+        "high": {
+          "Ion_A": 2.43085921e-05,
+          "Ioff_A": 6.78616883e-11,
+          "Ion_A_per_um": 0.0006077148025,
+          "Ioff_A_per_um": 1.6965422074999998e-09,
+          "Ion_Ioff": 358207.8888538351,
+          "Vth_V": 0.10657915712147441,
+          "SS_mV_dec": 60.06277261180028,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 7.900000003669728e-12,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        }
+      },
+      "bias_checks": {
+        "low": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.05,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        },
+        "high": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.6,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        }
+      },
+      "DIBL_mV_V": 11.08528243983447,
+      "engineering_targets": {
+        "ion": true,
+        "ioff": false,
+        "ratio": false,
+        "low_vth": true,
+        "dibl": true,
+        "ss": true,
+        "kcl": true,
+        "monotonic": true
+      },
+      "engineering_targets_pass": false,
+      "simulator_log_review": "REQUIRED_SEPARATELY",
+      "mesh_validation": "PENDING",
+      "physical_validation": "NOT_VALIDATED",
+      "raw_exports_only": true
+    },
+    "eq_bicgst_fine": {
+      "perimeter_um": 0.04,
+      "metrics": {
+        "low": {
+          "Ion_A": 9.1162689e-06,
+          "Ioff_A": 5.44931415e-11,
+          "Ion_A_per_um": 0.00022790672249999998,
+          "Ioff_A_per_um": 1.3623285375e-09,
+          "Ion_Ioff": 167292.04169666013,
+          "Vth_V": 0.11262590235992354,
+          "SS_mV_dec": 60.179365697626736,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 1.103999999938995e-11,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        },
+        "high": {
+          "Ion_A": 2.39895514e-05,
+          "Ioff_A": 6.80245001e-11,
+          "Ion_A_per_um": 0.000599738785,
+          "Ioff_A_per_um": 1.7006125025e-09,
+          "Ion_Ioff": 352660.4585808636,
+          "Vth_V": 0.1065230287894164,
+          "SS_mV_dec": 60.06429888012893,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 4.1000000025907465e-12,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        }
+      },
+      "bias_checks": {
+        "low": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.05,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        },
+        "high": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.6,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        }
+      },
+      "DIBL_mV_V": 11.096133764558427,
+      "engineering_targets": {
+        "ion": true,
+        "ioff": false,
+        "ratio": false,
+        "low_vth": true,
+        "dibl": true,
+        "ss": true,
+        "kcl": true,
+        "monotonic": true
+      },
+      "engineering_targets_pass": false,
+      "simulator_log_review": "REQUIRED_SEPARATELY",
+      "mesh_validation": "PENDING",
+      "physical_validation": "NOT_VALIDATED",
+      "raw_exports_only": true
+    },
+    "wf4p55_full": {
+      "perimeter_um": 0.04,
+      "metrics": {
+        "low": {
+          "Ion_A": 8.46264304e-06,
+          "Ioff_A": 8.01915081e-12,
+          "Ion_A_per_um": 0.000211566076,
+          "Ioff_A_per_um": 2.0047877025000003e-10,
+          "Ion_Ioff": 1055304.1388680404,
+          "Vth_V": 0.16267243785273985,
+          "SS_mV_dec": 60.187302138754816,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 2.0820000000562004e-11,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        },
+        "high": {
+          "Ion_A": 1.99615495e-05,
+          "Ioff_A": 9.97484583e-12,
+          "Ion_A_per_um": 0.0004990387375,
+          "Ioff_A_per_um": 2.4937114575e-10,
+          "Ion_Ioff": 2001188.7742629903,
+          "Vth_V": 0.15657591438458246,
+          "SS_mV_dec": 60.058352685499756,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 7.700000000403131e-12,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        }
+      },
+      "bias_checks": {
+        "low": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.05,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        },
+        "high": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.6,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        }
+      },
+      "DIBL_mV_V": 11.084588123922535,
+      "engineering_targets": {
+        "ion": true,
+        "ioff": true,
+        "ratio": true,
+        "low_vth": true,
+        "dibl": true,
+        "ss": true,
+        "kcl": true,
+        "monotonic": true
+      },
+      "engineering_targets_pass": true,
+      "simulator_log_review": "REQUIRED_SEPARATELY",
+      "mesh_validation": "PENDING",
+      "physical_validation": "NOT_VALIDATED",
+      "raw_exports_only": true
+    },
+    "wf4p6_full": {
+      "perimeter_um": 0.04,
+      "metrics": {
+        "low": {
+          "Ion_A": 7.5083097e-06,
+          "Ioff_A": 1.18074141e-12,
+          "Ion_A_per_um": 0.0001877077425,
+          "Ioff_A_per_um": 2.951853525e-11,
+          "Ion_Ioff": 6358978.889374262,
+          "Vth_V": 0.2126760624633834,
+          "SS_mV_dec": 60.180136123006164,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 2.051999999905024e-11,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        },
+        "high": {
+          "Ion_A": 1.57345155e-05,
+          "Ioff_A": 1.46407966e-12,
+          "Ion_A_per_um": 0.00039336288749999994,
+          "Ioff_A_per_um": 3.66019915e-11,
+          "Ion_Ioff": 10747035.103267536,
+          "Vth_V": 0.2065791571214744,
+          "SS_mV_dec": 60.062772578531714,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 3.800000001078982e-12,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        }
+      },
+      "bias_checks": {
+        "low": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.05,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        },
+        "high": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.6,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        }
+      },
+      "DIBL_mV_V": 11.085282439834522,
+      "engineering_targets": {
+        "ion": true,
+        "ioff": true,
+        "ratio": true,
+        "low_vth": true,
+        "dibl": true,
+        "ss": true,
+        "kcl": true,
+        "monotonic": true
+      },
+      "engineering_targets_pass": true,
+      "simulator_log_review": "REQUIRED_SEPARATELY",
+      "mesh_validation": "PENDING",
+      "physical_validation": "NOT_VALIDATED",
+      "raw_exports_only": true
+    },
+    "bqp_full": {
+      "perimeter_um": 0.04,
+      "metrics": {
+        "low": {
+          "Ion_A": 5.75457125e-06,
+          "Ioff_A": 2.38022563e-11,
+          "Ion_A_per_um": 0.00014386428125,
+          "Ioff_A_per_um": 5.950564075e-10,
+          "Ion_Ioff": 241765.78797699945,
+          "Vth_V": 0.137347072006804,
+          "SS_mV_dec": 61.730659962938304,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 9.9999998245167e-15,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        },
+        "high": {
+          "Ion_A": 1.36489579e-05,
+          "Ioff_A": 3.73226829e-11,
+          "Ion_A_per_um": 0.0003412239475,
+          "Ioff_A_per_um": 9.330670725000001e-10,
+          "Ion_Ioff": 365701.4137105347,
+          "Vth_V": 0.1255634572539216,
+          "SS_mV_dec": 61.88272706467474,
+          "SS_status": "EXTRACTED",
+          "kcl_max_abs_A": 9.9999998245167e-15,
+          "kcl_pass": true,
+          "nonmonotonic_indices": [],
+          "sweep_points": 51,
+          "terminal_signs": [
+            1
+          ]
+        }
+      },
+      "bias_checks": {
+        "low": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.05,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        },
+        "high": {
+          "points": 51,
+          "source_voltage_V": 0,
+          "drain_voltage_V": 0.6,
+          "terminals": [
+            "gate",
+            "source",
+            "drain"
+          ],
+          "native_export_match": true
+        }
+      },
+      "DIBL_mV_V": 21.424754096149805,
+      "engineering_targets": {
+        "ion": true,
+        "ioff": true,
+        "ratio": false,
+        "low_vth": true,
+        "dibl": true,
+        "ss": true,
+        "kcl": true,
+        "monotonic": true
+      },
+      "engineering_targets_pass": false,
+      "simulator_log_review": "REQUIRED_SEPARATELY",
+      "mesh_validation": "PENDING",
+      "physical_validation": "NOT_VALIDATED",
+      "raw_exports_only": true
+    }
+  },
+  "physical_validation": "NOT_VALIDATED",
+  "graphs_created": 0,
+  "presentation_sections": 12,
+  "raw_structure_byte_validation": "NOT_DOWNLOADED",
+  "whole_solver_review": false,
+  "output_sha256": "5dfca77656300feb8ab3cdadeae5bfedf2eb631c8ce780412f00ce2db726b155",
+  "output_sha256_before_reorganization": "36c29f68d0d4535202cf317ba0e43ee73855929cf864de4de08e1fa44fe766f0"
+}

@@ -5,3 +5,10 @@
 *.json text eol=lf
 *.csv text eol=lf
 *.png binary
+# Preserve simulator output bytes and hashes, including native trailing spaces.
+*.log binary
+*.out binary
+*.dat binary
+*solver_tail.txt binary
+*scheduler_console.txt binary
+*scheduler_tail.txt binary

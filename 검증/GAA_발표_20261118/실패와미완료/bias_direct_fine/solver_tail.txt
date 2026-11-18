@@ -1,0 +1,193 @@
+                                                                                              
+ vp (cm/s)    :   1.3e+07   1.3e+07   1.3e+07                                                                                                     
+
+ Saturation Velocities
+ vsatn (cm/s) :  1.03e+07  1.03e+07  1.03e+07                                                                                                     
+ vsatp (cm/s) :  1.03e+07  1.03e+07  1.03e+07                                                                                                     
+
+ Piezoelectric Parameters
+ e33 (C/m^2)  :         0         0         0                                                                                                     
+ e31 (C/m^2)  :         0         0         0                                                                                                     
+ Psp (C/m^2)  :         0         0         0                                                                                                     
+ Alattice (Å) :      5.43      5.43      5.43                             0         0         0         0                                         
+
+REGIONAL MODEL FLAGS:
+ Region:          1    2    3    4    5    6    7    8    9   10   11   12   13 
+ SRH              T    T    T                                                    
+ consrh           F    F    F                                                    
+ klasrh           F    F    F                                                    
+ schsrh           F    F    F                                                    
+ Auger            F    F    F                                                    
+ klaaug           F    F    F                                                    
+ picaug           F    F    F                                                    
+ hnsaug           F    F    F                                                    
+ auggen           F    F    F                                                    
+ kerraug          F    F    F                                                    
+ richteraug       F    F    F                                                    
+ solaraug         F    F    F                                                    
+ optr             F    F    F                                                    
+ solaropt         F    F    F                                                    
+ optr.gb          F    F    F                                                    
+ bgn(std/kla)     T    T    T                                                    
+ ubgn             F    F    F                                                    
+ bgn.alamo        F    F    F                                                    
+ bgn.bennett      F    F    F                                                    
+ bgn.schenk       F    F    F                                                    
+ bgn.lind         F    F    F                                                    
+ bgn.persson      F    F    F                                                    
+ incomplete       F    F    F                                                    
+ inc.two_level    F    F    F                                                    
+ inc.ion          F    F    F                                                    
+ ioniz            F    F    F                                                    
+ inc.cryo         F    F    F                                                    
+ bbt              F    F    F                                                    
+ bbtauto          F    F    F                                                    
+ bbthurkx         F    F    F                                                    
+ bbtkane          F    F    F                                                    
+ bbtschenk        F    F    F                                                    
+ bbtheigl         F    F    F                                                    
+ bbtnonlocal      F    F    F                                                    
+ tat(local)       F    F    F                                                    
+ tatnonlocal      F    F    F                                                    
+ tat(coulombic)   F    F    F                                                    
+ impact           F    F    F                                                    
+ Boltzmann        F    F    F                                                    
+ Fermi-Dirac      T    T    T                                                    
+ cubic35          F    F    F                                                    
+
+Gain and Rsp scaling
+  Gain scale factor  :         1         1         1         1         1         1         1 
+  Rsp scale factor   :         1         1         1         1         1         1         1 
+
+
+REGIONAL MOBILITY MODEL SUMMARY:
+
+  Region #1:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+  Region #2:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+  Region #3:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+
+Contacts :
+Name         Num  Work fn    Resist.    Capacit.   Induct.
+                   (eV)      (Ohms)     (Farads)   (Henries)
+gate          1     4.500   0.000E+00  0.000E+00  0.000E+00
+source        2     0.000   0.000E+00  0.000E+00  0.000E+00
+drain         3     0.000   0.000E+00  0.000E+00  0.000E+00
+gate_right    4     4.500   0.000E+00  0.000E+00  0.000E+00
+gate_top      5     4.500   0.000E+00  0.000E+00  0.000E+00
+gate_botto    6     4.500   0.000E+00  0.000E+00  0.000E+00
+  
+ATLAS> solve init
+
+Starting module:   DEVICE 3D                      
+
+
+Obtaining static solution:
+
+
+init           psi    psi 
+direct          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+Error: Unable to allocate memory.
+
+ATLAS version 5.34.0.R aborted at Tue Nov 17 03:42:22 2026
+284.080u 11.805s 5:56.07 83.0%	0+0k 0+16io 0pf+0w

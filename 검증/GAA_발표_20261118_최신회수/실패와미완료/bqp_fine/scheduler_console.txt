@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/validate_case.py", line 59, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/validate_case.py", line 48, in main
+    result,_=analyze.analyze(execution,.04)
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/analyze.py", line 114, in analyze
+    values[name]=metric(raw[name],perimeter)
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/analyze.py", line 78, in metric
+    if abs(grid[0]+.2)>1e-6 or abs(grid[-1]-.8)>1e-6:raise ValueError('Truncated or incorrect sweep')
+ValueError: Truncated or incorrect sweep

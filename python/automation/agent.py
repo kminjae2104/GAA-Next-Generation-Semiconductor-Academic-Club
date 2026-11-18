@@ -26,17 +26,20 @@ def request(config, path, content=None, digest=None):
     headers = {'Authorization': 'Bearer ' + config['token']}
     if digest:
         headers['X-SHA256'] = digest
-    req = urllib.request.Request(config['base_url'].rstrip('/') + path, data=content, headers=headers)
     last = None
     for attempt in range(3):
-        try:
-            context=ssl.create_default_context(cadata=config.get('ca_pem'))
-            with urllib.request.urlopen(req, timeout=15, context=context) as response:
-                return response.read()
-        except (OSError, ValueError) as exc:
-            last = exc
-            if attempt < 2:
-                time.sleep(2 ** attempt)
+        for base in dict.fromkeys([config['base_url']] + config.get('fallback_urls', [])):
+            if not re.fullmatch(r'https://[a-z0-9.-]+(?::[0-9]+)?', base):
+                raise ValueError('Invalid fallback HTTPS URL')
+            req = urllib.request.Request(base.rstrip('/') + path, data=content, headers=headers)
+            try:
+                context=ssl.create_default_context(cadata=config.get('ca_pem'))
+                with urllib.request.urlopen(req, timeout=15, context=context) as response:
+                    return response.read()
+            except (OSError, ValueError) as exc:
+                last = exc
+        if attempt < 2:
+            time.sleep(2 ** attempt)
     raise RuntimeError('Relay request failed: ' + str(last))
 
 
@@ -142,7 +145,16 @@ def run_package(config,descriptor,end):
             stop_own_process(proc)
     (output / 'agent_exit.json').write_text(json.dumps(dict(returncode=proc.returncode)), encoding='utf-8')
     result = make_result(output)
-    request(config, '/result/' + job, result, hashlib.sha256(result).hexdigest())
+    # Keep a durable copy and retry transport; never rerun the solver for delivery.
+    (root / 'pending_result.zip').write_bytes(result)
+    while True:
+        try:
+            request(config, '/result/' + job, result, hashlib.sha256(result).hexdigest())
+            break
+        except RuntimeError:
+            if time.monotonic() >= end:
+                return 3
+            time.sleep(min(30, max(0, end-time.monotonic())))
     post_event(config, status='RESULT_RETURNED', job=job, returncode=proc.returncode)
     print('Result returned to the originating PC. Study exit code: ' + str(proc.returncode), flush=True)
     return proc.returncode

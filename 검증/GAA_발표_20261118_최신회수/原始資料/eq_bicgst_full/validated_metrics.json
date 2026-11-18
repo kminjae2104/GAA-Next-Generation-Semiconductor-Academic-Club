@@ -1,0 +1,132 @@
+{
+  "perimeter_um": 0.04,
+  "metrics": {
+    "low": {
+      "Ion_A": 9.13171067e-06,
+      "Ioff_A": 5.43747349e-11,
+      "Ion_A_per_um": 0.00022829276675,
+      "Ioff_A_per_um": 1.3593683725e-09,
+      "Ion_Ioff": 167940.32535136095,
+      "Vth_V": 0.11267606246338337,
+      "SS_mV_dec": 60.18013611262792,
+      "SS_status": "EXTRACTED",
+      "kcl_max_abs_A": 2.051999999905024e-11,
+      "kcl_pass": true,
+      "nonmonotonic_indices": [],
+      "sweep_points": 51,
+      "terminal_signs": [
+        1
+      ]
+    },
+    "high": {
+      "Ion_A": 2.43085921e-05,
+      "Ioff_A": 6.78616883e-11,
+      "Ion_A_per_um": 0.0006077148025,
+      "Ioff_A_per_um": 1.6965422074999998e-09,
+      "Ion_Ioff": 358207.8888538351,
+      "Vth_V": 0.10657915712147441,
+      "SS_mV_dec": 60.06277261180028,
+      "SS_status": "EXTRACTED",
+      "kcl_max_abs_A": 7.900000003669728e-12,
+      "kcl_pass": true,
+      "nonmonotonic_indices": [],
+      "sweep_points": 51,
+      "terminal_signs": [
+        1
+      ]
+    }
+  },
+  "bias_checks": {
+    "low": {
+      "points": 51,
+      "source_voltage_V": 0,
+      "drain_voltage_V": 0.05,
+      "terminals": [
+        "gate",
+        "source",
+        "drain"
+      ],
+      "native_export_match": true
+    },
+    "high": {
+      "points": 51,
+      "source_voltage_V": 0,
+      "drain_voltage_V": 0.6,
+      "terminals": [
+        "gate",
+        "source",
+        "drain"
+      ],
+      "native_export_match": true
+    }
+  },
+  "DIBL_mV_V": 11.08528243983447,
+  "engineering_targets": {
+    "ion": true,
+    "ioff": false,
+    "ratio": false,
+    "low_vth": true,
+    "dibl": true,
+    "ss": true,
+    "kcl": true,
+    "monotonic": true
+  },
+  "engineering_targets_pass": false,
+  "simulator_log_review": "REQUIRED_SEPARATELY",
+  "mesh_validation": "DIAGNOSTIC_COMPARISON",
+  "physical_validation": "NOT_VALIDATED",
+  "raw_exports_only": true,
+  "mesh_comparison": {
+    "checks": {
+      "low_Ion_A": {
+        "difference": 0.009809333486565626,
+        "tolerance": 0.05,
+        "relative": true,
+        "passed": true
+      },
+      "low_Ioff_A": {
+        "difference": 0.005372914702651488,
+        "tolerance": 0.2,
+        "relative": true,
+        "passed": true
+      },
+      "low_Vth_V": {
+        "difference": 9.673970397520992e-05,
+        "tolerance": 0.01,
+        "relative": false,
+        "passed": true
+      },
+      "low_SS_mV_dec": {
+        "difference": 0.007547891998136436,
+        "tolerance": 5,
+        "relative": false,
+        "passed": true
+      },
+      "high_Ion_A": {
+        "difference": 0.02286524450099343,
+        "tolerance": 0.05,
+        "relative": true,
+        "passed": true
+      },
+      "high_Ioff_A": {
+        "difference": 0.004926398043708924,
+        "tolerance": 0.2,
+        "relative": true,
+        "passed": true
+      },
+      "high_Vth_V": {
+        "difference": 0.0001014801497753598,
+        "tolerance": 0.01,
+        "relative": false,
+        "passed": true
+      },
+      "high_SS_mV_dec": {
+        "difference": 0.00394987202329844,
+        "tolerance": 5,
+        "relative": false,
+        "passed": true
+      }
+    },
+    "status": "PASS"
+  }
+}

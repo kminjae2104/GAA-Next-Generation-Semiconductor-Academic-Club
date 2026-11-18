@@ -1,0 +1,459 @@
+       N   1.744  1.169  7.999 -22.40 -11.10 -7.010
+   2       N   1.843  1.908  7.626 -22.17 -11.10 -6.550
+   3       N   2.049  2.690  8.245 -22.14 -10.16 -6.563
+   4       N   2.288  3.742  9.073 -22.05 -7.181 -5.455
+
+Warning: Solution diverging. Potential update too large.
+ Update: 194.236 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 8 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201118    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   0.676  0.233  6.602 -23.88 -11.93 -7.885
+   2       N   1.709  1.967  7.840 -23.72 -10.58 -7.103
+   3       N   2.067  5.837  7.632 -22.84 -6.834 -6.872
+   4       N   2.798  7.441  7.945 -21.83 -5.986 -6.174
+
+Warning: Solution diverging. Potential update too large.
+ Update: 627.542 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201116    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -6.23* -6.22* -0.000 -29.1* -21.2* -13.50
+   2       N  -6.23* -6.22* -0.000 -30.3* -22.6* -14.62
+   3       N  -8.91* -8.99* -0.000 -30.9* -23.1* -15.41
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -5.938e-16 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  7.519e-24  1.334e-07  1.334e-07
+Total                                                     -5.836e-16
+
+Time for bias point:  16.00 sec. 
+Total time:            3.20 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201118    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   0.499 -0.000  6.396 -24.14 -11.30 -7.795
+   2       N   0.311  3.259  6.406 -24.16 -11.07 -8.237
+   3       N   0.803  2.403  7.070 -23.20 -11.26 -7.865
+   4       N   1.388  3.739  7.582 -22.86 -10.53 -7.383
+   5       N   2.037  4.600  8.099 -22.07 -8.008 -6.789
+
+Warning: Solution diverging. Potential update too large.
+ Update: 108.996 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201117    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -6.72* -7.13* -0.000 -29.4* -21.3* -13.77
+   2       N  -6.72* -7.13* -0.000 -30.2* -22.8* -14.56
+   3       N  -9.31* -9.40* -0.301 -30.5* -23.1* -14.86
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -4.656e-16 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  9.723e-24  1.334e-07  1.334e-07
+Total                                                     -3.643e-16
+
+Time for bias point:  16.00 sec. 
+Total time:            3.23 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201118    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -4.825 -4.965 -0.000 -28.1* -20.0* -12.70
+   2       N  -4.825 -4.964 -0.000 -29.1* -21.1* -13.72
+   3       N  -7.27* -7.61* -0.000 -29.9* -22.3* -14.59
+   4       N  -8.67* -8.80* -0.000 -30.9* -23.1* -15.95
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -1.185e-18 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  9.731e-24  1.334e-07  1.334e-07
+Total                                                      2.675e-17
+
+Time for bias point:  20.00 sec. 
+Total time:            3.23 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201123    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.990  0.981  8.758 -22.58 -9.747 -6.650
+   2       N   3.235  6.302  10.03 -20.86 -4.656 -4.162
+   3       N   6.233  9.301  11.38 -19.20 -3.478  0.150
+   4       N   6.574  10.57  10.15 -19.19 -0.511 -0.132
+
+Warning: Solution diverging. Potential update too large.
+ Update: 3.75166e+06 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 8 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201121    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -3.186 -3.586  2.670 -27.0* -19.3* -11.96
+   2       N  -3.186 -3.586 -0.000 -27.8* -19.3* -12.65
+   3       N  -5.09* -5.41* -0.000 -28.9* -21.4* -13.68
+   4       N  -6.85* -7.31* -0.000 -29.5* -22.7* -14.67
+   5       N  -8.79* -7.92* -0.000 -30.5* -23.2* -15.62
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -2.423e-18 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  8.264e-23  1.334e-07  1.334e-07
+Total                                                     -7.783e-18
+
+Time for bias point:  24.00 sec. 
+Total time:            3.26 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201123    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.271  1.096  7.791 -23.22 -10.25 -7.360
+   2       N   2.400  3.373  8.792 -22.02 -9.556 -5.867
+   3       N   2.154  4.259  8.785 -22.02 -7.620 -5.865
+   4       N   3.275  5.198  9.897 -20.69 -6.954 -4.008
+
+Warning: Solution diverging. Potential update too large.
+ Update: 1881.98 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 8 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -3.305 -3.607  2.182 -26.8* -19.9* -11.94
+   2       N  -3.308 -3.609 -0.000 -28.4* -19.9* -13.33
+   3       N  -5.12* -5.39* -0.000 -29.4* -22.1* -14.22
+   4       N  -7.94* -7.98* -0.000 -30.7* -23.1* -15.30
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -3.053e-16 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  8.485e-23  1.334e-07  1.334e-07
+Total                                                     -3.610e-16
+
+Time for bias point:  20.00 sec. 
+Total time:            3.28 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201123    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   0.719  0.708  6.773 -23.87 -11.09 -7.891
+   2       N   1.129  1.298  7.151 -23.17 -10.08 -7.465
+   3       N   2.221  3.377  7.503 -22.18 -8.860 -7.126
+   4       N   2.129  4.499  8.283 -22.47 -7.410 -6.384
+   5       N   2.911  5.829  8.614 -22.01 -6.570 -6.110
+
+Warning: Solution diverging. Potential update too large.
+ Update: 815.578 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 8 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.306  0.664  7.113 -22.78 -10.02 -6.757
+   2       N   1.696  3.673  8.047 -23.22 -9.563 -7.003
+   3       N   3.881  5.285  9.663 -21.22 -7.375 -3.728
+   4       N   4.784  7.897  10.49 -19.20 -3.629 -1.310
+
+Warning: Solution diverging. Potential update too large.
+ Update: 60839.8 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -4.488 -4.648  0.551 -27.6* -20.5* -12.39
+   2       N  -4.489 -4.651 -0.000 -28.9* -21.4* -13.69
+   3       N  -6.71* -6.58* -0.000 -31.1* -23.1* -15.89
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -6.667e-16 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  8.498e-23  1.334e-07  1.334e-07
+Total                                                     -7.477e-16
+
+Time for bias point:  16.00 sec. 
+Total time:            3.32 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.260  1.172  7.857 -22.79 -11.66 -7.230
+   2       N   0.213  0.661  6.038 -22.79 -11.67 -7.233
+   3       N   0.607  0.617  5.473 -22.79 -11.52 -7.238
+   4       N   0.870  1.105  7.473 -22.79 -10.49 -7.244
+   5       N   2.182  2.226  8.059 -22.09 -10.79 -6.001
+
+Warning: Solution diverging. Potential update too large.
+ Update: 152.027 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.187  0.945  7.494 -23.41 -11.69 -7.513
+   2       N   1.710  2.543  7.441 -22.42 -9.652 -6.878
+   3       N   2.988  3.694  9.155 -21.43 -8.798 -4.351
+   4       N   4.538  9.062  10.31 -19.82 -2.672 -1.413
+
+Warning: Solution diverging. Potential update too large.
+ Update: 34547.6 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 10 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -7.87* -7.88* -0.000 -30.5* -22.4* -14.89
+   2       N  -8.88* -8.92* -0.000 -31.9* -23.1* -16.33
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -4.769e-18 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  8.764e-24  1.334e-07  1.334e-07
+Total                                                     -3.431e-18
+
+Time for bias point:  12.00 sec. 
+Total time:            3.37 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N  -1.949 -2.217  3.275 -27.2* -17.3* -10.90
+   2       N  -1.960 -2.231  2.447 -27.9* -17.4* -12.60
+   3       N  -3.525 -3.787 -0.000 -28.5* -20.2* -13.39
+   4       N  -6.62* -7.00* -0.000 -29.5* -22.3* -14.06
+   5       N  -8.34* -8.74* -0.000 -30.2* -23.1* -14.91
+
+Electrode       Va(V)      In(A)      Ip(A)      Ic(A)      It(A)
+====================================================================
+gate           2.011e-01                       -0.000e+00  0.000e+00
+source         0.000e+00 -1.334e-07 -1.222e-14 -1.334e-07 -1.334e-07
+drain          4.419e-01  1.334e-07  2.245e-23  1.334e-07  1.334e-07
+Total                                                     -1.218e-14
+
+Time for bias point:  24.00 sec. 
+Total time:            3.37 hr.  
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.087  0.874  7.499 -22.92 -11.75 -7.056
+   2       N   1.123  1.593  7.432 -22.92 -10.65 -7.082
+   3       N   1.393  1.386  5.601 -22.77 -10.65 -7.082
+   4       N   2.046  2.742  7.468 -21.98 -8.400 -6.585
+
+Warning: Solution diverging. Potential update too large.
+ Update: 111.257 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.663  1.402  7.973 -22.52 -9.885 -6.498
+   2       N   1.085  1.880  7.452 -22.52 -9.885 -6.498
+   3       N   2.296  4.989  8.952 -21.90 -7.036 -6.036
+   4       N   2.900  5.990  8.849 -21.18 -5.437 -4.557
+
+Warning: Solution diverging. Potential update too large.
+ Update: 793.622 Vstep: 0.773633
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 10 times.
+
+
+Obtaining static solution:
+
+ V(   gate  ) = 0.201122    
+
+
+proj           psi     n      p     psi     n      p  
+BICGST          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1       N   1.098  0.958  6.957 -23.24 -11.48 -7.825
+   2       N   1.752  3.579  7.997 -22.55 -8.604 -6.862
+   3       N   2.495  4.484  8.968 -21.67 -7.250 -5.059
+   4       N   3.049  4.896  9.018 -20.88 -4.556 -4.881
+
+Warning: Solution diverging. Potential update too large.
+ Update: 1120.16 Vstep: 0.773633
+
+
+Warning: Bias step cut back more than 10
+times.  Cannot trap.
+
+ATLAS> log off
+ATLAS> save outf=final_high.str
+
+MASTER format file written to final_high.str
+ATLAS> EXTRACT> init infile="idvg_high.log"
+EXTRACT> extract name="high_drain" curve(v."gate",i."drain") outfile="high_drain.dat"
+EXTRACT> extract name="high_source" curve(v."gate",i."source") outfile="high_source.dat"
+EXTRACT> extract name="high_gate" curve(v."gate",i."gate") outfile="high_gate.dat"
+EXTRACT> quit
+quit
+
+ATLAS version 5.34.0.R finished at Mon Nov 16 21:13:03 2026
+14055.141u 1526.504s 3:27:03.90 125.4%	0+0k 0+1497504io 0pf+0w

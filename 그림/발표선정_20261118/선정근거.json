@@ -1,0 +1,23 @@
+[
+  {
+    "case": "eq_bicgst_fine",
+    "source": ".local/collected/gaa_presentation_snapshot_20261118T032856Z/gaa_overnight_20261116T080149Z/cases/eq_bicgst_fine/idvg_high.log",
+    "sha256": "fe695643dadef1a7c405aa470ab54860852b972daa366f0ab5c578980e56c337",
+    "png": "eq_bicgst_fine.png",
+    "rows_in_native_log": 51
+  },
+  {
+    "case": "wf4p6_fine",
+    "source": ".local/collected/gaa_presentation_snapshot_20261118T032856Z/gaa_overnight_20261116T080149Z/cases/wf4p6_fine/idvg_high.log",
+    "sha256": "ac4877f7a31034798a578338e1e64c9ce4a22f3f0223065ca5fd57351c4e6cd8",
+    "png": "wf4p6_fine.png",
+    "rows_in_native_log": 52
+  },
+  {
+    "case": "bqp_fine",
+    "source": ".local/collected/gaa_presentation_snapshot_20261118T032856Z/gaa_overnight_20261116T080149Z/cases/bqp_fine/idvg_high.log",
+    "sha256": "dd9b96d6d9acee8238c50654ab19a1967698a824809c4b3b34cb2c5cf78a48b5",
+    "png": "bqp_fine.png",
+    "rows_in_native_log": 54
+  }
+]

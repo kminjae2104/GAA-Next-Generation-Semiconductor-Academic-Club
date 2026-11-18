@@ -1,0 +1,23 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 6868.7,
+  "diagnostic_tail": [
+    "SFLM: Current License Server: semicon1:3162/",
+    "Communications with license server restored. ",
+    "Warning: Convergence problem.  Taking smaller bias"
+  ],
+  "last_solver_lines": [
+    "  57    1  G  -1.508               -18.13              ",
+    "  58    1  G  -1.508               -18.16              ",
+    "  59    1  G  -1.508               -18.18              ",
+    "  60    1  G  -1.508               -18.20              "
+  ],
+  "last_bias": [
+    "V(  drain  ) = 3.125e-05"
+  ],
+  "output_sizes": {
+    "console.txt": 793,
+    "solver.out": 144195
+  }
+}

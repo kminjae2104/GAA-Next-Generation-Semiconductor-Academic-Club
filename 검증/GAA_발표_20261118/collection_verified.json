@@ -1,0 +1,7 @@
+{
+  "archive_sha256": "e0c85b1a9abf907799d2c1eafccfe95e4635baba3cc680c9d776c51d90992d55",
+  "files_verified": 385,
+  "transport_verified": true,
+  "simulator_success": "REQUIRES_LOG_REVIEW",
+  "physical_validation": "NOT_VALIDATED"
+}

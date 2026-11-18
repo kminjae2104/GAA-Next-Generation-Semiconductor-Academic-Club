@@ -1,0 +1,31 @@
+{
+  "stage": "gaa",
+  "returncode": 11,
+  "timeout": false,
+  "seconds": 5.377,
+  "missing": [
+    "equilibrium.str",
+    "idvg_low.log",
+    "low_drain.dat",
+    "low_source.dat",
+    "low_gate.dat",
+    "idvg_high.log",
+    "high_drain.dat",
+    "high_source.dat",
+    "high_gate.dat"
+  ],
+  "normal_atlas_finish": false,
+  "license_diagnostics": [],
+  "diagnostic_lines": [
+    "FLEXlm=/users/tools/Silvaco/etc/license",
+    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+    "\tError(s)   = 0"
+  ],
+  "fatal_lines": [],
+  "outputs": {
+    "gaa.in": 4721,
+    "console.txt": 140,
+    "solver.out": 5614,
+    "geometry.str": 19413397
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "snapshot.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/snapshot.json",
+    "sha256": "bd6fafa30a327facdf31d2c1983d1e7d788be5913e30d9ab8444f02d64ac07f2",
+    "bytes": 6169
+  },
+  "recovery.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/recovery.json",
+    "sha256": "5ace75a85bc975b6498d013ef402824340b27005da313ba82019fa4bf1e61626",
+    "bytes": 2529
+  },
+  "collection_verified.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/collection_verified.json",
+    "sha256": "fbaa0c605c4c4be956a35a629ed8446d1cb6248cb1a5f39559c35492279498c3",
+    "bytes": 234
+  },
+  "remote_check.json": {
+    "source": ".local/presentation_remote_check_20261118.json",
+    "sha256": "fb268cf4529ed8722cce59a4795d2e9616612b3249e8472226b7fa1907437476",
+    "bytes": 251
+  },
+  "原始資料/eq_bicgst_full/high_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/high_drain.dat",
+    "sha256": "3b52718605825f7da3041eb4343fa4e8066bcc4d9610439037777e33a1e02fe2",
+    "bytes": 1084
+  },
+  "原始資料/eq_bicgst_full/high_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/high_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/eq_bicgst_full/high_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/high_source.dat",
+    "sha256": "e58cd35356119d73195e431379d15313ae526f3a5982f30a1db974989c09170b",
+    "bytes": 1133
+  },
+  "原始資料/eq_bicgst_full/idvg_high.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/idvg_high.log",
+    "sha256": "8e0da5e155499d426051522eef7d1964262f797ded6a0a9aa9a1cd7d3f07d1f0",
+    "bytes": 8789
+  },
+  "原始資料/eq_bicgst_full/idvg_low.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/idvg_low.log",
+    "sha256": "b2a7be98f794dc7c0cf614e447ae72addcd7778a4c207d3543da93d38b173242",
+    "bytes": 8789
+  },
+  "原始資料/eq_bicgst_full/low_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/low_drain.dat",
+    "sha256": "49ef7b12620b4623e8b1efc2ece66e21c86a8795cec1a46214f4623d08e0123e",
+    "bytes": 1083
+  },
+  "原始資料/eq_bicgst_full/low_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/low_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/eq_bicgst_full/low_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/low_source.dat",
+    "sha256": "7914fb8fc0f82efb9e076e0ffe906568a121091deff5f44740336b080ab4b1b6",
+    "bytes": 1136
+  },
+  "原始資料/eq_bicgst_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/process.json",
+    "sha256": "a3d77eb43ab4dca900cd2b8d4f4f0389c63c975d2fd675554276af4795c043f6",
+    "bytes": 1865
+  },
+  "原始資料/eq_bicgst_full/retained_structures.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/retained_structures.json",
+    "sha256": "7f5b4991f0d9b0f83c7e5ef525fcf9d694c2dd68a508d3fb9513d4ace96fa5fa",
+    "bytes": 1226
+  },
+  "原始資料/eq_bicgst_full/run_config.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/run_config.json",
+    "sha256": "ad0e82546f2ed3a8156ba8985234463465dbbd65d1fd1562ad06d24c547fa46f",
+    "bytes": 980
+  },
+  "原始資料/eq_bicgst_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/solver_tail.txt",
+    "sha256": "abc38df0bb0a8e4c0c730573cfcd40f7a47a714a9c3947aaed9caac08c4996e5",
+    "bytes": 8192
+  },
+  "原始資料/eq_bicgst_full/validated_metrics.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_full/validated_metrics.json",
+    "sha256": "fa86e03ff9db31b3fa6a7b285d44d8d25aa3e34ab68918c5fcdc8ed2b58a1584",
+    "bytes": 3164
+  },
+  "덱/eq_bicgst_full.in": {
+    "source": "연구/01_GAA_IdVg/tcad/gaa_overnight_20261116T080149Z/eq_bicgst_full.in",
+    "sha256": "6e262da37e412c6b7f91f88229c5beb824b02018c6cb82433723d6a6dcc7e0b2",
+    "bytes": 4704
+  },
+  "原始資料/eq_bicgst_fine/high_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/high_drain.dat",
+    "sha256": "b473144ae91fc77fb896d2abb3f248f23752ab5abaaa35ee9f092f9183c8e2d2",
+    "bytes": 1079
+  },
+  "原始資料/eq_bicgst_fine/high_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/high_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/eq_bicgst_fine/high_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/high_source.dat",
+    "sha256": "98dd3dfc034167f7bba409b14195689744812ca2d468068079c7822047c1e72b",
+    "bytes": 1132
+  },
+  "原始資料/eq_bicgst_fine/idvg_high.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/idvg_high.log",
+    "sha256": "fe695643dadef1a7c405aa470ab54860852b972daa366f0ab5c578980e56c337",
+    "bytes": 8789
+  },
+  "原始資料/eq_bicgst_fine/idvg_low.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/idvg_low.log",
+    "sha256": "e1e90e6bdbd19e9e8b8f89c283b68f2e451a8d6a349a9f810e977adee2e17e79",
+    "bytes": 8789
+  },
+  "原始資料/eq_bicgst_fine/low_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/low_drain.dat",
+    "sha256": "716871b4947cc1ed01877c51738f3395ea053d595271c5b003743d518b4c0810",
+    "bytes": 1082
+  },
+  "原始資料/eq_bicgst_fine/low_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/low_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/eq_bicgst_fine/low_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/low_source.dat",
+    "sha256": "77543a12a237c8ac62988e54725ff03be7e4521d5c0156ece51520fed05f730f",
+    "bytes": 1138
+  },
+  "原始資料/eq_bicgst_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/process.json",
+    "sha256": "c661887933edbc738ff97ecb0f49a3f727aa627035cb540d9f52ebbf4c616d50",
+    "bytes": 2020
+  },
+  "原始資料/eq_bicgst_fine/retained_structures.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/retained_structures.json",
+    "sha256": "c0be56a62de51123408d0823c7405e6de46074f0331421900266384f4d4558aa",
+    "bytes": 1633
+  },
+  "原始資料/eq_bicgst_fine/run_config.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/run_config.json",
+    "sha256": "473973ce2dbe9438a72433ba211617161a0114ff9c6dfd5ae64ad10cb84c1070",
+    "bytes": 982
+  },
+  "原始資料/eq_bicgst_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/solver_tail.txt",
+    "sha256": "38cce480bc7f1cb25ebf66904c971a658b1d8a31db0fe38e6ba0493a730a7434",
+    "bytes": 8192
+  },
+  "原始資料/eq_bicgst_fine/validated_metrics.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_bicgst_fine/validated_metrics.json",
+    "sha256": "a8739593b86ea9dc44b59d3f9fbe685997e39ea961f742801afc44ab403d304a",
+    "bytes": 3150
+  },
+  "덱/eq_bicgst_fine.in": {
+    "source": "연구/01_GAA_IdVg/tcad/gaa_overnight_20261116T080149Z/eq_bicgst_fine.in",
+    "sha256": "274a8f07205f97688ecd344713928b6ba5530abe782967785048bde09cc24140",
+    "bytes": 4735
+  },
+  "原始資料/wf4p55_full/high_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/high_drain.dat",
+    "sha256": "a6e4dd814a24619039d9393c02459f003360c185e000ece4be12991459260312",
+    "bytes": 1084
+  },
+  "原始資料/wf4p55_full/high_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/high_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/wf4p55_full/high_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/high_source.dat",
+    "sha256": "7c0f64e09ff795cf6fdbe120781615c3554c78201c2818de4d3bf2b3fe194701",
+    "bytes": 1137
+  },
+  "原始資料/wf4p55_full/idvg_high.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/idvg_high.log",
+    "sha256": "85e4d113a7938a5492e6901dd50b75da381ee9f6c479ab3c2b1cb071075c0717",
+    "bytes": 8789
+  },
+  "原始資料/wf4p55_full/idvg_low.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/idvg_low.log",
+    "sha256": "773abe6fd3b526409a9072db226d4d212708a51484c1f1bc16b812d3e8006849",
+    "bytes": 8789
+  },
+  "原始資料/wf4p55_full/low_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/low_drain.dat",
+    "sha256": "d8921f3052dc2534e339db451b53c88fda920f430d8211f0c7540a44650cf0a7",
+    "bytes": 1084
+  },
+  "原始資料/wf4p55_full/low_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/low_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/wf4p55_full/low_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/low_source.dat",
+    "sha256": "8c24ed33cbbaab8c091e6a5cd03918fa56779e1b2bea17d0ae780cc650fb7bcd",
+    "bytes": 1140
+  },
+  "原始資料/wf4p55_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/process.json",
+    "sha256": "036877922b74f94632ce49b901df2630bbd4de72e9037e367cee5757780e58c9",
+    "bytes": 1865
+  },
+  "原始資料/wf4p55_full/retained_structures.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/retained_structures.json",
+    "sha256": "5697ee42fc5c7e2a74d52f8edf4237296d5713dfd8dc08681a81dcd21cf1c23c",
+    "bytes": 1217
+  },
+  "原始資料/wf4p55_full/run_config.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/run_config.json",
+    "sha256": "e11630a3c01008d6c97c19f90a727c531e4a2832247ba225889d484c43a5e54e",
+    "bytes": 981
+  },
+  "原始資料/wf4p55_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/solver_tail.txt",
+    "sha256": "7a750dd649f009d0f8c9f102fa5ee30be356b5c66686aaa08091a9da473da824",
+    "bytes": 8192
+  },
+  "原始資料/wf4p55_full/validated_metrics.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_full/validated_metrics.json",
+    "sha256": "e735155e723e93fda1091abe9f6c1c3334f92554398bb30ce5b979fa117ecdc1",
+    "bytes": 3167
+  },
+  "덱/wf4p55_full.in": {
+    "source": "연구/01_GAA_IdVg/tcad/gaa_overnight_20261116T080149Z/wf4p55_full.in",
+    "sha256": "692a29e0a2dc6f51847686a895c15e47334846a8b66c437f3d9a34ee8b760c65",
+    "bytes": 4708
+  },
+  "原始資料/wf4p6_full/high_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/high_drain.dat",
+    "sha256": "45577fac68bfc06ddf4072a7293078b5e8a0f75999bf4f68ed4d328460f7fa3d",
+    "bytes": 1083
+  },
+  "原始資料/wf4p6_full/high_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/high_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/wf4p6_full/high_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/high_source.dat",
+    "sha256": "3f1cfa20075f29c171a034857144df3b52b2925a7e78f2ff8a41c9e821896687",
+    "bytes": 1131
+  },
+  "原始資料/wf4p6_full/idvg_high.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/idvg_high.log",
+    "sha256": "f54fb2f5d14d3afa9f6a0b04ce1d6ec58b4adba865a8a62c310c4cdcbdaddc46",
+    "bytes": 8789
+  },
+  "原始資料/wf4p6_full/idvg_low.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/idvg_low.log",
+    "sha256": "7010071349d980f5d805723c9a512ecc182bc708690715b198752c3463a2a3eb",
+    "bytes": 8789
+  },
+  "原始資料/wf4p6_full/low_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/low_drain.dat",
+    "sha256": "649ea5959c119db2ea7ffd06bd51fbafad59b2428b579f15aed40f60d832c722",
+    "bytes": 1083
+  },
+  "原始資料/wf4p6_full/low_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/low_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/wf4p6_full/low_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/low_source.dat",
+    "sha256": "0ca01dfe932cf7ef41f44b7328d3f5a1ef02ced5a1db87d8d77810a720d25043",
+    "bytes": 1133
+  },
+  "原始資料/wf4p6_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/process.json",
+    "sha256": "e640c3a18a1f64508651e383ded772ab51ccf3f48250f5b0bc194b73cb1c713f",
+    "bytes": 1435
+  },
+  "原始資料/wf4p6_full/retained_structures.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/retained_structures.json",
+    "sha256": "b06f9cfc8ece594690363d7f7789f61783bcdaa702a547785000de619714b92f",
+    "bytes": 1214
+  },
+  "原始資料/wf4p6_full/run_config.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/run_config.json",
+    "sha256": "31648b5502f307fe0e636a4b2272f8bb6660de644b92281c0b4a3048d3fb2bca",
+    "bytes": 980
+  },
+  "原始資料/wf4p6_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/solver_tail.txt",
+    "sha256": "5dd0a178f8e3ac5a07be122a35ce36b2cb5859450950e11da8a24d5ae9b2376c",
+    "bytes": 8192
+  },
+  "原始資料/wf4p6_full/validated_metrics.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_full/validated_metrics.json",
+    "sha256": "1643518e7c255ff241ee73716ddfe2d42b5e84132d7a27a2eb46fcadd2f17479",
+    "bytes": 3159
+  },
+  "덱/wf4p6_full.in": {
+    "source": "연구/01_GAA_IdVg/tcad/gaa_overnight_20261116T080149Z/wf4p6_full.in",
+    "sha256": "dee5cce76b3f6e134e9105b9dcb62def99d40826ed3ad12ffa6c38fcb27554dd",
+    "bytes": 4704
+  },
+  "原始資料/bqp_full/high_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/high_drain.dat",
+    "sha256": "585ca52fcc564912122fd44f68b0192c6b5b53b9d804d5435cff34cf85bad896",
+    "bytes": 1081
+  },
+  "原始資料/bqp_full/high_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/high_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/bqp_full/high_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/high_source.dat",
+    "sha256": "64d54a440db0b16c6f0e659cf72b7cb9bd34c721b0ae729a20ee309f98aa98c5",
+    "bytes": 1136
+  },
+  "原始資料/bqp_full/idvg_high.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/idvg_high.log",
+    "sha256": "841a6424583da2d366bd36228b7dce82ed5bb8ba0ddce19123441f05833f04a0",
+    "bytes": 8789
+  },
+  "原始資料/bqp_full/idvg_low.log": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/idvg_low.log",
+    "sha256": "4dddedefc372f63cf7f60a70c63e63e72a62ef1a5aa2fcf9172fa5c0a954fbcd",
+    "bytes": 8789
+  },
+  "原始資料/bqp_full/low_drain.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/low_drain.dat",
+    "sha256": "32cba2e38e20cd9329e458acc5aa51ed1adb98fd7c58dd8851668184e8f3ed32",
+    "bytes": 1082
+  },
+  "原始資料/bqp_full/low_gate.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/low_gate.dat",
+    "sha256": "f1a297523b5712e3b38d4a9b87dd8b6c569dcefa781334d51c19c02f950ea4f8",
+    "bytes": 423
+  },
+  "原始資料/bqp_full/low_source.dat": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/low_source.dat",
+    "sha256": "46423040478103744410afbc4c03d879509ab41da7ba505923ef56f8680ad3c5",
+    "bytes": 1131
+  },
+  "原始資料/bqp_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/process.json",
+    "sha256": "3ee125c7ded0b3d97b79be14faa6a819f127a8344b6e29307b3acba1f7bfd7a1",
+    "bytes": 1377
+  },
+  "原始資料/bqp_full/retained_structures.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/retained_structures.json",
+    "sha256": "4a5f5bbe9b4d96d0f833980d3198648b6025d7c7a56d1b3673bb3fe3c76b71dc",
+    "bytes": 1208
+  },
+  "原始資料/bqp_full/run_config.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/run_config.json",
+    "sha256": "b64a10672912fd7eeb68f8ad1c42b297bab76b51b34fdd7d1718d82caa46a415",
+    "bytes": 979
+  },
+  "原始資料/bqp_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/solver_tail.txt",
+    "sha256": "111d0fd29b00ac668058f2134cf3b84edea2a398638246cd7aac9b7c56e0f6eb",
+    "bytes": 8192
+  },
+  "原始資料/bqp_full/validated_metrics.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_full/validated_metrics.json",
+    "sha256": "b14f75bb485b4dad7c1b1eca0a3b76f83eb474fc79660d58a6da97f7856a932c",
+    "bytes": 3152
+  },
+  "덱/bqp_full.in": {
+    "source": "연구/01_GAA_IdVg/tcad/gaa_overnight_20261116T080149Z/bqp_full.in",
+    "sha256": "f789425d99a38ba382660b0776da779988d1cb5dccd69f4d8d805fe85a0a0243",
+    "bytes": 4748
+  },
+  "실패와미완료/bias_bicgst_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_bicgst_full/solver_tail.txt",
+    "sha256": "1c01a3c90b5d26d959e7c299518a5fd9b30563b816313812336b8eea65595da9",
+    "bytes": 8192
+  },
+  "실패와미완료/bias_bicgst_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_bicgst_full/process.json",
+    "sha256": "04ba551d283672fb0cbf8984c44c1d2d3c4fdea07de8acb7a6d6107f5d3a08dc",
+    "bytes": 3194
+  },
+  "실패와미완료/bias_bicgst_full/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_bicgst_full/progress.json",
+    "sha256": "57d4f75d7809e1a97a826d6f7cb06d23c3d891c852051c89760d530433a958a8",
+    "bytes": 73
+  },
+  "실패와미완료/bias_default_full/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_default_full/solver_tail.txt",
+    "sha256": "73bc141ac024e3f38570be6ccfb5645397d16872303ac2f70f5215187f1ffaf8",
+    "bytes": 8192
+  },
+  "실패와미완료/bias_default_full/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_default_full/process.json",
+    "sha256": "d79edb117521c9bff454d4f1fd6ee5eb35e037e1d67d4533b0aaaced8754f21c",
+    "bytes": 3053
+  },
+  "실패와미완료/bias_default_full/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_default_full/progress.json",
+    "sha256": "57d4f75d7809e1a97a826d6f7cb06d23c3d891c852051c89760d530433a958a8",
+    "bytes": 73
+  },
+  "실패와미완료/bias_direct_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_direct_fine/solver_tail.txt",
+    "sha256": "b8f72acc37e662d36049881689510990f59fb1c9e49f6540cf73e5003a742914",
+    "bytes": 8192
+  },
+  "실패와미완료/bias_direct_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_direct_fine/process.json",
+    "sha256": "186fe12c4ee59d40bb4357cbb041b2026ce7005e82b5a744eada65af890c62de",
+    "bytes": 1830
+  },
+  "실패와미완료/bias_direct_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bias_direct_fine/progress.json",
+    "sha256": "947e20fa9c66716ff439a23aed286298d996f691feee559404a8a3e5039bde6f",
+    "bytes": 542
+  },
+  "실패와미완료/eq_direct_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_direct_fine/solver_tail.txt",
+    "sha256": "b3637cf646cbbdd00bc5e7bc61b8fd43924aedf7406fab6f9a5115ab15919fa8",
+    "bytes": 8192
+  },
+  "실패와미완료/eq_direct_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_direct_fine/process.json",
+    "sha256": "fcf0b246aab83e959eba257856eee31946e7168992595d6f61af38e7cda01361",
+    "bytes": 1830
+  },
+  "실패와미완료/eq_direct_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_direct_fine/progress.json",
+    "sha256": "6a8e3ab85d9fb6f9e7a03866cdc2bf13d5c020271f19331983402408ad37f272",
+    "bytes": 522
+  },
+  "실패와미완료/eq_default_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_default_fine/solver_tail.txt",
+    "sha256": "d9316dd4f37dee264a89d43f56062f929e1ea7232a9c3b71bd6f8623766e7bd3",
+    "bytes": 5614
+  },
+  "실패와미완료/eq_default_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_default_fine/process.json",
+    "sha256": "6327c0c42632f7a4d7cbce88dc16c5088d947491091f3f4b310152ff0d33321f",
+    "bytes": 641
+  },
+  "실패와미완료/eq_default_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/eq_default_fine/progress.json",
+    "sha256": "88103e0a3d359014768f71e6047475ffedf8a5ec7b4f4ee38c411df26ee9cfbb",
+    "bytes": 430
+  },
+  "실패와미완료/wf4p55_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_fine/solver_tail.txt",
+    "sha256": "cef54addc7319608bf5643a5f6d9b2417c9e81bb5f9dc4372dad1318ef85f4e7",
+    "bytes": 8192
+  },
+  "실패와미완료/wf4p55_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_fine/process.json",
+    "sha256": "cfd912911180b4f26f5543f36d53978188284fa28b8504888146db5bb64f8570",
+    "bytes": 3058
+  },
+  "실패와미완료/wf4p55_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p55_fine/progress.json",
+    "sha256": "57d4f75d7809e1a97a826d6f7cb06d23c3d891c852051c89760d530433a958a8",
+    "bytes": 73
+  },
+  "실패와미완료/wf4p6_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_fine/solver_tail.txt",
+    "sha256": "37d9ae4b4bdf9717c4d7783d485e6b7dc09a6734ab6550a306cb096e3d1892c6",
+    "bytes": 8192
+  },
+  "실패와미완료/wf4p6_fine/process.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_fine/process.json",
+    "sha256": "cfda3a09d815b3be1350d13ef013b047c88a2baf5923546dba86429d66d2011b",
+    "bytes": 3198
+  },
+  "실패와미완료/wf4p6_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/wf4p6_fine/progress.json",
+    "sha256": "57d4f75d7809e1a97a826d6f7cb06d23c3d891c852051c89760d530433a958a8",
+    "bytes": 73
+  },
+  "실패와미완료/bqp_fine/solver_tail.txt": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_fine/solver_tail.txt",
+    "sha256": "505461c2637d53d263c72a649ce012d117decabe36bbc64e064039a5a6467297",
+    "bytes": 8192
+  },
+  "실패와미완료/bqp_fine/progress.json": {
+    "source": ".local/collected/gaa_night_snapshot_20261117T072717Z/cases/bqp_fine/progress.json",
+    "sha256": "04c6bd99008280d85e087e1e45dc031ef83fc9608cedea65c41be115c220a465",
+    "bytes": 775
+  }
+}

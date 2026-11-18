@@ -1,0 +1,21 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 360.2,
+  "diagnostic_tail": [
+    "SFLM: Current License Server: semicon1:3162/",
+    "Communications with license server restored. ",
+    "Error: Unable to allocate memory."
+  ],
+  "last_solver_lines": [
+    "   i    j  m  -5.00* -26.0*",
+    "---------------------------",
+    "Error: Unable to allocate memory.",
+    "ATLAS version 5.34.0.R aborted at Tue Nov 17 03:42:22 2026"
+  ],
+  "last_bias": [],
+  "output_sizes": {
+    "console.txt": 794,
+    "solver.out": 27822
+  }
+}

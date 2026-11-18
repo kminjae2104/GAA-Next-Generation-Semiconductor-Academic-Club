@@ -1,0 +1,49 @@
+{
+  "stage": "gaa",
+  "returncode": 0,
+  "timeout": false,
+  "seconds": 2140.774,
+  "missing": [],
+  "normal_atlas_finish": true,
+  "license_diagnostics": [
+    "SFLM Programmer Error: This job is not logged in."
+  ],
+  "diagnostic_lines": [
+    "FLEXlm=/users/tools/Silvaco/etc/license",
+    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+    "\tError(s)   = 0",
+    "Can not get license. Waiting...",
+    "Warning: Problem communicating with license server. ",
+    "SFLM Retry: SFLM Transport Error: No Error",
+    "Communications with license server restored. ",
+    "Warning: Problem communicating with license server. ",
+    "SFLM Retry: SFLM Transport Error: No Error",
+    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+    "SFLM: Current License Server: semicon1:3162/",
+    "Communications with license server restored. ",
+    "ATLAS waiting for license. ",
+    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+    "SFLM: Current License Server: semicon1:3162/",
+    "SFLM Programmer Error: This job is not logged in.",
+    "SFLM Transport Error: No Error",
+    "SFLM: Can not log into license server."
+  ],
+  "fatal_lines": [],
+  "outputs": {
+    "gaa.in": 4704,
+    "console.txt": 1405,
+    "solver.out": 342989,
+    "geometry.str": 2286734,
+    "equilibrium.str": 14541996,
+    "idvg_low.log": 8789,
+    "final_low.str": 21060782,
+    "low_drain.dat": 1083,
+    "low_source.dat": 1136,
+    "low_gate.dat": 423,
+    "idvg_high.log": 8789,
+    "final_high.str": 21003526,
+    "high_drain.dat": 1084,
+    "high_source.dat": 1133,
+    "high_gate.dat": 423
+  }
+}

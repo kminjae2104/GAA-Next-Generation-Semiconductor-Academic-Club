@@ -1,0 +1,30 @@
+[
+  {
+    "original_result_path": "gaa/execution/equilibrium.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/durable/results/wf4p55_fine_ramp002/retained_structures/attempt_01/gaa/execution/equilibrium.str",
+    "bytes": 106436103,
+    "sha256": "887b4210850a709131f436342fe06ea2345e86681d9aeb1f4d96bbd49f485886",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_high.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/durable/results/wf4p55_fine_ramp002/retained_structures/attempt_01/gaa/execution/final_high.str",
+    "bytes": 156520037,
+    "sha256": "a2501dece73207c9af19b95e1d463e5e15d8d9f34d1ca899afeb1b32fe957d2b",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_low.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/durable/results/wf4p55_fine_ramp002/retained_structures/attempt_01/gaa/execution/final_low.str",
+    "bytes": 160992544,
+    "sha256": "8e91c62e8ef6b2628a5fac23065dcad21c67a4efb591d552e534b0d4125416a8",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/geometry.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/durable/results/wf4p55_fine_ramp002/retained_structures/attempt_01/gaa/execution/geometry.str",
+    "bytes": 19413397,
+    "sha256": "8215d00afbbf9891c7e93b584fd579644b3118f54d2b10cf2606a1d04535e424",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  }
+]

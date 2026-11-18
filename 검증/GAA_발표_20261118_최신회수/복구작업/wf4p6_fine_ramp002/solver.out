@@ -1,0 +1,2909 @@
+
+*** this is deckbuild version 5.2.17.R ***
+
+# Generated GAA; nm converted to micrometers. Classical DD model.
+# See the repository reference index and design/targets document.
+go devedit simflags="-3d"
+
+                                 D E V E D I T
+
+                      Copyright (c) 1992-2016 SILVACO Inc.
+
+                              All rights reserved
+
+                devedit 2.8.26.R (Tue Jan 26 05:23:40 PST 2016)
+              libMeshBuild 1.24.23 (Tue Jan 26 05:22:55 PST 2016)
+                  libSSS 2.8.14 (Tue Jan 19 16:38:10 PST 2016)
+               libSVC_Misc 1.28.13 (Tue Jan 19 16:37:06 PST 2016)
+                 libsflm 7.10.1 (Tue May 19 19:52:32 PDT 2015)
+                 libSDB 1.12.36 (Wed Jan 13 04:01:54 PST 2016)
+               libGeometry 1.30.16 (Tue May 19 19:51:51 PDT 2015)
+               libCardDeck 1.32.22 (Fri Jan 22 18:42:45 PST 2016)
+                libDW_Set 1.28.13 (Tue Jan 19 16:36:26 PST 2016)
+               libSvcFile 1.14.19 (Tue May 19 19:51:56 PDT 2015)
+                 libsstl 1.10.11 (Tue May 19 19:51:57 PDT 2015)
+               libDW_Misc 1.40.20 (Tue Jan 19 16:14:10 PST 2016)
+                libQSilCore 1.2.8 (Wed May 13 18:39:12 PDT 2015)
+                libDW_crypt 3.0.0 (Mon May 18 04:43:00 PDT 2015)
+               libDW_Version 3.8.0 (Fri Oct  3 16:08:41 PDT 2014)
+
+                  MeshBuild Library based on MeshBuild v1.9.0
+   Copyright (c) 1991 Integrated Systems Laboratory, ETH Zurich, Switzerland
+
+             Executing on host: semicon1  Wed Nov 18 10:37:52 2026
+
+SFLM_SERVERS=semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu
+FLEXlm=/users/tools/Silvaco/etc/license
+FLEXlm=/users/tools/Silvaco/etc/license.dat
+FLEXlm=/users/tools/Silvaco/etc
+Current Server: FLEXlm=27000@semicon1
+
+DevEdit> work.area x1=-0.004 y1=-0.004 x2=0.014 y2=0.014
+DevEdit> region reg=1 name=source_si mat="Silicon" z1=0 z2=0.02 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=2 name=channel mat="Silicon" z1=0.02 z2=0.06 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=3 name=drain_si mat="Silicon" z1=0.06 z2=0.08 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=4 name=source mat="Aluminum" z1=-0.005 z2=0 elec.id=2 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=5 name=drain mat="Aluminum" z1=0.08 z2=0.085 elec.id=3 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+DevEdit> region reg=6 name=oxide_left mat="Silicon Oxide" z1=0 z2=0.08 points="-0.001,-0.001 0,-0.001 0,0.011 -0.001,0.011 -0.001,-0.001"
+DevEdit> region reg=7 name=oxide_right mat="Silicon Oxide" z1=0 z2=0.08 points="0.01,-0.001 0.011,-0.001 0.011,0.011 0.01,0.011 0.01,-0.001"
+DevEdit> region reg=8 name=oxide_top mat="Silicon Oxide" z1=0 z2=0.08 points="0,-0.001 0.01,-0.001 0.01,0 0,0 0,-0.001"
+DevEdit> region reg=9 name=oxide_bottom mat="Silicon Oxide" z1=0 z2=0.08 points="0,0.01 0.01,0.01 0.01,0.011 0,0.011 0,0.01"
+DevEdit> region reg=10 name=gate mat="Aluminum" z1=0.02 z2=0.06 elec.id=1 points="-0.004,-0.004 -0.001,-0.004 -0.001,0.014 -0.004,0.014 -0.004,-0.004"
+DevEdit> region reg=11 name=gate_right mat="Aluminum" z1=0.02 z2=0.06 elec.id=4 points="0.011,-0.004 0.014,-0.004 0.014,0.014 0.011,0.014 0.011,-0.004"
+DevEdit> region reg=12 name=gate_top mat="Aluminum" z1=0.02 z2=0.06 elec.id=5 points="-0.001,-0.004 0.011,-0.004 0.011,-0.001 -0.001,-0.001 -0.001,-0.004"
+DevEdit> region reg=13 name=gate_bottom mat="Aluminum" z1=0.02 z2=0.06 elec.id=6 points="-0.001,0.011 0.011,0.011 0.011,0.014 -0.001,0.014 -0.001,0.011"
+DevEdit> base.mesh height=0.0005 width=0.0005
+DevEdit> bound.cond !apply max.slope=28 max.ratio=300 rnd.unit=0.00001 line.straightening=1 align.points when=automatic
+DevEdit> constr.mesh max.angle=90 max.ratio=300 max.height=0.003 max.width=0.003 min.height=0.00002 min.width=0.00002
+DevEdit> constr.mesh region=1 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=2 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=3 default max.height=0.0005 max.width=0.0005
+DevEdit> constr.mesh region=4 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=5 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=6 default max.height=0.0005 max.width=0.000125
+DevEdit> constr.mesh region=7 default max.height=0.0005 max.width=0.000125
+DevEdit> constr.mesh region=8 default max.height=0.000125 max.width=0.0005
+DevEdit> constr.mesh region=9 default max.height=0.000125 max.width=0.0005
+DevEdit> constr.mesh region=10 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=11 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=12 default max.height=0.0015 max.width=0.0015
+DevEdit> constr.mesh region=13 default max.height=0.0015 max.width=0.0015
+DevEdit> z.plane z=-0.005 spacing=0.001
+DevEdit> z.plane z=0 spacing=0.001
+DevEdit> z.plane z=0.02 spacing=0.0005
+DevEdit> z.plane z=0.04 spacing=0.0005
+DevEdit> z.plane z=0.06 spacing=0.0005
+DevEdit> z.plane z=0.08 spacing=0.001
+DevEdit> z.plane z=0.085 spacing=0.001
+DevEdit> z.plane maximum.spacing=0.001 maximum.ratio=1.5
+DevEdit> Mesh Mode=MeshBuild
+Building initial tensor-product mesh...Done
+Refining on geometry... Done
+Refining on size... Done
+Refining on Impurities...Done
+Handling green points...Done
+Dividing to triangles... Done
+Testing Consistency of mesh... Done
+Mesh statistics:
+	Number of points = 3721
+	Number of triangles = 7232
+	Obtuse triangles 0 (0%)
+	Obtuse triangles in Semiconductor 0 (0%)
+DevEdit> structure outf=geometry.str
+DevEdit> structure outfile="/tmp/auto.N3RCTD"
+DevEdit> quit
+
+Parse complete:
+	Error(s)   = 0
+	Warning(s) = 0
+
+go atlas simflags="-P 4"
+executing /users/tools/Silvaco/lib/atlas/5.34.0.R/x86_64-linux/atlas.exe -P 4
+
+
+                                   A T L A S
+
+            Version:  atlas 5.34.0.R (Wed May 18 09:10:12 PDT 2022)
+
+                           Copyright (c) 1984 - 2022
+                        Silvaco Inc. All rights reserved
+
+    We acknowledge the contribution of the following collaborative partners:
+
+                              Stanford University
+
+
+
+               ======================================================
+
+                  ATLAS                           : enabled
+
+                  S-PISCES                        : enabled
+
+                  BLAZE                           : enabled
+
+                  GIGA                            : enabled
+
+                  LUMINOUS                        : enabled
+
+                  LED                             : enabled
+
+                  TFT                             : enabled
+
+                  ORGANIC DISPLAY                 : enabled
+
+                  ORGANIC SOLAR                   : enabled
+
+                  MIXEDMODE                       : enabled
+
+                  LASER                           : enabled
+
+                  VCSEL                           : enabled
+
+                  FERRO                           : enabled
+
+                  QUANTUM                         : enabled
+
+                  NOISE                           : enabled
+
+                  REM                             : enabled
+
+                  MAGNETIC                        : enabled
+
+                  DEVICE3D                        : enabled
+
+                  THERMAL3D                       : enabled
+
+                  GIGA3D                          : enabled
+
+                  MIXEDMODE3D                     : enabled
+
+                  TFT3D                           : enabled
+
+                  QUANTUM3D                       : enabled
+
+                  LUMINOUS3D                      : enabled
+
+                  REM3D                           : enabled
+
+                  MAGNETIC3D                      : enabled
+
+                  LED3D                           : enabled
+
+                  LASER3D                         : enabled
+
+                  MIXEDMODE XL                    : enabled
+
+                  S-PISCES BUNDLE                 : enabled
+
+                  BLAZE BUNDLE                    : enabled
+
+                  TFT BUNDLE                      : enabled
+
+                  ORGANIC BUNDLE                  : enabled
+
+                  DEVICE3D BUNDLE                 : enabled
+
+                  TFT3D BUNDLE                    : enabled
+
+               ======================================================
+
+                           Wed Nov 18 10:39:23 2026
+
+                          Executing on host: semicon1
+                      Current SFLM Server: semicon1:3162/
+
+
+
+ATLAS> mesh infile="/tmp/auto.N3RCTD"
+	####################################################
+	######                                        ######
+	######           Running on  4 CPUs           ######
+	######           104 CPUs available            ######
+	######                                        ######
+	####################################################
+
+Reading MASTER format file /tmp/auto.N3RCTD from DEVEDIT3D.
+
+ Read 149193 sem & ins nodes and 128178 metal nodes.
+ Read 147 z planes.
+ Read 594048 sem & ins prisms and 249600 metal prisms.
+ Read 13 regions.
+ Read 6 electrodes.
+Electrode Information: 
+  No.  Name      x.min      x.max      y.min      y.max      z.min      z.max
+  1 gate       -4.000E-03 -1.000E-03 -4.000E-03  1.400E-02  2.000E-02  6.000E-02
+  2 source      0.000E+00  1.000E-02  0.000E+00  1.000E-02 -5.000E-03  0.000E+00
+  3 drain       0.000E+00  1.000E-02  0.000E+00  1.000E-02  8.000E-02  8.500E-02
+  4 gate_right  1.100E-02  1.400E-02 -4.000E-03  1.400E-02  2.000E-02  6.000E-02
+  5 gate_top   -1.000E-03  1.100E-02 -4.000E-03 -1.000E-03  2.000E-02  6.000E-02
+  6 gate_botto -1.000E-03  1.100E-02  1.100E-02  1.400E-02  2.000E-02  6.000E-02
+ATLAS> mesh infile=geometry.str
+
+Mesh statistics:
+ Total number of grid points    =  546987
+ Number of grid points in plane =    3721
+ Number of triangles in plane   =    7232
+ Obtuse triangles in plane      =       0  ( 0.0%)
+ Total number of z planes       =     147
+ Total number of prisms         = 1055872
+
+Warning: Electrodes 1 and 5 are touching.
+They will be tied together.
+
+Warning: Electrodes 4 and 5 are touching.
+They will be tied together.
+
+Warning: Electrodes 1 and 6 are touching.
+They will be tied together.
+
+Reading MASTER format file geometry.str from DEVEDIT3D.
+
+ Read 149193 sem & ins nodes and 128178 metal nodes.
+ Read 147 z planes.
+ Read 594048 sem & ins prisms and 249600 metal prisms.
+ Read 13 regions.
+ Read 6 electrodes.
+Electrode Information: 
+  No.  Name      x.min      x.max      y.min      y.max      z.min      z.max
+  1 gate       -4.000E-03 -1.000E-03 -4.000E-03  1.400E-02  2.000E-02  6.000E-02
+  2 source      0.000E+00  1.000E-02  0.000E+00  1.000E-02 -5.000E-03  0.000E+00
+  3 drain       0.000E+00  1.000E-02  0.000E+00  1.000E-02  8.000E-02  8.500E-02
+  4 gate_right  1.100E-02  1.400E-02 -4.000E-03  1.400E-02  2.000E-02  6.000E-02
+  5 gate_top   -1.000E-03  1.100E-02 -4.000E-03 -1.000E-03  2.000E-02  6.000E-02
+  6 gate_botto -1.000E-03  1.100E-02  1.100E-02  1.400E-02  2.000E-02  6.000E-02
+ATLAS> doping uniform region=1 n.type conc=1e+20
+
+Mesh statistics:
+ Total number of grid points    =  546987
+ Number of grid points in plane =    3721
+ Number of triangles in plane   =    7232
+ Obtuse triangles in plane      =       0  ( 0.0%)
+ Total number of z planes       =     147
+ Total number of prisms         = 1055872
+
+Warning: Electrodes 1 and 5 are touching.
+They will be tied together.
+
+Warning: Electrodes 4 and 5 are touching.
+They will be tied together.
+
+Warning: Electrodes 1 and 6 are touching.
+They will be tied together.
+ATLAS> doping uniform region=2 p.type conc=1e+16
+ATLAS> doping uniform region=3 n.type conc=1e+20
+ATLAS> contact name=gate workfunction=4.6
+ Changing parameters for contact named gate                .
+ATLAS> contact name=gate_right workfunction=4.6 common=gate short
+ Changing parameters for contact named gate_right          .
+  
+Electrode gate_right is in common with electrode    gate   .
+  
+ATLAS> contact name=gate_top workfunction=4.6 common=gate short
+ Changing parameters for contact named gate_top            .
+  
+Electrode  gate_top  is in common with electrode    gate   .
+  
+ATLAS> contact name=gate_bottom workfunction=4.6 common=gate short
+ Changing parameters for contact named gate_bottom         .
+  
+Electrode gate_botto is in common with electrode    gate   .
+  
+ATLAS> models fermi conmob fldmob srh bgn temperature=300 print
+ATLAS> method gummel newton bicgst carriers=0 trap maxtrap=10 itlimit=50
+
+
+Block-iterative    carriers = 2              
+
+
+CONSTANTS:
+ Boltzmann's constant  = 1.38066e-23 J/K
+ Elementary charge     = 1.60219e-19 C
+ Permitivity in vacuum = 8.85419e-14 F/cm
+ Temperature           = 300 K
+ Thermal voltage       = 0.025852 V
+
+REGIONAL MATERIAL PARAMETERS:
+ Region       :        1         2         3         4         5         6         7         8         9        10        11        12        13   
+ Material     :    Silicon   Silicon   Silicon  Aluminum  Aluminum      SiO2      SiO2      SiO2      SiO2  Aluminum  Aluminum  Aluminum  Aluminum 
+ Type         :    semicond. semicond. semicond.   metal     metal   insulator insulator insulator insulator   metal     metal     metal     metal  
+
+ Average Composition Fraction 
+ X-composition:         0         0         0         0         0         0         0         0         0         0         0         0         0 
+ Y-composition:         0         0         0         0         0         0         0         0         0         0         0         0         0 
+
+ Band Parameters
+ Epsilon      :      11.8      11.8      11.8                           3.9       3.9       3.9       3.9                                         
+ Eg (eV)      :      1.08      1.08      1.08                             9         9         9         9                                         
+ Chi (eV)     :      4.17      4.17      4.17                           0.9       0.9       0.9       0.9                                         
+ Nc (per cc)  :   2.8e+19   2.8e+19   2.8e+19                                                                                                     
+ Nv (per cc)  :  1.04e+19  1.04e+19  1.04e+19                                                                                                     
+ ni (per cc)  :  1.45e+10  1.45e+10  1.45e+10                                                                                                     
+
+ Bandgap Temperature Dependent Parameters 
+ eg300 (eV)   :      1.08      1.08      1.08                                                                                                     
+ egalpha(eV/K):  0.000473  0.000473  0.000473                                                                                                     
+ egbeta (K)   :       636       636       636                                                                                                     
+
+ Bandgap Narrowing Parameters 
+ bgn.e (eV)   :     0.009     0.009     0.009                                                                                                     
+ bgn.n (/cc)  :     1e+17     1e+17     1e+17                                                                                                     
+ bgn.c        :       0.5       0.5       0.5                                                                                                     
+ ubgn.b       :   3.1e+12   3.1e+12   3.1e+12                                                                                                     
+ ubgn.c       :   3.9e-05   3.9e-05   3.9e-05                                                                                                     
+ bgn.shnk.me  :     0.321     0.321     0.321                                                                                                     
+ bgn.shnk.mh  :     0.346     0.346     0.346                                                                                                     
+ bgn.shnk.eps :      11.7      11.7      11.7                                                                                                     
+ bgn.shnk.ge  :        12        12        12                                                                                                     
+ bgn.shnk.gh  :         4         4         4                                                                                                     
+ bgn.lind.anc :   0.00974   0.00974   0.00974                                                                                                     
+ bgn.lind.bnc :   0.00139   0.00139   0.00139                                                                                                     
+ bgn.lind.anv :    0.0127    0.0127    0.0127                                                                                                     
+ bgn.lind.bnv :    0.0014    0.0014    0.0014                                                                                                     
+ bgn.lind.apc :    0.0114    0.0114    0.0114                                                                                                     
+ bgn.lind.bpc :   0.00205   0.00205   0.00205                                                                                                     
+ bgn.lind.apv :    0.0111    0.0111    0.0111                                                                                                     
+ bgn.lind.bpv :   0.00206   0.00206   0.00206                                                                                                     
+ bgn.lind.cpv :         0         0         0                                                                                                     
+ bgn.lind.nd  :     1e+18     1e+18     1e+18                                                                                                     
+ bgn.lind.na  :     1e+18     1e+18     1e+18                                                                                                     
+
+ Effective Richardson Constants
+ An*          :       110       110       110                                                                                                     
+ Ap*          :        30        30        30                                                                                                     
+
+ Recombination Parameters
+ taun0        :     1e-07     1e-07     1e-07                                                                                                     
+ taup0        :     1e-07     1e-07     1e-07                                                                                                     
+ lt.taun      :         0         0         0                                                                                                     
+ lt.taup      :         0         0         0                                                                                                     
+ etrap        :         0         0         0                                                                                                     
+
+ Band-to-band tunneling Parameters
+ mass.tunnel  :      0.25      0.25      0.25                                                                                                     
+ me.tunnel    :     0.322     0.322     0.322                                                                                                     
+ mh.tunnel    :     0.549     0.549     0.549                                                                                                     
+
+ Thermal Velocities
+ vn (cm/s)    :  1.08e+07  1.08e+07  1.08e+07                                                                                                     
+ vp (cm/s)    :   1.3e+07   1.3e+07   1.3e+07                                                                                                     
+
+ Saturation Velocities
+ vsatn (cm/s) :  1.03e+07  1.03e+07  1.03e+07                                                                                                     
+ vsatp (cm/s) :  1.03e+07  1.03e+07  1.03e+07                                                                                                     
+
+ Piezoelectric Parameters
+ e33 (C/m^2)  :         0         0         0                                                                                                     
+ e31 (C/m^2)  :         0         0         0                                                                                                     
+ Psp (C/m^2)  :         0         0         0                                                                                                     
+ Alattice (Å) :      5.43      5.43      5.43                             0         0         0         0                                         
+
+REGIONAL MODEL FLAGS:
+ Region:          1    2    3    4    5    6    7    8    9   10   11   12   13 
+ SRH              T    T    T                                                    
+ consrh           F    F    F                                                    
+ klasrh           F    F    F                                                    
+ schsrh           F    F    F                                                    
+ Auger            F    F    F                                                    
+ klaaug           F    F    F                                                    
+ picaug           F    F    F                                                    
+ hnsaug           F    F    F                                                    
+ auggen           F    F    F                                                    
+ kerraug          F    F    F                                                    
+ richteraug       F    F    F                                                    
+ solaraug         F    F    F                                                    
+ optr             F    F    F                                                    
+ solaropt         F    F    F                                                    
+ optr.gb          F    F    F                                                    
+ bgn(std/kla)     T    T    T                                                    
+ ubgn             F    F    F                                                    
+ bgn.alamo        F    F    F                                                    
+ bgn.bennett      F    F    F                                                    
+ bgn.schenk       F    F    F                                                    
+ bgn.lind         F    F    F                                                    
+ bgn.persson      F    F    F                                                    
+ incomplete       F    F    F                                                    
+ inc.two_level    F    F    F                                                    
+ inc.ion          F    F    F                                                    
+ ioniz            F    F    F                                                    
+ inc.cryo         F    F    F                                                    
+ bbt              F    F    F                                                    
+ bbtauto          F    F    F                                                    
+ bbthurkx         F    F    F                                                    
+ bbtkane          F    F    F                                                    
+ bbtschenk        F    F    F                                                    
+ bbtheigl         F    F    F                                                    
+ bbtnonlocal      F    F    F                                                    
+ tat(local)       F    F    F                                                    
+ tatnonlocal      F    F    F                                                    
+ tat(coulombic)   F    F    F                                                    
+ impact           F    F    F                                                    
+ Boltzmann        F    F    F                                                    
+ Fermi-Dirac      T    T    T                                                    
+ cubic35          F    F    F                                                    
+
+Gain and Rsp scaling
+  Gain scale factor  :         1         1         1         1         1         1         1 
+  Rsp scale factor   :         1         1         1         1         1         1         1 
+
+
+REGIONAL MOBILITY MODEL SUMMARY:
+
+  Region #1:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+  Region #2:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+  Region #3:
+
+    Model for Electrons:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 2
+          betaexp (@300K) =  0
+
+
+    Model for Holes:
+
+      Concentration Dependent Mobility
+      @ Temperature =     300 Kelvin 
+      Using built-in model (refer to manual).
+
+      Parallel Field Dependent Mobility
+        Using parallel field model.
+          Using built-in Silicon model for Vsat.
+          alpha = 2.4e+07
+          theta = 0.8
+          tnom = 600
+          beta (@300K) = 1
+          betaexp (@300K) =  0
+
+
+
+Contacts :
+Name         Num  Work fn    Resist.    Capacit.   Induct.
+                   (eV)      (Ohms)     (Farads)   (Henries)
+gate          1     4.600   0.000E+00  0.000E+00  0.000E+00
+source        2     0.000   0.000E+00  0.000E+00  0.000E+00
+drain         3     0.000   0.000E+00  0.000E+00  0.000E+00
+gate_right    4     4.600   0.000E+00  0.000E+00  0.000E+00
+gate_top      5     4.600   0.000E+00  0.000E+00  0.000E+00
+gate_botto    6     4.600   0.000E+00  0.000E+00  0.000E+00
+  
+ATLAS> solve init
+
+Starting module:   DEVICE 3D                      
+
+
+Obtaining static solution:
+
+
+init           psi    psi 
+ICCG            x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1       G   0.588 -19.22
+   2       G   0.588 -19.33
+   3       G  -0.633 -19.47
+   4       G  -0.633 -19.62
+   5       G  -0.452 -19.73
+   6       G  -0.452 -19.88
+   7       G  -0.315 -20.11
+   8       G   0.000 -20.46
+   9       G  -0.385 -20.90
+  10       G  -2.487 -23.37
+  11       G  -6.15* -27.0*
+ATLAS> solve name=gate vstep=-0.02 vfinal=-0.2
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.02       
+
+
+prev           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -1.352 -21.06
+   2    1  G  -3.007 -23.88
+   3    1  G  -6.32* -27.3*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -2.000e-02             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:  12.00 sec. 
+Total time:            4.74 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.04       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.709 -23.59
+   2    1  G  -5.76* -26.8*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -4.000e-02             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   8.00 sec. 
+Total time:            4.87 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.06       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.817 -23.61
+   2    1  G  -5.80* -26.8*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -6.000e-02             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:  12.00 sec. 
+Total time:            5.07 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.08       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.813 -23.63
+   2    1  G  -5.80* -26.8*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -8.000e-02             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   4.00 sec. 
+Total time:            5.14 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.1        
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.847 -23.65
+   2    1  G  -5.84* -26.8*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -1.000e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:  12.00 sec. 
+Total time:            5.34 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.12       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.757 -23.66
+   2    1  G  -5.82* -26.8*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -1.200e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   4.00 sec. 
+Total time:            5.40 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.14       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.788 -23.67
+   2    1  G  -5.86* -26.9*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -1.400e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   8.00 sec. 
+Total time:            5.54 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.16       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.714 -23.69
+   2    1  G  -5.89* -26.9*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -1.600e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   8.00 sec. 
+Total time:            5.67 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.18       
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.795 -23.70
+   2    1  G  -5.88* -26.9*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -1.800e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:   8.00 sec. 
+Total time:            5.80 min. 
+
+Obtaining static solution:
+
+ V(   gate  ) = -0.2        
+
+
+proj           psi    psi 
+ILUCGS          x     rhs 
+   i    j  m  -5.00* -26.0*
+---------------------------
+   1    1  G  -2.826 -23.72
+   2    1  G  -5.92* -26.9*
+
+Electrode       Va(V)      Ic(A)      It(A)
+==============================================
+gate          -2.000e-01             0.000e+00
+source         0.000e+00             0.000e+00
+drain          0.000e+00             0.000e+00
+Total                                0.000e+00
+
+Time for bias point:  12.00 sec. 
+Total time:            6.00 min. 
+ATLAS> save outf=equilibrium.str
+
+MASTER format file written to equilibrium.str
+ATLAS> method gummel newton bicgst gum.init=5 carriers=2 trap maxtrap=10 itlimit=50
+ATLAS> solve vdrain=0.01
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.01        
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -0.457               -28.5*              
+   2    1  G  -3.207               -30.8*              
+   3    1  G  -7.29*               -31.1*              
+   4    1  G          16.66               -19.3*       
+   5    1  G                -3.188               -22.7*
+   7    1  G   0.027               -8.885              
+   8    1  G   0.031               -8.885              
+   9    1  G   0.035               -8.885              
+  10    1  G   0.588               -8.885              
+  11    1  G   0.588               -8.885              
+  12    1  G   0.588               -8.885              
+  13    1  G   0.588               -8.885              
+  14    1  G   0.588               -8.885              
+  15    1  G   0.588               -8.885              
+  16    1  G   0.588               -8.885              
+  17    1  G   0.588               -8.885              
+  18    1  G   0.588               -8.885              
+  19    1  G   0.588               -8.885              
+  20    1  G   0.588               -8.885              
+  21    1  G   0.588               -8.885              
+  22    1  G   0.355               -8.885              
+  23    1  G   0.588               -8.885              
+  24    1  G   0.537               -8.885              
+  25    1  G  -0.393               -8.885              
+  26    1  G  -1.289               -8.885              
+  27    1  G  -1.317               -8.885              
+  28    1  G  -1.342               -8.885              
+  29    1  G  -1.337               -8.885              
+  30    1  G  -1.379               -8.885              
+  31    1  G  -1.395               -8.885              
+  32    1  G  -1.402               -8.885              
+  33    1  G  -1.426               -8.885              
+  34    1  G  -1.446               -8.885              
+  35    1  G  -1.461               -8.885              
+  36    1  G  -1.475               -8.885              
+  37    1  G  -1.488               -8.885              
+  38    1  G  -1.501               -8.885              
+  39    1  G  -1.505               -8.885              
+  40    1  G  -1.529               -8.885              
+  41    1  G  -1.525               -8.885              
+  42    1  G  -1.521               -8.885              
+  43    1  G  -1.553               -8.885              
+  44    1  G  -1.576               -8.885              
+  45    1  G  -1.591               -8.885              
+  46    1  G  -1.582               -8.885              
+  47    1  G  -1.608               -8.885              
+  48    1  G  -1.606               -8.885              
+  49    1  G  -1.624               -8.885              
+  50    1  G  -1.636               -8.885              
+  51    1  G  -1.648               -8.885              
+  52    1  G  -1.661               -8.885              
+  53    1  G  -1.671               -8.885              
+  54    1  G  -1.679               -8.885              
+  55    1  G  -1.690               -8.885              
+  56    1  G  -1.696               -8.885              
+  57    1  G  -1.707               -8.885              
+  58    1  G  -1.713               -8.885              
+  59    1  G  -1.713               -8.885              
+  60    1  G  -1.713               -8.885              
+  61    1  G  -1.712               -8.885              
+  62    1  G  -1.743               -8.885              
+  63    1  G  -1.741               -8.885              
+  64    1  G  -1.762               -8.885              
+  65    1  G  -1.760               -8.885              
+  66    1  G  -1.772               -8.885              
+  67    1  G  -1.770               -8.885              
+  68    1  G  -1.769               -8.885              
+  69    1  G  -1.797               -8.885              
+  70    1  G  -1.796               -8.885              
+  71    1  G  -1.795               -8.885              
+  72    1  G  -1.813               -8.885              
+  73    1  G  -1.824               -8.885              
+  74    1  G  -1.800               -8.885              
+  75    1  G  -1.833               -8.885              
+  76    1  G  -1.832               -8.885              
+  77    1  G  -1.831               -8.885              
+  78    1  G  -1.854               -8.885              
+  79    1  G  -1.853               -8.885              
+  80    1  G  -1.868               -8.885              
+  81    1  G  -1.867               -8.885              
+  82    1  G  -1.881               -8.885              
+  83    1  G  -1.880               -8.885              
+  84    1  G  -1.879               -8.885              
+  85    1  G  -1.896               -8.885              
+  86    1  G  -1.895               -8.885              
+  87    1  G  -1.906               -8.885              
+  88    1  G  -1.913               -8.885              
+  89    1  G  -1.917               -8.885              
+  90    1  G  -1.916               -8.885              
+  91    1  G  -1.928               -8.885              
+  92    1  G  -1.927               -8.885              
+  93    1  G  -1.936               -8.885              
+  94    1  G  -1.938               -8.885              
+  95    1  G  -1.949               -8.885              
+  96    1  G  -1.948               -8.885              
+  97    1  G  -1.955               -8.885              
+  98    1  G  -1.962               -8.885              
+  99    1  G  -1.941               -8.885              
+ 100    1  G  -1.940               -8.885              
+ 101    1  G  -1.977               -8.885              
+ 102    1  G  -1.976               -8.885              
+ 103    1  G  -1.976               -8.885              
+ 104    1  G  -1.975               -8.885              
+ 105    1  G  -1.974               -8.885              
+ 106    1  G  -1.999               -8.885              
+ 107    1  G  -1.998               -8.885              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 1 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.005       
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -0.758               -28.5*              
+   2    1  G  -3.805               -30.7*              
+   3    1  G  -7.44*               -31.1*              
+   4    1  G          14.05               -19.4*       
+   5    1  G                -8.27*               -22.7*
+   7    1  G   0.066               -12.18              
+   8    1  G  -0.155               -12.18              
+   9    1  G  -0.128               -12.18              
+  10    1  G  -0.225               -12.18              
+  11    1  G  -0.344               -12.18              
+  12    1  G  -0.347               -12.18              
+  13    1  G  -0.420               -12.18              
+  14    1  G  -0.574               -12.18              
+  15    1  G  -0.694               -12.18              
+  16    1  G  -0.814               -12.18              
+  17    1  G   0.557               -12.18              
+  18    1  G   0.239               -12.18              
+  19    1  G   0.132               -12.18              
+  20    1  G   0.115               -12.18              
+  21    1  G   0.230               -12.18              
+  22    1  G   0.392               -12.18              
+  23    1  G   0.588               -12.18              
+  24    1  G  -0.310               -12.18              
+  25    1  G  -0.013               -12.18              
+  26    1  G  -1.291               -12.18              
+  27    1  G  -1.319               -12.18              
+  28    1  G  -1.340               -12.18              
+  29    1  G  -1.347               -12.18              
+  30    1  G  -1.374               -12.18              
+  31    1  G  -1.389               -12.18              
+  32    1  G  -1.395               -12.18              
+  33    1  G  -1.423               -12.18              
+  34    1  G  -1.421               -12.18              
+  35    1  G  -1.446               -12.18              
+  36    1  G  -1.466               -12.18              
+  37    1  G  -1.483               -12.18              
+  38    1  G  -1.505               -12.18              
+  39    1  G  -1.503               -12.18              
+  40    1  G  -1.521               -12.18              
+  41    1  G  -1.525               -12.18              
+  42    1  G  -1.545               -12.18              
+  43    1  G  -1.567               -12.18              
+  44    1  G  -1.579               -12.18              
+  45    1  G  -1.586               -12.18              
+  46    1  G  -1.598               -12.18              
+  47    1  G  -1.602               -12.18              
+  48    1  G  -1.614               -12.18              
+  49    1  G  -1.623               -12.18              
+  50    1  G  -1.640               -12.18              
+  51    1  G  -1.648               -12.18              
+  52    1  G  -1.647               -12.18              
+  53    1  G  -1.646               -12.18              
+  54    1  G  -1.679               -12.18              
+  55    1  G  -1.678               -12.18              
+  56    1  G  -1.678               -12.18              
+  57    1  G  -1.705               -12.18              
+  58    1  G  -1.705               -12.18              
+  59    1  G  -1.704               -12.18              
+  60    1  G  -1.726               -12.18              
+  61    1  G  -1.725               -12.18              
+  62    1  G  -1.741               -12.18              
+  63    1  G  -1.751               -12.18              
+  64    1  G  -1.758               -12.18              
+  65    1  G  -1.757               -12.18              
+  66    1  G  -1.767               -12.18              
+  67    1  G  -1.766               -12.18              
+  68    1  G  -1.791               -12.18              
+  69    1  G  -1.790               -12.18              
+  70    1  G  -1.804               -12.18              
+  71    1  G  -1.795               -12.18              
+  72    1  G  -1.795               -12.18              
+  73    1  G  -1.820               -12.18              
+  74    1  G  -1.819               -12.18              
+  75    1  G  -1.818               -12.18              
+  76    1  G  -1.844               -12.18              
+  77    1  G  -1.843               -12.18              
+  78    1  G  -1.843               -12.18              
+  79    1  G  -1.862               -12.18              
+  80    1  G  -1.862               -12.18              
+  81    1  G  -1.861               -12.18              
+  82    1  G  -1.876               -12.18              
+  83    1  G  -1.875               -12.18              
+  84    1  G  -1.890               -12.18              
+  85    1  G  -1.883               -12.18              
+  86    1  G  -1.898               -12.18              
+  87    1  G  -1.905               -12.18              
+  88    1  G  -1.897               -12.18              
+  89    1  G  -1.896               -12.18              
+  90    1  G  -1.896               -12.18              
+  91    1  G  -1.896               -12.18              
+  92    1  G  -1.895               -12.18              
+  93    1  G  -1.938               -12.18              
+  94    1  G  -1.937               -12.18              
+  95    1  G  -1.937               -12.18              
+  96    1  G  -1.937               -12.18              
+  97    1  G  -1.936               -12.18              
+  98    1  G  -1.936               -12.18              
+  99    1  G  -1.936               -12.18              
+ 100    1  G  -1.970               -12.18              
+ 101    1  G  -1.970               -12.18              
+ 102    1  G  -1.969               -12.18              
+ 103    1  G  -1.969               -12.18              
+ 104    1  G  -1.969               -12.18              
+ 105    1  G  -1.995               -12.18              
+ 106    1  G  -1.995               -12.18              
+ 107    1  G  -1.995               -12.18              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 2 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.0025      
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.059               -28.5*              
+   2    1  G  -4.405               -30.7*              
+   3    1  G  -7.58*               -31.0*              
+   4    1  G          14.80               -19.4*       
+   5    1  G                -5.70*               -22.7*
+   7    1  G   0.260               -11.34              
+   8    1  G  -0.173               -11.34              
+   9    1  G   0.588               -11.34              
+  10    1  G   0.588               -11.34              
+  11    1  G   0.588               -11.34              
+  12    1  G   0.588               -11.34              
+  13    1  G   0.588               -11.34              
+  14    1  G  -0.404               -11.34              
+  15    1  G   0.588               -11.34              
+  16    1  G  -0.389               -11.34              
+  17    1  G   0.588               -11.34              
+  18    1  G   0.588               -11.34              
+  19    1  G   0.588               -11.34              
+  20    1  G   0.588               -11.34              
+  21    1  G   0.588               -11.34              
+  22    1  G   0.588               -11.34              
+  23    1  G   0.588               -11.34              
+  24    1  G   0.588               -11.34              
+  25    1  G   0.588               -11.34              
+  26    1  G  -1.294               -11.34              
+  27    1  G  -1.312               -11.34              
+  28    1  G  -1.336               -11.34              
+  29    1  G  -1.332               -11.34              
+  30    1  G  -1.370               -11.34              
+  31    1  G  -1.395               -11.34              
+  32    1  G  -1.204               -11.34              
+  33    1  G  -1.202               -11.34              
+  34    1  G   0.588               -11.34              
+  35    1  G  -1.274               -11.34              
+  36    1  G  -1.467               -11.34              
+  37    1  G  -1.487               -11.34              
+  38    1  G  -1.485               -11.34              
+  39    1  G  -1.512               -11.34              
+  40    1  G  -1.510               -11.34              
+  41    1  G  -1.541               -11.34              
+  42    1  G  -1.552               -11.34              
+  43    1  G  -1.563               -11.34              
+  44    1  G  -1.572               -11.34              
+  45    1  G  -1.587               -11.34              
+  46    1  G   0.588               -11.34              
+  47    1  G   0.588               -11.34              
+  48    1  G  -1.346               -11.34              
+  49    1  G  -1.345               -11.34              
+  50    1  G  -1.344               -11.34              
+  51    1  G   0.588               -11.34              
+  52    1  G   0.588               -11.34              
+  53    1  G  -1.442               -11.34              
+  54    1  G   0.588               -11.34              
+  55    1  G  -1.689               -11.34              
+  56    1  G  -1.688               -11.34              
+  57    1  G  -1.706               -11.34              
+  58    1  G  -1.708               -11.34              
+  59    1  G  -1.707               -11.34              
+  60    1  G  -1.707               -11.34              
+  61    1  G  -1.738               -11.34              
+  62    1  G  -1.738               -11.34              
+  63    1  G  -1.750               -11.34              
+  64    1  G  -1.762               -11.34              
+  65    1  G  -1.762               -11.34              
+  66    1  G  -1.772               -11.34              
+  67    1  G  -1.782               -11.34              
+  68    1  G  -1.789               -11.34              
+  69    1  G   0.588               -11.34              
+  70    1  G   0.588               -11.34              
+  71    1  G   0.588               -11.34              
+  72    1  G   0.588               -11.34              
+  73    1  G   0.588               -11.34              
+  74    1  G   0.588               -11.34              
+  75    1  G  -1.498               -11.34              
+  76    1  G  -1.498               -11.34              
+  77    1  G  -1.497               -11.34              
+  78    1  G  -1.497               -11.34              
+  79    1  G  -1.496               -11.34              
+  80    1  G   0.588               -11.34              
+  81    1  G   0.588               -11.34              
+  82    1  G   0.588               -11.34              
+  83    1  G  -1.623               -11.34              
+  84    1  G  -1.623               -11.34              
+  85    1  G  -1.622               -11.34              
+  86    1  G   0.588               -11.34              
+  87    1  G  -1.907               -11.34              
+  88    1  G  -1.907               -11.34              
+  89    1  G  -1.906               -11.34              
+  90    1  G  -1.906               -11.34              
+  91    1  G  -1.905               -11.34              
+  92    1  G  -1.932               -11.34              
+  93    1  G  -1.931               -11.34              
+  94    1  G  -1.931               -11.34              
+  95    1  G  -1.930               -11.34              
+  96    1  G  -1.952               -11.34              
+  97    1  G  -1.952               -11.34              
+  98    1  G  -1.952               -11.34              
+  99    1  G  -1.951               -11.34              
+ 100    1  G  -1.969               -11.34              
+ 101    1  G  -1.968               -11.34              
+ 102    1  G  -1.982               -11.34              
+ 103    1  G  -1.981               -11.34              
+ 104    1  G  -1.990               -11.34              
+ 105    1  G  -1.995               -11.34              
+ 106    1  G  -1.995               -11.34              
+ 107    1  G  -2.003               -11.34              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 3 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.00125     
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.360               -28.5*              
+   2    1  G  -5.01*               -30.7*              
+   3    1  G          17.47               -19.5*       
+   4    1  G                -7.85*               -22.7*
+   6    1  G   0.588               -8.610              
+   7    1  G   0.520               -8.610              
+   8    1  G  -0.048               -8.610              
+   9    1  G  -0.064               -8.610              
+  10    1  G   0.588               -8.610              
+  11    1  G   0.588               -8.610              
+  12    1  G   0.588               -8.610              
+  13    1  G   0.588               -8.610              
+  14    1  G   0.588               -8.610              
+  15    1  G   0.588               -8.610              
+  16    1  G   0.588               -8.610              
+  17    1  G   0.588               -8.610              
+  18    1  G   0.588               -8.610              
+  19    1  G   0.588               -8.610              
+  20    1  G   0.588               -8.610              
+  21    1  G   0.588               -8.610              
+  22    1  G   0.588               -8.610              
+  23    1  G   0.588               -8.610              
+  24    1  G   0.350               -8.610              
+  25    1  G   0.588               -8.610              
+  26    1  G  -0.680               -8.610              
+  27    1  G  -0.981               -8.610              
+  28    1  G  -1.030               -8.610              
+  29    1  G  -1.377               -8.610              
+  30    1  G  -1.385               -8.610              
+  31    1  G  -1.401               -8.610              
+  32    1  G  -1.422               -8.610              
+  33    1  G  -1.446               -8.610              
+  34    1  G  -1.454               -8.610              
+  35    1  G  -1.470               -8.610              
+  36    1  G   0.588               -8.610              
+  37    1  G   0.588               -8.610              
+  38    1  G  -1.123               -8.610              
+  39    1  G   0.588               -8.610              
+  40    1  G  -1.183               -8.610              
+  41    1  G  -1.549               -8.610              
+  42    1  G  -1.567               -8.610              
+  43    1  G  -1.565               -8.610              
+  44    1  G  -1.591               -8.610              
+  45    1  G  -1.599               -8.610              
+  46    1  G  -1.598               -8.610              
+  47    1  G  -1.619               -8.610              
+  48    1  G  -1.617               -8.610              
+  49    1  G  -1.616               -8.610              
+  50    1  G  -1.643               -8.610              
+  51    1  G  -1.653               -8.610              
+  52    1  G  -1.663               -8.610              
+  53    1  G  -1.680               -8.610              
+  54    1  G  -1.685               -8.610              
+  55    1  G   0.588               -8.610              
+  56    1  G   0.588               -8.610              
+  57    1  G  -1.262               -8.610              
+  58    1  G  -1.261               -8.610              
+  59    1  G   0.588               -8.610              
+  60    1  G   0.588               -8.610              
+  61    1  G  -1.345               -8.610              
+  62    1  G  -1.344               -8.610              
+  63    1  G  -1.763               -8.610              
+  64    1  G  -1.762               -8.610              
+  65    1  G  -1.761               -8.610              
+  66    1  G  -1.760               -8.610              
+  67    1  G  -1.791               -8.610              
+  68    1  G  -1.790               -8.610              
+  69    1  G  -1.789               -8.610              
+  70    1  G  -1.788               -8.610              
+  71    1  G  -1.815               -8.610              
+  72    1  G  -1.814               -8.610              
+  73    1  G  -1.813               -8.610              
+  74    1  G  -1.836               -8.610              
+  75    1  G  -1.835               -8.610              
+  76    1  G  -1.834               -8.610              
+  77    1  G  -1.852               -8.610              
+  78    1  G  -1.851               -8.610              
+  79    1  G  -1.864               -8.610              
+  80    1  G  -1.872               -8.610              
+  81    1  G  -1.881               -8.610              
+  82    1  G  -1.880               -8.610              
+  83    1  G  -1.889               -8.610              
+  84    1  G  -1.897               -8.610              
+  85    1  G  -1.903               -8.610              
+  86    1  G  -1.907               -8.610              
+  87    1  G   0.588               -8.610              
+  88    1  G   0.588               -8.610              
+  89    1  G   0.588               -8.610              
+  90    1  G   0.588               -8.610              
+  91    1  G   0.588               -8.610              
+  92    1  G   0.588               -8.610              
+  93    1  G   0.588               -8.610              
+  94    1  G   0.588               -8.610              
+  95    1  G   0.588               -8.610              
+  96    1  G   0.588               -8.610              
+  97    1  G   0.588               -8.610              
+  98    1  G   0.588               -8.610              
+  99    1  G  -1.516               -8.610              
+ 100    1  G  -1.515               -8.610              
+ 101    1  G   0.588               -8.610              
+ 102    1  G  -1.965               -8.610              
+ 103    1  G  -1.965               -8.610              
+ 104    1  G  -1.964               -8.610              
+ 105    1  G  -1.964               -8.610              
+ 106    1  G  -1.963               -8.610              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 4 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.000625    
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.661               -28.5*              
+   2    1  G  -5.61*               -30.6*              
+   3    1  G          11.51               -19.5*       
+   4    1  G                -8.36*               -22.7*
+   6    1  G   0.026               -13.89              
+   7    1  G   0.588               -13.89              
+   8    1  G  -0.097               -13.89              
+   9    1  G  -0.196               -13.89              
+  10    1  G  -0.238               -13.89              
+  11    1  G  -0.293               -13.89              
+  12    1  G  -0.346               -13.89              
+  13    1  G  -0.414               -13.89              
+  14    1  G   0.588               -13.89              
+  15    1  G  -0.725               -13.89              
+  16    1  G   0.304               -13.89              
+  17    1  G   0.043               -13.89              
+  18    1  G  -0.017               -13.89              
+  19    1  G  -0.066               -13.89              
+  20    1  G  -0.006               -13.89              
+  21    1  G   0.334               -13.89              
+  22    1  G   0.549               -13.89              
+  23    1  G   0.588               -13.89              
+  24    1  G  -0.258               -13.89              
+  25    1  G  -1.278               -13.89              
+  26    1  G  -1.304               -13.89              
+  27    1  G  -1.328               -13.89              
+  28    1  G  -1.350               -13.89              
+  29    1  G  -1.369               -13.89              
+  30    1  G  -1.385               -13.89              
+  31    1  G  -1.410               -13.89              
+  32    1  G  -1.399               -13.89              
+  33    1  G  -1.439               -13.89              
+  34    1  G  -1.437               -13.89              
+  35    1  G  -1.475               -13.89              
+  36    1  G  -1.473               -13.89              
+  37    1  G  -1.472               -13.89              
+  38    1  G  -1.508               -13.89              
+  39    1  G  -1.506               -13.89              
+  40    1  G  -1.540               -13.89              
+  41    1  G  -1.539               -13.89              
+  42    1  G  -1.537               -13.89              
+  43    1  G  -1.568               -13.89              
+  44    1  G  -1.566               -13.89              
+  45    1  G  -1.593               -13.89              
+  46    1  G  -1.592               -13.89              
+  47    1  G  -1.615               -13.89              
+  48    1  G  -1.633               -13.89              
+  49    1  G  -1.632               -13.89              
+  50    1  G  -1.645               -13.89              
+  51    1  G  -1.655               -13.89              
+  52    1  G  -1.654               -13.89              
+  53    1  G  -1.653               -13.89              
+  54    1  G  -1.653               -13.89              
+  55    1  G  -1.652               -13.89              
+  56    1  G  -1.702               -13.89              
+  57    1  G  -1.701               -13.89              
+  58    1  G  -1.700               -13.89              
+  59    1  G  -1.699               -13.89              
+  60    1  G  -1.698               -13.89              
+  61    1  G  -1.744               -13.89              
+  62    1  G  -1.744               -13.89              
+  63    1  G  -1.743               -13.89              
+  64    1  G  -1.742               -13.89              
+  65    1  G  -1.741               -13.89              
+  66    1  G  -1.783               -13.89              
+  67    1  G  -1.783               -13.89              
+  68    1  G  -1.782               -13.89              
+  69    1  G  -1.781               -13.89              
+  70    1  G  -1.781               -13.89              
+  71    1  G  -1.818               -13.89              
+  72    1  G  -1.818               -13.89              
+  73    1  G  -1.817               -13.89              
+  74    1  G  -1.817               -13.89              
+  75    1  G  -1.816               -13.89              
+  76    1  G  -1.849               -13.89              
+  77    1  G  -1.849               -13.89              
+  78    1  G  -1.848               -13.89              
+  79    1  G  -1.847               -13.89              
+  80    1  G  -1.847               -13.89              
+  81    1  G  -1.875               -13.89              
+  82    1  G  -1.874               -13.89              
+  83    1  G  -1.874               -13.89              
+  84    1  G  -1.897               -13.89              
+  85    1  G  -1.896               -13.89              
+  86    1  G  -1.896               -13.89              
+  87    1  G  -1.912               -13.89              
+  88    1  G  -1.912               -13.89              
+  89    1  G  -1.923               -13.89              
+  90    1  G  -1.895               -13.89              
+  91    1  G  -1.894               -13.89              
+  92    1  G  -1.894               -13.89              
+  93    1  G  -1.894               -13.89              
+  94    1  G  -1.893               -13.89              
+  95    1  G  -1.952               -13.89              
+  96    1  G  -1.952               -13.89              
+  97    1  G  -1.952               -13.89              
+  98    1  G  -1.951               -13.89              
+  99    1  G  -1.951               -13.89              
+ 100    1  G  -1.951               -13.89              
+ 101    1  G  -1.950               -13.89              
+ 102    1  G  -1.950               -13.89              
+ 103    1  G  -1.949               -13.89              
+ 104    1  G  -1.949               -13.89              
+ 105    1  G  -1.949               -13.89              
+ 106    1  G  -2.003               -13.89              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 5 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.0003125   
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.963               -28.5*              
+   2    1  G  -6.21*               -30.6*              
+   3    1  G          14.61               -19.4*       
+   4    1  G                -7.33*               -22.7*
+   6    1  G   0.588               -12.09              
+   7    1  G  -0.095               -12.09              
+   8    1  G  -0.069               -12.09              
+   9    1  G  -0.123               -12.09              
+  10    1  G  -0.144               -12.09              
+  11    1  G  -0.183               -12.09              
+  12    1  G  -0.260               -12.09              
+  13    1  G  -0.269               -12.09              
+  14    1  G  -0.314               -12.09              
+  15    1  G  -0.491               -12.09              
+  16    1  G   0.213               -12.09              
+  17    1  G  -0.049               -12.09              
+  18    1  G  -0.127               -12.09              
+  19    1  G  -0.073               -12.09              
+  20    1  G   0.076               -12.09              
+  21    1  G   0.232               -12.09              
+  22    1  G   0.354               -12.09              
+  23    1  G   0.588               -12.09              
+  24    1  G   0.588               -12.09              
+  25    1  G   0.487               -12.09              
+  26    1  G   0.588               -12.09              
+  27    1  G   0.588               -12.09              
+  28    1  G   0.588               -12.09              
+  29    1  G   0.588               -12.09              
+  30    1  G  -1.391               -12.09              
+  31    1  G   0.588               -12.09              
+  32    1  G   0.588               -12.09              
+  33    1  G   0.588               -12.09              
+  34    1  G   0.588               -12.09              
+  35    1  G   0.588               -12.09              
+  36    1  G   0.588               -12.09              
+  37    1  G   0.588               -12.09              
+  38    1  G   0.588               -12.09              
+  39    1  G   0.588               -12.09              
+  40    1  G   0.588               -12.09              
+  41    1  G   0.588               -12.09              
+  42    1  G   0.588               -12.09              
+  43    1  G   0.588               -12.09              
+  44    1  G   0.588               -12.09              
+  45    1  G   0.588               -12.09              
+  46    1  G   0.588               -12.09              
+  47    1  G   0.588               -12.09              
+  48    1  G   0.588               -12.09              
+  49    1  G  -1.637               -12.09              
+  50    1  G  -1.648               -12.09              
+  51    1  G   0.588               -12.09              
+  52    1  G   0.588               -12.09              
+  53    1  G   0.588               -12.09              
+  54    1  G   0.588               -12.09              
+  55    1  G   0.588               -12.09              
+  56    1  G   0.588               -12.09              
+  57    1  G   0.588               -12.09              
+  58    1  G   0.588               -12.09              
+  59    1  G   0.588               -12.09              
+  60    1  G   0.588               -12.09              
+  61    1  G   0.588               -12.09              
+  62    1  G   0.588               -12.09              
+  63    1  G   0.588               -12.09              
+  64    1  G   0.588               -12.09              
+  65    1  G   0.588               -12.09              
+  66    1  G   0.588               -12.09              
+  67    1  G   0.588               -12.09              
+  68    1  G   0.588               -12.09              
+  69    1  G   0.588               -12.09              
+  70    1  G   0.588               -12.09              
+  71    1  G   0.588               -12.09              
+  72    1  G   0.588               -12.09              
+  73    1  G   0.588               -12.09              
+  74    1  G   0.588               -12.09              
+  75    1  G   0.588               -12.09              
+  76    1  G   0.588               -12.09              
+  77    1  G   0.588               -12.09              
+  78    1  G   0.588               -12.09              
+  79    1  G   0.588               -12.09              
+  80    1  G   0.588               -12.09              
+  81    1  G   0.588               -12.09              
+  82    1  G   0.588               -12.09              
+  83    1  G   0.588               -12.09              
+  84    1  G   0.588               -12.09              
+  85    1  G   0.588               -12.09              
+  86    1  G   0.588               -12.09              
+  87    1  G  -1.911               -12.09              
+  88    1  G   0.588               -12.09              
+  89    1  G   0.588               -12.09              
+  90    1  G   0.588               -12.09              
+  91    1  G   0.588               -12.09              
+  92    1  G  -1.927               -12.09              
+  93    1  G  -1.943               -12.09              
+  94    1  G   0.588               -12.09              
+  95    1  G   0.588               -12.09              
+  96    1  G   0.588               -12.09              
+  97    1  G   0.588               -12.09              
+  98    1  G   0.588               -12.09              
+  99    1  G   0.588               -12.09              
+ 100    1  G   0.588               -12.09              
+ 101    1  G   0.588               -12.09              
+ 102    1  G   0.588               -12.09              
+ 103    1  G   0.588               -12.09              
+ 104    1  G   0.588               -12.09              
+ 105    1  G   0.588               -12.09              
+ 106    1  G   0.588               -12.09              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 6 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.00015625  
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.264               -28.5*              
+   2    1  G  -6.83*               -30.5*              
+   3    1  G          12.67               -19.5*       
+   4    1  G                -4.690               -22.7*
+   6    1  G   0.035               -13.71              
+   7    1  G  -0.280               -13.71              
+   8    1  G   0.588               -13.71              
+   9    1  G   0.588               -13.71              
+  10    1  G   0.588               -13.71              
+  11    1  G   0.588               -13.71              
+  12    1  G   0.588               -13.71              
+  13    1  G   0.588               -13.71              
+  14    1  G   0.588               -13.71              
+  15    1  G   0.588               -13.71              
+  16    1  G   0.588               -13.71              
+  17    1  G   0.588               -13.71              
+  18    1  G   0.588               -13.71              
+  19    1  G   0.588               -13.71              
+  20    1  G   0.588               -13.71              
+  21    1  G   0.588               -13.71              
+  22    1  G   0.588               -13.71              
+  23    1  G   0.588               -13.71              
+  24    1  G  -1.276               -13.71              
+  25    1  G  -1.283               -13.71              
+  26    1  G  -1.292               -13.71              
+  27    1  G  -1.305               -13.71              
+  28    1  G  -1.305               -13.71              
+  29    1  G  -1.376               -13.71              
+  30    1  G  -1.397               -13.71              
+  31    1  G  -1.394               -13.71              
+  32    1  G   0.588               -13.71              
+  33    1  G   0.588               -13.71              
+  34    1  G   0.588               -13.71              
+  35    1  G   0.588               -13.71              
+  36    1  G   0.588               -13.71              
+  37    1  G   0.588               -13.71              
+  38    1  G   0.588               -13.71              
+  39    1  G   0.588               -13.71              
+  40    1  G   0.588               -13.71              
+  41    1  G   0.588               -13.71              
+  42    1  G   0.588               -13.71              
+  43    1  G   0.588               -13.71              
+  44    1  G   0.588               -13.71              
+  45    1  G   0.588               -13.71              
+  46    1  G   0.588               -13.71              
+  47    1  G   0.588               -13.71              
+  48    1  G   0.588               -13.71              
+  49    1  G   0.588               -13.71              
+  50    1  G   0.588               -13.71              
+  51    1  G   0.588               -13.71              
+  52    1  G   0.588               -13.71              
+  53    1  G   0.588               -13.71              
+  54    1  G   0.588               -13.71              
+  55    1  G   0.588               -13.71              
+  56    1  G   0.588               -13.71              
+  57    1  G   0.588               -13.71              
+  58    1  G   0.588               -13.71              
+  59    1  G   0.588               -13.71              
+  60    1  G   0.588               -13.71              
+  61    1  G   0.588               -13.71              
+  62    1  G   0.588               -13.71              
+  63    1  G   0.588               -13.71              
+  64    1  G   0.588               -13.71              
+  65    1  G   0.588               -13.71              
+  66    1  G   0.588               -13.71              
+  67    1  G   0.588               -13.71              
+  68    1  G   0.588               -13.71              
+  69    1  G   0.588               -13.71              
+  70    1  G   0.588               -13.71              
+  71    1  G   0.588               -13.71              
+  72    1  G   0.588               -13.71              
+  73    1  G   0.588               -13.71              
+  74    1  G   0.588               -13.71              
+  75    1  G   0.588               -13.71              
+  76    1  G   0.588               -13.71              
+  77    1  G   0.588               -13.71              
+  78    1  G   0.588               -13.71              
+  79    1  G   0.588               -13.71              
+  80    1  G   0.588               -13.71              
+  81    1  G   0.588               -13.71              
+  82    1  G   0.588               -13.71              
+  83    1  G   0.588               -13.71              
+  84    1  G   0.588               -13.71              
+  85    1  G   0.588               -13.71              
+  86    1  G   0.588               -13.71              
+  87    1  G   0.588               -13.71              
+  88    1  G   0.588               -13.71              
+  89    1  G   0.588               -13.71              
+  90    1  G   0.588               -13.71              
+  91    1  G   0.588               -13.71              
+  92    1  G   0.588               -13.71              
+  93    1  G   0.588               -13.71              
+  94    1  G   0.588               -13.71              
+  95    1  G   0.588               -13.71              
+  96    1  G   0.588               -13.71              
+  97    1  G   0.588               -13.71              
+  98    1  G   0.588               -13.71              
+  99    1  G   0.588               -13.71              
+ 100    1  G   0.588               -13.71              
+ 101    1  G   0.588               -13.71              
+ 102    1  G   0.588               -13.71              
+ 103    1  G   0.588               -13.71              
+ 104    1  G   0.588               -13.71              
+ 105    1  G   0.588               -13.71              
+ 106    1  G   0.588               -13.71              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 7 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 7.8125e-05  
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.565               -28.5*              
+   2    1  G  -7.26*               -30.5*              
+   3    1  G          10.39               -19.5*       
+   4    1  G                -8.45*               -22.7*
+   6    1  G   0.029               -15.34              
+   7    1  G   0.588               -15.34              
+   8    1  G   0.588               -15.34              
+   9    1  G   0.588               -15.34              
+  10    1  G   0.588               -15.34              
+  11    1  G   0.588               -15.34              
+  12    1  G   0.588               -15.34              
+  13    1  G   0.588               -15.34              
+  14    1  G   0.588               -15.34              
+  15    1  G   0.588               -15.34              
+  16    1  G   0.588               -15.34              
+  17    1  G   0.588               -15.34              
+  18    1  G   0.588               -15.34              
+  19    1  G   0.588               -15.34              
+  20    1  G   0.588               -15.34              
+  21    1  G   0.588               -15.34              
+  22    1  G   0.588               -15.34              
+  23    1  G  -0.445               -15.34              
+  24    1  G  -1.252               -15.34              
+  25    1  G  -1.282               -15.34              
+  26    1  G  -1.309               -15.34              
+  27    1  G  -1.334               -15.34              
+  28    1  G  -1.355               -15.34              
+  29    1  G  -1.372               -15.34              
+  30    1  G  -1.396               -15.34              
+  31    1  G  -1.380               -15.34              
+  32    1  G  -1.425               -15.34              
+  33    1  G  -1.423               -15.34              
+  34    1  G  -1.420               -15.34              
+  35    1  G  -1.462               -15.34              
+  36    1  G  -1.461               -15.34              
+  37    1  G  -1.499               -15.34              
+  38    1  G  -1.498               -15.34              
+  39    1  G  -1.532               -15.34              
+  40    1  G  -1.530               -15.34              
+  41    1  G  -1.529               -15.34              
+  42    1  G  -1.559               -15.34              
+  43    1  G  -1.558               -15.34              
+  44    1  G  -1.583               -15.34              
+  45    1  G  -1.602               -15.34              
+  46    1  G  -1.600               -15.34              
+  47    1  G  -1.619               -15.34              
+  48    1  G  -1.618               -15.34              
+  49    1  G  -1.616               -15.34              
+  50    1  G  -1.615               -15.34              
+  51    1  G  -1.614               -15.34              
+  52    1  G  -1.668               -15.35              
+  53    1  G  -1.667               -15.35              
+  54    1  G  -1.666               -15.35              
+  55    1  G  -1.665               -15.35              
+  56    1  G  -1.664               -15.35              
+  57    1  G  -1.713               -15.35              
+  58    1  G  -1.712               -15.35              
+  59    1  G  -1.711               -15.35              
+  60    1  G  -1.710               -15.35              
+  61    1  G  -1.709               -15.35              
+  62    1  G  -1.753               -15.35              
+  63    1  G  -1.752               -15.35              
+  64    1  G  -1.751               -15.35              
+  65    1  G  -1.750               -15.35              
+  66    1  G  -1.750               -15.35              
+  67    1  G  -1.788               -15.35              
+  68    1  G  -1.787               -15.35              
+  69    1  G  -1.786               -15.35              
+  70    1  G  -1.786               -15.35              
+  71    1  G  -1.817               -15.35              
+  72    1  G  -1.817               -15.35              
+  73    1  G  -1.816               -15.35              
+  74    1  G  -1.816               -15.35              
+  75    1  G  -1.841               -15.35              
+  76    1  G  -1.840               -15.35              
+  77    1  G  -1.858               -15.35              
+  78    1  G  -1.857               -15.35              
+  79    1  G  -1.820               -15.35              
+  80    1  G  -1.820               -15.35              
+  81    1  G  -1.819               -15.35              
+  82    1  G  -1.886               -15.35              
+  83    1  G  -1.885               -15.35              
+  84    1  G  -1.885               -15.35              
+  85    1  G  -1.884               -15.35              
+  86    1  G  -1.884               -15.35              
+  87    1  G  -1.883               -15.35              
+  88    1  G  -1.883               -15.35              
+  89    1  G  -1.882               -15.35              
+  90    1  G  -1.882               -15.35              
+  91    1  G  -1.882               -15.35              
+  92    1  G  -1.881               -15.35              
+  93    1  G  -1.941               -15.35              
+  94    1  G  -1.941               -15.35              
+  95    1  G  -1.940               -15.35              
+  96    1  G  -1.940               -15.35              
+  97    1  G  -1.940               -15.35              
+  98    1  G  -1.939               -15.35              
+  99    1  G  -1.939               -15.35              
+ 100    1  G  -1.939               -15.35              
+ 101    1  G  -1.938               -15.35              
+ 102    1  G  -1.938               -15.35              
+ 103    1  G  -1.991               -15.35              
+ 104    1  G  -1.991               -15.35              
+ 105    1  G  -1.991               -15.35              
+ 106    1  G  -1.991               -15.35              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 8 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 3.90625e-05 
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.866               -28.5*              
+   2    1  G  -7.25*               -30.5*              
+   3    1  G          13.79               -19.5*       
+   4    1  G                -8.60*               -22.7*
+   6    1  G   0.007               -12.99              
+   7    1  G  -0.140               -12.99              
+   8    1  G   0.033               -12.99              
+   9    1  G   0.588               -12.99              
+  10    1  G  -0.234               -12.99              
+  11    1  G  -0.259               -12.99              
+  12    1  G  -0.333               -12.99              
+  13    1  G  -0.351               -12.99              
+  14    1  G   0.588               -12.99              
+  15    1  G  -0.740               -12.99              
+  16    1  G   0.588               -12.99              
+  17    1  G   0.113               -12.99              
+  18    1  G   0.023               -12.99              
+  19    1  G   0.002               -12.99              
+  20    1  G  -0.006               -12.99              
+  21    1  G   0.354               -12.99              
+  22    1  G   0.588               -12.99              
+  23    1  G   0.181               -12.99              
+  24    1  G   0.275               -12.99              
+  25    1  G  -1.294               -12.99              
+  26    1  G  -1.317               -12.99              
+  27    1  G  -1.336               -12.99              
+  28    1  G  -1.361               -12.99              
+  29    1  G  -1.378               -12.99              
+  30    1  G  -1.394               -12.99              
+  31    1  G  -1.392               -12.99              
+  32    1  G  -1.434               -12.99              
+  33    1  G  -1.432               -12.99              
+  34    1  G  -1.430               -12.99              
+  35    1  G  -1.468               -12.99              
+  36    1  G  -1.467               -12.99              
+  37    1  G  -1.499               -12.99              
+  38    1  G  -1.498               -12.99              
+  39    1  G  -1.524               -12.99              
+  40    1  G  -1.545               -12.99              
+  41    1  G  -1.558               -12.99              
+  42    1  G   0.588               -12.99              
+  43    1  G  -1.572               -12.99              
+  44    1  G  -1.558               -12.99              
+  45    1  G  -1.557               -12.99              
+  46    1  G  -1.613               -12.99              
+  47    1  G  -1.612               -12.99              
+  48    1  G  -1.611               -12.99              
+  49    1  G  -1.610               -12.99              
+  50    1  G  -1.609               -12.99              
+  51    1  G  -1.659               -12.99              
+  52    1  G  -1.657               -12.99              
+  53    1  G  -1.656               -12.99              
+  54    1  G  -1.656               -12.99              
+  55    1  G  -1.698               -12.99              
+  56    1  G  -1.697               -12.99              
+  57    1  G  -1.696               -12.99              
+  58    1  G  -1.695               -12.99              
+  59    1  G  -1.730               -12.99              
+  60    1  G  -1.729               -12.99              
+  61    1  G  -1.728               -12.99              
+  62    1  G  -1.754               -12.99              
+  63    1  G  -1.754               -12.99              
+  64    1  G  -1.772               -12.99              
+  65    1  G  -1.771               -12.99              
+  66    1  G   0.588               -12.99              
+  67    1  G   0.588               -12.99              
+  68    1  G  -1.802               -12.99              
+  69    1  G  -1.791               -12.99              
+  70    1  G  -1.791               -12.99              
+  71    1  G  -1.790               -12.99              
+  72    1  G  -1.790               -12.99              
+  73    1  G  -1.789               -12.99              
+  74    1  G  -1.788               -12.99              
+  75    1  G  -1.850               -12.99              
+  76    1  G  -1.849               -12.99              
+  77    1  G  -1.848               -12.99              
+  78    1  G  -1.848               -12.99              
+  79    1  G  -1.847               -12.99              
+  80    1  G  -1.846               -12.99              
+  81    1  G  -1.846               -12.99              
+  82    1  G  -1.845               -12.99              
+  83    1  G  -1.845               -12.99              
+  84    1  G  -1.898               -12.99              
+  85    1  G  -1.897               -12.99              
+  86    1  G  -1.897               -12.99              
+  87    1  G  -1.896               -12.99              
+  88    1  G  -1.896               -12.99              
+  89    1  G  -1.895               -12.99              
+  90    1  G  -1.895               -12.99              
+  91    1  G  -1.895               -12.99              
+  92    1  G  -1.939               -12.99              
+  93    1  G  -1.939               -12.99              
+  94    1  G  -1.938               -12.99              
+  95    1  G  -1.938               -12.99              
+  96    1  G  -1.937               -12.99              
+  97    1  G  -1.937               -12.99              
+  98    1  G  -1.970               -12.99              
+  99    1  G  -1.970               -12.99              
+ 100    1  G  -1.969               -12.99              
+ 101    1  G  -1.969               -12.99              
+ 102    1  G  -1.968               -12.99              
+ 103    1  G  -1.991               -12.99              
+ 104    1  G  -1.991               -12.99              
+ 105    1  G  -1.990               -12.99              
+ 106    1  G  -2.004               -12.99              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 9 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 1.95313e-05 
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -3.167               -28.5*              
+   2    1  G  -7.24*               -30.4*              
+   3    1  G          10.30               -19.5*       
+   4    1  G                -8.70*               -22.8*
+   6    1  G   0.013               -16.23              
+   7    1  G  -0.162               -16.23              
+   8    1  G  -0.241               -16.23              
+   9    1  G  -0.376               -16.23              
+  10    1  G  -0.563               -16.23              
+  11    1  G  -0.687               -16.23              
+  12    1  G  -0.774               -16.23              
+  13    1  G  -0.829               -16.24              
+  14    1  G  -0.913               -16.24              
+  15    1  G  -0.968               -16.24              
+  16    1  G   0.403               -16.24              
+  17    1  G   0.208               -16.24              
+  18    1  G   0.034               -16.24              
+  19    1  G  -0.121               -16.24              
+  20    1  G  -0.234               -16.24              
+  21    1  G  -0.390               -16.24              
+  22    1  G  -1.243               -16.24              
+  23    1  G  -1.265               -16.24              
+  24    1  G  -1.297               -16.24              
+  25    1  G  -1.330               -16.24              
+  26    1  G  -1.327               -16.24              
+  27    1  G  -1.357               -16.24              
+  28    1  G  -1.380               -16.24              
+  29    1  G  -1.399               -16.24              
+  30    1  G  -1.412               -16.24              
+  31    1  G  -1.428               -16.24              
+  32    1  G  -1.433               -16.25              
+  33    1  G  -1.449               -16.25              
+  34    1  G  -1.467               -16.25              
+  35    1  G  -1.463               -16.25              
+  36    1  G  -1.520               -16.25              
+  37    1  G  -1.520               -16.25              
+  38    1  G  -1.544               -16.25              
+  39    1  G  -1.553               -16.25              
+  40    1  G  -1.553               -16.25              
+  41    1  G  -1.579               -16.25              
+  42    1  G  -1.579               -16.25              
+  43    1  G  -1.583               -16.25              
+  44    1  G  -1.583               -16.25              
+  45    1  G  -1.612               -16.25              
+  46    1  G  -1.629               -16.25              
+  47    1  G  -1.608               -16.25              
+  48    1  G  -1.639               -16.25              
+  49    1  G  -1.639               -16.25              
+  50    1  G  -1.659               -16.26              
+  51    1  G  -1.659               -16.26              
+  52    1  G  -1.682               -16.26              
+  53    1  G  -1.677               -16.26              
+  54    1  G  -1.676               -16.26              
+  55    1  G  -1.676               -16.26              
+  56    1  G  -1.675               -16.26              
+  57    1  G  -1.717               -16.26              
+  58    1  G  -1.717               -16.26              
+  59    1  G  -1.716               -16.26              
+  60    1  G  -1.716               -16.26              
+  61    1  G  -1.750               -16.26              
+  62    1  G  -1.750               -16.26              
+  63    1  G  -1.726               -16.26              
+  64    1  G  -1.772               -16.26              
+  65    1  G  -1.772               -16.26              
+  66    1  G  -1.772               -16.26              
+  67    1  G  -1.771               -16.26              
+  68    1  G  -1.799               -16.27              
+  69    1  G  -1.779               -16.27              
+  70    1  G  -1.779               -16.27              
+  71    1  G  -1.779               -16.27              
+  72    1  G  -1.826               -16.27              
+  73    1  G  -1.826               -16.27              
+  74    1  G  -1.825               -16.27              
+  75    1  G  -1.828               -16.27              
+  76    1  G  -1.828               -16.27              
+  77    1  G  -1.866               -16.27              
+  78    1  G  -1.866               -16.27              
+  79    1  G  -1.866               -16.27              
+  80    1  G  -1.833               -16.27              
+  81    1  G  -1.833               -16.27              
+  82    1  G  -1.833               -16.27              
+  83    1  G  -1.898               -16.27              
+  84    1  G  -1.898               -16.27              
+  85    1  G  -1.898               -16.27              
+  86    1  G  -1.898               -16.28              
+  87    1  G  -1.898               -16.28              
+  88    1  G  -1.898               -16.28              
+  89    1  G  -1.898               -16.28              
+  90    1  G  -1.898               -16.28              
+  91    1  G  -1.941               -16.28              
+  92    1  G  -1.941               -16.28              
+  93    1  G  -1.941               -16.28              
+  94    1  G  -1.941               -16.28              
+  95    1  G  -1.943               -16.28              
+  96    1  G  -1.943               -16.28              
+  97    1  G  -1.943               -16.28              
+  98    1  G  -1.944               -16.28              
+  99    1  G  -1.944               -16.28              
+ 100    1  G  -1.944               -16.28              
+ 101    1  G  -1.944               -16.28              
+ 102    1  G  -1.944               -16.29              
+ 103    1  G  -1.995               -16.29              
+ 104    1  G  -1.995               -16.29              
+ 105    1  G  -1.995               -16.29              
+ 106    1  G  -1.995               -16.29              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 10 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 9.76563e-06 
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -3.468               -28.5*              
+   2    1  G  -7.28*               -30.4*              
+   3    1  G          10.44               -19.5*       
+   4    1  G                -8.64*               -22.7*
+   6    1  G   0.004               -16.04              
+   7    1  G  -0.209               -16.04              
+   8    1  G  -0.209               -16.04              
+   9    1  G  -0.267               -16.04              
+  10    1  G  -0.264               -16.05              
+  11    1  G  -0.395               -16.05              
+  12    1  G  -0.592               -16.05              
+  13    1  G  -0.798               -16.05              
+  14    1  G  -0.775               -16.05              
+  15    1  G  -0.886               -16.05              
+  16    1  G   0.588               -16.05              
+  17    1  G   0.588               -16.05              
+  18    1  G   0.588               -16.05              
+  19    1  G   0.530               -16.05              
+  20    1  G   0.310               -16.05              
+  21    1  G   0.086               -16.05              
+  22    1  G  -0.132               -16.05              
+  23    1  G  -1.257               -16.05              
+  24    1  G  -1.254               -16.05              
+  25    1  G  -1.283               -16.05              
+  26    1  G  -1.307               -16.05              
+  27    1  G  -1.343               -16.05              
+  28    1  G  -1.366               -16.05              
+  29    1  G  -1.356               -16.05              
+  30    1  G  -1.399               -16.05              
+  31    1  G  -1.399               -16.05              
+  32    1  G  -1.437               -16.05              
+  33    1  G  -1.437               -16.05              
+  34    1  G  -1.436               -16.05              
+  35    1  G  -1.469               -16.06              
+  36    1  G  -1.497               -16.06              
+  37    1  G  -1.496               -16.06              
+  38    1  G  -1.516               -16.06              
+  39    1  G  -1.534               -16.06              
+  40    1  G  -1.533               -16.06              
+  41    1  G  -1.533               -16.06              
+  42    1  G  -1.532               -16.06              
+  43    1  G  -1.581               -16.06              
+  44    1  G  -1.581               -16.06              
+  45    1  G  -1.580               -16.06              
+  46    1  G  -1.580               -16.06              
+  47    1  G  -1.622               -16.06              
+  48    1  G  -1.622               -16.06              
+  49    1  G  -1.621               -16.06              
+  50    1  G  -1.655               -16.06              
+  51    1  G  -1.655               -16.06              
+  52    1  G  -1.680               -16.06              
+  53    1  G  -1.680               -16.06              
+  54    1  G  -1.694               -16.06              
+  55    1  G  -1.704               -16.06              
+  56    1  G  -1.709               -16.06              
+  57    1  G  -1.724               -16.06              
+  58    1  G  -1.724               -16.06              
+  59    1  G  -1.724               -16.06              
+  60    1  G  -1.724               -16.07              
+  61    1  G  -1.723               -16.07              
+  62    1  G  -1.760               -16.07              
+  63    1  G  -1.760               -16.07              
+  64    1  G  -1.760               -16.07              
+  65    1  G  -1.786               -16.07              
+  66    1  G  -1.786               -16.07              
+  67    1  G  -1.791               -16.07              
+  68    1  G  -1.806               -16.07              
+  69    1  G  -1.806               -16.07              
+  70    1  G  -1.822               -16.07              
+  71    1  G  -1.801               -16.07              
+  72    1  G  -1.831               -16.07              
+  73    1  G  -1.830               -16.07              
+  74    1  G  -1.830               -16.07              
+  75    1  G  -1.831               -16.07              
+  76    1  G  -1.831               -16.07              
+  77    1  G  -1.863               -16.07              
+  78    1  G  -1.863               -16.07              
+  79    1  G  -1.863               -16.07              
+  80    1  G  -1.863               -16.07              
+  81    1  G  -1.883               -16.07              
+  82    1  G  -1.868               -16.07              
+  83    1  G  -1.868               -16.07              
+  84    1  G  -1.904               -16.08              
+  85    1  G  -1.904               -16.08              
+  86    1  G  -1.904               -16.08              
+  87    1  G  -1.904               -16.08              
+  88    1  G  -1.904               -16.08              
+  89    1  G  -1.927               -16.08              
+  90    1  G  -1.927               -16.08              
+  91    1  G  -1.911               -16.08              
+  92    1  G  -1.911               -16.08              
+  93    1  G  -1.911               -16.08              
+  94    1  G  -1.952               -16.08              
+  95    1  G  -1.952               -16.08              
+  96    1  G  -1.952               -16.08              
+  97    1  G  -1.952               -16.08              
+  98    1  G  -1.953               -16.08              
+  99    1  G  -1.953               -16.08              
+ 100    1  G  -1.979               -16.08              
+ 101    1  G  -1.979               -16.08              
+ 102    1  G  -1.980               -16.08              
+ 103    1  G  -1.960               -16.08              
+ 104    1  G  -1.960               -16.08              
+ 105    1  G  -1.960               -16.08              
+ 106    1  G  -2.008               -16.08              
+
+
+Warning: Bias step cut back more than 10
+times.  Cannot trap.
+
+ATLAS> solve name=drain vstep=0.002 vfinal=0.05
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.002       
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.156               -28.5*              
+   2    1  G  -4.599               -30.7*              
+   3    1  G  -7.54*               -30.9*              
+   4    1  G          15.93               -19.4*       
+   5    1  G                -7.40*               -22.7*
+   7    1  G   0.024               -10.32              
+   8    1  G  -0.017               -10.32              
+   9    1  G  -0.050               -10.32              
+  10    1  G  -0.059               -10.32              
+  11    1  G  -0.070               -10.32              
+  12    1  G   0.588               -10.32              
+  13    1  G   0.588               -10.32              
+  14    1  G   0.588               -10.32              
+  15    1  G   0.588               -10.32              
+  16    1  G   0.588               -10.32              
+  17    1  G   0.588               -10.32              
+  18    1  G   0.588               -10.32              
+  19    1  G   0.588               -10.32              
+  20    1  G   0.588               -10.32              
+  21    1  G   0.588               -10.32              
+  22    1  G   0.588               -10.32              
+  23    1  G   0.588               -10.32              
+  24    1  G   0.588               -10.32              
+  25    1  G   0.261               -10.32              
+  26    1  G   0.588               -10.32              
+  27    1  G  -0.685               -10.32              
+  28    1  G  -1.340               -10.32              
+  29    1  G  -1.354               -10.32              
+  30    1  G  -1.376               -10.32              
+  31    1  G  -1.394               -10.32              
+  32    1  G  -1.390               -10.32              
+  33    1  G  -1.413               -10.32              
+  34    1  G  -1.440               -10.32              
+  35    1  G  -1.459               -10.32              
+  36    1  G  -1.474               -10.32              
+  37    1  G  -1.481               -10.32              
+  38    1  G  -1.503               -10.32              
+  39    1  G  -1.500               -10.32              
+  40    1  G  -1.519               -10.32              
+  41    1  G  -1.534               -10.32              
+  42    1  G  -1.556               -10.32              
+  43    1  G  -1.562               -10.32              
+  44    1  G  -1.571               -10.32              
+  45    1  G  -1.588               -10.32              
+  46    1  G  -1.586               -10.32              
+  47    1  G  -1.611               -10.32              
+  48    1  G  -1.609               -10.32              
+  49    1  G  -1.608               -10.32              
+  50    1  G  -1.637               -10.32              
+  51    1  G  -1.648               -10.32              
+  52    1  G  -1.658               -10.32              
+  53    1  G  -1.667               -10.32              
+  54    1  G  -1.675               -10.32              
+  55    1  G  -1.690               -10.32              
+  56    1  G  -1.666               -10.32              
+  57    1  G  -1.703               -10.32              
+  58    1  G  -1.701               -10.32              
+  59    1  G  -1.700               -10.32              
+  60    1  G  -1.699               -10.32              
+  61    1  G  -1.731               -10.32              
+  62    1  G  -1.730               -10.32              
+  63    1  G  -1.729               -10.32              
+  64    1  G  -1.758               -10.32              
+  65    1  G  -1.757               -10.32              
+  66    1  G  -1.756               -10.32              
+  67    1  G  -1.780               -10.32              
+  68    1  G  -1.779               -10.32              
+  69    1  G  -1.799               -10.32              
+  70    1  G  -1.798               -10.32              
+  71    1  G  -1.797               -10.32              
+  72    1  G  -1.812               -10.32              
+  73    1  G  -1.823               -10.32              
+  74    1  G  -1.829               -10.32              
+  75    1  G  -1.828               -10.32              
+  76    1  G  -1.827               -10.32              
+  77    1  G  -1.827               -10.32              
+  78    1  G  -1.855               -10.32              
+  79    1  G  -1.854               -10.32              
+  80    1  G  -1.866               -10.32              
+  81    1  G  -1.865               -10.32              
+  82    1  G  -1.876               -10.32              
+  83    1  G  -1.886               -10.32              
+  84    1  G  -1.886               -10.32              
+  85    1  G  -1.894               -10.32              
+  86    1  G  -1.901               -10.32              
+  87    1  G  -1.906               -10.32              
+  88    1  G  -1.891               -10.32              
+  89    1  G  -1.891               -10.32              
+  90    1  G  -1.890               -10.32              
+  91    1  G  -1.889               -10.32              
+  92    1  G  -1.888               -10.32              
+  93    1  G  -1.938               -10.32              
+  94    1  G  -1.937               -10.32              
+  95    1  G  -1.936               -10.32              
+  96    1  G  -1.935               -10.32              
+  97    1  G  -1.935               -10.32              
+  98    1  G  -1.934               -10.32              
+  99    1  G  -1.934               -10.32              
+ 100    1  G  -1.933               -10.32              
+ 101    1  G  -1.932               -10.32              
+ 102    1  G  -1.977               -10.32              
+ 103    1  G  -1.977               -10.32              
+ 104    1  G  -1.976               -10.32              
+ 105    1  G  -1.975               -10.32              
+ 106    1  G  -1.975               -10.32              
+ 107    1  G  -1.974               -10.32              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 1 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.001       
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.457               -28.5*              
+   2    1  G  -5.20*               -30.7*              
+   3    1  G          14.77               -19.5*       
+   4    1  G                -7.66*               -22.7*
+   6    1  G   0.588               -11.48              
+   7    1  G   0.193               -11.48              
+   8    1  G   0.588               -11.48              
+   9    1  G   0.588               -11.48              
+  10    1  G   0.588               -11.48              
+  11    1  G   0.588               -11.48              
+  12    1  G   0.588               -11.48              
+  13    1  G   0.588               -11.48              
+  14    1  G   0.588               -11.48              
+  15    1  G   0.588               -11.48              
+  16    1  G   0.588               -11.48              
+  17    1  G   0.588               -11.48              
+  18    1  G   0.588               -11.48              
+  19    1  G   0.588               -11.48              
+  20    1  G   0.361               -11.48              
+  21    1  G   0.588               -11.48              
+  22    1  G   0.588               -11.48              
+  23    1  G   0.588               -11.48              
+  24    1  G   0.588               -11.48              
+  25    1  G   0.588               -11.48              
+  26    1  G   0.588               -11.48              
+  27    1  G   0.588               -11.48              
+  28    1  G  -1.142               -11.48              
+  29    1  G   0.588               -11.48              
+  30    1  G  -1.205               -11.48              
+  31    1  G  -1.392               -11.48              
+  32    1  G  -1.416               -11.48              
+  33    1  G  -1.444               -11.48              
+  34    1  G  -1.454               -11.48              
+  35    1  G  -1.473               -11.48              
+  36    1  G  -1.487               -11.48              
+  37    1  G   0.588               -11.48              
+  38    1  G   0.588               -11.48              
+  39    1  G  -1.275               -11.48              
+  40    1  G  -1.274               -11.48              
+  41    1  G   0.588               -11.48              
+  42    1  G   0.588               -11.48              
+  43    1  G  -1.362               -11.48              
+  44    1  G  -1.589               -11.48              
+  45    1  G  -1.598               -11.48              
+  46    1  G  -1.604               -11.48              
+  47    1  G  -1.603               -11.48              
+  48    1  G  -1.633               -11.48              
+  49    1  G  -1.632               -11.48              
+  50    1  G  -1.644               -11.48              
+  51    1  G  -1.654               -11.48              
+  52    1  G  -1.664               -11.48              
+  53    1  G  -1.680               -11.48              
+  54    1  G   0.588               -11.48              
+  55    1  G   0.588               -11.48              
+  56    1  G   0.588               -11.48              
+  57    1  G   0.588               -11.48              
+  58    1  G  -1.415               -11.48              
+  59    1  G  -1.415               -11.48              
+  60    1  G  -1.414               -11.48              
+  61    1  G  -1.413               -11.48              
+  62    1  G   0.588               -11.48              
+  63    1  G   0.588               -11.48              
+  64    1  G   0.588               -11.48              
+  65    1  G  -1.775               -11.48              
+  66    1  G  -1.775               -11.48              
+  67    1  G  -1.788               -11.48              
+  68    1  G  -1.798               -11.48              
+  69    1  G  -1.804               -11.48              
+  70    1  G  -1.798               -11.48              
+  71    1  G  -1.812               -11.48              
+  72    1  G  -1.822               -11.48              
+  73    1  G  -1.827               -11.48              
+  74    1  G  -1.837               -11.48              
+  75    1  G  -1.841               -11.48              
+  76    1  G  -1.837               -11.48              
+  77    1  G  -1.855               -11.48              
+  78    1  G  -1.855               -11.48              
+  79    1  G  -1.867               -11.48              
+  80    1  G  -1.874               -11.48              
+  81    1  G  -1.878               -11.48              
+  82    1  G  -1.885               -11.48              
+  83    1  G  -1.890               -11.48              
+  84    1  G  -1.897               -11.48              
+  85    1  G  -1.899               -11.48              
+  86    1  G   0.588               -11.48              
+  87    1  G   0.588               -11.48              
+  88    1  G   0.588               -11.48              
+  89    1  G   0.588               -11.48              
+  90    1  G   0.588               -11.48              
+  91    1  G  -1.569               -11.48              
+  92    1  G  -1.569               -11.48              
+  93    1  G  -1.568               -11.48              
+  94    1  G  -1.568               -11.48              
+  95    1  G  -1.568               -11.48              
+  96    1  G  -1.567               -11.48              
+  97    1  G  -1.945               -11.48              
+  98    1  G  -1.966               -11.48              
+  99    1  G  -1.965               -11.48              
+ 100    1  G  -1.965               -11.48              
+ 101    1  G  -1.981               -11.48              
+ 102    1  G  -1.981               -11.48              
+ 103    1  G  -1.980               -11.48              
+ 104    1  G  -1.991               -11.48              
+ 105    1  G  -1.978               -11.48              
+ 106    1  G  -2.003               -11.48              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 2 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.0005      
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -1.758               -28.5*              
+   2    1  G  -5.80*               -30.6*              
+   3    1  G          13.44               -19.5*       
+   4    1  G                -8.29*               -22.7*
+   6    1  G   0.009               -12.75              
+   7    1  G  -0.158               -12.75              
+   8    1  G  -0.068               -12.75              
+   9    1  G  -0.099               -12.75              
+  10    1  G  -0.143               -12.75              
+  11    1  G  -0.193               -12.75              
+  12    1  G  -0.313               -12.75              
+  13    1  G  -0.312               -12.75              
+  14    1  G  -0.384               -12.75              
+  15    1  G  -0.477               -12.75              
+  16    1  G   0.216               -12.75              
+  17    1  G  -0.032               -12.75              
+  18    1  G  -0.104               -12.75              
+  19    1  G  -0.104               -12.75              
+  20    1  G   0.066               -12.75              
+  21    1  G   0.208               -12.75              
+  22    1  G   0.461               -12.75              
+  23    1  G   0.588               -12.75              
+  24    1  G   0.564               -12.75              
+  25    1  G   0.588               -12.75              
+  26    1  G  -1.316               -12.75              
+  27    1  G  -1.340               -12.75              
+  28    1  G  -1.352               -12.75              
+  29    1  G  -1.375               -12.75              
+  30    1  G  -1.394               -12.75              
+  31    1  G  -1.409               -12.75              
+  32    1  G  -1.421               -12.75              
+  33    1  G  -1.444               -12.75              
+  34    1  G  -1.453               -12.75              
+  35    1  G  -1.473               -12.75              
+  36    1  G  -1.490               -12.75              
+  37    1  G  -1.478               -12.75              
+  38    1  G  -1.505               -12.75              
+  39    1  G  -1.524               -12.75              
+  40    1  G  -1.537               -12.75              
+  41    1  G  -1.557               -12.75              
+  42    1  G  -1.567               -12.75              
+  43    1  G  -1.564               -12.75              
+  44    1  G  -1.584               -12.75              
+  45    1  G  -1.589               -12.75              
+  46    1  G  -1.610               -12.75              
+  47    1  G  -1.621               -12.75              
+  48    1  G  -1.630               -12.75              
+  49    1  G  -1.642               -12.75              
+  50    1  G  -1.645               -12.75              
+  51    1  G  -1.655               -12.75              
+  52    1  G  -1.668               -12.75              
+  53    1  G  -1.650               -12.75              
+  54    1  G  -1.684               -12.75              
+  55    1  G  -1.683               -12.75              
+  56    1  G  -1.706               -12.75              
+  57    1  G  -1.705               -12.75              
+  58    1  G  -1.692               -12.75              
+  59    1  G  -1.727               -12.75              
+  60    1  G  -1.726               -12.75              
+  61    1  G  -1.725               -12.75              
+  62    1  G  -1.749               -12.75              
+  63    1  G  -1.763               -12.75              
+  64    1  G  -1.767               -12.75              
+  65    1  G  -1.766               -12.75              
+  66    1  G  -1.765               -12.75              
+  67    1  G  -1.790               -12.75              
+  68    1  G  -1.789               -12.75              
+  69    1  G  -1.803               -12.75              
+  70    1  G  -1.800               -12.75              
+  71    1  G  -1.800               -12.75              
+  72    1  G  -1.825               -12.75              
+  73    1  G  -1.824               -12.75              
+  74    1  G  -1.839               -12.75              
+  75    1  G  -1.830               -12.75              
+  76    1  G  -1.829               -12.75              
+  77    1  G  -1.854               -12.75              
+  78    1  G  -1.854               -12.75              
+  79    1  G  -1.868               -12.75              
+  80    1  G  -1.852               -12.75              
+  81    1  G  -1.879               -12.75              
+  82    1  G  -1.878               -12.75              
+  83    1  G  -1.877               -12.75              
+  84    1  G  -1.898               -12.75              
+  85    1  G  -1.897               -12.75              
+  86    1  G  -1.896               -12.75              
+  87    1  G  -1.911               -12.75              
+  88    1  G  -1.909               -12.75              
+  89    1  G  -1.909               -12.75              
+  90    1  G  -1.915               -12.75              
+  91    1  G  -1.931               -12.75              
+  92    1  G  -1.916               -12.75              
+  93    1  G  -1.943               -12.75              
+  94    1  G  -1.942               -12.75              
+  95    1  G  -1.942               -12.75              
+  96    1  G  -1.957               -12.75              
+  97    1  G  -1.930               -12.75              
+  98    1  G  -1.929               -12.75              
+  99    1  G  -1.970               -12.75              
+ 100    1  G  -1.969               -12.75              
+ 101    1  G  -1.969               -12.75              
+ 102    1  G  -1.968               -12.75              
+ 103    1  G  -1.968               -12.75              
+ 104    1  G  -1.995               -12.75              
+ 105    1  G  -1.994               -12.75              
+ 106    1  G  -1.994               -12.75              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 3 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.00025     
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.059               -28.5*              
+   2    1  G  -6.41*               -30.6*              
+   3    1  G          14.04               -19.5*       
+   4    1  G                -6.89*               -22.7*
+   6    1  G   0.052               -12.52              
+   7    1  G   0.100               -12.52              
+   8    1  G   0.588               -12.52              
+   9    1  G   0.588               -12.52              
+  10    1  G  -0.312               -12.52              
+  11    1  G   0.588               -12.52              
+  12    1  G   0.588               -12.52              
+  13    1  G   0.588               -12.52              
+  14    1  G   0.588               -12.52              
+  15    1  G   0.588               -12.52              
+  16    1  G   0.450               -12.52              
+  17    1  G   0.588               -12.52              
+  18    1  G   0.588               -12.52              
+  19    1  G   0.050               -12.52              
+  20    1  G   0.588               -12.52              
+  21    1  G   0.296               -12.52              
+  22    1  G   0.588               -12.52              
+  23    1  G  -0.032               -12.52              
+  24    1  G  -0.407               -12.52              
+  25    1  G  -1.291               -12.52              
+  26    1  G  -1.320               -12.52              
+  27    1  G  -1.340               -12.52              
+  28    1  G   0.588               -12.52              
+  29    1  G  -1.157               -12.52              
+  30    1  G  -1.219               -12.52              
+  31    1  G  -1.413               -12.52              
+  32    1  G  -1.430               -12.52              
+  33    1  G  -1.444               -12.52              
+  34    1  G  -1.454               -12.52              
+  35    1  G  -1.477               -12.52              
+  36    1  G  -1.485               -12.52              
+  37    1  G  -1.501               -12.52              
+  38    1  G  -1.518               -12.52              
+  39    1  G   0.588               -12.52              
+  40    1  G   0.588               -12.52              
+  41    1  G   0.588               -12.52              
+  42    1  G   0.588               -12.52              
+  43    1  G   0.588               -12.52              
+  44    1  G   0.588               -12.52              
+  45    1  G   0.588               -12.52              
+  46    1  G  -1.588               -12.52              
+  47    1  G  -1.619               -12.52              
+  48    1  G  -1.618               -12.52              
+  49    1  G  -1.617               -12.52              
+  50    1  G  -1.645               -12.52              
+  51    1  G  -1.644               -12.52              
+  52    1  G  -1.667               -12.52              
+  53    1  G  -1.666               -12.52              
+  54    1  G  -1.684               -12.52              
+  55    1  G  -1.698               -12.52              
+  56    1  G  -1.697               -12.52              
+  57    1  G  -1.714               -12.52              
+  58    1  G  -1.712               -12.52              
+  59    1  G   0.588               -12.52              
+  60    1  G   0.588               -12.52              
+  61    1  G   0.588               -12.52              
+  62    1  G   0.588               -12.52              
+  63    1  G   0.588               -12.52              
+  64    1  G   0.588               -12.52              
+  65    1  G   0.588               -12.52              
+  66    1  G   0.588               -12.52              
+  67    1  G   0.588               -12.52              
+  68    1  G   0.588               -12.52              
+  69    1  G   0.588               -12.52              
+  70    1  G   0.588               -12.52              
+  71    1  G   0.588               -12.52              
+  72    1  G   0.588               -12.52              
+  73    1  G   0.588               -12.52              
+  74    1  G   0.588               -12.52              
+  75    1  G   0.588               -12.52              
+  76    1  G   0.588               -12.52              
+  77    1  G   0.588               -12.52              
+  78    1  G   0.588               -12.52              
+  79    1  G  -1.836               -12.52              
+  80    1  G  -1.836               -12.52              
+  81    1  G  -1.875               -12.52              
+  82    1  G  -1.875               -12.52              
+  83    1  G  -1.875               -12.52              
+  84    1  G  -1.874               -12.52              
+  85    1  G  -1.874               -12.52              
+  86    1  G  -1.907               -12.52              
+  87    1  G  -1.907               -12.52              
+  88    1  G  -1.906               -12.52              
+  89    1  G  -1.906               -12.52              
+  90    1  G  -1.905               -12.52              
+  91    1  G  -1.933               -12.52              
+  92    1  G  -1.932               -12.52              
+  93    1  G  -1.932               -12.52              
+  94    1  G  -1.931               -12.52              
+  95    1  G  -1.953               -12.52              
+  96    1  G  -1.953               -12.52              
+  97    1  G  -1.952               -12.52              
+  98    1  G  -1.968               -12.52              
+  99    1  G  -1.968               -12.52              
+ 100    1  G  -1.968               -12.52              
+ 101    1  G  -1.979               -12.52              
+ 102    1  G  -1.986               -12.52              
+ 103    1  G  -1.985               -12.52              
+ 104    1  G  -1.985               -12.52              
+ 105    1  G  -1.984               -12.52              
+ 106    1  G  -2.000               -12.52              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 4 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 0.000125    
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.360               -28.5*              
+   2    1  G  -7.02*               -30.5*              
+   3    1  G          14.38               -19.5*       
+   4    1  G                -7.44*               -22.7*
+   6    1  G   0.018               -11.51              
+   7    1  G   0.588               -11.51              
+   8    1  G   0.544               -11.51              
+   9    1  G   0.588               -11.51              
+  10    1  G   0.588               -11.51              
+  11    1  G   0.588               -11.51              
+  12    1  G   0.588               -11.51              
+  13    1  G   0.588               -11.51              
+  14    1  G   0.588               -11.51              
+  15    1  G   0.588               -11.51              
+  16    1  G   0.588               -11.51              
+  17    1  G   0.588               -11.51              
+  18    1  G   0.588               -11.51              
+  19    1  G   0.588               -11.51              
+  20    1  G   0.588               -11.51              
+  21    1  G   0.588               -11.51              
+  22    1  G   0.588               -11.51              
+  23    1  G   0.588               -11.51              
+  24    1  G   0.588               -11.51              
+  25    1  G   0.588               -11.51              
+  26    1  G  -1.322               -11.51              
+  27    1  G   0.588               -11.51              
+  28    1  G  -0.991               -11.51              
+  29    1  G  -1.039               -11.51              
+  30    1  G  -1.397               -11.51              
+  31    1  G  -1.393               -11.51              
+  32    1  G  -1.421               -11.51              
+  33    1  G  -1.446               -11.51              
+  34    1  G  -1.443               -11.51              
+  35    1  G  -1.465               -11.51              
+  36    1  G  -1.484               -11.51              
+  37    1  G  -1.499               -11.51              
+  38    1  G  -1.510               -11.51              
+  39    1  G   0.588               -11.51              
+  40    1  G   0.588               -11.51              
+  41    1  G   0.588               -11.51              
+  42    1  G   0.588               -11.51              
+  43    1  G  -1.539               -11.51              
+  44    1  G  -1.582               -11.51              
+  45    1  G  -1.580               -11.51              
+  46    1  G  -1.579               -11.51              
+  47    1  G  -1.619               -11.51              
+  48    1  G  -1.618               -11.51              
+  49    1  G  -1.616               -11.51              
+  50    1  G  -1.615               -11.51              
+  51    1  G  -1.652               -11.51              
+  52    1  G  -1.651               -11.51              
+  53    1  G  -1.650               -11.51              
+  54    1  G  -1.684               -11.51              
+  55    1  G  -1.682               -11.51              
+  56    1  G  -1.681               -11.51              
+  57    1  G  -1.711               -11.51              
+  58    1  G  -1.710               -11.51              
+  59    1  G  -1.709               -11.51              
+  60    1  G  -1.735               -11.51              
+  61    1  G  -1.734               -11.51              
+  62    1  G  -1.755               -11.51              
+  63    1  G  -1.754               -11.51              
+  64    1  G  -1.769               -11.51              
+  65    1  G  -1.768               -11.51              
+  66    1  G  -1.785               -11.51              
+  67    1  G   0.588               -11.51              
+  68    1  G   0.588               -11.51              
+  69    1  G   0.588               -11.51              
+  70    1  G   0.588               -11.51              
+  71    1  G   0.588               -11.51              
+  72    1  G   0.588               -11.51              
+  73    1  G   0.588               -11.51              
+  74    1  G   0.588               -11.51              
+  75    1  G   0.588               -11.51              
+  76    1  G  -1.825               -11.51              
+  77    1  G  -1.825               -11.51              
+  78    1  G  -1.824               -11.51              
+  79    1  G  -1.823               -11.51              
+  80    1  G  -1.875               -11.51              
+  81    1  G  -1.874               -11.51              
+  82    1  G  -1.874               -11.51              
+  83    1  G  -1.873               -11.51              
+  84    1  G  -1.872               -11.51              
+  85    1  G  -1.871               -11.51              
+  86    1  G  -1.870               -11.51              
+  87    1  G  -1.870               -11.51              
+  88    1  G  -1.917               -11.51              
+  89    1  G  -1.916               -11.51              
+  90    1  G  -1.915               -11.51              
+  91    1  G  -1.915               -11.51              
+  92    1  G  -1.914               -11.51              
+  93    1  G  -1.913               -11.51              
+  94    1  G  -1.913               -11.51              
+  95    1  G  -1.912               -11.51              
+  96    1  G  -1.954               -11.51              
+  97    1  G  -1.954               -11.51              
+  98    1  G  -1.953               -11.51              
+  99    1  G  -1.952               -11.51              
+ 100    1  G  -1.952               -11.51              
+ 101    1  G  -1.951               -11.51              
+ 102    1  G  -1.951               -11.51              
+ 103    1  G  -1.988               -11.51              
+ 104    1  G  -1.987               -11.51              
+ 105    1  G  -1.987               -11.51              
+ 106    1  G  -1.986               -11.51              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 5 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 6.25e-05    
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.661               -28.5*              
+   2    1  G  -7.22*               -30.5*              
+   3    1  G          11.54               -19.5*       
+   4    1  G                -8.41*               -22.7*
+   6    1  G   0.018               -14.98              
+   7    1  G  -0.186               -14.98              
+   8    1  G  -0.178               -14.98              
+   9    1  G  -0.246               -14.98              
+  10    1  G  -0.369               -14.98              
+  11    1  G  -0.349               -14.98              
+  12    1  G  -0.604               -14.98              
+  13    1  G  -0.707               -14.98              
+  14    1  G  -0.791               -14.98              
+  15    1  G  -0.886               -14.98              
+  16    1  G   0.588               -14.98              
+  17    1  G   0.588               -14.98              
+  18    1  G   0.581               -14.98              
+  19    1  G   0.576               -14.98              
+  20    1  G   0.584               -14.98              
+  21    1  G   0.588               -14.98              
+  22    1  G   0.289               -14.98              
+  23    1  G  -0.350               -14.98              
+  24    1  G  -1.269               -14.98              
+  25    1  G  -1.291               -14.98              
+  26    1  G  -1.311               -14.98              
+  27    1  G  -1.331               -14.98              
+  28    1  G  -1.349               -14.98              
+  29    1  G  -1.378               -14.98              
+  30    1  G  -1.394               -14.98              
+  31    1  G  -1.409               -14.98              
+  32    1  G  -1.407               -14.98              
+  33    1  G  -1.439               -14.98              
+  34    1  G  -1.437               -14.98              
+  35    1  G  -1.467               -14.98              
+  36    1  G  -1.466               -14.98              
+  37    1  G  -1.495               -14.98              
+  38    1  G  -1.494               -14.98              
+  39    1  G  -1.521               -14.98              
+  40    1  G  -1.520               -14.98              
+  41    1  G  -1.545               -14.98              
+  42    1  G  -1.566               -14.98              
+  43    1  G  -1.565               -14.98              
+  44    1  G  -1.582               -14.98              
+  45    1  G  -1.594               -14.98              
+  46    1  G  -1.614               -14.98              
+  47    1  G  -1.622               -14.98              
+  48    1  G  -1.634               -14.98              
+  49    1  G  -1.626               -14.98              
+  50    1  G  -1.626               -14.98              
+  51    1  G  -1.662               -14.98              
+  52    1  G  -1.662               -14.98              
+  53    1  G  -1.661               -14.98              
+  54    1  G  -1.661               -14.98              
+  55    1  G  -1.696               -14.98              
+  56    1  G  -1.695               -14.98              
+  57    1  G  -1.695               -14.98              
+  58    1  G  -1.694               -14.98              
+  59    1  G  -1.728               -14.98              
+  60    1  G  -1.727               -14.98              
+  61    1  G  -1.726               -14.98              
+  62    1  G  -1.726               -14.98              
+  63    1  G  -1.757               -14.98              
+  64    1  G  -1.757               -14.98              
+  65    1  G  -1.756               -14.98              
+  66    1  G  -1.783               -14.98              
+  67    1  G  -1.783               -14.98              
+  68    1  G  -1.783               -14.98              
+  69    1  G  -1.804               -14.98              
+  70    1  G  -1.804               -14.98              
+  71    1  G  -1.819               -14.98              
+  72    1  G  -1.821               -14.98              
+  73    1  G  -1.833               -14.98              
+  74    1  G  -1.833               -14.98              
+  75    1  G  -1.843               -14.98              
+  76    1  G  -1.852               -14.98              
+  77    1  G  -1.849               -14.98              
+  78    1  G  -1.862               -14.98              
+  79    1  G  -1.859               -14.98              
+  80    1  G  -1.859               -14.98              
+  81    1  G  -1.858               -14.98              
+  82    1  G  -1.858               -14.98              
+  83    1  G  -1.858               -14.98              
+  84    1  G  -1.898               -14.98              
+  85    1  G  -1.898               -14.98              
+  86    1  G  -1.898               -14.98              
+  87    1  G  -1.897               -14.98              
+  88    1  G  -1.897               -14.98              
+  89    1  G  -1.897               -14.98              
+  90    1  G  -1.896               -14.98              
+  91    1  G  -1.936               -14.98              
+  92    1  G  -1.936               -14.98              
+  93    1  G  -1.936               -14.98              
+  94    1  G  -1.935               -14.98              
+  95    1  G  -1.935               -14.98              
+  96    1  G  -1.935               -14.98              
+  97    1  G  -1.934               -14.98              
+  98    1  G  -1.934               -14.98              
+  99    1  G  -1.972               -14.98              
+ 100    1  G  -1.972               -14.98              
+ 101    1  G  -1.971               -14.98              
+ 102    1  G  -1.971               -14.98              
+ 103    1  G  -1.971               -14.98              
+ 104    1  G  -1.971               -14.98              
+ 105    1  G  -1.970               -14.98              
+ 106    1  G  -2.004               -14.98              
+
+
+Warning: Convergence problem.  Taking smaller bias
+step(s).  Bias step reduced 6 times.
+
+
+Obtaining static solution:
+
+ V(  drain  ) = 3.125e-05   
+
+
+prev           psi     n      p     psi     n      p  
+ILUCGS          x      x      x     rhs    rhs    rhs 
+   i    j  m  -5.00* -5.00* -5.00* -26.0* -17.3* -17.3*
+-------------------------------------------------------
+   1    1  G  -2.963               -28.5*              
+   2    1  G  -7.36*               -30.5*              
+   3    1  G          8.312               -19.5*       
+   4    1  G                -8.62*               -22.7*
+   6    1  G  -0.062               -17.69              
+   7    1  G  -0.339               -17.69              
+   8    1  G  -0.435               -17.70              
+   9    1  G  -0.617               -17.70              
+  10    1  G  -0.735               -17.71              
+  11    1  G  -0.787               -17.71              
+  12    1  G  -0.843               -17.72              
+  13    1  G  -0.913               -17.72              
+  14    1  G  -0.974               -17.73              
+  15    1  G  -1.004               -17.73              
+  16    1  G  -1.043               -17.74              
+  17    1  G  -1.054               -17.74              
+  18    1  G  -1.125               -17.75              
+  19    1  G  -1.142               -17.75              
+  20    1  G  -1.119               -17.76              
+  21    1  G  -1.154               -17.76              
+  22    1  G  -1.154               -17.77              
+  23    1  G  -1.180               -17.77              
+  24    1  G  -1.198               -17.78              
+  25    1  G  -1.209               -17.79              
+  26    1  G  -1.331               -17.79              
+  27    1  G  -1.359               -17.80              
+  28    1  G  -1.348               -17.80              
+  29    1  G  -1.348               -17.81              
+  30    1  G  -1.408               -17.82              
+  31    1  G  -1.408               -17.82              
+  32    1  G  -1.443               -17.83              
+  33    1  G  -1.443               -17.84              
+  34    1  G  -1.443               -17.84              
+  35    1  G  -1.443               -17.85              
+  36    1  G  -1.443               -17.86              
+  37    1  G  -1.444               -17.87              
+  38    1  G  -1.529               -17.88              
+  39    1  G  -1.529               -17.89              
+  40    1  G  -1.529               -17.90              
+  41    1  G  -1.530               -17.91              
+  42    1  G  -1.530               -17.92              
+  43    1  G  -1.588               -17.92              
+  44    1  G  -1.588               -17.93              
+  45    1  G  -1.615               -17.94              
+  46    1  G  -1.615               -17.96              
+  47    1  G  -1.615               -17.97              
+  48    1  G  -1.615               -17.98              
+  49    1  G  -1.615               -17.99              
+  50    1  G  -1.615               -18.01              
+  51    1  G  -1.672               -18.02              
+  52    1  G  -1.672               -18.04              
+  53    1  G  -1.672               -18.05              
+  54    1  G  -1.564               -18.07              
+  55    1  G  -1.564               -18.09              
+  56    1  G  -1.508               -18.11              
+  57    1  G  -1.508               -18.13              
+  58    1  G  -1.508               -18.16              
+  59    1  G  -1.508               -18.18              
+  60    1  G  -1.508               -18.20              
+  61    1  G  -1.548               -18.23              

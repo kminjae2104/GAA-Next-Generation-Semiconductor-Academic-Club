@@ -1,0 +1,21 @@
+v ATLAS
+# This file was created by ATLAS version 5.34.0.R on Tue Nov 17 23:12:58 2026.
+#SSF 2.0 generic
+##############################################################################
+#                    Copyright (c) 1984 - 2022                               #
+#                    Silvaco Inc. All rights reserved                        #
+#                                                                            #
+# This file format and the following Key are copyright Silvaco Inc.          #
+# You may not use, this format or key without reproducing this message in    #
+# full and obtaining express written permission from Silvaco Inc.            #
+#                                                                            #
+# To obtain such permission please contact: Silvaco Inc.                     #
+#                                           support@silvaco.com              #
+#                                                                            #
+# KEY=SVC86hn7562asdx                       PROD=345                         #
+##############################################################################
+y 3 700 711 15
+z 0 1e+41 300
+f 3 "gate" "source" "drain" 
+p 9 2 601 20 3 602 21 4 603 22 
+d -1.999804688e-01 -1.999804688e-01 0.000000000e+00 0.000000000e+00 0.000000000e+00 -7.667524205e-15 4.331835938e-02 4.331835938e-02 -1.716749277e-14 

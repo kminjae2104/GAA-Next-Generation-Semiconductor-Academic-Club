@@ -1,0 +1,484 @@
+{
+  "snapshot_epoch": 1794972740.9742064,
+  "jobs": {
+    "gaa_overnight_20261116T080149Z": {
+      "exists": true,
+      "files": {
+        "launch.json": {
+          "scheduler_pid": 152545,
+          "remote_directory": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable",
+          "results_directory": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results",
+          "command": [
+            "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3",
+            "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/dag_scheduler.py",
+            "--plan",
+            "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/workflow.json",
+            "--output",
+            "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results"
+          ],
+          "tasks": 34,
+          "max_parallel": 3,
+          "calculation_time_limit_seconds": null,
+          "detached_session": true,
+          "launch_epoch": 1794816147.8482807,
+          "workflow_sha256": "78a4fb2f2982f628216c9b284b72982946a85f1f964b95fb081c67940214852d",
+          "disk_free_bytes": 27096106405888,
+          "physical_validation": "NOT_VALIDATED",
+          "alive_at_handoff": true,
+          "scheduler_session_id": 152545,
+          "launcher_session_id": 152544,
+          "separate_session_verified": true,
+          "initial_progress": {
+            "stage": "DEPENDENCY_WORKFLOW",
+            "tasks": {
+              "eq_bicgst_smoke": {
+                "status": "RUNNING",
+                "started": 1794816147.955671,
+                "worker_pid": 152549
+              },
+              "bias_direct_smoke": {
+                "status": "RUNNING",
+                "started": 1794816147.9562154,
+                "worker_pid": 152550
+              },
+              "bias_bicgst_smoke": {
+                "status": "RUNNING",
+                "started": 1794816147.9566438,
+                "worker_pid": 152551
+              },
+              "eq_direct_smoke": {
+                "status": "PENDING"
+              },
+              "eq_default_smoke": {
+                "status": "PENDING"
+              },
+              "bias_default_smoke": {
+                "status": "PENDING"
+              },
+              "bqp_smoke": {
+                "status": "PENDING"
+              },
+              "eq_bicgst_screen": {
+                "status": "PENDING"
+              },
+              "bias_direct_screen": {
+                "status": "PENDING"
+              },
+              "bias_bicgst_screen": {
+                "status": "PENDING"
+              },
+              "eq_direct_screen": {
+                "status": "PENDING"
+              },
+              "eq_default_screen": {
+                "status": "PENDING"
+              },
+              "bias_default_screen": {
+                "status": "PENDING"
+              },
+              "wf4p55_screen": {
+                "status": "PENDING"
+              },
+              "wf4p6_screen": {
+                "status": "PENDING"
+              },
+              "bqp_screen": {
+                "status": "PENDING"
+              },
+              "eq_bicgst_full": {
+                "status": "PENDING"
+              },
+              "bias_direct_full": {
+                "status": "PENDING"
+              },
+              "bias_bicgst_full": {
+                "status": "PENDING"
+              },
+              "eq_direct_full": {
+                "status": "PENDING"
+              },
+              "eq_default_full": {
+                "status": "PENDING"
+              },
+              "bias_default_full": {
+                "status": "PENDING"
+              },
+              "wf4p55_full": {
+                "status": "PENDING"
+              },
+              "wf4p6_full": {
+                "status": "PENDING"
+              },
+              "bqp_full": {
+                "status": "PENDING"
+              },
+              "eq_bicgst_fine": {
+                "status": "PENDING"
+              },
+              "bias_direct_fine": {
+                "status": "PENDING"
+              },
+              "bias_bicgst_fine": {
+                "status": "PENDING"
+              },
+              "eq_direct_fine": {
+                "status": "PENDING"
+              },
+              "eq_default_fine": {
+                "status": "PENDING"
+              },
+              "bias_default_fine": {
+                "status": "PENDING"
+              },
+              "wf4p55_fine": {
+                "status": "PENDING"
+              },
+              "wf4p6_fine": {
+                "status": "PENDING"
+              },
+              "bqp_fine": {
+                "status": "PENDING"
+              }
+            }
+          }
+        },
+        "results/progress.json": {
+          "stage": "DEPENDENCY_WORKFLOW",
+          "tasks": {
+            "eq_bicgst_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816147.955671,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816285.7494946
+            },
+            "bias_direct_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816147.9562154,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816341.2801948
+            },
+            "bias_bicgst_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816147.9566438,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816292.929621
+            },
+            "eq_direct_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816285.7499635,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816440.5830128
+            },
+            "eq_default_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816292.930295,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816488.66697
+            },
+            "bias_default_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816341.2804914,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816499.7137249
+            },
+            "bqp_smoke": {
+              "status": "SUCCEEDED",
+              "started": 1794816898.640917,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817179.8024583
+            },
+            "eq_bicgst_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794816440.5833945,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816898.6404617
+            },
+            "bias_direct_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794816488.6676073,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817186.1502545
+            },
+            "bias_bicgst_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794816499.7143528,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794816837.8210638
+            },
+            "eq_direct_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794816837.821667,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817676.1110477
+            },
+            "eq_default_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794817179.8033817,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817589.4573936
+            },
+            "bias_default_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794817186.1506622,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817593.0493927
+            },
+            "wf4p55_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794817589.4580963,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794817922.6310682
+            },
+            "wf4p6_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794817593.0498028,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794818068.3403988
+            },
+            "bqp_screen": {
+              "status": "SUCCEEDED",
+              "started": 1794817676.1115725,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794818757.6198978
+            },
+            "eq_bicgst_full": {
+              "status": "SUCCEEDED",
+              "started": 1794817922.631973,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794820064.156868
+            },
+            "bias_direct_full": {
+              "status": "SUCCEEDED",
+              "started": 1794818068.3407617,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794854182.7432542
+            },
+            "bias_bicgst_full": {
+              "status": "FAILED",
+              "started": 1794818757.620424,
+              "returncode": 1,
+              "timeout": false,
+              "finished": 1794831186.3638008
+            },
+            "eq_direct_full": {
+              "status": "SUCCEEDED",
+              "started": 1794820064.1575406,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794833337.9739907
+            },
+            "eq_default_full": {
+              "status": "SUCCEEDED",
+              "started": 1794831186.3644657,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794833289.4979815
+            },
+            "bias_default_full": {
+              "status": "FAILED",
+              "started": 1794833289.498538,
+              "returncode": 1,
+              "timeout": false,
+              "finished": 1794839052.968193
+            },
+            "wf4p55_full": {
+              "status": "SUCCEEDED",
+              "started": 1794833337.9744143,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794835243.1108189
+            },
+            "wf4p6_full": {
+              "status": "SUCCEEDED",
+              "started": 1794835243.1116025,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794837124.406912
+            },
+            "bqp_full": {
+              "status": "SUCCEEDED",
+              "started": 1794837124.4073634,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794841292.1762273
+            },
+            "eq_bicgst_fine": {
+              "status": "SUCCEEDED",
+              "started": 1794839052.9686642,
+              "returncode": 0,
+              "timeout": false,
+              "finished": 1794861367.5275419
+            },
+            "bias_direct_fine": {
+              "status": "FAILED",
+              "started": 1794854182.7440038,
+              "returncode": 5,
+              "timeout": false,
+              "finished": 1794854545.025323
+            },
+            "bias_bicgst_fine": {
+              "status": "BLOCKED",
+              "reason": "Dependency did not pass validation"
+            },
+            "eq_direct_fine": {
+              "status": "FAILED",
+              "started": 1794841292.1769602,
+              "returncode": 5,
+              "timeout": false,
+              "finished": 1794841686.122177
+            },
+            "eq_default_fine": {
+              "status": "FAILED",
+              "started": 1794841686.122828,
+              "returncode": 5,
+              "timeout": false,
+              "finished": 1794841691.9511771
+            },
+            "bias_default_fine": {
+              "status": "BLOCKED",
+              "reason": "Dependency did not pass validation"
+            },
+            "wf4p55_fine": {
+              "status": "FAILED",
+              "started": 1794841691.9516654,
+              "returncode": 1,
+              "timeout": false,
+              "finished": 1794887402.127285
+            },
+            "wf4p6_fine": {
+              "status": "FAILED",
+              "started": 1794854545.0257587,
+              "returncode": 1,
+              "timeout": false,
+              "finished": 1794885767.134032
+            },
+            "bqp_fine": {
+              "status": "FAILED",
+              "started": 1794861367.5282207,
+              "returncode": 1,
+              "timeout": false,
+              "finished": 1794925502.9806817
+            }
+          }
+        }
+      },
+      "snapshot_epoch": 1794972740.9743917,
+      "recorded_pid_exists": false,
+      "snapshot_end_epoch": 1794972741.114298
+    },
+    "gaa_autonomous_20261117T064609Z": {
+      "exists": true,
+      "files": {
+        "launch.json": {
+          "pid": 74265,
+          "started": 1794898028.2195296,
+          "plan": {
+            "job": "gaa_autonomous_20261117T064609Z",
+            "max_parallel": 1,
+            "tasks": [
+              {
+                "id": "wf4p55_fine_ramp002",
+                "after": [],
+                "timeout_seconds": null,
+                "command": [
+                  "{python}",
+                  "{base}/run_case.py",
+                  "--worker",
+                  "{base}/wf4p55_fine_ramp002/worker.py",
+                  "--output",
+                  "{output}"
+                ],
+                "checks": [
+                  [
+                    "{python}",
+                    "{base}/validate_case.py",
+                    "{output}",
+                    "--mode",
+                    "fine",
+                    "--compare",
+                    "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/wf4p55_full"
+                  ]
+                ],
+                "input_file": "wf4p55_fine_ramp002/gaa.in",
+                "input_sha256": "ff83384bd53968f57bfea76c5de4a9a1fd8dc895156088da6c9b8da026b2663e"
+              },
+              {
+                "id": "wf4p6_fine_ramp002",
+                "after": [],
+                "timeout_seconds": null,
+                "command": [
+                  "{python}",
+                  "{base}/run_case.py",
+                  "--worker",
+                  "{base}/wf4p6_fine_ramp002/worker.py",
+                  "--output",
+                  "{output}"
+                ],
+                "checks": [
+                  [
+                    "{python}",
+                    "{base}/validate_case.py",
+                    "{output}",
+                    "--mode",
+                    "fine",
+                    "--compare",
+                    "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/wf4p6_full"
+                  ]
+                ],
+                "input_file": "wf4p6_fine_ramp002/gaa.in",
+                "input_sha256": "7f717dd38969302ec83d7ffb916087ec06b4e373adab04fe4ca20ac24687cb1d"
+              }
+            ],
+            "physical_validation": "NOT_VALIDATED",
+            "recovery_budget": 2,
+            "reason": "Actual high Vds fell below 0.6V; finer ramp without target/model changes"
+          },
+          "original_root": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results",
+          "transport_required": false,
+          "model_calls": 0
+        },
+        "results/progress.json": {
+          "stage": "DEPENDENCY_WORKFLOW",
+          "tasks": {
+            "wf4p55_fine_ramp002": {
+              "status": "FAILED",
+              "started": 1794898028.2235544,
+              "returncode": 5,
+              "timeout": false,
+              "finished": 1794965870.636277
+            },
+            "wf4p6_fine_ramp002": {
+              "status": "RUNNING",
+              "started": 1794965870.6367848,
+              "worker_pid": 48113
+            }
+          }
+        }
+      },
+      "snapshot_epoch": 1794972741.1143332,
+      "recorded_pid_exists": true,
+      "pid_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/code/night_supervisor.py --output /users/cau/cau103/gaa_tcad_runs/gaa_autonomous_20261117T064609Z/durable ",
+      "snapshot_end_epoch": 1794972741.1203847
+    }
+  },
+  "read_only": true,
+  "simulators_started": 0
+}

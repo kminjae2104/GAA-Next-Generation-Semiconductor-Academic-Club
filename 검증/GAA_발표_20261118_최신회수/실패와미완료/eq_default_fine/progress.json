@@ -1,0 +1,21 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 5.0,
+  "diagnostic_tail": [
+    "FLEXlm=/users/tools/Silvaco/etc/license",
+    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+    "\tError(s)   = 0"
+  ],
+  "last_solver_lines": [
+    "DevEdit> quit",
+    "Parse complete:",
+    "\tError(s)   = 0",
+    "\tWarning(s) = 0"
+  ],
+  "last_bias": [],
+  "output_sizes": {
+    "console.txt": 140,
+    "solver.out": 5614
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 67835.8,
+  "diagnostic_tail": [
+    "SFLM: Current License Server: semicon1:3162/",
+    "Communications with license server restored. ",
+    "Warning: Convergence problem.  Taking smaller bias"
+  ],
+  "last_solver_lines": [
+    "Warning: Bias step cut back more than 10",
+    "times.  Cannot trap.",
+    "ATLAS> log off",
+    "ATLAS> save outf=final_high.str"
+  ],
+  "last_bias": [
+    "V(   gate  ) = -0.19998"
+  ],
+  "output_sizes": {
+    "console.txt": 793,
+    "solver.out": 1127312
+  }
+}

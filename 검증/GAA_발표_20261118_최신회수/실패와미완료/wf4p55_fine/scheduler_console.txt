@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/validate_case.py", line 59, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/validate_case.py", line 48, in main
+    result,_=analyze.analyze(execution,.04)
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/analyze.py", line 113, in analyze
+    bias_checks[name]=validate_native_log(folder/('idvg_'+name+'.log'),vd,raw[name])
+  File "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/code/analyze.py", line 24, in validate_native_log
+    raise ValueError('Native source/drain bias differs from intended Vds')
+ValueError: Native source/drain bias differs from intended Vds

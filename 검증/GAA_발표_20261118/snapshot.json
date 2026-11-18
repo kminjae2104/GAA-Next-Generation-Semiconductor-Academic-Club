@@ -1,0 +1,240 @@
+{
+  "job": "gaa_overnight_20261116T080149Z",
+  "snapshot_epoch": 1794900450.8945246,
+  "scheduler_pid": 152545,
+  "scheduler_alive": true,
+  "states": {
+    "eq_bicgst_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816147.955671,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816285.7494946
+    },
+    "bias_direct_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816147.9562154,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816341.2801948
+    },
+    "bias_bicgst_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816147.9566438,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816292.929621
+    },
+    "eq_direct_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816285.7499635,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816440.5830128
+    },
+    "eq_default_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816292.930295,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816488.66697
+    },
+    "bias_default_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816341.2804914,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816499.7137249
+    },
+    "bqp_smoke": {
+      "status": "SUCCEEDED",
+      "started": 1794816898.640917,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817179.8024583
+    },
+    "eq_bicgst_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794816440.5833945,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816898.6404617
+    },
+    "bias_direct_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794816488.6676073,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817186.1502545
+    },
+    "bias_bicgst_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794816499.7143528,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794816837.8210638
+    },
+    "eq_direct_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794816837.821667,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817676.1110477
+    },
+    "eq_default_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794817179.8033817,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817589.4573936
+    },
+    "bias_default_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794817186.1506622,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817593.0493927
+    },
+    "wf4p55_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794817589.4580963,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794817922.6310682
+    },
+    "wf4p6_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794817593.0498028,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794818068.3403988
+    },
+    "bqp_screen": {
+      "status": "SUCCEEDED",
+      "started": 1794817676.1115725,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794818757.6198978
+    },
+    "eq_bicgst_full": {
+      "status": "SUCCEEDED",
+      "started": 1794817922.631973,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794820064.156868
+    },
+    "bias_direct_full": {
+      "status": "SUCCEEDED",
+      "started": 1794818068.3407617,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794854182.7432542
+    },
+    "bias_bicgst_full": {
+      "status": "FAILED",
+      "started": 1794818757.620424,
+      "returncode": 1,
+      "timeout": false,
+      "finished": 1794831186.3638008
+    },
+    "eq_direct_full": {
+      "status": "SUCCEEDED",
+      "started": 1794820064.1575406,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794833337.9739907
+    },
+    "eq_default_full": {
+      "status": "SUCCEEDED",
+      "started": 1794831186.3644657,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794833289.4979815
+    },
+    "bias_default_full": {
+      "status": "FAILED",
+      "started": 1794833289.498538,
+      "returncode": 1,
+      "timeout": false,
+      "finished": 1794839052.968193
+    },
+    "wf4p55_full": {
+      "status": "SUCCEEDED",
+      "started": 1794833337.9744143,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794835243.1108189
+    },
+    "wf4p6_full": {
+      "status": "SUCCEEDED",
+      "started": 1794835243.1116025,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794837124.406912
+    },
+    "bqp_full": {
+      "status": "SUCCEEDED",
+      "started": 1794837124.4073634,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794841292.1762273
+    },
+    "eq_bicgst_fine": {
+      "status": "SUCCEEDED",
+      "started": 1794839052.9686642,
+      "returncode": 0,
+      "timeout": false,
+      "finished": 1794861367.5275419
+    },
+    "bias_direct_fine": {
+      "status": "FAILED",
+      "started": 1794854182.7440038,
+      "returncode": 5,
+      "timeout": false,
+      "finished": 1794854545.025323
+    },
+    "bias_bicgst_fine": {
+      "status": "BLOCKED",
+      "reason": "Dependency did not pass validation"
+    },
+    "eq_direct_fine": {
+      "status": "FAILED",
+      "started": 1794841292.1769602,
+      "returncode": 5,
+      "timeout": false,
+      "finished": 1794841686.122177
+    },
+    "eq_default_fine": {
+      "status": "FAILED",
+      "started": 1794841686.122828,
+      "returncode": 5,
+      "timeout": false,
+      "finished": 1794841691.9511771
+    },
+    "bias_default_fine": {
+      "status": "BLOCKED",
+      "reason": "Dependency did not pass validation"
+    },
+    "wf4p55_fine": {
+      "status": "FAILED",
+      "started": 1794841691.9516654,
+      "returncode": 1,
+      "timeout": false,
+      "finished": 1794887402.127285
+    },
+    "wf4p6_fine": {
+      "status": "FAILED",
+      "started": 1794854545.0257587,
+      "returncode": 1,
+      "timeout": false,
+      "finished": 1794885767.134032
+    },
+    "bqp_fine": {
+      "status": "RUNNING",
+      "started": 1794861367.5282207,
+      "worker_pid": 124997
+    }
+  },
+  "calculation_time_limit_seconds": null,
+  "physical_validation": "NOT_VALIDATED"
+}

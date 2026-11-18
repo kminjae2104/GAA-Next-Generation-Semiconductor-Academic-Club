@@ -1,0 +1,30 @@
+[
+  {
+    "original_result_path": "gaa/execution/equilibrium.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/eq_bicgst_fine/retained_structures/attempt_01/gaa/execution/equilibrium.str",
+    "bytes": 106222689,
+    "sha256": "caf8f9dcd39ecc6b7593360aba0bd179c876d18d82b22cf01ac4b0ddfddb6ac4",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_high.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/eq_bicgst_fine/retained_structures/attempt_01/gaa/execution/final_high.str",
+    "bytes": 153021396,
+    "sha256": "6fa483b34caa50d69ecb1ab1b5dccf89dbb88f45ca7951eae5a868b4d18ccfc3",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/final_low.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/eq_bicgst_fine/retained_structures/attempt_01/gaa/execution/final_low.str",
+    "bytes": 153322468,
+    "sha256": "f85c5a11dcb71bb6a3d94604269aa1767cdc076fac98d4d087852ed053402bd9",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  },
+  {
+    "original_result_path": "gaa/execution/geometry.str",
+    "remote_preserved_path": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/eq_bicgst_fine/retained_structures/attempt_01/gaa/execution/geometry.str",
+    "bytes": 19413397,
+    "sha256": "8215d00afbbf9891c7e93b584fd579644b3118f54d2b10cf2606a1d04535e424",
+    "local_byte_verification": "NOT_DOWNLOADED"
+  }
+]

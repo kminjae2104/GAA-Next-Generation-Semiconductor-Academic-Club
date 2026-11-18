@@ -1,0 +1,85 @@
+{
+  "snapshot_epoch": 1794900450.9768872,
+  "job": "gaa_autonomous_20261117T064609Z",
+  "launch.json": {
+    "pid": 74265,
+    "started": 1794898028.2195296,
+    "plan": {
+      "job": "gaa_autonomous_20261117T064609Z",
+      "max_parallel": 1,
+      "tasks": [
+        {
+          "id": "wf4p55_fine_ramp002",
+          "after": [],
+          "timeout_seconds": null,
+          "command": [
+            "{python}",
+            "{base}/run_case.py",
+            "--worker",
+            "{base}/wf4p55_fine_ramp002/worker.py",
+            "--output",
+            "{output}"
+          ],
+          "checks": [
+            [
+              "{python}",
+              "{base}/validate_case.py",
+              "{output}",
+              "--mode",
+              "fine",
+              "--compare",
+              "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/wf4p55_full"
+            ]
+          ],
+          "input_file": "wf4p55_fine_ramp002/gaa.in",
+          "input_sha256": "ff83384bd53968f57bfea76c5de4a9a1fd8dc895156088da6c9b8da026b2663e"
+        },
+        {
+          "id": "wf4p6_fine_ramp002",
+          "after": [],
+          "timeout_seconds": null,
+          "command": [
+            "{python}",
+            "{base}/run_case.py",
+            "--worker",
+            "{base}/wf4p6_fine_ramp002/worker.py",
+            "--output",
+            "{output}"
+          ],
+          "checks": [
+            [
+              "{python}",
+              "{base}/validate_case.py",
+              "{output}",
+              "--mode",
+              "fine",
+              "--compare",
+              "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results/wf4p6_full"
+            ]
+          ],
+          "input_file": "wf4p6_fine_ramp002/gaa.in",
+          "input_sha256": "7f717dd38969302ec83d7ffb916087ec06b4e373adab04fe4ca20ac24687cb1d"
+        }
+      ],
+      "physical_validation": "NOT_VALIDATED",
+      "recovery_budget": 2,
+      "reason": "Actual high Vds fell below 0.6V; finer ramp without target/model changes"
+    },
+    "original_root": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable/results",
+    "transport_required": false,
+    "model_calls": 0
+  },
+  "results/progress.json": {
+    "stage": "DEPENDENCY_WORKFLOW",
+    "tasks": {
+      "wf4p55_fine_ramp002": {
+        "status": "RUNNING",
+        "started": 1794898028.2235544,
+        "worker_pid": 74267
+      },
+      "wf4p6_fine_ramp002": {
+        "status": "PENDING"
+      }
+    }
+  }
+}

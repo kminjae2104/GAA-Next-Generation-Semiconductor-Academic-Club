@@ -1,0 +1,56 @@
+{
+  "input_deck_hashes_match_saved_configs": true,
+  "evidence_files_match_originals": 97,
+  "links_exist": 14,
+  "markdown_tables_consistent": true,
+  "mesh_8_checks_recomputed": {
+    "low_Ion_A": {
+      "difference": 0.0016910051750468375,
+      "limit": 0.05,
+      "pass": true
+    },
+    "low_Ioff_A": {
+      "difference": 0.002177603260370098,
+      "limit": 0.2,
+      "pass": true
+    },
+    "low_Vth_V": {
+      "difference": 5.016010345983146e-05,
+      "limit": 0.01,
+      "pass": true
+    },
+    "low_SS_mV_dec": {
+      "difference": 0.0007704150011846878,
+      "limit": 5,
+      "pass": true
+    },
+    "high_Ion_A": {
+      "difference": 0.01312460625804811,
+      "limit": 0.05,
+      "pass": true
+    },
+    "high_Ioff_A": {
+      "difference": 0.002399171079862504,
+      "limit": 0.2,
+      "pass": true
+    },
+    "high_Vth_V": {
+      "difference": 5.61283320580086e-05,
+      "limit": 0.01,
+      "pass": true
+    },
+    "high_SS_mV_dec": {
+      "difference": 0.0015262683286536571,
+      "limit": 5,
+      "pass": true
+    }
+  },
+  "successful_task_stages": {
+    "smoke": 7,
+    "screen": 9,
+    "full": 7,
+    "fine": 1
+  },
+  "current_remote_verified": false,
+  "graphs_created": 0
+}

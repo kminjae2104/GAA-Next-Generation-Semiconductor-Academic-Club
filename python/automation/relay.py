@@ -14,6 +14,8 @@ import re
 import secrets
 import threading
 import time
+import os
+import tempfile
 
 JOB = re.compile(r'[a-zA-Z0-9_-]{1,80}')
 MAX_RESULT = 64 * 1024 * 1024
@@ -29,11 +31,21 @@ def digest(path):
 
 def write_json(path, value):
     path = Path(path)
-    temp = path.with_name(path.name + '.tmp')
-    with temp.open('w', encoding='utf-8', newline='\n') as stream:
-        json.dump(value, stream, indent=2)
-        stream.write('\n')
-    temp.replace(path)
+    fd, name = tempfile.mkstemp(prefix=path.name+'.', suffix='.tmp', dir=path.parent)
+    temp = Path(name)
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8', newline='\n') as stream:
+            json.dump(value, stream, indent=2)
+            stream.write('\n')
+        for attempt in range(8):
+            try:
+                temp.replace(path)
+                break
+            except PermissionError:
+                if attempt == 7: raise
+                time.sleep(.05 * (attempt+1))
+    finally:
+        temp.unlink(missing_ok=True)
 
 
 class Relay(ThreadingHTTPServer):

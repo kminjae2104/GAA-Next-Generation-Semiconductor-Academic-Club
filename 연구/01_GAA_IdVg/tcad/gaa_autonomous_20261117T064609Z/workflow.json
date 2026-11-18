@@ -1,0 +1,57 @@
+{
+  "job": "gaa_autonomous_20261117T064609Z",
+  "max_parallel": 1,
+  "tasks": [
+    {
+      "id": "wf4p55_fine_ramp002",
+      "after": [],
+      "timeout_seconds": null,
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/wf4p55_fine_ramp002/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_case.py",
+          "{output}",
+          "--mode",
+          "fine"
+        ]
+      ],
+      "input_file": "wf4p55_fine_ramp002/gaa.in",
+      "input_sha256": "ff83384bd53968f57bfea76c5de4a9a1fd8dc895156088da6c9b8da026b2663e"
+    },
+    {
+      "id": "wf4p6_fine_ramp002",
+      "after": [],
+      "timeout_seconds": null,
+      "command": [
+        "{python}",
+        "{base}/run_case.py",
+        "--worker",
+        "{base}/wf4p6_fine_ramp002/worker.py",
+        "--output",
+        "{output}"
+      ],
+      "checks": [
+        [
+          "{python}",
+          "{base}/validate_case.py",
+          "{output}",
+          "--mode",
+          "fine"
+        ]
+      ],
+      "input_file": "wf4p6_fine_ramp002/gaa.in",
+      "input_sha256": "7f717dd38969302ec83d7ffb916087ec06b4e373adab04fe4ca20ac24687cb1d"
+    }
+  ],
+  "physical_validation": "NOT_VALIDATED",
+  "recovery_budget": 2,
+  "reason": "Actual high Vds fell below 0.6V; finer ramp without target/model changes"
+}

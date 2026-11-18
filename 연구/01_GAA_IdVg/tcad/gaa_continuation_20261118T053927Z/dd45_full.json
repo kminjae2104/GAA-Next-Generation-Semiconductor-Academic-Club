@@ -1,0 +1,56 @@
+{
+  "mode": "full",
+  "stage_timeout": null,
+  "required": {
+    "gaa": [
+      "geometry.str",
+      "equilibrium.str",
+      "on_zero.str",
+      "idvg_low_rev.log",
+      "low_rev_drain.dat",
+      "low_rev_source.dat",
+      "low_rev_gate.dat",
+      "idvg_low.log",
+      "low_drain.dat",
+      "low_source.dat",
+      "low_gate.dat",
+      "idvg_high_rev.log",
+      "high_rev_drain.dat",
+      "high_rev_source.dat",
+      "high_rev_gate.dat",
+      "idvg_high.log",
+      "high_drain.dat",
+      "high_source.dat",
+      "high_gate.dat"
+    ]
+  },
+  "parameters": {
+    "gate_nm": 40,
+    "width_nm": 10,
+    "height_nm": 10,
+    "oxide_nm": 1,
+    "gate_metal_nm": 3,
+    "extension_nm": 20,
+    "contact_nm": 5,
+    "acceptor_cm3": 1e+16,
+    "donor_cm3": 1e+20,
+    "workfunction_eV": 4.5,
+    "temperature_K": 300,
+    "vds_V": [
+      0.05,
+      0.6
+    ],
+    "gate_start_V": -0.2,
+    "gate_stop_V": 0.8,
+    "gate_step_V": 0.02,
+    "effective_perimeter_um": 0.04
+  },
+  "linear_solver": "bicgst",
+  "mesh_style": "anisotropic",
+  "processors": 4,
+  "quantum_mode": "none",
+  "mesh_scale": 1,
+  "gate_initialization": "two_carrier_gate_first_roundtrip",
+  "sha256": "119d441dff2f43abaf08c42360d5ac88268f2dfb1bbc865d87ab914be413f8b2",
+  "engineering_targets_unchanged": true
+}

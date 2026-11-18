@@ -1,0 +1,24 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 39081.4,
+  "diagnostic_tail": [
+    "Warning: Convergence problem.  Taking smaller bias",
+    " Warning: Newton iteration in block algorithm did not converge.",
+    "Warning: Convergence problem.  Taking smaller bias"
+  ],
+  "last_solver_lines": [
+    "   8    1  B  -6.55* -6.57* -0.000        -30.3* -21.9* -14.21       ",
+    "   9    1  B  -8.55* -8.62* -0.000        -31.1* -22.9* -15.11       ",
+    "   1    1  G                       -2.298                      -17.31",
+    "   2    1  G                         *                         -19.6*"
+  ],
+  "last_bias": [
+    "V(   gate  ) = 0.5775",
+    "V(   gate  ) = 0.58"
+  ],
+  "output_sizes": {
+    "console.txt": 793,
+    "solver.out": 281959
+  }
+}

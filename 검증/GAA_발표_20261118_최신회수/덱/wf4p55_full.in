@@ -1,0 +1,82 @@
+# Generated GAA; nm converted to micrometers. Classical DD model.
+# See the repository reference index and design/targets document.
+go devedit simflags="-3d"
+work.area x1=-0.004 y1=-0.004 x2=0.014 y2=0.014
+region reg=1 name=source_si mat="Silicon" z1=0 z2=0.02 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=2 name=channel mat="Silicon" z1=0.02 z2=0.06 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=3 name=drain_si mat="Silicon" z1=0.06 z2=0.08 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=4 name=source mat="Aluminum" z1=-0.005 z2=0 elec.id=2 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=5 name=drain mat="Aluminum" z1=0.08 z2=0.085 elec.id=3 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=6 name=oxide_left mat="Silicon Oxide" z1=0 z2=0.08 points="-0.001,-0.001 0,-0.001 0,0.011 -0.001,0.011 -0.001,-0.001"
+region reg=7 name=oxide_right mat="Silicon Oxide" z1=0 z2=0.08 points="0.01,-0.001 0.011,-0.001 0.011,0.011 0.01,0.011 0.01,-0.001"
+region reg=8 name=oxide_top mat="Silicon Oxide" z1=0 z2=0.08 points="0,-0.001 0.01,-0.001 0.01,0 0,0 0,-0.001"
+region reg=9 name=oxide_bottom mat="Silicon Oxide" z1=0 z2=0.08 points="0,0.01 0.01,0.01 0.01,0.011 0,0.011 0,0.01"
+region reg=10 name=gate mat="Aluminum" z1=0.02 z2=0.06 elec.id=1 points="-0.004,-0.004 -0.001,-0.004 -0.001,0.014 -0.004,0.014 -0.004,-0.004"
+region reg=11 name=gate_right mat="Aluminum" z1=0.02 z2=0.06 elec.id=4 points="0.011,-0.004 0.014,-0.004 0.014,0.014 0.011,0.014 0.011,-0.004"
+region reg=12 name=gate_top mat="Aluminum" z1=0.02 z2=0.06 elec.id=5 points="-0.001,-0.004 0.011,-0.004 0.011,-0.001 -0.001,-0.001 -0.001,-0.004"
+region reg=13 name=gate_bottom mat="Aluminum" z1=0.02 z2=0.06 elec.id=6 points="-0.001,0.011 0.011,0.011 0.011,0.014 -0.001,0.014 -0.001,0.011"
+base.mesh height=0.001 width=0.001
+bound.cond !apply max.slope=28 max.ratio=300 rnd.unit=0.00001 line.straightening=1 align.points when=automatic
+constr.mesh max.angle=90 max.ratio=300 max.height=0.003 max.width=0.003 min.height=0.00002 min.width=0.00002
+constr.mesh region=1 default max.height=0.001 max.width=0.001
+constr.mesh region=2 default max.height=0.001 max.width=0.001
+constr.mesh region=3 default max.height=0.001 max.width=0.001
+constr.mesh region=4 default max.height=0.003 max.width=0.003
+constr.mesh region=5 default max.height=0.003 max.width=0.003
+constr.mesh region=6 default max.height=0.001 max.width=0.00025
+constr.mesh region=7 default max.height=0.001 max.width=0.00025
+constr.mesh region=8 default max.height=0.00025 max.width=0.001
+constr.mesh region=9 default max.height=0.00025 max.width=0.001
+constr.mesh region=10 default max.height=0.003 max.width=0.003
+constr.mesh region=11 default max.height=0.003 max.width=0.003
+constr.mesh region=12 default max.height=0.003 max.width=0.003
+constr.mesh region=13 default max.height=0.003 max.width=0.003
+z.plane z=-0.005 spacing=0.002
+z.plane z=0 spacing=0.002
+z.plane z=0.02 spacing=0.001
+z.plane z=0.04 spacing=0.001
+z.plane z=0.06 spacing=0.001
+z.plane z=0.08 spacing=0.002
+z.plane z=0.085 spacing=0.002
+z.plane maximum.spacing=0.002 maximum.ratio=1.5
+Mesh Mode=MeshBuild
+structure outf=geometry.str
+go atlas simflags="-P 4"
+mesh infile=geometry.str
+doping uniform region=1 n.type conc=1e+20
+doping uniform region=2 p.type conc=1e+16
+doping uniform region=3 n.type conc=1e+20
+contact name=gate workfunction=4.55
+contact name=gate_right workfunction=4.55 common=gate short
+contact name=gate_top workfunction=4.55 common=gate short
+contact name=gate_bottom workfunction=4.55 common=gate short
+models fermi conmob fldmob srh bgn temperature=300 print
+method gummel newton bicgst carriers=0 trap maxtrap=10 itlimit=50
+solve init
+solve name=gate vstep=-0.02 vfinal=-0.2
+save outf=equilibrium.str
+method gummel newton bicgst gum.init=5 carriers=2 trap maxtrap=10 itlimit=50
+solve vdrain=0.01
+solve name=drain vstep=0.01 vfinal=0.05
+log outf=idvg_low.log
+solve vgate=-0.2
+solve name=gate vstep=0.02 vfinal=0.8
+log off
+save outf=final_low.str
+extract init infile="idvg_low.log"
+extract name="low_drain" curve(v."gate",i."drain") outfile="low_drain.dat"
+extract name="low_source" curve(v."gate",i."source") outfile="low_source.dat"
+extract name="low_gate" curve(v."gate",i."gate") outfile="low_gate.dat"
+load infile=equilibrium.str
+solve vdrain=0.01
+solve name=drain vstep=0.01 vfinal=0.6
+log outf=idvg_high.log
+solve vgate=-0.2
+solve name=gate vstep=0.02 vfinal=0.8
+log off
+save outf=final_high.str
+extract init infile="idvg_high.log"
+extract name="high_drain" curve(v."gate",i."drain") outfile="high_drain.dat"
+extract name="high_source" curve(v."gate",i."source") outfile="high_source.dat"
+extract name="high_gate" curve(v."gate",i."gate") outfile="high_gate.dat"
+quit

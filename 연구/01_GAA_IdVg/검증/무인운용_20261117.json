@@ -1,0 +1,33 @@
+{
+  "checked_kst": "2026-11-17T15:49:11.723504",
+  "job": "gaa_autonomous_20261117T064609Z",
+  "runtime": "C:\\Users\\MinjaeKwak\\AppData\\Local\\TCAD_PRIVATE\\gaa_night_20261117T064424Z",
+  "deadline": "2026-11-18T06:44:24.399029+00:00",
+  "transport_two_routes": true,
+  "real_fallback_verified": true,
+  "registration_received": true,
+  "actual_snapshot_collected": true,
+  "recovery": {
+    "wf4p55_fine_ramp002": {
+      "status": "RUNNING",
+      "started": 1794898028.2235544,
+      "worker_pid": 74267
+    },
+    "wf4p6_fine_ramp002": {
+      "status": "PENDING"
+    }
+  },
+  "original_counts": {
+    "SUCCEEDED": 24,
+    "FAILED": 7,
+    "BLOCKED": 2,
+    "RUNNING": 1
+  },
+  "tests_passed": 17,
+  "ui_input_used": false,
+  "physical_validation": "NOT_VALIDATED",
+  "limitations": [
+    "Quick tunnels cannot guarantee uptime",
+    "Finite researched recovery, not open-ended model/API research"
+  ]
+}

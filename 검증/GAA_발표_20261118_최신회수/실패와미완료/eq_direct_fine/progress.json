@@ -1,0 +1,21 @@
+{
+  "stage": "gaa",
+  "status": "RUNNING",
+  "elapsed_seconds": 390.2,
+  "diagnostic_tail": [
+    "SFLM Transport Error: No Error",
+    "SFLM: Can not log into license server.",
+    "Error: Unable to allocate memory."
+  ],
+  "last_solver_lines": [
+    "   i    j  m  -5.00* -26.0*",
+    "---------------------------",
+    "Error: Unable to allocate memory.",
+    "ATLAS version 5.34.0.R aborted at Tue Nov 17 00:07:05 2026"
+  ],
+  "last_bias": [],
+  "output_sizes": {
+    "console.txt": 1259,
+    "solver.out": 27833
+  }
+}
