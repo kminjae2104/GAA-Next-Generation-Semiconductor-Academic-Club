@@ -47,7 +47,7 @@ def state(runtime):
                 heartbeat_age_seconds=round(age,1) if age is not None else None,
                 event=event,deadline_utc=session.get('deadline_utc'),
                 registration_required=not bool(event),
-                bootstrap_file=str(runtime/'bootstrap.txt'),token_file=str(runtime/'token.txt'),
+                bootstrap_file=str(runtime/('bootstrap_ca_verified.txt' if (runtime/'bootstrap_ca_verified.txt').exists() else 'bootstrap.txt')),token_file=str(runtime/'token.txt'),
                 public_route_verified=bool(session.get('public_health_verified')),
                 startup_error=get('session_error.json'))
 
@@ -145,7 +145,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--runtime',type=Path)
     s=p.add_subparsers(dest='action',required=True)
     a=s.add_parser('start');a.add_argument('--cloudflared',type=Path,required=True);a.add_argument('--ca-pem',type=Path)
-    a.add_argument('--seconds',type=int,default=14400)
+    a.add_argument('--seconds',type=int,default=0,help='0: no scheduled expiry')
     s.add_parser('status')
     a=s.add_parser('queue');a.add_argument('--job',required=True);a.add_argument('--mode',choices=['preflight','smoke','full','fine'],required=True);a.add_argument('--stage-timeout',type=int,default=4800)
     a.add_argument('--linear-solver',choices=['default','bicgst','direct'],default='default')

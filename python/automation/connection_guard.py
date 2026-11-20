@@ -21,8 +21,8 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--runtime',type=Path,required=True);p.add_argument('--target',required=True)
     a=p.parse_args();r=a.runtime;session=json.loads((r/'session.json').read_text());token=(r/'token.txt').read_text().strip()
     context=ssl.create_default_context(cadata=(r/'task_root_ca.pem').read_text() if (r/'task_root_ca.pem').exists() else None)
-    deadline=datetime.fromisoformat(session['deadline_utc']);pending=None;last_snapshot=0;latest_summary=None
-    while datetime.now(timezone.utc)<deadline and not (r/'stop.request').exists() and not (r/'session_stopped.json').exists():
+    deadline=datetime.fromisoformat(session['deadline_utc']) if session.get('deadline_utc') else None;pending=None;last_snapshot=0;latest_summary=None
+    while (deadline is None or datetime.now(timezone.utc)<deadline) and not (r/'stop.request').exists() and not (r/'session_stopped.json').exists():
         state=dict(checked_utc=datetime.now(timezone.utc).isoformat(),interval_seconds=30,display_or_input_changes=False,
             snapshot_interval_seconds=600,latest_snapshot=latest_summary,deadline_utc=session['deadline_utc'])
         for name,url in [('local',session['origin']),('public_https',session['base_url'])]:

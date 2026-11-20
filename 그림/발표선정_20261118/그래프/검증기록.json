@@ -1,0 +1,47 @@
+[
+  {
+    "source": "그림/발표선정_20261118/bqp_fine.log",
+    "sha256": "dd9b96d6d9acee8238c50654ab19a1967698a824809c4b3b34cb2c5cf78a48b5",
+    "output": "bqp_fine_IdVg.png",
+    "points": 54,
+    "vgs_range_V": [
+      -0.2,
+      0.58484375
+    ],
+    "actual_vds_V": 0.6,
+    "target_bias_and_grid_reached": false,
+    "note": "Gate sweep incomplete / adaptive steps",
+    "current_unit": "A per single wire",
+    "interpolation_or_extrapolation": false
+  },
+  {
+    "source": "그림/발표선정_20261118/eq_bicgst_fine.log",
+    "sha256": "fe695643dadef1a7c405aa470ab54860852b972daa366f0ab5c578980e56c337",
+    "output": "eq_bicgst_fine_IdVg.png",
+    "points": 51,
+    "vgs_range_V": [
+      -0.2,
+      0.8
+    ],
+    "actual_vds_V": 0.6,
+    "target_bias_and_grid_reached": true,
+    "note": "Target bias and 51-point gate grid reached",
+    "current_unit": "A per single wire",
+    "interpolation_or_extrapolation": false
+  },
+  {
+    "source": "그림/발표선정_20261118/wf4p6_fine.log",
+    "sha256": "ac4877f7a31034798a578338e1e64c9ce4a22f3f0223065ca5fd57351c4e6cd8",
+    "output": "wf4p6_fine_IdVg.png",
+    "points": 52,
+    "vgs_range_V": [
+      -0.2,
+      0.8
+    ],
+    "actual_vds_V": 0.340703125,
+    "target_bias_and_grid_reached": false,
+    "note": "Vds target NOT reached",
+    "current_unit": "A per single wire",
+    "interpolation_or_extrapolation": false
+  }
+]

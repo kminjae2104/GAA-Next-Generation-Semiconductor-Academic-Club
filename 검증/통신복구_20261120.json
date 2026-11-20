@@ -1,0 +1,82 @@
+{
+  "checked_utc": "2026-11-20T06:07:38.569171+00:00",
+  "live_agent": true,
+  "deadline_utc": null,
+  "agent_pid": 61368,
+  "last_event_utc": "2026-11-20T06:07:17.819441+00:00",
+  "ca_verification": {
+    "root_subject": [
+      [
+        [
+          "countryName",
+          "BE"
+        ]
+      ],
+      [
+        [
+          "organizationName",
+          "GlobalSign nv-sa"
+        ]
+      ],
+      [
+        [
+          "organizationalUnitName",
+          "Root CA"
+        ]
+      ],
+      [
+        [
+          "commonName",
+          "GlobalSign Root CA"
+        ]
+      ]
+    ],
+    "sha256_der": "ebd41040e4bb3ec742c9e381d31ef2a41a48b6685c96e7cef3c1df6cd4331c99",
+    "live_tls_chain_verified": true,
+    "public_authenticated_health_verified_with_exported_ca": true,
+    "bootstrap_file": "C:\\Users\\MinjaeKwak\\AppData\\Local\\TCAD_PRIVATE\\gaa_background_20261120T055207Z\\bootstrap_ca_verified.txt",
+    "deadline_utc": null
+  },
+  "awake": {
+    "active": true,
+    "temporary_system_request": true,
+    "display_required": false,
+    "deadline_utc": null
+  },
+  "snapshot_time": "2026-11-20 15:03:23 KST",
+  "files_rehashed": 804,
+  "scoped_jobs": {
+    "gaa_overnight_20261116T080149Z": {
+      "counts": {
+        "SUCCEEDED": 24,
+        "FAILED": 8,
+        "BLOCKED": 2
+      },
+      "scheduler_pid_exists": false,
+      "scoped_live_processes": [],
+      "workflow_all_succeeded": false
+    },
+    "gaa_autonomous_20261117T064609Z": {
+      "counts": {
+        "FAILED": 2
+      },
+      "scheduler_pid_exists": false,
+      "scoped_live_processes": [],
+      "workflow_all_succeeded": false
+    },
+    "gaa_continuation_20261118T053927Z": {
+      "counts": {
+        "SUCCEEDED": 4,
+        "FAILED": 4,
+        "BLOCKED": 4
+      },
+      "scheduler_pid_exists": false,
+      "scoped_live_processes": [],
+      "workflow_all_succeeded": false
+    }
+  },
+  "automation_tests_passed": 23,
+  "analysis_tests_passed": 15,
+  "physical_validation": "NOT_VALIDATED",
+  "new_simulations_submitted": 0
+}

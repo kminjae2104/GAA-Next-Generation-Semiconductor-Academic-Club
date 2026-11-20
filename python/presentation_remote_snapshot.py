@@ -35,7 +35,7 @@ def main():
             continue
         dest = args.output / job
         data = {'exists': True, 'files': {}, 'snapshot_epoch': time.time()}
-        for name in ['launch.json', 'complete.json', 'results/progress.json', 'workflow.json']:
+        for name in ['launch.json', 'complete.json', 'results/progress.json', 'results/workflow_status.json', 'results/status.json', 'workflow.json']:
             p = root / name
             if p.is_file():
                 data['files'][name] = json.loads(p.read_text())
@@ -51,6 +51,16 @@ def main():
             proc = Path('/proc') / str(pid)
             if (proc / 'cmdline').is_file():
                 data['pid_cmdline'] = (proc / 'cmdline').read_bytes().decode(errors='replace').replace('\0', ' ')
+        data['scoped_live_processes'] = []
+        for proc in Path('/proc').iterdir():
+            if not proc.name.isdigit(): continue
+            try:
+                if proc.stat().st_uid != os.getuid(): continue
+                cwd = (proc / 'cwd').resolve(strict=True)
+                cwd.relative_to(root.parent.resolve())
+                command = (proc / 'cmdline').read_bytes().decode(errors='replace').replace('\0', ' ')
+                data['scoped_live_processes'].append({'pid':int(proc.name),'cwd':str(cwd),'cmdline':command})
+            except (OSError, ValueError): continue
         for case in (root / 'results').iterdir():
             if not case.is_dir() or case.is_symlink():
                 continue
@@ -61,7 +71,7 @@ def main():
                 selected.relative_to(case.resolve())
                 copy_small(selection, dest / 'cases' / case.name / 'selected_attempt.json')
             cdest = dest / 'cases' / case.name
-            for name in ['status.json', 'progress.json', 'run_config.json', 'validated_metrics.json', 'retained_structures.json']:
+            for name in ['status.json', 'progress.json', 'run_config.json', 'validated_metrics.json', 'validation_failure.json', 'retained_structures.json']:
                 copy_small(selected / name, cdest / name)
             copy_small(selected / 'gaa/process.json', cdest / 'process.json')
             copy_small(case / 'scheduler_console.txt', cdest / 'scheduler_console.txt', 256*1024)

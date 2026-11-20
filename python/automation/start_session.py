@@ -32,7 +32,7 @@ def bootstrap_command(url,agent_sha,ca_pem=None,deadline=None):
           'log=d/"agent_'+agent_sha[:12]+'.console"; '
           'lf=log.open("ab"); '
           'p=subprocess.Popen([sys.executable,str(f),"--stdin-config"],stdin=subprocess.PIPE,stdout=lf,stderr=subprocess.STDOUT,start_new_session=True); lf.close(); '
-          'p.stdin.write(json.dumps({"base_url":u,"token":t,"ca_pem":ca,"max_session_seconds":86400,"deadline_utc":'+(json.dumps(deadline) if deadline else 'None')+'}).encode()); p.stdin.close(); '
+          'p.stdin.write(json.dumps({"base_url":u,"token":t,"ca_pem":ca,"max_session_seconds":'+('86400' if deadline else 'None')+',"deadline_utc":'+(json.dumps(deadline) if deadline else 'None')+'}).encode()); p.stdin.close(); '
           'print("AGENT_STARTED",p.pid,"LOG",log)')
     return "python3 -c '"+code+"'"
 
@@ -49,18 +49,18 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--cloudflared',type=Path,required=True)
-    p.add_argument('--seconds',type=int,default=21600)
+    p.add_argument('--seconds',type=int,default=0,help='0: no scheduled expiry')
     p.add_argument('--ca-pem',type=Path)
     a=p.parse_args()
-    if not 1<=a.seconds<=86400:raise ValueError('Maximum relay lifetime is 24 hours')
+    if a.seconds<0:raise ValueError('Lifetime must be nonnegative')
     if relay.digest(a.cloudflared)!=EXPECTED_CF_SHA:raise ValueError('Cloudflare official release SHA256 mismatch')
     relay.initialize(a.root)
     ca_pem=a.ca_pem.read_text(encoding='ascii') if a.ca_pem else None
     context=ssl.create_default_context(cadata=ca_pem)
     if ca_pem:(a.root/'task_root_ca.pem').write_bytes(ca_pem.encode('ascii'))
-    end=time.monotonic()+a.seconds
-    deadline_dt=datetime.now(timezone.utc)+timedelta(seconds=a.seconds)
-    deadline=deadline_dt.isoformat()
+    end=time.monotonic()+a.seconds if a.seconds else float('inf')
+    deadline_dt=datetime.now(timezone.utc)+timedelta(seconds=a.seconds) if a.seconds else None
+    deadline=deadline_dt.isoformat() if deadline_dt else None
     server=tunnel=awake=None
     flags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0
     try:
@@ -96,7 +96,7 @@ def main():
         # Verify the actual public route with normal HTTPS certificate validation.
         last_error=None
         for i in range(60):
-            if datetime.now(timezone.utc)>=deadline_dt:raise TimeoutError('Session expired during startup')
+            if deadline_dt and datetime.now(timezone.utc)>=deadline_dt:raise TimeoutError('Session expired during startup')
             try:
                 req=urllib.request.Request(url+'/health',headers={'Authorization':'Bearer '+token})
                 with urllib.request.urlopen(req,timeout=10,context=context) as response:
@@ -119,7 +119,7 @@ def main():
                                         '--root',str(a.root)],stdin=subprocess.DEVNULL,stdout=log,
                                        stderr=subprocess.STDOUT,creationflags=flags)
         print('PUBLIC_ROUTE_VERIFIED; bootstrap and token files are in '+str(a.root),flush=True)
-        while time.monotonic()<end and datetime.now(timezone.utc)<deadline_dt:
+        while time.monotonic()<end and (deadline_dt is None or datetime.now(timezone.utc)<deadline_dt):
             if server.poll() is not None or tunnel.poll() is not None:
                 raise RuntimeError('Relay/tunnel stopped; artifacts preserved')
             if (a.root/'stop.request').exists():break

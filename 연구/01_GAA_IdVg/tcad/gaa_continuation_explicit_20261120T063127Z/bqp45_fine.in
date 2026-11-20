@@ -1,0 +1,661 @@
+# Generated GAA; nm converted to micrometers. BQP-corrected DD candidate.
+# See the repository reference index and design/targets document.
+go devedit simflags="-3d"
+work.area x1=-0.004 y1=-0.004 x2=0.014 y2=0.014
+region reg=1 name=source_si mat="Silicon" z1=0 z2=0.02 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=2 name=channel mat="Silicon" z1=0.02 z2=0.06 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=3 name=drain_si mat="Silicon" z1=0.06 z2=0.08 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=4 name=source mat="Aluminum" z1=-0.005 z2=0 elec.id=2 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=5 name=drain mat="Aluminum" z1=0.08 z2=0.085 elec.id=3 points="0,0 0.01,0 0.01,0.01 0,0.01 0,0"
+region reg=6 name=oxide_left mat="Silicon Oxide" z1=0 z2=0.08 points="-0.001,-0.001 0,-0.001 0,0.011 -0.001,0.011 -0.001,-0.001"
+region reg=7 name=oxide_right mat="Silicon Oxide" z1=0 z2=0.08 points="0.01,-0.001 0.011,-0.001 0.011,0.011 0.01,0.011 0.01,-0.001"
+region reg=8 name=oxide_top mat="Silicon Oxide" z1=0 z2=0.08 points="0,-0.001 0.01,-0.001 0.01,0 0,0 0,-0.001"
+region reg=9 name=oxide_bottom mat="Silicon Oxide" z1=0 z2=0.08 points="0,0.01 0.01,0.01 0.01,0.011 0,0.011 0,0.01"
+region reg=10 name=gate mat="Aluminum" z1=0.02 z2=0.06 elec.id=1 points="-0.004,-0.004 -0.001,-0.004 -0.001,0.014 -0.004,0.014 -0.004,-0.004"
+region reg=11 name=gate_right mat="Aluminum" z1=0.02 z2=0.06 elec.id=4 points="0.011,-0.004 0.014,-0.004 0.014,0.014 0.011,0.014 0.011,-0.004"
+region reg=12 name=gate_top mat="Aluminum" z1=0.02 z2=0.06 elec.id=5 points="-0.001,-0.004 0.011,-0.004 0.011,-0.001 -0.001,-0.001 -0.001,-0.004"
+region reg=13 name=gate_bottom mat="Aluminum" z1=0.02 z2=0.06 elec.id=6 points="-0.001,0.011 0.011,0.011 0.011,0.014 -0.001,0.014 -0.001,0.011"
+base.mesh height=0.0005 width=0.0005
+bound.cond !apply max.slope=28 max.ratio=300 rnd.unit=0.00001 line.straightening=1 align.points when=automatic
+constr.mesh max.angle=90 max.ratio=300 max.height=0.003 max.width=0.003 min.height=0.00002 min.width=0.00002
+constr.mesh region=1 default max.height=0.0005 max.width=0.0005
+constr.mesh region=2 default max.height=0.0005 max.width=0.0005
+constr.mesh region=3 default max.height=0.0005 max.width=0.0005
+constr.mesh region=4 default max.height=0.0015 max.width=0.0015
+constr.mesh region=5 default max.height=0.0015 max.width=0.0015
+constr.mesh region=6 default max.height=0.0005 max.width=0.000125
+constr.mesh region=7 default max.height=0.0005 max.width=0.000125
+constr.mesh region=8 default max.height=0.000125 max.width=0.0005
+constr.mesh region=9 default max.height=0.000125 max.width=0.0005
+constr.mesh region=10 default max.height=0.0015 max.width=0.0015
+constr.mesh region=11 default max.height=0.0015 max.width=0.0015
+constr.mesh region=12 default max.height=0.0015 max.width=0.0015
+constr.mesh region=13 default max.height=0.0015 max.width=0.0015
+z.plane z=-0.005 spacing=0.001
+z.plane z=0 spacing=0.001
+z.plane z=0.02 spacing=0.0005
+z.plane z=0.04 spacing=0.0005
+z.plane z=0.06 spacing=0.0005
+z.plane z=0.08 spacing=0.001
+z.plane z=0.085 spacing=0.001
+z.plane maximum.spacing=0.001 maximum.ratio=1.5
+Mesh Mode=MeshBuild
+structure outf=geometry.str
+go atlas simflags="-P 4"
+mesh infile=geometry.str
+doping uniform region=1 n.type conc=1e+20
+doping uniform region=2 p.type conc=1e+16
+doping uniform region=3 n.type conc=1e+20
+contact name=gate workfunction=4.5
+contact name=gate_right workfunction=4.5 common=gate short
+contact name=gate_top workfunction=4.5 common=gate short
+contact name=gate_bottom workfunction=4.5 common=gate short
+models fermi conmob fldmob srh bgn bqp.n bqp.ngamma=1.4 bqp.nalpha=0.3 temperature=300 print
+method gummel newton bicgst carriers=2 trap maxtrap=15 itlimit=80
+solve init
+save outf=equilibrium.str
+solve vgate=0.02 previous
+solve vgate=0.04 previous
+solve vgate=0.06 previous
+solve vgate=0.08 previous
+solve vgate=0.1 previous
+solve vgate=0.12 previous
+solve vgate=0.14 previous
+solve vgate=0.16 previous
+solve vgate=0.18 previous
+solve vgate=0.2 previous
+solve vgate=0.22 previous
+solve vgate=0.24 previous
+solve vgate=0.26 previous
+solve vgate=0.28 previous
+solve vgate=0.3 previous
+solve vgate=0.32 previous
+solve vgate=0.34 previous
+solve vgate=0.36 previous
+solve vgate=0.38 previous
+solve vgate=0.4 previous
+solve vgate=0.42 previous
+solve vgate=0.44 previous
+solve vgate=0.46 previous
+solve vgate=0.48 previous
+solve vgate=0.5 previous
+solve vgate=0.52 previous
+solve vgate=0.54 previous
+solve vgate=0.56 previous
+solve vgate=0.58 previous
+solve vgate=0.6 previous
+solve vgate=0.62 previous
+solve vgate=0.64 previous
+solve vgate=0.66 previous
+solve vgate=0.68 previous
+solve vgate=0.7 previous
+solve vgate=0.72 previous
+solve vgate=0.74 previous
+solve vgate=0.76 previous
+solve vgate=0.78 previous
+solve vgate=0.8 previous
+save outf=on_zero.str
+load infile=on_zero.str
+solve vdrain=0.001 previous
+solve vdrain=0.003 previous
+solve vdrain=0.005 previous
+solve vdrain=0.007 previous
+solve vdrain=0.009 previous
+solve vdrain=0.011 previous
+solve vdrain=0.013 previous
+solve vdrain=0.015 previous
+solve vdrain=0.017 previous
+solve vdrain=0.019 previous
+solve vdrain=0.021 previous
+solve vdrain=0.023 previous
+solve vdrain=0.025 previous
+solve vdrain=0.027 previous
+solve vdrain=0.029 previous
+solve vdrain=0.031 previous
+solve vdrain=0.033 previous
+solve vdrain=0.035 previous
+solve vdrain=0.037 previous
+solve vdrain=0.039 previous
+solve vdrain=0.041 previous
+solve vdrain=0.043 previous
+solve vdrain=0.045 previous
+solve vdrain=0.047 previous
+solve vdrain=0.049 previous
+solve vdrain=0.05 previous
+save outf=drain_low.str
+log outf=idvg_low_rev.log
+solve previous
+solve vgate=0.78 previous
+solve vgate=0.76 previous
+solve vgate=0.74 previous
+solve vgate=0.72 previous
+solve vgate=0.7 previous
+solve vgate=0.68 previous
+solve vgate=0.66 previous
+solve vgate=0.64 previous
+solve vgate=0.62 previous
+solve vgate=0.6 previous
+solve vgate=0.58 previous
+solve vgate=0.56 previous
+solve vgate=0.54 previous
+solve vgate=0.52 previous
+solve vgate=0.5 previous
+solve vgate=0.48 previous
+solve vgate=0.46 previous
+solve vgate=0.44 previous
+solve vgate=0.42 previous
+solve vgate=0.4 previous
+solve vgate=0.38 previous
+solve vgate=0.36 previous
+solve vgate=0.34 previous
+solve vgate=0.32 previous
+solve vgate=0.3 previous
+solve vgate=0.28 previous
+solve vgate=0.26 previous
+solve vgate=0.24 previous
+solve vgate=0.22 previous
+solve vgate=0.2 previous
+solve vgate=0.18 previous
+solve vgate=0.16 previous
+solve vgate=0.14 previous
+solve vgate=0.12 previous
+solve vgate=0.1 previous
+solve vgate=0.08 previous
+solve vgate=0.06 previous
+solve vgate=0.04 previous
+solve vgate=0.02 previous
+solve vgate=0 previous
+solve vgate=-0.02 previous
+solve vgate=-0.04 previous
+solve vgate=-0.06 previous
+solve vgate=-0.08 previous
+solve vgate=-0.1 previous
+solve vgate=-0.12 previous
+solve vgate=-0.14 previous
+solve vgate=-0.16 previous
+solve vgate=-0.18 previous
+solve vgate=-0.2 previous
+log off
+save outf=final_low_rev.str
+extract init infile="idvg_low_rev.log"
+extract name="low_rev_drain" curve(v."gate",i."drain") outfile="low_rev_drain.dat"
+extract name="low_rev_source" curve(v."gate",i."source") outfile="low_rev_source.dat"
+extract name="low_rev_gate" curve(v."gate",i."gate") outfile="low_rev_gate.dat"
+log outf=idvg_low.log
+solve previous
+solve vgate=-0.18 previous
+solve vgate=-0.16 previous
+solve vgate=-0.14 previous
+solve vgate=-0.12 previous
+solve vgate=-0.1 previous
+solve vgate=-0.08 previous
+solve vgate=-0.06 previous
+solve vgate=-0.04 previous
+solve vgate=-0.02 previous
+solve vgate=0 previous
+solve vgate=0.02 previous
+solve vgate=0.04 previous
+solve vgate=0.06 previous
+solve vgate=0.08 previous
+solve vgate=0.1 previous
+solve vgate=0.12 previous
+solve vgate=0.14 previous
+solve vgate=0.16 previous
+solve vgate=0.18 previous
+solve vgate=0.2 previous
+solve vgate=0.22 previous
+solve vgate=0.24 previous
+solve vgate=0.26 previous
+solve vgate=0.28 previous
+solve vgate=0.3 previous
+solve vgate=0.32 previous
+solve vgate=0.34 previous
+solve vgate=0.36 previous
+solve vgate=0.38 previous
+solve vgate=0.4 previous
+solve vgate=0.42 previous
+solve vgate=0.44 previous
+solve vgate=0.46 previous
+solve vgate=0.48 previous
+solve vgate=0.5 previous
+solve vgate=0.52 previous
+solve vgate=0.54 previous
+solve vgate=0.56 previous
+solve vgate=0.58 previous
+solve vgate=0.6 previous
+solve vgate=0.62 previous
+solve vgate=0.64 previous
+solve vgate=0.66 previous
+solve vgate=0.68 previous
+solve vgate=0.7 previous
+solve vgate=0.72 previous
+solve vgate=0.74 previous
+solve vgate=0.76 previous
+solve vgate=0.78 previous
+solve vgate=0.8 previous
+log off
+save outf=final_low.str
+extract init infile="idvg_low.log"
+extract name="low_drain" curve(v."gate",i."drain") outfile="low_drain.dat"
+extract name="low_source" curve(v."gate",i."source") outfile="low_source.dat"
+extract name="low_gate" curve(v."gate",i."gate") outfile="low_gate.dat"
+load infile=on_zero.str
+solve vdrain=0.001 previous
+solve vdrain=0.003 previous
+solve vdrain=0.005 previous
+solve vdrain=0.007 previous
+solve vdrain=0.009 previous
+solve vdrain=0.011 previous
+solve vdrain=0.013 previous
+solve vdrain=0.015 previous
+solve vdrain=0.017 previous
+solve vdrain=0.019 previous
+solve vdrain=0.021 previous
+solve vdrain=0.023 previous
+solve vdrain=0.025 previous
+solve vdrain=0.027 previous
+solve vdrain=0.029 previous
+solve vdrain=0.031 previous
+solve vdrain=0.033 previous
+solve vdrain=0.035 previous
+solve vdrain=0.037 previous
+solve vdrain=0.039 previous
+solve vdrain=0.041 previous
+solve vdrain=0.043 previous
+solve vdrain=0.045 previous
+solve vdrain=0.047 previous
+solve vdrain=0.049 previous
+solve vdrain=0.051 previous
+solve vdrain=0.053 previous
+solve vdrain=0.055 previous
+solve vdrain=0.057 previous
+solve vdrain=0.059 previous
+solve vdrain=0.061 previous
+solve vdrain=0.063 previous
+solve vdrain=0.065 previous
+solve vdrain=0.067 previous
+solve vdrain=0.069 previous
+solve vdrain=0.071 previous
+solve vdrain=0.073 previous
+solve vdrain=0.075 previous
+solve vdrain=0.077 previous
+solve vdrain=0.079 previous
+solve vdrain=0.081 previous
+solve vdrain=0.083 previous
+solve vdrain=0.085 previous
+solve vdrain=0.087 previous
+solve vdrain=0.089 previous
+solve vdrain=0.091 previous
+solve vdrain=0.093 previous
+solve vdrain=0.095 previous
+solve vdrain=0.097 previous
+solve vdrain=0.099 previous
+solve vdrain=0.101 previous
+solve vdrain=0.103 previous
+solve vdrain=0.105 previous
+solve vdrain=0.107 previous
+solve vdrain=0.109 previous
+solve vdrain=0.111 previous
+solve vdrain=0.113 previous
+solve vdrain=0.115 previous
+solve vdrain=0.117 previous
+solve vdrain=0.119 previous
+solve vdrain=0.121 previous
+solve vdrain=0.123 previous
+solve vdrain=0.125 previous
+solve vdrain=0.127 previous
+solve vdrain=0.129 previous
+solve vdrain=0.131 previous
+solve vdrain=0.133 previous
+solve vdrain=0.135 previous
+solve vdrain=0.137 previous
+solve vdrain=0.139 previous
+solve vdrain=0.141 previous
+solve vdrain=0.143 previous
+solve vdrain=0.145 previous
+solve vdrain=0.147 previous
+solve vdrain=0.149 previous
+solve vdrain=0.151 previous
+solve vdrain=0.153 previous
+solve vdrain=0.155 previous
+solve vdrain=0.157 previous
+solve vdrain=0.159 previous
+solve vdrain=0.161 previous
+solve vdrain=0.163 previous
+solve vdrain=0.165 previous
+solve vdrain=0.167 previous
+solve vdrain=0.169 previous
+solve vdrain=0.171 previous
+solve vdrain=0.173 previous
+solve vdrain=0.175 previous
+solve vdrain=0.177 previous
+solve vdrain=0.179 previous
+solve vdrain=0.181 previous
+solve vdrain=0.183 previous
+solve vdrain=0.185 previous
+solve vdrain=0.187 previous
+solve vdrain=0.189 previous
+solve vdrain=0.191 previous
+solve vdrain=0.193 previous
+solve vdrain=0.195 previous
+solve vdrain=0.197 previous
+solve vdrain=0.199 previous
+solve vdrain=0.201 previous
+solve vdrain=0.203 previous
+solve vdrain=0.205 previous
+solve vdrain=0.207 previous
+solve vdrain=0.209 previous
+solve vdrain=0.211 previous
+solve vdrain=0.213 previous
+solve vdrain=0.215 previous
+solve vdrain=0.217 previous
+solve vdrain=0.219 previous
+solve vdrain=0.221 previous
+solve vdrain=0.223 previous
+solve vdrain=0.225 previous
+solve vdrain=0.227 previous
+solve vdrain=0.229 previous
+solve vdrain=0.231 previous
+solve vdrain=0.233 previous
+solve vdrain=0.235 previous
+solve vdrain=0.237 previous
+solve vdrain=0.239 previous
+solve vdrain=0.241 previous
+solve vdrain=0.243 previous
+solve vdrain=0.245 previous
+solve vdrain=0.247 previous
+solve vdrain=0.249 previous
+solve vdrain=0.251 previous
+solve vdrain=0.253 previous
+solve vdrain=0.255 previous
+solve vdrain=0.257 previous
+solve vdrain=0.259 previous
+solve vdrain=0.261 previous
+solve vdrain=0.263 previous
+solve vdrain=0.265 previous
+solve vdrain=0.267 previous
+solve vdrain=0.269 previous
+solve vdrain=0.271 previous
+solve vdrain=0.273 previous
+solve vdrain=0.275 previous
+solve vdrain=0.277 previous
+solve vdrain=0.279 previous
+solve vdrain=0.281 previous
+solve vdrain=0.283 previous
+solve vdrain=0.285 previous
+solve vdrain=0.287 previous
+solve vdrain=0.289 previous
+solve vdrain=0.291 previous
+solve vdrain=0.293 previous
+solve vdrain=0.295 previous
+solve vdrain=0.297 previous
+solve vdrain=0.299 previous
+solve vdrain=0.301 previous
+solve vdrain=0.303 previous
+solve vdrain=0.305 previous
+solve vdrain=0.307 previous
+solve vdrain=0.309 previous
+solve vdrain=0.311 previous
+solve vdrain=0.313 previous
+solve vdrain=0.315 previous
+solve vdrain=0.317 previous
+solve vdrain=0.319 previous
+solve vdrain=0.321 previous
+solve vdrain=0.323 previous
+solve vdrain=0.325 previous
+solve vdrain=0.327 previous
+solve vdrain=0.329 previous
+solve vdrain=0.331 previous
+solve vdrain=0.333 previous
+solve vdrain=0.335 previous
+solve vdrain=0.337 previous
+solve vdrain=0.339 previous
+solve vdrain=0.341 previous
+solve vdrain=0.343 previous
+solve vdrain=0.345 previous
+solve vdrain=0.347 previous
+solve vdrain=0.349 previous
+solve vdrain=0.351 previous
+solve vdrain=0.353 previous
+solve vdrain=0.355 previous
+solve vdrain=0.357 previous
+solve vdrain=0.359 previous
+solve vdrain=0.361 previous
+solve vdrain=0.363 previous
+solve vdrain=0.365 previous
+solve vdrain=0.367 previous
+solve vdrain=0.369 previous
+solve vdrain=0.371 previous
+solve vdrain=0.373 previous
+solve vdrain=0.375 previous
+solve vdrain=0.377 previous
+solve vdrain=0.379 previous
+solve vdrain=0.381 previous
+solve vdrain=0.383 previous
+solve vdrain=0.385 previous
+solve vdrain=0.387 previous
+solve vdrain=0.389 previous
+solve vdrain=0.391 previous
+solve vdrain=0.393 previous
+solve vdrain=0.395 previous
+solve vdrain=0.397 previous
+solve vdrain=0.399 previous
+solve vdrain=0.401 previous
+solve vdrain=0.403 previous
+solve vdrain=0.405 previous
+solve vdrain=0.407 previous
+solve vdrain=0.409 previous
+solve vdrain=0.411 previous
+solve vdrain=0.413 previous
+solve vdrain=0.415 previous
+solve vdrain=0.417 previous
+solve vdrain=0.419 previous
+solve vdrain=0.421 previous
+solve vdrain=0.423 previous
+solve vdrain=0.425 previous
+solve vdrain=0.427 previous
+solve vdrain=0.429 previous
+solve vdrain=0.431 previous
+solve vdrain=0.433 previous
+solve vdrain=0.435 previous
+solve vdrain=0.437 previous
+solve vdrain=0.439 previous
+solve vdrain=0.441 previous
+solve vdrain=0.443 previous
+solve vdrain=0.445 previous
+solve vdrain=0.447 previous
+solve vdrain=0.449 previous
+solve vdrain=0.451 previous
+solve vdrain=0.453 previous
+solve vdrain=0.455 previous
+solve vdrain=0.457 previous
+solve vdrain=0.459 previous
+solve vdrain=0.461 previous
+solve vdrain=0.463 previous
+solve vdrain=0.465 previous
+solve vdrain=0.467 previous
+solve vdrain=0.469 previous
+solve vdrain=0.471 previous
+solve vdrain=0.473 previous
+solve vdrain=0.475 previous
+solve vdrain=0.477 previous
+solve vdrain=0.479 previous
+solve vdrain=0.481 previous
+solve vdrain=0.483 previous
+solve vdrain=0.485 previous
+solve vdrain=0.487 previous
+solve vdrain=0.489 previous
+solve vdrain=0.491 previous
+solve vdrain=0.493 previous
+solve vdrain=0.495 previous
+solve vdrain=0.497 previous
+solve vdrain=0.499 previous
+solve vdrain=0.501 previous
+solve vdrain=0.503 previous
+solve vdrain=0.505 previous
+solve vdrain=0.507 previous
+solve vdrain=0.509 previous
+solve vdrain=0.511 previous
+solve vdrain=0.513 previous
+solve vdrain=0.515 previous
+solve vdrain=0.517 previous
+solve vdrain=0.519 previous
+solve vdrain=0.521 previous
+solve vdrain=0.523 previous
+solve vdrain=0.525 previous
+solve vdrain=0.527 previous
+solve vdrain=0.529 previous
+solve vdrain=0.531 previous
+solve vdrain=0.533 previous
+solve vdrain=0.535 previous
+solve vdrain=0.537 previous
+solve vdrain=0.539 previous
+solve vdrain=0.541 previous
+solve vdrain=0.543 previous
+solve vdrain=0.545 previous
+solve vdrain=0.547 previous
+solve vdrain=0.549 previous
+solve vdrain=0.551 previous
+solve vdrain=0.553 previous
+solve vdrain=0.555 previous
+solve vdrain=0.557 previous
+solve vdrain=0.559 previous
+solve vdrain=0.561 previous
+solve vdrain=0.563 previous
+solve vdrain=0.565 previous
+solve vdrain=0.567 previous
+solve vdrain=0.569 previous
+solve vdrain=0.571 previous
+solve vdrain=0.573 previous
+solve vdrain=0.575 previous
+solve vdrain=0.577 previous
+solve vdrain=0.579 previous
+solve vdrain=0.581 previous
+solve vdrain=0.583 previous
+solve vdrain=0.585 previous
+solve vdrain=0.587 previous
+solve vdrain=0.589 previous
+solve vdrain=0.591 previous
+solve vdrain=0.593 previous
+solve vdrain=0.595 previous
+solve vdrain=0.597 previous
+solve vdrain=0.599 previous
+solve vdrain=0.6 previous
+save outf=drain_high.str
+log outf=idvg_high_rev.log
+solve previous
+solve vgate=0.78 previous
+solve vgate=0.76 previous
+solve vgate=0.74 previous
+solve vgate=0.72 previous
+solve vgate=0.7 previous
+solve vgate=0.68 previous
+solve vgate=0.66 previous
+solve vgate=0.64 previous
+solve vgate=0.62 previous
+solve vgate=0.6 previous
+solve vgate=0.58 previous
+solve vgate=0.56 previous
+solve vgate=0.54 previous
+solve vgate=0.52 previous
+solve vgate=0.5 previous
+solve vgate=0.48 previous
+solve vgate=0.46 previous
+solve vgate=0.44 previous
+solve vgate=0.42 previous
+solve vgate=0.4 previous
+solve vgate=0.38 previous
+solve vgate=0.36 previous
+solve vgate=0.34 previous
+solve vgate=0.32 previous
+solve vgate=0.3 previous
+solve vgate=0.28 previous
+solve vgate=0.26 previous
+solve vgate=0.24 previous
+solve vgate=0.22 previous
+solve vgate=0.2 previous
+solve vgate=0.18 previous
+solve vgate=0.16 previous
+solve vgate=0.14 previous
+solve vgate=0.12 previous
+solve vgate=0.1 previous
+solve vgate=0.08 previous
+solve vgate=0.06 previous
+solve vgate=0.04 previous
+solve vgate=0.02 previous
+solve vgate=0 previous
+solve vgate=-0.02 previous
+solve vgate=-0.04 previous
+solve vgate=-0.06 previous
+solve vgate=-0.08 previous
+solve vgate=-0.1 previous
+solve vgate=-0.12 previous
+solve vgate=-0.14 previous
+solve vgate=-0.16 previous
+solve vgate=-0.18 previous
+solve vgate=-0.2 previous
+log off
+save outf=final_high_rev.str
+extract init infile="idvg_high_rev.log"
+extract name="high_rev_drain" curve(v."gate",i."drain") outfile="high_rev_drain.dat"
+extract name="high_rev_source" curve(v."gate",i."source") outfile="high_rev_source.dat"
+extract name="high_rev_gate" curve(v."gate",i."gate") outfile="high_rev_gate.dat"
+log outf=idvg_high.log
+solve previous
+solve vgate=-0.18 previous
+solve vgate=-0.16 previous
+solve vgate=-0.14 previous
+solve vgate=-0.12 previous
+solve vgate=-0.1 previous
+solve vgate=-0.08 previous
+solve vgate=-0.06 previous
+solve vgate=-0.04 previous
+solve vgate=-0.02 previous
+solve vgate=0 previous
+solve vgate=0.02 previous
+solve vgate=0.04 previous
+solve vgate=0.06 previous
+solve vgate=0.08 previous
+solve vgate=0.1 previous
+solve vgate=0.12 previous
+solve vgate=0.14 previous
+solve vgate=0.16 previous
+solve vgate=0.18 previous
+solve vgate=0.2 previous
+solve vgate=0.22 previous
+solve vgate=0.24 previous
+solve vgate=0.26 previous
+solve vgate=0.28 previous
+solve vgate=0.3 previous
+solve vgate=0.32 previous
+solve vgate=0.34 previous
+solve vgate=0.36 previous
+solve vgate=0.38 previous
+solve vgate=0.4 previous
+solve vgate=0.42 previous
+solve vgate=0.44 previous
+solve vgate=0.46 previous
+solve vgate=0.48 previous
+solve vgate=0.5 previous
+solve vgate=0.52 previous
+solve vgate=0.54 previous
+solve vgate=0.56 previous
+solve vgate=0.58 previous
+solve vgate=0.6 previous
+solve vgate=0.62 previous
+solve vgate=0.64 previous
+solve vgate=0.66 previous
+solve vgate=0.68 previous
+solve vgate=0.7 previous
+solve vgate=0.72 previous
+solve vgate=0.74 previous
+solve vgate=0.76 previous
+solve vgate=0.78 previous
+solve vgate=0.8 previous
+log off
+save outf=final_high.str
+extract init infile="idvg_high.log"
+extract name="high_drain" curve(v."gate",i."drain") outfile="high_drain.dat"
+extract name="high_source" curve(v."gate",i."source") outfile="high_source.dat"
+extract name="high_gate" curve(v."gate",i."gate") outfile="high_gate.dat"
+quit

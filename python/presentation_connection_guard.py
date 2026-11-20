@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 import ssl
+import subprocess
 import sys
 import time
 import urllib.request
@@ -17,12 +18,17 @@ import control
 def main():
     runtime = Path(json.loads((ROOT / '.local/reconnect_runtime.json').read_text())['runtime'])
     session = json.loads((runtime / 'session.json').read_text())
-    deadline = datetime.fromisoformat(session['deadline_utc'])
+    deadline = datetime.fromisoformat(session['deadline_utc']) if session.get('deadline_utc') else None
     token = (runtime / 'token.txt').read_text().strip()
     context = ssl.create_default_context(cadata=(runtime / 'task_root_ca.pem').read_text() if (runtime / 'task_root_ca.pem').exists() else None)
-    pending = None
+    queued = json.loads((runtime / 'queue.json').read_text()) if (runtime / 'queue.json').exists() else {}
+    previous = queued.get('job')
+    pending = previous if previous and not (ROOT / '.local/collected' / previous / 'collection_verified.json').exists() else None
     last = time.monotonic()
-    while datetime.now(timezone.utc) < deadline and not (runtime / 'session_stopped.json').exists():
+    while (deadline is None or datetime.now(timezone.utc) < deadline) and not (runtime / 'session_stopped.json').exists() and not (runtime / 'stop.request').exists():
+        if pending is None and (runtime/'queue.json').exists():
+            current=json.loads((runtime/'queue.json').read_text()).get('job')
+            if current and not (ROOT/'.local/collected'/current/'collection_verified.json').exists():pending=current
         state = {'checked_utc': datetime.now(timezone.utc).isoformat(), 'health_interval_seconds':30,
                  'collection_interval_seconds':600, 'model_calls':0, 'simulators_started':0}
         try:
@@ -40,7 +46,13 @@ def main():
         if pending and (runtime / 'results' / (pending+'.receipt.json')).exists():
             receipt = json.loads((runtime / 'results' / (pending+'.receipt.json')).read_text())
             destination = ROOT / '.local/collected' / pending
-            control.collect_archive(runtime / 'results' / (pending+'.zip'), receipt, destination)
+            if not (destination / 'collection_verified.json').exists():
+                control.collect_archive(runtime / 'results' / (pending+'.zip'), receipt, destination)
+            if not (destination/'presentation_snapshot.json').exists():
+                relay.write_json(runtime/'latest_control_result.json',dict(job=pending,collected=str(destination),analysis='NON_SNAPSHOT_RESULT'))
+                pending=None
+                time.sleep(30)
+                continue
             snapshot=json.loads((destination/'presentation_snapshot.json').read_text())
             summaries={}
             for job,data in snapshot['jobs'].items():
@@ -51,6 +63,11 @@ def main():
                     'failed_or_blocked':{k:v for k,v in tasks.items() if v['status'] in ['FAILED','BLOCKED']},
                     'physical_validation':'NOT_VALIDATED'}
             relay.write_json(ROOT / '.local/presentation_guard_latest.json', {'job':pending,'collected':str(destination), 'transport_verified':True,'summaries':summaries})
+            audit_out=ROOT / '검증' / ('자동총분석_'+pending)
+            if not audit_out.exists():
+                with (runtime / ('audit_'+pending+'.console')).open('xb') as log:
+                    completed=subprocess.run([sys.executable,str(ROOT/'python/automation/audit_results.py'),str(destination),'--out',str(audit_out)],stdout=log,stderr=subprocess.STDOUT)
+                relay.write_json(runtime/'latest_audit.json',dict(job=pending,out=str(audit_out),returncode=completed.returncode))
             pending = None
         if pending is None and time.monotonic()-last >= 600 and state['https_ready']:
             queue = json.loads((runtime / 'queue.json').read_text()) if (runtime / 'queue.json').exists() else {}

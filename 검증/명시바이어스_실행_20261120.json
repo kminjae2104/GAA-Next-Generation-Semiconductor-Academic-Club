@@ -1,0 +1,42 @@
+{
+  "job": "gaa_continuation_explicit_20261120T063127Z",
+  "snapshot_epoch": 1795156444.1145492,
+  "scheduler_pid": 71263,
+  "scheduler_session_id": 71263,
+  "scheduler_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/gaa_tcad_runs/gaa_continuation_explicit_20261120T063127Z/code/explicit_supervisor.py --output /users/cau/cau103/gaa_tcad_runs/gaa_continuation_explicit_20261120T063127Z/durable/results ",
+  "running": [
+    "dd455_screen",
+    "dd46_screen",
+    "dd45_screen"
+  ],
+  "pending": 9,
+  "atlas_processes": [
+    {
+      "pid": 72537,
+      "cwd": "/users/cau/cau103/gaa_tcad_runs/gaa_continuation_explicit_20261120T063127Z/durable/results/dd455_screen/attempt_01/gaa/execution",
+      "cmdline": "/users/tools/Silvaco/lib/atlas/5.34.0.R/x86_64-linux/atlas.exe3 -P 4 mesh infile=\"/tmp/auto.pzLWZE\"  "
+    },
+    {
+      "pid": 72542,
+      "cwd": "/users/cau/cau103/gaa_tcad_runs/gaa_continuation_explicit_20261120T063127Z/durable/results/dd45_screen/attempt_01/gaa/execution",
+      "cmdline": "/users/tools/Silvaco/lib/atlas/5.34.0.R/x86_64-linux/atlas.exe3 -P 4 mesh infile=\"/tmp/auto.G9TNBF\"  "
+    },
+    {
+      "pid": 72555,
+      "cwd": "/users/cau/cau103/gaa_tcad_runs/gaa_continuation_explicit_20261120T063127Z/durable/results/dd46_screen/attempt_01/gaa/execution",
+      "cmdline": "/users/tools/Silvaco/lib/atlas/5.34.0.R/x86_64-linux/atlas.exe3 -P 4 mesh infile=\"/tmp/auto.HAF1nK\"  "
+    }
+  ],
+  "calculation_deadline_utc": null,
+  "communication_deadline_utc": null,
+  "max_parallel": 3,
+  "package_sha256": "45f247681cf81e57c07a267440c3d5a039971582b1aeeecb833cf845484ef6d5",
+  "automation_tests_passed": 31,
+  "analysis_tests_passed": 15,
+  "actual_stage": "ATLAS_MESH_LOADING",
+  "solve_and_previous_syntax_validation": "NOT_YET_CONFIRMED",
+  "final_simulator_completion": "NOT_YET_CONFIRMED",
+  "engineering_targets": "NOT_YET_EVALUATED",
+  "physical_validation": "NOT_VALIDATED",
+  "source_snapshot": ".local\\collected\\gaa_explicit_startup_20261120T063352Z"
+}

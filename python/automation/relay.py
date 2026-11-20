@@ -54,8 +54,8 @@ class Relay(ThreadingHTTPServer):
     def __init__(self, root, port, seconds):
         self.root = Path(root).resolve()
         self.token = (self.root / 'token.txt').read_text(encoding='ascii').strip()
-        self.end = time.monotonic() + seconds
-        self.wall_end = time.time() + seconds
+        self.end = time.monotonic() + seconds if seconds else float('inf')
+        self.wall_end = time.time() + seconds if seconds else float('inf')
         self.lock = threading.Lock()
         super().__init__(('127.0.0.1', port), Handler)
 
@@ -166,18 +166,19 @@ def initialize(root):
 
 
 def serve(root, port, seconds):
-    if not 1 <= seconds <= 86400:
-        raise ValueError('Relay lifetime must be at most 24 hours')
+    if seconds < 0:
+        raise ValueError('Relay lifetime must be nonnegative; zero means unlimited')
     server = Relay(root, port, seconds)
     write_json(Path(root) / 'state.json', dict(status='LISTENING_LOOPBACK_ONLY',
                address=server.server_address[0], port=server.server_address[1], seconds=seconds))
-    timer = threading.Timer(seconds, server.shutdown)
-    timer.daemon = True
-    timer.start()
+    timer = threading.Timer(seconds, server.shutdown) if seconds else None
+    if timer:
+        timer.daemon = True
+        timer.start()
     try:
         server.serve_forever(poll_interval=0.5)
     finally:
-        timer.cancel()
+        if timer: timer.cancel()
         server.server_close()
         write_json(Path(root) / 'state.json', dict(status='STOPPED'))
 
@@ -200,7 +201,7 @@ def main():
         q.add_argument('--root', type=Path, required=True)
         if action == 'serve':
             q.add_argument('--port', type=int, default=0)
-            q.add_argument('--seconds', type=int, default=21600)
+            q.add_argument('--seconds', type=int, default=0)
         if action == 'publish':
             q.add_argument('--package', type=Path, required=True)
             q.add_argument('--job', required=True)

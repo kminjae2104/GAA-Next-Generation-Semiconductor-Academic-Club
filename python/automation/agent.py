@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import hashlib
 import io
 import json
+import math
 import os
 from pathlib import Path, PurePosixPath
 import platform
@@ -122,10 +123,10 @@ def run_package(config,descriptor,end):
     (output/'input_provenance.json').write_text(json.dumps(dict(job=job,
         package_sha256=descriptor['sha256'],host=platform.node(),user=getpass.getuser(),
         python=sys.version,entry_point='run_study.py')),encoding='utf-8')
-    timeout = max(1, int(end - time.monotonic()))
+    timeout = max(1, int(end - time.monotonic())) if math.isfinite(end) else None
     post_event(config, status='STUDY_START', job=job, root=str(root))
-    command = [sys.executable, str(package / 'run_study.py'), '--output', str(output),
-               '--max-seconds', str(timeout)]
+    command = [sys.executable, str(package / 'run_study.py'), '--output', str(output)]
+    if timeout is not None: command += ['--max-seconds', str(timeout)]
     with (output / 'worker.console').open('xb') as stream:
         proc = subprocess.Popen(command, cwd=str(package), stdin=subprocess.DEVNULL,
                                 stdout=stream, stderr=subprocess.STDOUT, start_new_session=True)
@@ -167,7 +168,9 @@ def main(config):
         raise ValueError('A verified HTTPS relay URL is required')
     if not re.fullmatch(r'[0-9a-f]{64}', config['token']):
         raise ValueError('Invalid task token')
-    lifetime=min(86400,int(config.get('max_session_seconds',21600)))
+    seconds=config.get('max_session_seconds')
+    if seconds is not None and seconds < 0: raise ValueError('Negative session lifetime')
+    lifetime=float('inf') if seconds is None or seconds==0 else int(seconds)
     if config.get('deadline_utc'):
         left=(datetime.fromisoformat(config['deadline_utc'])-datetime.now(timezone.utc)).total_seconds()
         if left<=0:
@@ -178,7 +181,7 @@ def main(config):
     post_event(config,status='AGENT_READY',hostname=platform.node(),user=getpass.getuser(),
                python=sys.version,executable=sys.executable,
                deckbuild_exists=os.access('/users/tools/Silvaco/bin/deckbuild',os.X_OK))
-    print('Agent connected. Session lifetime seconds: '+str(int(lifetime)),flush=True)
+    print('Agent connected. Session lifetime seconds: '+(str(int(lifetime)) if math.isfinite(lifetime) else 'UNLIMITED'),flush=True)
     seen=set();last_heartbeat=0
     while time.monotonic()<end:
         try:
