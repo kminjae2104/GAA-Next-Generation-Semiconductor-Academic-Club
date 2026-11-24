@@ -1,0 +1,28 @@
+{
+  "snapshot_epoch": 1795194723.3217995,
+  "config_mode": "0o600",
+  "config_owner_matches": true,
+  "supervisor_status.json": {
+    "supervisor_pid": 43681,
+    "agent_pid": 43682,
+    "started": 1795194721.8688679,
+    "deadline_utc": null
+  },
+  "watchdog_tick.json": {
+    "pid": 43681,
+    "checked": 1795194721.8662875
+  },
+  "restart_test.json": {
+    "old_supervisor_pid": 42825,
+    "old_agent_pid": 42928,
+    "triggered": 1795194668.7629514,
+    "simulations_untouched": true
+  },
+  "supervisor_pid_alive": true,
+  "supervisor_pid_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/.local/share/gaa_persistent_agent/durable_agent.py --config /users/cau/cau103/.local/share/gaa_persistent_agent/config.json ",
+  "agent_pid_alive": true,
+  "agent_pid_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/.local/share/gaa_persistent_agent/agent.py --config /users/cau/cau103/.local/share/gaa_persistent_agent/config.json ",
+  "automatic_recovery_verified": true,
+  "local_automation_tests_passed": 33,
+  "dynamic_tunnel_address_recovery": "NOT_CONFIGURED"
+}

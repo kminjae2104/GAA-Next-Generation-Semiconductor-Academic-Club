@@ -1,0 +1,5920 @@
+{
+  "snapshots": [
+    {
+      "collection": "gaa_continuation_explicit_20261120T063127Z",
+      "snapshot_epoch": 1795156349.343367,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_continuation_startup_20261118T054039Z",
+      "snapshot_epoch": 1794980450.9828792,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "RUNNING": 2,
+          "PENDING": 10
+        }
+      }
+    },
+    {
+      "collection": "gaa_explicit_startup_20261120T063352Z",
+      "snapshot_epoch": 1795156443.9115613,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_final_status_20261120T060317Z",
+      "snapshot_epoch": 1795154603.3249724,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T034628Z",
+      "snapshot_epoch": 1794973592.438866,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T035636Z",
+      "snapshot_epoch": 1794974196.6563063,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T040650Z",
+      "snapshot_epoch": 1794974814.0826726,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T041705Z",
+      "snapshot_epoch": 1794975438.0803075,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T042719Z",
+      "snapshot_epoch": 1794976041.8336542,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T043729Z",
+      "snapshot_epoch": 1794976651.1187189,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T044742Z",
+      "snapshot_epoch": 1794977277.9197958,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T045754Z",
+      "snapshot_epoch": 1794977875.6091497,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T050806Z",
+      "snapshot_epoch": 1794978501.701479,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T051823Z",
+      "snapshot_epoch": 1794979111.3501887,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T052832Z",
+      "snapshot_epoch": 1794979719.1897702,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T053842Z",
+      "snapshot_epoch": 1794980324.301225,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T054850Z",
+      "snapshot_epoch": 1794980931.712333,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T055026Z",
+      "snapshot_epoch": 1794981041.715979,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "RUNNING": 2,
+          "PENDING": 10
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T055153Z",
+      "snapshot_epoch": 1794981120.8345668,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "RUNNING": 2,
+          "PENDING": 10
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T055900Z",
+      "snapshot_epoch": 1794981541.8973355,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T060032Z",
+      "snapshot_epoch": 1794981638.898883,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "RUNNING": 2,
+          "PENDING": 10
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T060203Z",
+      "snapshot_epoch": 1794981737.3345757,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "RUNNING": 2,
+          "PENDING": 9,
+          "SUCCEEDED": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T060911Z",
+      "snapshot_epoch": 1794982161.6789238,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T061042Z",
+      "snapshot_epoch": 1794982244.472796,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T061214Z",
+      "snapshot_epoch": 1794982344.9096045,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T061932Z",
+      "snapshot_epoch": 1794982785.2656233,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T062059Z",
+      "snapshot_epoch": 1794982870.2925544,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T062233Z",
+      "snapshot_epoch": 1794982969.6264126,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T062950Z",
+      "snapshot_epoch": 1794983394.396057,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T063114Z",
+      "snapshot_epoch": 1794983481.317031,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T063250Z",
+      "snapshot_epoch": 1794983578.512459,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T064003Z",
+      "snapshot_epoch": 1794984014.9615765,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T064127Z",
+      "snapshot_epoch": 1794984095.2944796,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T064304Z",
+      "snapshot_epoch": 1794984193.0296814,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T065017Z",
+      "snapshot_epoch": 1794984630.9838812,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T065145Z",
+      "snapshot_epoch": 1794984711.579631,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T065315Z",
+      "snapshot_epoch": 1794984809.6691556,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T070028Z",
+      "snapshot_epoch": 1794985234.7021637,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T070203Z",
+      "snapshot_epoch": 1794985333.127172,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T070333Z",
+      "snapshot_epoch": 1794985415.4752913,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T071039Z",
+      "snapshot_epoch": 1794985853.8929415,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T071213Z",
+      "snapshot_epoch": 1794985949.6056228,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T071342Z",
+      "snapshot_epoch": 1794986029.8001742,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T072049Z",
+      "snapshot_epoch": 1794986451.3880553,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T072219Z",
+      "snapshot_epoch": 1794986546.8485303,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T072350Z",
+      "snapshot_epoch": 1794986643.614516,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T073100Z",
+      "snapshot_epoch": 1794987063.9911366,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T073231Z",
+      "snapshot_epoch": 1794987160.2638357,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T073405Z",
+      "snapshot_epoch": 1794987257.6112363,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T074112Z",
+      "snapshot_epoch": 1794987681.5314617,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T074242Z",
+      "snapshot_epoch": 1794987777.9635327,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T074414Z",
+      "snapshot_epoch": 1794987857.8700838,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T075119Z",
+      "snapshot_epoch": 1794988294.3144994,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T075250Z",
+      "snapshot_epoch": 1794988372.8453386,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 2,
+          "PENDING": 8
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261118T075422Z",
+      "snapshot_epoch": 1794988467.2732472,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 2,
+          "PENDING": 7
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T060142Z",
+      "snapshot_epoch": 1795154506.1754942,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T061721Z",
+      "snapshot_epoch": 1795155443.0053685,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T062739Z",
+      "snapshot_epoch": 1795156067.07901,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T064239Z",
+      "snapshot_epoch": 1795156974.643181,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T065501Z",
+      "snapshot_epoch": 1795157709.6476882,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T070520Z",
+      "snapshot_epoch": 1795158336.1053722,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T071548Z",
+      "snapshot_epoch": 1795158964.0652797,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "RUNNING": 3,
+          "PENDING": 9
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T072616Z",
+      "snapshot_epoch": 1795159592.7221572,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 2,
+          "RUNNING": 3,
+          "PENDING": 7
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T073645Z",
+      "snapshot_epoch": 1795160221.1160333,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 3,
+          "PENDING": 6
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T074714Z",
+      "snapshot_epoch": 1795160850.4704967,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 3,
+          "PENDING": 6
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T075714Z",
+      "snapshot_epoch": 1795161439.1999526,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 3,
+          "PENDING": 6
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T080746Z",
+      "snapshot_epoch": 1795162081.8816597,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 3,
+          "PENDING": 6
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T081753Z",
+      "snapshot_epoch": 1795162674.6301947,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 3,
+          "RUNNING": 3,
+          "PENDING": 6
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T170557Z",
+      "snapshot_epoch": 1795194359.550138,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T171610Z",
+      "snapshot_epoch": 1795194986.3515968,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T173339Z",
+      "snapshot_epoch": 1795196027.7958405,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T174348Z",
+      "snapshot_epoch": 1795196641.69093,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T175357Z",
+      "snapshot_epoch": 1795197242.1301055,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T180406Z",
+      "snapshot_epoch": 1795197857.172967,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T181416Z",
+      "snapshot_epoch": 1795198457.4570823,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T182428Z",
+      "snapshot_epoch": 1795199071.4062643,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T183437Z",
+      "snapshot_epoch": 1795199690.9474897,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T184447Z",
+      "snapshot_epoch": 1795200288.2830672,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T185456Z",
+      "snapshot_epoch": 1795200903.6658504,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T190506Z",
+      "snapshot_epoch": 1795201518.1245084,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T191516Z",
+      "snapshot_epoch": 1795202131.126547,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T192525Z",
+      "snapshot_epoch": 1795202729.985613,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T193535Z",
+      "snapshot_epoch": 1795203346.054928,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T194545Z",
+      "snapshot_epoch": 1795203959.3684578,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T195555Z",
+      "snapshot_epoch": 1795204559.8063006,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T200605Z",
+      "snapshot_epoch": 1795205173.0814614,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T201626Z",
+      "snapshot_epoch": 1795205787.7734916,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T202639Z",
+      "snapshot_epoch": 1795206401.3327794,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T203649Z",
+      "snapshot_epoch": 1795207014.7575011,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T204700Z",
+      "snapshot_epoch": 1795207632.2172,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T205709Z",
+      "snapshot_epoch": 1795208237.4661105,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T210719Z",
+      "snapshot_epoch": 1795208843.777223,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T211729Z",
+      "snapshot_epoch": 1795209456.6941004,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T212738Z",
+      "snapshot_epoch": 1795210069.3100908,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T213748Z",
+      "snapshot_epoch": 1795210683.4909494,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T214759Z",
+      "snapshot_epoch": 1795211283.3660135,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T215817Z",
+      "snapshot_epoch": 1795211898.425727,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T220828Z",
+      "snapshot_epoch": 1795212511.4097407,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T221837Z",
+      "snapshot_epoch": 1795213128.511016,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T222847Z",
+      "snapshot_epoch": 1795213742.2035282,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T223857Z",
+      "snapshot_epoch": 1795214339.6265604,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T224907Z",
+      "snapshot_epoch": 1795214956.8738034,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T225917Z",
+      "snapshot_epoch": 1795215569.7929246,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261120T230927Z",
+      "snapshot_epoch": 1795216170.1218076,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_auto_20261121T041053Z",
+      "snapshot_epoch": 1795234285.5557427,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_presentation_snapshot_20261118T032856Z",
+      "snapshot_epoch": 1794972740.9742064,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 1,
+          "RUNNING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_status_recovery_20261120T055450Z",
+      "snapshot_epoch": 1795154455.9293346,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        }
+      }
+    },
+    {
+      "collection": "gaa_status_recovery_20261120T165547Z",
+      "snapshot_epoch": 1795193806.0623343,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    },
+    {
+      "collection": "gaa_status_recovery_20261120T172330Z",
+      "snapshot_epoch": 1795195417.3615046,
+      "jobs": {
+        "gaa_overnight_20261116T080149Z": {
+          "SUCCEEDED": 24,
+          "FAILED": 8,
+          "BLOCKED": 2
+        },
+        "gaa_autonomous_20261117T064609Z": {
+          "FAILED": 2
+        },
+        "gaa_continuation_20261118T053927Z": {
+          "SUCCEEDED": 4,
+          "FAILED": 4,
+          "BLOCKED": 4
+        },
+        "gaa_continuation_explicit_20261120T063127Z": {
+          "SUCCEEDED": 7,
+          "FAILED": 1,
+          "RUNNING": 3,
+          "PENDING": 1
+        }
+      }
+    }
+  ],
+  "other_collections": [
+    {
+      "collection": "gaa_agent_autostart_20261120T171030Z",
+      "status.json": {
+        "status": "AUTOSTART_CONFIGURED",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d682de9dfec9f8c39528a6291c6c5785f33d31200bd9ce31f00aa598ffd67997",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "autostart.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_agent_install_20261120T170858Z",
+      "status.json": {
+        "status": "INSTALLED",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "727dc6290353435b36e080eb8d0dc1a608c1886ab240f088a83b82e853f6f294",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "installation.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_agent_persistence_check_20261120T171121Z",
+      "status.json": {
+        "status": "READ_ONLY_PERSISTENCE_CHECK",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ef78d65d200952acf905c06f8e448f71cec4c411b944cec09b7c025a046f3793",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "persistent_status.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_autonomous_20261117T064609Z",
+      "status.json": {
+        "status": "NIGHT_HANDOFF",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "b5f834541c5d3bbcbeb431b9bc4af67a1b6b13456ea1fa9a2a087bc80309c6e7",
+        "files_verified": 7,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "connection.console",
+        "handoff.json",
+        "input_provenance.json",
+        "night.console",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_continuation_20261118T053927Z",
+      "status.json": {
+        "status": "DETACHED_LAUNCH",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "a36edb0463d3777c6c1293493fa9dcf2513b11552538a9001fed0886502824c8",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "launch.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_discovery_install_20261120T172054Z",
+      "collection_verified.json": {
+        "archive_sha256": "aa1389182894feabc0a1af86227e730fc45256c74c905db55b744cac70730a56",
+        "files_verified": 3,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_discovery_install_20261120T172202Z",
+      "status.json": {
+        "status": "DISCOVERY_INSTALLED",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "10f03e286f1919f25aec0d045771445c6006709f03218d468f3028b8a98b4f2c",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "discovery_installed.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_discovery_preflight_20261120T171849Z",
+      "status.json": {
+        "status": "DISCOVERY_PREFLIGHT",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "307abf5e329970848852288b62e4df7fd8324a15539c3b5cf69f681ae04a6c8f",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "discovery_public_key.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_discovery_rotation_proof_20261120T172455Z",
+      "status.json": {
+        "status": "READ_ONLY_PERSISTENCE_CHECK",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8c629b24cb54c69be69260255848b8e629f6c4b5a26434b2d0d7d54d16f0d28e",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "persistent_status.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_full_20261116_r01",
+      "status.json": {
+        "status": "EXECUTION_FAILED",
+        "stages": [
+          {
+            "stage": "gaa",
+            "returncode": 15,
+            "timeout": true,
+            "seconds": 2401.137,
+            "missing": [
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat",
+              "idvg_high.log",
+              "high_drain.dat",
+              "high_source.dat",
+              "high_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "received signal Process interrupted by signal TERM.",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "SFLM Programmer Error: This job is not logged in.",
+              "Kill signal received.",
+              "SFLM Transport Error: No Error",
+              "SFLM: Can not log into license server."
+            ],
+            "fatal_lines": [
+              "SFLM Programmer Error: This job is not logged in."
+            ],
+            "outputs": {
+              "gaa.in": 4683,
+              "console.txt": 1327,
+              "solver.out": 44032,
+              "geometry.str": 5986324,
+              "equilibrium.str": 53662380
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "3b3cec6ed77a7144883161ef1ca6749ff8bb2b631588657da494ca7b14549e8d",
+        "files_verified": 14,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "gaa",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_full_20261116_r02",
+      "status.json": {
+        "status": "EXECUTION_FAILED",
+        "stages": [
+          {
+            "stage": "gaa",
+            "returncode": 143,
+            "timeout": true,
+            "seconds": 2401.235,
+            "missing": [
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat",
+              "idvg_high.log",
+              "high_drain.dat",
+              "high_source.dat",
+              "high_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "received signal 15 terminating simulatorProcess interrupted by signal TERM.",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: FLEXlm=27000@semicon1"
+            ],
+            "fatal_lines": [],
+            "outputs": {
+              "gaa.in": 4705,
+              "console.txt": 1115,
+              "solver.out": 38328,
+              "geometry.str": 2286734,
+              "equilibrium.str": 20944164
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "9fa53cb70b350bcd488b31b00e6aaf8d59ea27a52a18350e3c8625ed13996350",
+        "files_verified": 14,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "gaa",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "retained_structures.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_modelhints_20261116_r01",
+      "status.json": {
+        "status": "PREFLIGHT_COMPLETE",
+        "simulator_execution": "NOT_RUN"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "b3546821d1adccc726e32ee5249ec63d2add2286f009bd759c453a0133c974f9",
+        "files_verified": 8,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "input_provenance.json",
+        "installed_quantum_examples.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_modelhints_20261116_r02",
+      "status.json": {
+        "status": "PREFLIGHT_COMPLETE",
+        "simulator_execution": "NOT_RUN"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "2d8ffd6a11f9f4f5d6bd9d34f6d45620353d9359b9e64e5e7274b7b3a97a78ad",
+        "files_verified": 8,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "input_provenance.json",
+        "installed_quantum_examples.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_night_snapshot_20261117T064715Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d9e6aaf99e73af159447de91a400ac05ef10a8ffc8f97a2827aa389c77462b6d",
+        "files_verified": 385,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "recovery.json",
+        "recovery_cases",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_night_snapshot_20261117T065716Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "b3b7efa277ed9cf5cce024b61fb71eab86b11098fbd969e9af58ff70c32686bb",
+        "files_verified": 385,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "recovery.json",
+        "recovery_cases",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_night_snapshot_20261117T070716Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "1855c0cc07a41fb848afe4a7fe7254a13989a0092abc6dbb4e5243a3b539da16",
+        "files_verified": 385,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "recovery.json",
+        "recovery_cases",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_night_snapshot_20261117T071717Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "f09e5eec982a014f40298a226ee08ce6514bfec676ddd99c6d5fb11bc667422d",
+        "files_verified": 385,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "recovery.json",
+        "recovery_cases",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_night_snapshot_20261117T072717Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "e0c85b1a9abf907799d2c1eafccfe95e4635baba3cc680c9d776c51d90992d55",
+        "files_verified": 385,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "recovery.json",
+        "recovery_cases",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_overnight_20261116T080149Z",
+      "status.json": {
+        "status": "DETACHED_WORKFLOW_STARTED",
+        "stages": [],
+        "remote_directory": "/users/cau/cau103/gaa_tcad_runs/gaa_overnight_20261116T080149Z/durable",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "99699b8dbe40ef3d835e5a45c0b0f8dbad93230890412056ea98bead77695702",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "input_provenance.json",
+        "launch.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_parallel_20261116T062844Z",
+      "status.json": {
+        "status": "PARALLEL_BATCH_RETURNED",
+        "stages": [
+          {
+            "stage": "smoke",
+            "returncode": 0,
+            "timeout": false,
+            "seconds": 245.136,
+            "missing": [],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "ATLAS waiting for license. ",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "SFLM Programmer Error: This job is not logged in.",
+              "SFLM Transport Error: No Error",
+              "SFLM: Can not log into license server."
+            ],
+            "fatal_lines": [
+              "SFLM Programmer Error: This job is not logged in."
+            ],
+            "outputs": {
+              "gaa.in": 4171,
+              "console.txt": 1397,
+              "solver.out": 48168,
+              "geometry.str": 850634,
+              "equilibrium.str": 9400466,
+              "idvg_low.log": 1965,
+              "final_low.str": 9418248,
+              "low_drain.dat": 152,
+              "low_source.dat": 159,
+              "low_gate.dat": 85
+            }
+          },
+          {
+            "stage": "coarse",
+            "returncode": 15,
+            "timeout": true,
+            "seconds": 4801.138,
+            "missing": [
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat",
+              "idvg_high.log",
+              "high_drain.dat",
+              "high_source.dat",
+              "high_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "Process interrupted by signal TERM.",
+              "received signal 15 terminating simulator",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "SFLM Programmer Error: This job is not logged in.",
+              "Kill signal received.",
+              "SFLM Transport Error: No Error",
+              "SFLM: Can not log into license server."
+            ],
+            "fatal_lines": [
+              "SFLM Programmer Error: This job is not logged in."
+            ],
+            "outputs": {
+              "gaa.in": 4683,
+              "console.txt": 1327,
+              "solver.out": 54608,
+              "geometry.str": 5986324,
+              "equilibrium.str": 53662380
+            }
+          },
+          {
+            "stage": "fine",
+            "returncode": 143,
+            "timeout": true,
+            "seconds": 4801.232,
+            "missing": [
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat",
+              "idvg_high.log",
+              "high_drain.dat",
+              "high_source.dat",
+              "high_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "received signal Process interrupted by signal TERM.",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "SFLM Programmer Error: This job is not logged in.",
+              "Kill signal received.",
+              "SFLM Transport Error: No Error",
+              "SFLM: Can not log into license server."
+            ],
+            "fatal_lines": [
+              "SFLM Programmer Error: This job is not logged in."
+            ],
+            "outputs": {
+              "gaa.in": 4714,
+              "console.txt": 1329,
+              "solver.out": 29745,
+              "geometry.str": 46064963,
+              "equilibrium.str": 344122748
+            }
+          }
+        ],
+        "cases": [
+          {
+            "case": "smoke",
+            "returncode": 5,
+            "details": {
+              "status": "EXECUTION_FAILED",
+              "stages": [
+                {
+                  "stage": "smoke",
+                  "returncode": 0,
+                  "timeout": false,
+                  "seconds": 245.136,
+                  "missing": [],
+                  "diagnostic_lines": [
+                    "FLEXlm=/users/tools/Silvaco/etc/license",
+                    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+                    "\tError(s)   = 0",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Can not get license. Waiting...",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "Communications with license server restored. ",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "Communications with license server restored. ",
+                    "ATLAS waiting for license. ",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "SFLM Programmer Error: This job is not logged in.",
+                    "SFLM Transport Error: No Error",
+                    "SFLM: Can not log into license server."
+                  ],
+                  "fatal_lines": [
+                    "SFLM Programmer Error: This job is not logged in."
+                  ],
+                  "outputs": {
+                    "gaa.in": 4171,
+                    "console.txt": 1397,
+                    "solver.out": 48168,
+                    "geometry.str": 850634,
+                    "equilibrium.str": 9400466,
+                    "idvg_low.log": 1965,
+                    "final_low.str": 9418248,
+                    "low_drain.dat": 152,
+                    "low_source.dat": 159,
+                    "low_gate.dat": 85
+                  }
+                }
+              ],
+              "physical_validation": "NOT_VALIDATED"
+            }
+          },
+          {
+            "case": "coarse",
+            "returncode": 5,
+            "details": {
+              "status": "EXECUTION_FAILED",
+              "stages": [
+                {
+                  "stage": "coarse",
+                  "returncode": 15,
+                  "timeout": true,
+                  "seconds": 4801.138,
+                  "missing": [
+                    "idvg_low.log",
+                    "low_drain.dat",
+                    "low_source.dat",
+                    "low_gate.dat",
+                    "idvg_high.log",
+                    "high_drain.dat",
+                    "high_source.dat",
+                    "high_gate.dat"
+                  ],
+                  "diagnostic_lines": [
+                    "FLEXlm=/users/tools/Silvaco/etc/license",
+                    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+                    "\tError(s)   = 0",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Warning: Convergence problem.  Taking smaller bias",
+                    "Can not get license. Waiting...",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "Communications with license server restored. ",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "Communications with license server restored. ",
+                    "Process interrupted by signal TERM.",
+                    "received signal 15 terminating simulator",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "SFLM Programmer Error: This job is not logged in.",
+                    "Kill signal received.",
+                    "SFLM Transport Error: No Error",
+                    "SFLM: Can not log into license server."
+                  ],
+                  "fatal_lines": [
+                    "SFLM Programmer Error: This job is not logged in."
+                  ],
+                  "outputs": {
+                    "gaa.in": 4683,
+                    "console.txt": 1327,
+                    "solver.out": 54608,
+                    "geometry.str": 5986324,
+                    "equilibrium.str": 53662380
+                  }
+                }
+              ],
+              "physical_validation": "NOT_VALIDATED"
+            }
+          },
+          {
+            "case": "fine",
+            "returncode": 5,
+            "details": {
+              "status": "EXECUTION_FAILED",
+              "stages": [
+                {
+                  "stage": "fine",
+                  "returncode": 143,
+                  "timeout": true,
+                  "seconds": 4801.232,
+                  "missing": [
+                    "idvg_low.log",
+                    "low_drain.dat",
+                    "low_source.dat",
+                    "low_gate.dat",
+                    "idvg_high.log",
+                    "high_drain.dat",
+                    "high_source.dat",
+                    "high_gate.dat"
+                  ],
+                  "diagnostic_lines": [
+                    "FLEXlm=/users/tools/Silvaco/etc/license",
+                    "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+                    "\tError(s)   = 0",
+                    "Can not get license. Waiting...",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "Communications with license server restored. ",
+                    "Warning: Problem communicating with license server. ",
+                    "SFLM Retry: SFLM Transport Error: No Error",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "Communications with license server restored. ",
+                    "received signal Process interrupted by signal TERM.",
+                    "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+                    "SFLM: Current License Server: semicon1:3162/",
+                    "SFLM Programmer Error: This job is not logged in.",
+                    "Kill signal received.",
+                    "SFLM Transport Error: No Error",
+                    "SFLM: Can not log into license server."
+                  ],
+                  "fatal_lines": [
+                    "SFLM Programmer Error: This job is not logged in."
+                  ],
+                  "outputs": {
+                    "gaa.in": 4714,
+                    "console.txt": 1329,
+                    "solver.out": 29745,
+                    "geometry.str": 46064963,
+                    "equilibrium.str": 344122748
+                  }
+                }
+              ],
+              "physical_validation": "NOT_VALIDATED"
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "02f8f713f52cf5be3e5ca78847efe422de93cd938853f5371887770d7c342c04",
+        "files_verified": 44,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "coarse",
+        "collection_verified.json",
+        "fine",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "smoke",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_preflight_20261116_bg01",
+      "status.json": {
+        "status": "PREFLIGHT_COMPLETE",
+        "simulator_execution": "NOT_RUN"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "03d148ea76faba9b82ba14e4b1bd07ea577abb0af9790e52b4b08458aee54fba",
+        "files_verified": 7,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_readonly_20261117T004731Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "df6f75ccb884d2727df36686e5f58ef0e7923e78ae21eda59f36056af31da271",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_readonly_20261117T004801Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "27ec112d5baa8d0b707f71ed836e852c24582186e0f9dc570238377f92dfaed7",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r01",
+      "status.json": {
+        "status": "EXECUTION_FAILED",
+        "stages": [
+          {
+            "stage": "gaa",
+            "returncode": 1,
+            "timeout": false,
+            "seconds": 0.521,
+            "missing": [
+              "geometry.str",
+              "equilibrium.str",
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "OptionsError, MSG:non-option arguments not allowed (gaa.in)",
+              "                 -out[file] runtime-output -err[file] error-output "
+            ],
+            "fatal_lines": [],
+            "outputs": {
+              "gaa.in": 3986,
+              "console.txt": 532
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8f7d8acce92bbd133a33774d4061a25f78e87a8b538c3e2603b59fbad8a455aa",
+        "files_verified": 11,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "gaa",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r02",
+      "status.json": {
+        "status": "EXECUTION_FAILED",
+        "stages": [
+          {
+            "stage": "gaa",
+            "returncode": 15,
+            "timeout": true,
+            "seconds": 241.131,
+            "missing": [
+              "idvg_low.log",
+              "low_drain.dat",
+              "low_source.dat",
+              "low_gate.dat"
+            ],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. ",
+              "received signal Process interrupted by signal TERM.",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "SFLM Programmer Error: This job is not logged in.",
+              "Kill signal received.",
+              "SFLM Transport Error: No Error",
+              "SFLM: Can not log into license server."
+            ],
+            "fatal_lines": [
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM Programmer Error: This job is not logged in.",
+              "SFLM Transport Error: No Error"
+            ],
+            "outputs": {
+              "gaa.in": 3986,
+              "console.txt": 1327,
+              "solver.out": 27744,
+              "geometry.str": 5986307,
+              "equilibrium.str": 53662363
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "484126fe79ad4ce9e953ff4674749aebd7c1201ecb371a6b4255973793190e1a",
+        "files_verified": 14,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "gaa",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r03",
+      "status.json": {
+        "status": "EXECUTION_FAILED",
+        "stages": [
+          {
+            "stage": "gaa",
+            "returncode": 0,
+            "timeout": false,
+            "seconds": 241.352,
+            "missing": [],
+            "diagnostic_lines": [
+              "FLEXlm=/users/tools/Silvaco/etc/license",
+              "FLEXlm=/users/tools/Silvaco/etc/license.dat",
+              "\tError(s)   = 0",
+              "Warning: Convergence problem.  Taking smaller bias",
+              "Can not get license. Waiting...",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "Communications with license server restored. ",
+              "Warning: Problem communicating with license server. ",
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM: License Servers: semicon1:3162/ FLEXlm=27000@semicon1 FLEXlm=27020@ryu FLEXlm=/users/tools/Silvaco/etc/license FLEXlm=/users/tools/Silvaco/etc/license.dat FLEXlm=/users/tools/Silvaco/etc",
+              "SFLM: Current License Server: semicon1:3162/",
+              "Communications with license server restored. "
+            ],
+            "fatal_lines": [
+              "SFLM Retry: SFLM Transport Error: No Error",
+              "SFLM Retry: SFLM Transport Error: No Error"
+            ],
+            "outputs": {
+              "gaa.in": 4171,
+              "console.txt": 932,
+              "solver.out": 48168,
+              "geometry.str": 850634,
+              "equilibrium.str": 9400466,
+              "idvg_low.log": 1965,
+              "final_low.str": 9418248,
+              "low_drain.dat": 152,
+              "low_source.dat": 159,
+              "low_gate.dat": 85
+            }
+          }
+        ],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "f5804fcac427f0fde328ea2f17c9c47bd6e4fa82d7edae554759b613df614348",
+        "files_verified": 19,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "environment.json",
+        "gaa",
+        "input_provenance.json",
+        "output_hashes.json",
+        "progress.json",
+        "run_config.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T081046Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "359546f2cfa880fe9e08c52cdb131093a29dd28c41bda31697e23118b112491c",
+        "files_verified": 80,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T082108Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "674f6ad5774300e27a6c9f647cdd6740e4b84373784f99e5c162918a5e494d33",
+        "files_verified": 136,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T083115Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "c639df6d8071c975ffa956cf99f6c73eefcd2330bb0f01ee243b2ace940c6f57",
+        "files_verified": 181,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T084125Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "c162697ed5202d33e69f75174a8d30bc08d31151fb2151f644a2c206841ed4f4",
+        "files_verified": 211,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T085135Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "e05948caad13cdb04c63d375c7193a69f91b66c4e3702ec9e2febd6cb9f82f68",
+        "files_verified": 226,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T090141Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "147ff436c6538b536d604d5fe9bb00a21b247cfd2b0468209195ca4e057e5c8a",
+        "files_verified": 226,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T091153Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "2c7b84c27377a9e4aa8df44d30203dc747bd0e0201c91149639ebe48443d72dc",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T092204Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "3fe14883271b8324b03125ba6daae307e462825fa9dca2d820b56f22fa182f68",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T093209Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "23439cc32a74a7c9a82b7c1261b0e57eac54c43fde8e30a092cd81f890e4ab21",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T094220Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "fc3655a96114ec5432a097bd5c3ef955e7a818859cd4c49311c24a3100c4a8a6",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T095230Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "bf480535f30c36a43950ed8aec983076ce6c08c87d7acbad1d56ccdfa025451b",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T100236Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "5fd7af7c9db74800175a2ab16fc9cb94e6a73a36684da93e5428ee5207bbbd97",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T101248Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d71a452f2e199ed153974c6e484caea2c0c90e47d213fc177039880ec947b3b0",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T102259Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "c1c44b5b882d5248212534b94be3627610d15a08d7c33563735ca4bc5349f61f",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T103305Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "6de5acaebfc795aea91da6d53407348178c57e7fb7cc5b6a79cb9a430870bc7f",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T104316Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "bfd14ee3d81b1d2c63d9c94639e07a35d184685c6e4cff32510bfda36821af21",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T105324Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "6cdeb952ad6755ab3a9d9ef9e5c41cfa0963c35119d10ed1db1a52698fc5a7a2",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T110333Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d640b882e2cde4d46c9c8efa4c928042397718857d4fd691c2d156b33cd6b879",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T111340Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "5c7ec190301e57e5a4cc7fb56c5bd09f5243a3f6199688e3deaa3eed81f4ee7a",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T112346Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ada922292a1d44733f57bbb78263967a426c4e03a1b95d99a9929aa84de6b5cc",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T113357Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "cc3a6a28608cfb384fa46a58115d5cd12abd450a03c40e1839753cd7b20f1038",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T114405Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "73a26aaac241c31c5d9da80a88d8914117ccf722d90bf221841023e3ecc45615",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T115415Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "3c0a9370dc33c75d565004c200bffcf62eafc3a1939c3f8fcc08f92bbd16c288",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T120423Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "5fbc2fae8de067ca37d8efca34e097002f1dad1b781182a8767f09195a36c566",
+        "files_verified": 241,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T121432Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "facc048ca3aff5ed7d0d43db6948ebd7aea2e2bd265b198e8374001ec18ed148",
+        "files_verified": 247,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T122443Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "cbc6257b00967121c0e7c209cdf5382d8c14801f38e7089ae277d24238652cea",
+        "files_verified": 247,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T123451Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "2a6094b17acba502dc14d416522a8197d2256303280e75701cd4fa5d341bce83",
+        "files_verified": 247,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T124501Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d05886bfccb3ed886beabd295273e051f412787cbb2ffe7c33136aeb7ae61b0c",
+        "files_verified": 247,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T125511Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "f6402a1a8f4b0d5edc49312d3e5ee61e1e6a10a420580495b15f74361146ad0d",
+        "files_verified": 277,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T130519Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "00a3c72c0abbca9c36602ec75433d420b4b45d0610592c2e4c526b3dd10af674",
+        "files_verified": 277,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T131534Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8ddd9b968bf645fe1776d4622c7b5083db8888a9619738f0d726728aed0b15e5",
+        "files_verified": 277,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T132543Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "656ca36273eb3b7626aaaff91b5217ffca96f7c41e115107002d073b053db46e",
+        "files_verified": 292,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T133555Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "eac37eec9406d788137abb7a699ac1860ac75a8890ca402eb7d09d9d04dccc3d",
+        "files_verified": 292,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T134608Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "0d5b366c7ec9a9a8f96911a898bd0061271282434b854b651fb1f642994d438b",
+        "files_verified": 292,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T135631Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "09dfd2504745d70e5c367b3a03b29d10d3090f8ac37dddcecd31a79bdd648b7d",
+        "files_verified": 307,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T140637Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "1bfb9fae0e493447f59680c14bb0821cd5effbf1b344deb0ed613eb4d3bbdd3a",
+        "files_verified": 307,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T141648Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "3bc1b5fe0cee9c23ab0c6d48dd80567774d412331094a89e6372451c2ac4177c",
+        "files_verified": 307,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T142656Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "f048893768effc4234870dfe365939bd1edaf78eb32b9705c3da1ed25695e3a8",
+        "files_verified": 313,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T143706Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "4a2a161a392d1ab7dc50132ead34ed8a73756222c4b7397fc788ae5e1a1048a7",
+        "files_verified": 313,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T144717Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8ba9ca9c6cd92e697c2daf6d7debf833cc00126f66091be2456b934272f78df1",
+        "files_verified": 313,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T145723Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "6bb1a557ce190d50887b2d9706535cc16cff49fa0a12e333665ce171d6c69f0a",
+        "files_verified": 313,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T150750Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d8aabe61aef0ebc8daffa7b0552c484c43b4336e5d4623ca2e2fe98a3d14bc3d",
+        "files_verified": 328,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T151814Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "33aa08c3231d04a3b6f5052b2ee2bcd4c54ba748b37df3e192ab96026b003cd1",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T152844Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "7d5b84671a5f3f17c433ce364f2a7e475703fb6379f5dc9d65063c9afdd7e16b",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T153901Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "0830f610b4cee2a4d180ba868b1c10981ea5b080f4be283fc71ea8f296b1deaf",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T154918Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "1c33f5a4ad8924824325ca19427f649fa6842c13135e7f801719477fdf198509",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T155932Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "bf26eb83c21d2c6847c2e43d3af27d0465d34b7bfc519389d7c7df5780af54e9",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T160948Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ba628c9dd50712a8374de47726f497dcef83c6a98e250d96f3ecb96ed89ab5b2",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T162011Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "a4c105432485735d10da123f3257c669b4f853206eb2f2a39df207751848dab8",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T163029Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "025c75dcdaf94af344374def27423ec8f73c2f85ba2c3b39dba32eb586f81b9b",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T164049Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "4781f95672a32d7cbb2d7fe07bd6ee0f333c78806a31004d18b12312e6d9138d",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T165105Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "585c8ac8cd31546449a963a3e339f259f447f85c6abf303f7f014e4a426f7839",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T170125Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8ad9d53dca51613b5da449dbbe2838bca63e978404af39617fd9f98937d079da",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T171139Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "95d8542416608aab4a45baa40d1dc97e22181996f0f029e0f5f9fd92306546eb",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T172204Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "5aefb9b558e49da934071fc5b6d8d09cece8329e7d67907dd8016a8d61153aab",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T173221Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "07cc023dcd9132f502ba6f05b6dde587dcfaafbe6ee1699645e41ca336bdcbf7",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T174234Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "e1ad27d63e00387094a9184c77e7b87b2aef4b1cb7850c65122b7f169a6bb2f5",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T175302Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "2d5f5246cf1d63510ee1fff5bf327d325b882fcbb145578b98d51576c98f46b1",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T180323Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "b878f0213e82d1543dee484f6f20ed8f3ef9a45646c5c2c1c9f6da3b1bb09bfa",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T181339Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d9d0234c6ae23ffa55393db3a3461c8aaf6cbeede271818123cf3203f7f4d605",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T182356Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "0bcd968d64cdf1e5436fa11ba47a4091466bfcfd10d82372dfb1c2d7431a3efb",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T183413Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ac675811bfec04ea755b788772db26a34d05f473e8105e491d171e5db6322cc7",
+        "files_verified": 340,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T184433Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "bb071a7e16e27d264c0abb2ff29a08100da5f9a67235765e9b712caff1725262",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T185500Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "6fb5105f5c0c07178d2a1671f610a27869e17508eedd0a08286237aecae41a0c",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T190517Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "67115157b0cdbf7220f901829a0f5dd2509a70b7ac6a9ea84015772e577d4df0",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T191529Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "021ab5c6fe970a81b91c486fdb31d364a2edf900135a6daf9219107fc0f51b1e",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T192545Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8c84f8e05b1d030c07ae1ce625bb28833aca3e22be18c653c35b92cc51e28a39",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T193600Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "77cba142004caf1a0b4b3af3041954384e1f1e0bb8d898dc32027eba1767656a",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T194624Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "a2130b6c355da912ca4bbfabddb1dcfec5c66d4a3c7416416bf5422075e77154",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T195640Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "167aba4bff862c0956b6591b1973b75473b414ec9da8de15c14ed112fbd1ffbc",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T200657Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d05ff6e8e88158aab5f0fb0807f373b537cf0e513a9656e29a45b207b4436a68",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T201721Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ffca0199d9b3972fd899950a5a66be29cc8802f12bb7409fef7d64e76791f50b",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T202737Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "b47150583cfb3a14f98266b73b7a1d8e32bcad52830fea2e9af8e374f307016a",
+        "files_verified": 361,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T203755Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "539d6b140225587e106d02b25a9d702d89dcfd0664d4ae7d22df5a4d822c6675",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T204816Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "3ca4ba64d77e47b203631898eb24fa5b3be18474c95712adf6de8daea9f56665",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T205833Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "36d5ef50e364211dff803262ec64eac10bf4524710b7b85e5b37a833e25e359b",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T210852Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "ade119d188cfed7263a6275f34dd5e349eec543d88f4db8dbcfc54b1dd97b4ec",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T211911Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "9deccf8f5c30401e1a29f070d9abfdf04b91999f0d88ad42e0f3babd763ed2be",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T212932Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "7a1f85bf19d752a4dc9edafdfea91ff750b11f8a6d23ce97654607c2a888d683",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T213946Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "e356284426920c790f3afd76f3fbfbb41634bda44d854c7ca326e898ad9ddc42",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T215006Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "7449bcfd17b5af1496ca7d699c70ea670455dddbebcb81f0df3d36531161f1c4",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T220028Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d59349b8938c3ed02545841ac288bc03baffc501b7fd48fb0b87a80933de5e78",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T221043Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "59a9f2fb4a37667f09a8d40d9de239ae756f19d1a004bc29f2ab472ba4afc248",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T222102Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "96312b013d55e9a9fe17dbf8fec5e1c44eb1068b232f15ca8ab69c3258a88dc0",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T223124Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "632b05c0deb120c61e16b8107aa45f9e701bbbe4b6ab6eb9311553a802aeb118",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T224141Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "8a1d3bacf54966f3eb464e8505365e506d9bf4140a90d96b3c78204811f74759",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T225209Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "1985f0fc6e28d579842180288c66453dff3c7687ab4143b2352ac1adf5b4bb35",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T230234Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "efd893a7471db230b4145aec3745466b7425097e1b06f7a957e7d138b3fc4333",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T231303Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "46f78f2914cf5682ccf442c895df3323457c071c2273f162fc4b4b6d06b5c020",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T232315Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "e2a93e43c4e172251db1737e2027dad7f1da9d749618ca500239057d6ddc77d6",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T233335Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "dc4a86af2fe39689b46b0566d58139277e4525814228b0baa4aa2734478a388f",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T234346Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d2c7661a7e213554c3a44491791231070f172c2198342f3eb0f7dc7b660871fa",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_snapshot_20261116T235402Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "2c8f5e73640e8b453eb6371c36ba575072bedcd93a2f47f3963445c0147f26eb",
+        "files_verified": 376,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_status_20261117T032346Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "37c888e5067fb727a7d84da1ef6637060a53bc0dc1408061dbd32a2b426da571",
+        "files_verified": 380,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "bcat_status.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_status_20261117T062819Z",
+      "status.json": {
+        "status": "READ_ONLY_SNAPSHOT",
+        "stages": [],
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "collection_verified.json": {
+        "archive_sha256": "98d3f34f6693746505d473a9a41db6ba3a1f0caf8333fd71bfcfedb2869136cc",
+        "files_verified": 383,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "bcat_status.json",
+        "cases",
+        "collection_verified.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "snapshot.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_tonyplot_diag_20261118T034400Z",
+      "status.json": {
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "22d8681f0c4eebd129709071363fe0b520ea6394755f895fef0314420822cfad",
+        "files_verified": 5,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "diagnostic.json",
+        "input_provenance.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_tonyplot_export_20261118T034226Z",
+      "status.json": {
+        "status": "TONYPLOT_EXPORT_ATTEMPT",
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "d44dc43a230f1a2ab6d0a0ea36c39caee0069e12953b843266258f451d4c1657",
+        "files_verified": 8,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "collection_verified.json",
+        "export_report.json",
+        "final_high_export.txt",
+        "geometry_export.txt",
+        "help.txt",
+        "input_provenance.json",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    },
+    {
+      "collection": "gaa_tonyplot_trace_20261118T034500Z",
+      "status.json": {
+        "stages": []
+      },
+      "collection_verified.json": {
+        "archive_sha256": "356fbbfad9dd3e3a50b2c5d224f76c940c6752bf0a8eb59d9fc931e9f803b9af",
+        "files_verified": 7,
+        "transport_verified": true,
+        "simulator_success": "REQUIRES_LOG_REVIEW",
+        "physical_validation": "NOT_VALIDATED"
+      },
+      "top_files": [
+        "agent_exit.json",
+        "binary_help.txt",
+        "collection_verified.json",
+        "diagnostic.json",
+        "input_provenance.json",
+        "launcher_trace.txt",
+        "output_hashes.json",
+        "status.json",
+        "worker.console"
+      ]
+    }
+  ]
+}

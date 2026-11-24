@@ -1,0 +1,7 @@
+{
+  "session_status": "AGENT_IDLE",
+  "live_agent": true,
+  "heartbeat_age_seconds": 0.2,
+  "deadline_utc": null,
+  "registration_required": false
+}

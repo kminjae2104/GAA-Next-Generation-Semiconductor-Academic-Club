@@ -1,0 +1,56 @@
+{
+  "tunnel_rotation_test": {
+    "old_url": "https://composer-robert-dom-vegetation.trycloudflare.com",
+    "old_pid": 38940,
+    "test_started_utc": "2026-11-20T17:24:04.0575299Z"
+  },
+  "new_endpoint": "https://proceedings-beneath-breeding-fighter.trycloudflare.com",
+  "new_tunnel_pid": 38904,
+  "discovery_publish": {
+    "base_url": "https://proceedings-beneath-breeding-fighter.trycloudflare.com",
+    "commit": "37df23b87c178fc4da6f1148d78df736daba1163",
+    "sequence": 1795195525998937700,
+    "branch": "gaa-agent-rendezvous",
+    "checked_utc": 1795195529.834245
+  },
+  "remote_proof": {
+    "snapshot_epoch": 1795195564.6066825,
+    "config_mode": "0o600",
+    "config_owner_matches": true,
+    "supervisor_status.json": {
+      "supervisor_pid": 46801,
+      "agent_pid": 46802,
+      "started": 1795195381.825627,
+      "deadline_utc": null
+    },
+    "watchdog_tick.json": {
+      "pid": 47802,
+      "checked": 1795195562.0656264
+    },
+    "restart_test.json": {
+      "old_supervisor_pid": 43681,
+      "old_agent_pid": 43682,
+      "triggered": 1795195357.6946497,
+      "simulations_untouched": true
+    },
+    "discovery_status.json": {
+      "checked": 1795195562.4651217,
+      "sequence": 1795195525998937700,
+      "base_url": "https://proceedings-beneath-breeding-fighter.trycloudflare.com",
+      "endpoint_changed": true
+    },
+    "supervisor_pid_alive": true,
+    "supervisor_pid_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/.local/share/gaa_persistent_agent/durable_agent.py --config /users/cau/cau103/.local/share/gaa_persistent_agent/config.json ",
+    "agent_pid_alive": true,
+    "agent_pid_cmdline": "/users/tools/SYNOPSYS/spxviewer/T-2022.03/linux64/bin/python3 /users/cau/cau103/.local/share/gaa_persistent_agent/agent.py --config /users/cau/cau103/.local/share/gaa_persistent_agent/config.json ",
+    "automatic_recovery_verified": true,
+    "discovery_configured": true
+  },
+  "authenticated_roundtrip_verified": true,
+  "raw_result_hashes_verified": true,
+  "manual_input_required": false,
+  "existing_simulations_restarted": false,
+  "automation_tests_passed": 38,
+  "read_only_deploy_key": true,
+  "public_repository_visibility_changed": false
+}

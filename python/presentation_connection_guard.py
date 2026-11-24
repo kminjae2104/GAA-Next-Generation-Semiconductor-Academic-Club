@@ -26,6 +26,7 @@ def main():
     pending = previous if previous and not (ROOT / '.local/collected' / previous / 'collection_verified.json').exists() else None
     last = time.monotonic()
     while (deadline is None or datetime.now(timezone.utc) < deadline) and not (runtime / 'session_stopped.json').exists() and not (runtime / 'stop.request').exists():
+        session=json.loads((runtime/'session.json').read_text())
         if pending is None and (runtime/'queue.json').exists():
             current=json.loads((runtime/'queue.json').read_text()).get('job')
             if current and not (ROOT/'.local/collected'/current/'collection_verified.json').exists():pending=current

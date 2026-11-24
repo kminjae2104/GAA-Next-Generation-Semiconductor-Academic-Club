@@ -1,0 +1,8 @@
+{
+  "source": "C:\\dev\\gaa\\.local\\collected\\gaa_research_review_20261124T021733Z",
+  "archive_sha256": "2b4225b843fe29cf1d522f1ad06cac22988703767a99dbfb4f7f22ac3dbfeb1b",
+  "files_verified": 1064,
+  "transport_verified": true,
+  "simulator_success": "REQUIRES_LOG_REVIEW",
+  "physical_validation": "NOT_VALIDATED"
+}

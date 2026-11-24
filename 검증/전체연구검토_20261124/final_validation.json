@@ -1,0 +1,39 @@
+{
+  "snapshot_time": "2026-11-24 11:17:49 KST",
+  "snapshot_files_rehashed": 1064,
+  "early_files_rehashed": 139,
+  "DAG_counts": {
+    "SUCCEEDED": 37,
+    "FAILED": 15,
+    "BLOCKED": 6,
+    "RUNNING": 1,
+    "PENDING": 1
+  },
+  "recomputed_conditions": 30,
+  "smoke_checks": 9,
+  "stored_metrics_and_execution_checks_match": true,
+  "forward_reverse_mesh_checks": true,
+  "independent_repeat_matches": true,
+  "local_link_errors": [],
+  "trailing_whitespace": [],
+  "figures": "PNG_VISUALLY_INSPECTED_SVG_EXPORTED",
+  "new_simulator_executions": 0,
+  "physical_calibration": "NOT_VALIDATED",
+  "literature_novelty": "CONDITIONAL_NOT_PROVEN",
+  "artifacts": {
+    "md\\GAA_전체결과와_연구방향_20261124.md": "8bde3c8cfca537942232fe7dd8a5f570f764349f75e278e13783d74f498a737e",
+    "md\\연구계획\\후속실험_사전계획_20261124.md": "8fa2879b03c9bdf863ffc23813e37b26fde106f012954897b7d9fb5ff5dce0ba",
+    "md\\연구계획\\연구주제와_선행연구검토_20261124.md": "71ad9c3182913db6fd04e336ef39ffaa73c8fb0d68f3c85c001864ca77a4cd6f",
+    "md\\연구계획\\전체결과_후속실험_연구주제_실행프롬프트_20261124.md": "803f0a7c2b1965b576a371257125a79789e6d6d36233fd059eb24121a7bc89d7",
+    "python\\research_audit_20261124.py": "2869b7cd9ec62071dc330c4f83c5aadd67eb52dbe6c793780843d39453df8478",
+    "python\\research_results_20261124.py": "81f38463dfb1ecb81a64bc8f15512af90a218df3b61f62e12a33c6a90286cf55",
+    "python\\verify_research_review_20261124.py": "6573a9d887159cbe1163bc9199919d98b81c3f8d63ec8915bae998610fe7b37c",
+    "검증\\전체연구검토_20261124\\literature_search.json": "216905685db682a1c62d8be332d6b55f8aa40ca381e112d9b760e34d47e85cdc",
+    "검증\\전체연구검토_20261124\\smoke_checks.json": "43a15d3af8327d83e496419de32b65263313119e68a2adb5f33b24051879f798",
+    "검증\\전체연구검토_20261124\\case_ledger.csv": "c5bb4c2e4e0a9e4185eab0b322fe5532e8cd22e146930a759099a7945c67321d",
+    "검증\\전체연구검토_20261124\\실행전체목록.md": "6104ac224136d847cd84b259bca5997595897c1050de9c0baf3de9c087f7e44b",
+    "검증\\전체연구검토_20261124\\supplemental_validation.json": "7dc80cd02d48c253e8ff4527b26e68c46d36c3f3bfe8825f988adda067f996f8",
+    "그림\\전체연구검토_20261124\\observed_trends.png": "ce222246a91ed1a82b98b41e2d9551ca6dc0ed7fd28c9334bbdb44d4e28ecf66",
+    "그림\\전체연구검토_20261124\\observed_trends.svg": "7f65ae221b70a11be0ce5287de83993b7954a54aef13277b0f1bbb623d40ecef"
+  }
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "eq_bicgst_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 6.9999999989226765e-15,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40841455e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "bias_direct_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 1.0000000086552009e-20,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40841695e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "bias_bicgst_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 1.9191900000005582e-14,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40802254e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "eq_direct_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 6.9999999989226765e-15,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40840799e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "eq_default_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 6.9999999989226765e-15,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40841455e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "bias_default_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 1.0000000086552009e-20,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.40841695e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_overnight_20261116T080149Z",
+    "case": "bqp_smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 8.000000004618122e-19,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 2.76758893e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_smoke_20261116_r03",
+    "case": "gaa",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 8.999999998379629e-22,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.38981372e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  },
+  {
+    "job": "gaa_parallel_20261116T062844Z",
+    "case": "smoke",
+    "points": 5,
+    "source_voltage_V": 0,
+    "drain_voltage_V": 0.05,
+    "terminals": [
+      "gate",
+      "source",
+      "drain"
+    ],
+    "native_export_match": true,
+    "kcl_max_abs_A": 8.999999998379629e-22,
+    "kcl_pass": true,
+    "gate_range_V": [
+      -0.2,
+      0.2
+    ],
+    "Id_at_Vg0_A": 5.38981372e-11,
+    "use": "SHORT_LOW_VDS_DIAGNOSTIC_NOT_ION_IOFF_PERFORMANCE"
+  }
+]

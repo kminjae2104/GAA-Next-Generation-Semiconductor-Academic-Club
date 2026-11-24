@@ -1,0 +1,921 @@
+{
+  "snapshot_time": "2026-11-24 11:17:49 KST",
+  "explicit_raw_checks": {
+    "dd455_screen": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": true
+    },
+    "dd455_full": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": true
+    },
+    "dd46_screen": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": true
+    },
+    "dd46_full": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 52,
+            "target_points": 51,
+            "adaptive_gate_V": [
+              0.53
+            ],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": true
+    },
+    "dd46_fine": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 52,
+            "target_points": 51,
+            "adaptive_gate_V": [
+              -0.11
+            ],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": true,
+      "forward_mesh": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.00836597039162058,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.0021017563307936145,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 5.015999252533376e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 3.196573928931912e-05,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.008297837262520496,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.002458718791373936,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 5.612822431991238e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0015264786646866924,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      },
+      "reverse_mesh": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.00836671752222468,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.0021017478236390044,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 5.0159686509038126e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 3.803096419829899e-05,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.008298554581091728,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.002458725588016305,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 5.6128272764632836e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0015263778645007164,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "dd45_screen": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": false
+    },
+    "dd45_full": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": false
+    },
+    "dd45_fine": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": false,
+      "forward_mesh": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.0016903283406385532,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.0021776199483393684,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 5.015999252533376e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 3.194297211450703e-05,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.01312488910859998,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.002399174642191094,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 5.61282243198985e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0015264958588190325,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      },
+      "reverse_mesh": {
+        "checks": {
+          "low_Ion_A": {
+            "difference": 0.0016896999868950206,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "low_Ioff_A": {
+            "difference": 0.002177520040810717,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "low_Vth_V": {
+            "difference": 5.015968650902425e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "low_SS_mV_dec": {
+            "difference": 3.994729746636949e-05,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          },
+          "high_Ion_A": {
+            "difference": 0.013124672543550117,
+            "tolerance": 0.05,
+            "relative": true,
+            "passed": true
+          },
+          "high_Ioff_A": {
+            "difference": 0.00239915484567441,
+            "tolerance": 0.2,
+            "relative": true,
+            "passed": true
+          },
+          "high_Vth_V": {
+            "difference": 5.612827276461896e-05,
+            "tolerance": 0.01,
+            "relative": false,
+            "passed": true
+          },
+          "high_SS_mV_dec": {
+            "difference": 0.0015263951840651657,
+            "tolerance": 5,
+            "relative": false,
+            "passed": true
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "bqp45_screen": {
+      "raw": {
+        "forward": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        },
+        "reverse": {
+          "low": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          },
+          "high": {
+            "native_points": 51,
+            "target_points": 51,
+            "adaptive_gate_V": [],
+            "all_raw_points_checked": true,
+            "interpolation_used": false,
+            "raw_file_unchanged": true
+          }
+        }
+      },
+      "reverse_engineering_pass": false
+    }
+  },
+  "early_collections": [
+    {
+      "collection": "gaa_preflight_20261116_bg01",
+      "files_rehashed": 7,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "PREFLIGHT_COMPLETE",
+          "stages": []
+        }
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r01",
+      "files_rehashed": 11,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 1,
+              "timeout": false,
+              "seconds": 0.521,
+              "missing": [
+                "geometry.str",
+                "equilibrium.str",
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r02",
+      "files_rehashed": 14,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 15,
+              "timeout": true,
+              "seconds": 241.131,
+              "missing": [
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collection": "gaa_smoke_20261116_r03",
+      "files_rehashed": 19,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 0,
+              "timeout": false,
+              "seconds": 241.352,
+              "missing": [],
+              "normal_finish": true,
+              "native": [
+                {
+                  "name": "idvg_low.log",
+                  "points": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collection": "gaa_full_20261116_r01",
+      "files_rehashed": 14,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 15,
+              "timeout": true,
+              "seconds": 2401.137,
+              "missing": [
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat",
+                "idvg_high.log",
+                "high_drain.dat",
+                "high_source.dat",
+                "high_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collection": "gaa_full_20261116_r02",
+      "files_rehashed": 14,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 143,
+              "timeout": true,
+              "seconds": 2401.235,
+              "missing": [
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat",
+                "idvg_high.log",
+                "high_drain.dat",
+                "high_source.dat",
+                "high_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collection": "gaa_parallel_20261116T062844Z",
+      "files_rehashed": 44,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": "coarse",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 15,
+              "timeout": true,
+              "seconds": 4801.138,
+              "missing": [
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat",
+                "idvg_high.log",
+                "high_drain.dat",
+                "high_source.dat",
+                "high_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        },
+        {
+          "path": "fine",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 143,
+              "timeout": true,
+              "seconds": 4801.232,
+              "missing": [
+                "idvg_low.log",
+                "low_drain.dat",
+                "low_source.dat",
+                "low_gate.dat",
+                "idvg_high.log",
+                "high_drain.dat",
+                "high_source.dat",
+                "high_gate.dat"
+              ],
+              "normal_finish": false,
+              "native": []
+            }
+          ]
+        },
+        {
+          "path": "smoke",
+          "status": "EXECUTION_FAILED",
+          "stages": [
+            {
+              "stage": "gaa",
+              "returncode": 0,
+              "timeout": false,
+              "seconds": 245.136,
+              "missing": [],
+              "normal_finish": true,
+              "native": [
+                {
+                  "name": "idvg_low.log",
+                  "points": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": ".",
+          "status": "PARALLEL_BATCH_RETURNED",
+          "stages": []
+        }
+      ]
+    },
+    {
+      "collection": "gaa_modelhints_20261116_r01",
+      "files_rehashed": 8,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "PREFLIGHT_COMPLETE",
+          "stages": []
+        }
+      ]
+    },
+    {
+      "collection": "gaa_modelhints_20261116_r02",
+      "files_rehashed": 8,
+      "mismatches": [],
+      "statuses": [
+        {
+          "path": ".",
+          "status": "PREFLIGHT_COMPLETE",
+          "stages": []
+        }
+      ]
+    }
+  ],
+  "physical_validation": "NOT_VALIDATED",
+  "trends": {
+    "source_conditions": [
+      "gaa_continuation_explicit_20261120T063127Z/dd45_full",
+      "gaa_continuation_explicit_20261120T063127Z/dd455_full",
+      "gaa_continuation_explicit_20261120T063127Z/dd46_full",
+      "gaa_continuation_explicit_20261120T063127Z/dd45_fine",
+      "gaa_continuation_explicit_20261120T063127Z/dd46_fine"
+    ],
+    "DD_45_to_46": {
+      "Ion_change_percent": -35.27178980786832,
+      "Ioff_reduction_factor": 46.35108047643776,
+      "low_Vth_change_V": 0.1,
+      "Ioff_log10_slope_per_eV": -16.660598623097602
+    },
+    "rigid_shift_exact_native_pairs": {
+      "low_full": {
+        "points": 39,
+        "max_relative_current_error": 1.8290776458566462e-09,
+        "RMS_relative_error": 2.9288682659717976e-10,
+        "gate_shift_V": 0.1,
+        "interpolated": false,
+        "normalized_current_window_A_um": [
+          1e-10,
+          0.001
+        ]
+      },
+      "low_fine": {
+        "points": 39,
+        "max_relative_current_error": 8.48405224344697e-09,
+        "RMS_relative_error": 1.7922768827185633e-09,
+        "gate_shift_V": 0.1,
+        "interpolated": false,
+        "normalized_current_window_A_um": [
+          1e-10,
+          0.001
+        ]
+      },
+      "high_full": {
+        "points": 39,
+        "max_relative_current_error": 0.0,
+        "RMS_relative_error": 0.0,
+        "gate_shift_V": 0.1,
+        "interpolated": false,
+        "normalized_current_window_A_um": [
+          1e-10,
+          0.001
+        ]
+      },
+      "high_fine": {
+        "points": 39,
+        "max_relative_current_error": 1.3291492440147259e-07,
+        "RMS_relative_error": 2.1441878043249114e-08,
+        "gate_shift_V": 0.1,
+        "interpolated": false,
+        "normalized_current_window_A_um": [
+          1e-10,
+          0.001
+        ]
+      }
+    },
+    "uncalibrated_BQP_vs_DD_full": {
+      "Ion_change_percent": -43.85130227266433,
+      "Ioff_change_percent": -45.001835593883975,
+      "low_Vth_change_mV": 24.67100954342062,
+      "DIBL_change_mV_V": 10.339471656315334
+    }
+  }
+}

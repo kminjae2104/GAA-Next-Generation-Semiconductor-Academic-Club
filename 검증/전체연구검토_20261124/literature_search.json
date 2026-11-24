@@ -1,0 +1,37 @@
+{
+  "search_date_KST": "2026-11-24",
+  "queries": [
+    "gate all around nanowire equal off current work function quantum correction aspect ratio TCAD sensitivity",
+    "gate all around nanowire localized interface traps position corner work function TCAD",
+    "gate all around nanosheet nonuniform interface traps work function compensation source drain TCAD",
+    "gate all around nanowire localized oxide thickness variation axial nonuniform oxide work function compensation",
+    "gate all around nanosheet oxide thickness fluctuation location source drain variability iso Ioff",
+    "\"nanowire\" \"oxide thickness\" \"non-uniform\" MOSFET",
+    "\"gate all around\" \"oxide thickness fluctuation\"",
+    "\"gate-all-around\" \"nonuniform\" \"oxide\" TCAD",
+    "\"gate-all-around\" \"iso-Ioff\" variability",
+    "\"Rewari\" \"2019\" \"dielectric\" GAA MOSFET",
+    "\"Novel design to improve band to band tunneling\"",
+    "\"Characteristics of Gate-All-Around Silicon Nanowire and Nanosheet MOSFETs with Various Spacers\"",
+    "\"gate-all-around\" \"work-function retargeting\"",
+    "\"nanowire\" \"oxide thickness\" \"permutation\"",
+    "\"gate-all-around\" \"compensat\" \"nonuniform\"",
+    "\"Impact of nonuniform gate oxide shape on TFET performance\"",
+    "\"Proposal for variability-induced effective radius\"",
+    "\"Impact of two gate oxide with no junction\"",
+    "\"nanowire\" \"work function compensation\"",
+    "\"iso-Ioff\" \"nonuniform\" gate oxide",
+    "\"gate-all-around\" \"oxide thickness\" \"compensation limit\"",
+    "Silvaco BQP Schrodinger Poisson calibration parameters gamma alpha",
+    "\"Performance of vertical gate-all-around nanowire p-MOS transistors determined by boron depletion during oxidation\""
+  ],
+  "scope": "Representative exact queries from this review; generic search engine plus primary publisher, conference, university and vendor verification. No claim of exhaustive subscription-database coverage.",
+  "novelty_status": "CONDITIONAL_NOT_PROVEN",
+  "critical_fulltext_gaps": [
+    "10.1016/j.physe.2018.07.001",
+    "10.1007/s00542-017-3446-1",
+    "S143484112400222X",
+    "10.1016/j.micrna.2026.208815"
+  ],
+  "exclusions": "Search results with only irrelevant news, videos, aggregators, or future issue dates without verified online publication were not used as technical evidence."
+}

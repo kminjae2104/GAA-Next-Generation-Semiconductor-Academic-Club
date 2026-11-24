@@ -40,6 +40,12 @@ def request(config, path, content=None, digest=None):
             except (OSError, ValueError) as exc:
                 last = exc
         if attempt < 2:
+            if config.get('discovery'):
+                try:
+                    import rendezvous_client
+                    rendezvous_client.refresh(config)
+                except Exception:
+                    pass # Keep TLS/auth and retry; never use an unverified endpoint.
             time.sleep(2 ** attempt)
     raise RuntimeError('Relay request failed: ' + str(last))
 
@@ -192,6 +198,15 @@ def main(config):
             job=descriptor.get('job')
             if job and job not in seen:
                 seen.add(job)
+                previous=os.path.join(os.path.expanduser('~'),'gaa_tcad_runs',job)
+                if os.path.isdir(previous):
+                    pending=Path(previous)/'pending_result.zip'
+                    if pending.exists():
+                        result=pending.read_bytes()
+                        request(config,'/result/'+job,result,hashlib.sha256(result).hexdigest())
+                        post_event(config,status='RESULT_RETURNED',job=job,recovered_delivery=True)
+                    else:post_event(config,status='EXISTING_JOB_PRESERVED',job=job)
+                    continue
                 rc=run_package(config,descriptor,end)
                 if rc==0 and descriptor.get('final',False):return 0
                 post_event(config,status='AWAITING_NEXT_PACKAGE',previous_job=job,returncode=rc)
@@ -206,6 +221,11 @@ def main(config):
 
 
 if __name__ == '__main__':
+    if len(sys.argv)==3 and sys.argv[1]=='--config':
+        config_file=Path(sys.argv[2])
+        if os.name=='posix' and (config_file.stat().st_uid!=os.getuid() or config_file.stat().st_mode & 0o077):
+            raise SystemExit('Private owner-only config required')
+        BOOTSTRAP_CONFIG=json.loads(config_file.read_text())
     if sys.argv[1:]==['--stdin-config']:
         BOOTSTRAP_CONFIG=json.load(sys.stdin)
         sys.stdin.close()
