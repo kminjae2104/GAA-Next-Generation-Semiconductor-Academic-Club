@@ -8,6 +8,7 @@ __pycache__/
 token.txt
 bootstrap.txt
 연구/**/실행원본/
+*/연구/**/실행원본/
 .env
 .env.*
 *.pem

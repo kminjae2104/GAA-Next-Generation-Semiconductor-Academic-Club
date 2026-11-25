@@ -7,6 +7,8 @@
 - `public_access.json`: 인증 없이 공개 저장소·주소 문서 조회가 되는지, 주소 문서 서명, 공개 전환 후 새 agent heartbeat 확인.
 - `workspace_static.json`: 필수 구조·문서 링크·파일 크기·위험 파일명 정적 검사.
 - `verification.json`: 수행한 시험과 기존 자료 보존 범위 요약.
+- `member_roots.json`: 후속 지시에 따른 팀원 최상위 이동과 새 하위 구조 기록. 공통 기준 연구·원격 자동화 경로는 유지했다.
+- `member_roots_static.json`: 이동 후 5명 개인 공간·59개 문서 링크·파일 구조 정적 검사. 생성 도구의 경로·기존 ID 보존 시험 4개도 이동 후 재실행해 통과했다.
 
 첫 `verification_initial_git_blob_comparison.json`은 Git blob과 Windows 작업 파일의 CRLF/LF 차이까지 변경으로 집계했다. 최종 `verification.json`은 Git의 text 속성에 따라 줄바꿈 차이를 따로 분류한다. 원시 바이너리 지정 로그·export는 바이트 그대로 비교한다. 이 분류를 위해 기존 파일을 다시 쓰거나 줄바꿈을 변경하지 않았다.
 

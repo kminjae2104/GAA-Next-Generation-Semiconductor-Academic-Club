@@ -20,7 +20,7 @@
 1. 좌측 Source Control에서 미커밋 변경을 확인한다. 변경이 있으면 먼저 본인 작업을 커밋하거나 별도로 보존한다. `Discard Changes`는 변경을 버리는 기능이다.
 2. 좌측 아래 브랜치 이름 → `main` 선택 → `Ctrl+Shift+P` → `Git: Pull`. 충돌/오류가 나오면 중단하고 [아래 도움말](#문제가-생겼을-때)을 따른다.
 3. `Ctrl+Shift+P` → `Git: Create Branch` → `exp/myid/gate-length-20261125-r01`처럼 본인 작업 이름 입력. **현재 브랜치가 main이 아닌지** 확인한다.
-4. [실험 양식](../양식/실험/README.md)을 본인 이름/주제/새 실행 ID 폴더에 복사하거나, Python 설치 시 아래 명령을 실행한다.
+4. [실험 양식](../양식/실험/README.md)을 `이름/연구/주제/새실행ID/` 폴더에 복사하거나, Python 설치 시 아래 명령을 실행한다.
 
    ```powershell
    py -3.11 python/collaboration/new_run.py --member 권도현 --topic gate_length --run-id 20261125_lg40_r01
@@ -62,7 +62,7 @@ py -3.11 python/collaboration/new_run.py --member 권도현 --topic gate_length 
 py -3.11 python/collaboration/check_workspace.py
 git status --short
 git diff
-git add -- "연구/팀원실험/권도현/gate_length/20261125_lg40_r01"
+git add -- "권도현/연구/gate_length/20261125_lg40_r01"
 git diff --cached --stat
 git diff --cached --check
 git commit -m "Share gate length r01 conditions and verified outputs"
@@ -78,8 +78,8 @@ git push -u origin exp/myid/gate-length-20261125-r01
 작은 문서와 결과 파일을 올릴 때 적합하다. 웹에서는 `.gitignore`가 업로드를 자동으로 걸러 준다고 가정하지 않는다.
 
 1. GitHub에 로그인하고 저장소를 연다. 쓰기 권한이 있으면 `main` 브랜치 선택 메뉴에서 `exp/myid/...` 브랜치를 만든다.
-2. 본인 `연구/팀원실험/이름/주제/실행ID/` 구조를 PC에 준비한다. [양식의 문서](../양식/실험/README.md)를 복사하고 빈칸을 채운다. `tcad/`, `python/`, `검증/raw/`, `그림/`도 구분한다.
-3. GitHub에서 업로드할 **상위 경로**를 연 뒤 `Add file → Upload files`를 선택한다. 예: `연구/팀원실험/권도현`에서 `gate_length` 폴더를 올린다. 미리보기에 경로가 두 번 중첩되지 않는지 확인한다.
+2. 본인 `이름/연구/주제/실행ID/` 구조를 PC에 준비한다. [양식의 문서](../양식/실험/README.md)를 복사하고 빈칸을 채운다. `tcad/`, `python/`, `검증/raw/`, `그림/`도 구분한다.
+3. GitHub에서 업로드할 **상위 경로**를 연 뒤 `Add file → Upload files`를 선택한다. 예: `권도현/연구`에서 `gate_length` 폴더를 올린다. 미리보기에 경로가 두 번 중첩되지 않는지 확인한다.
 4. 작은 문서 하나는 `Add file → Create new file`로도 만들 수 있다. 이름에 `/`를 넣어 하위 경로를 만든다. 예: `gate_length/20261125_lg40_r01/md/사전계획.md`.
 5. 브라우저 업로드는 파일당 **25 MiB**, 한 번에 **100개 파일** 제한이 있다. 이 팀은 관리 편의를 위해 Git에 올리는 파일을 **20 MiB 이하**로 정한다. 더 큰 원본과 `.str`, `.zip`은 별도 보관하고 위치·해시를 기록한다.
 6. 업로드 목록을 확인한다. token·비밀번호·라이선스·원본 중복을 빼고 **본인 브랜치**에 커밋한다. main 직접 커밋은 선택하지 않는다.

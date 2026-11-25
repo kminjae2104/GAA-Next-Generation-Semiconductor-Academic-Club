@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-11-25T06:44:40.895530+00:00",
+  "moved": [
+    {
+      "source": "연구\\팀원실험\\README.md",
+      "destination": "md\\협업\\팀원공간.md"
+    },
+    {
+      "source": "연구\\팀원실험\\곽민재",
+      "destination": "곽민재"
+    },
+    {
+      "source": "연구\\팀원실험\\권도현",
+      "destination": "권도현"
+    },
+    {
+      "source": "연구\\팀원실험\\윤석영",
+      "destination": "윤석영"
+    },
+    {
+      "source": "연구\\팀원실험\\박선우",
+      "destination": "박선우"
+    },
+    {
+      "source": "연구\\팀원실험\\진",
+      "destination": "진"
+    }
+  ],
+  "member_subfolders": [
+    "문헌",
+    "연구",
+    "md",
+    "python",
+    "검증",
+    "그림"
+  ],
+  "experiment_path": "<이름>/연구/<주제>/<실행ID>",
+  "common_research_and_automation": "UNCHANGED",
+  "tcad_execution": "NOT_RUN"
+}

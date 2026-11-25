@@ -18,7 +18,8 @@ FORBIDDEN_NAMES = {'token.txt', 'bootstrap.txt', 'private_discovery.json', 'rout
 def check(root=ROOT):
     root = Path(root).resolve()
     errors = []
-    runs = list((root / '연구' / '팀원실험').glob('*/*/*/README.md'))
+    members = [p for p in root.iterdir() if p.is_dir() and (p / '문헌/README.md').is_file() and (p / '연구/README.md').is_file()]
+    runs = [readme for member in members for readme in (member / '연구').glob('*/*/README.md')]
     for readme in runs:
         run = readme.parent
         for item in REQUIRED:
@@ -27,8 +28,10 @@ def check(root=ROOT):
             if not (path.is_dir() if is_dir else path.is_file()):
                 errors.append(f'Missing path: {path.relative_to(root).as_posix()}')
     docs = [root / name for name in ['README.md', 'md/접근권한.md', 'md/기존README_20261125.md']]
-    for folder in ['md/협업', 'md/양식', 'md/운영', '연구/팀원실험']:
+    for folder in ['md/협업', 'md/양식', 'md/운영']:
         docs.extend((root / folder).rglob('*.md'))
+    for member in members:
+        docs.extend(member.rglob('*.md'))
     docs.extend([root / '연구/README.md', root / '연구/01_GAA_IdVg/README.md', root / '연구/02_치수변화/README.md'])
     for path in docs:
         if not path.is_file():
@@ -54,7 +57,7 @@ def check(root=ROOT):
         if path.name in FORBIDDEN_NAMES or path.suffix.lower() in {'.lic', '.pem', '.key', '.str', '.zip', '.pfx', '.p12'} or path.name.startswith('.env.'):
             errors.append(f'Private/large artifact filename: {relative}')
     return dict(scope='STATIC_ONLY; no simulator execution, numerical or physical validation',
-                checked_runs=len(runs), checked_documents=len(docs), checked_files=len(files), errors=errors)
+                checked_members=len(members), checked_runs=len(runs), checked_documents=len(docs), checked_files=len(files), errors=errors)
 
 
 def main():

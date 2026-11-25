@@ -16,12 +16,12 @@ def create_run(member, topic, run_id, root=ROOT):
     for label, value, pattern in [('member', member, MEMBER_COMPONENT), ('topic', topic, ASCII_COMPONENT), ('run-id', run_id, ASCII_COMPONENT)]:
         if not pattern.fullmatch(value) or value.upper() in RESERVED:
             raise ValueError(f'Invalid {label}: use one safe folder name, no paths')
-    workspace = root / '연구' / '팀원실험'
-    owner = workspace / member
-    if not (owner / 'README.md').is_file() or owner.is_symlink():
+    owner = root / member
+    if not (owner / 'README.md').is_file() or not (owner / '문헌/README.md').is_file() or not (owner / '연구/README.md').is_file() or owner.is_symlink() or not owner.resolve().is_relative_to(root):
         raise ValueError('Register the member folder and README first; GitHub account is a separate setting')
-    destination = owner / topic / run_id
-    if not destination.resolve().is_relative_to(workspace.resolve()):
+    workspace = owner / '연구'
+    destination = workspace / topic / run_id
+    if not workspace.resolve().is_relative_to(owner.resolve()) or not destination.resolve().is_relative_to(workspace.resolve()):
         raise ValueError('Destination escapes the team workspace')
     template = root / 'md' / '양식' / '실험'
     if not (template / 'README.md').is_file():

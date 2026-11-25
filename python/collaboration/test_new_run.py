@@ -15,12 +15,16 @@ class NewRunTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         shutil.copytree(ROOT / 'md/양식/실험', self.root / 'md/양식/실험')
-        owner = self.root / '연구/팀원실험/권도현'
+        owner = self.root / '권도현'
         owner.mkdir(parents=True)
         (owner / 'README.md').write_text('Registered member', encoding='utf-8')
+        for folder in ['문헌', '연구']:
+            (owner / folder).mkdir()
+            (owner / folder / 'README.md').write_text('Member area', encoding='utf-8')
 
     def test_scaffold_is_not_simulation_and_has_required_layout(self):
         path = create_run('권도현', 'gate_length', '20261125_lg40_r01', self.root)
+        self.assertEqual(path, self.root / '권도현/연구/gate_length/20261125_lg40_r01')
         self.assertTrue((path / 'tcad').is_dir())
         self.assertTrue((path / '검증/raw').is_dir())
         self.assertIn('NOT_RUN', (path / 'README.md').read_text(encoding='utf-8'))
@@ -35,7 +39,7 @@ class NewRunTests(unittest.TestCase):
         self.assertEqual(raw.read_bytes(), b'original\r\n')
 
     def test_existing_empty_directory_also_rejected(self):
-        path = self.root / '연구/팀원실험/권도현/gate_length/r01'
+        path = self.root / '권도현/연구/gate_length/r01'
         path.mkdir(parents=True)
         with self.assertRaises(FileExistsError):
             create_run('권도현', 'gate_length', 'r01', self.root)
