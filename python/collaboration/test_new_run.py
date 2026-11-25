@@ -5,9 +5,15 @@ import tempfile
 import unittest
 
 from new_run import ROOT, create_run
+from check_workspace import check_member_layout
 
 
 class NewRunTests(unittest.TestCase):
+    def test_member_check_reports_missing_subfolder_even_without_experiments(self):
+        errors = check_member_layout(self.root, ['권도현'])
+        self.assertIn('Missing member document: 권도현/검증/README.md', errors)
+        self.assertNotIn('Missing member document: 권도현/문헌/README.md', errors)
+
     def setUp(self):
         local = ROOT / '.local'
         local.mkdir(exist_ok=True)

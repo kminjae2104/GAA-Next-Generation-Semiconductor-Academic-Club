@@ -2,6 +2,8 @@
 
 세 가지 방법 중 편한 것을 고른다. 모두 **새 실행 폴더 → 본인 브랜치 → PR → 검토 후 main 반영**이다. 저장소 주소는 [GAA GitHub](https://github.com/kminjae2104/GAA-Next-Generation-Semiconductor-Academic-Club)다.
 
+먼저 [폴더별 저장 위치](폴더별_저장위치.md)를 확인한다. 논문 읽기 기록은 [문헌 양식](../양식/문헌검토.md)을 `이름/문헌/날짜_주제.md`로 복사하고, 아래와 같은 브랜치·stage·commit·push·PR 절차로 제출한다. 문헌만 제출할 때는 TCAD 실행 폴더를 만들 필요가 없다.
+
 ## A. VS Code 버튼으로 하기
 
 ### 처음 한 번

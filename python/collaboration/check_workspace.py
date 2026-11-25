@@ -15,9 +15,28 @@ FORBIDDEN_NAMES = {'token.txt', 'bootstrap.txt', 'private_discovery.json', 'rout
                    'discovery_settings.json', 'id_rsa', 'id_ed25519', '.env'}
 
 
+def check_member_layout(root, names):
+    errors = []
+    for name in names:
+        for relative in ['README.md', '문헌/README.md', '연구/README.md', 'md/README.md',
+                         'python/README.md', '검증/README.md', '그림/README.md']:
+            path = root / name / relative
+            if not path.is_file():
+                errors.append(f'Missing member document: {name}/{relative}')
+    return errors
+
+
 def check(root=ROOT):
     root = Path(root).resolve()
     errors = []
+    roster = root / 'md/협업/팀원명단.md'
+    if roster.is_file():
+        names = re.findall(r'\]\(\.\./\.\./([^/]+)/README\.md\)', roster.read_text(encoding='utf-8'))
+        if not names:
+            errors.append('No member paths found in roster')
+        errors.extend(check_member_layout(root, names))
+    else:
+        errors.append('Missing member roster')
     members = [p for p in root.iterdir() if p.is_dir() and (p / '문헌/README.md').is_file() and (p / '연구/README.md').is_file()]
     runs = [readme for member in members for readme in (member / '연구').glob('*/*/README.md')]
     for readme in runs:
