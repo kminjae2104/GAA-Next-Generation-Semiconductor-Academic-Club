@@ -8,3 +8,14 @@ __pycache__/
 token.txt
 bootstrap.txt
 연구/**/실행원본/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+private_discovery.json
+route_settings.json
+discovery_settings.json
+id_rsa
+id_ed25519

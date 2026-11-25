@@ -1,0 +1,54 @@
+{
+  "checked_utc": "2026-11-25T06:35:49.945726+00:00",
+  "repository": "kminjae2104/GAA-Next-Generation-Semiconductor-Academic-Club",
+  "repository_settings": {
+    "visibility": "public",
+    "private": false,
+    "default_branch": "main",
+    "has_issues": true,
+    "allow_update_branch": true,
+    "delete_branch_on_merge": false,
+    "allow_squash_merge": true
+  },
+  "collaborators": [
+    {
+      "login": "kminjae2104",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      }
+    }
+  ],
+  "invitations": [],
+  "member_invitations": "DEFERRED: exact GitHub IDs not yet supplied",
+  "main_protection": {
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/kminjae2104/GAA-Next-Generation-Semiconductor-Academic-Club/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": true,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 1
+    },
+    "enforce_admins": {
+      "url": "https://api.github.com/repos/kminjae2104/GAA-Next-Generation-Semiconductor-Academic-Club/branches/main/protection/enforce_admins",
+      "enabled": false
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    },
+    "required_conversation_resolution": {
+      "enabled": true
+    }
+  },
+  "signed_manifest_published_after_public_transition": {
+    "commit": "1004156c3eee6d1f9fde24a2ce8a0d9fedc25920",
+    "sequence": 1795588534516676000,
+    "branch": "gaa-agent-rendezvous"
+  }
+}

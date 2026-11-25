@@ -1,0 +1,22 @@
+{
+  "started_utc": "2026-11-25T06:33:31.203411+00:00",
+  "controller_pid": 21416,
+  "replaced_local_processes": [
+    25832,
+    5228,
+    7216,
+    46792
+  ],
+  "remote_processes_touched": false,
+  "token_preserved": true,
+  "queue_preserved": true,
+  "public_discovery_opt_in": true,
+  "scheduled_expiry": null,
+  "checked_utc": "2026-11-25T06:35:01.414756+00:00",
+  "authenticated_http": 200,
+  "ready": true,
+  "unauthenticated_http": 401,
+  "agent_event": "AGENT_HEARTBEAT",
+  "agent_received_utc": "2026-11-25T06:34:58.344208+00:00",
+  "deadline_utc": null
+}

@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-11-25T06:38:31.874351+00:00",
+  "anonymous_repository_http": 200,
+  "visibility": "public",
+  "anonymous_discovery_http": 200,
+  "manifest_signature_verified": true,
+  "manifest_keys": [
+    "payload",
+    "signature"
+  ],
+  "payload_keys": [
+    "base_url",
+    "protocol",
+    "sequence"
+  ],
+  "post_transition_agent_event": "AGENT_HEARTBEAT",
+  "agent_received_utc": "2026-11-25T06:38:05.655166+00:00"
+}

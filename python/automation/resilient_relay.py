@@ -1,4 +1,4 @@
-"""Replace lost Quick Tunnels and publish signed routes at a stable private rendezvous."""
+"""Replace lost Quick Tunnels and publish signed routes at an authenticated rendezvous."""
 import argparse,json,os,re,ssl,subprocess,sys,time,urllib.request
 from pathlib import Path
 import relay
@@ -49,7 +49,7 @@ def run(root,settings):
                     else:raise RuntimeError('New tunnel HTTPS not ready')
                     failures=0;published=None
                 if published!=url:
-                    result=publish(url,settings['mac_key'])
+                    result=publish(url,settings['mac_key'],allow_public=settings.get('allow_public_discovery',False))
                     relay.write_json(root/'session.json',dict(status='PUBLIC_ROUTE_VERIFIED',base_url=url,origin=origin,deadline_utc=None,server_pid=server.pid,tunnel_pid=tunnel.pid,public_health_verified=True,discovery_commit=result['commit']))
                     relay.write_json(root/'discovery_publish.json',dict(base_url=url,**result,checked_utc=time.time()))
                     published=url

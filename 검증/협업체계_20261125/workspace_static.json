@@ -1,0 +1,7 @@
+{
+  "scope": "STATIC_ONLY; no simulator execution, numerical or physical validation",
+  "checked_runs": 0,
+  "checked_documents": 29,
+  "checked_files": 7969,
+  "errors": []
+}

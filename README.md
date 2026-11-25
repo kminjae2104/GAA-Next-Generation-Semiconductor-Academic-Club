@@ -1,104 +1,68 @@
-# GAA 개인 연구 · 차세대반도체 학술동아리
+# GAA · 차세대반도체 학술동아리 TCAD 실험 공유
 
-**2026-11-21 통신 보완:** [agent 자동 복구](md/agent_자동복구_20261121.md)와 [터널 주소 자동 발견](md/터널주소_자동복구_20261121.md)을 구성했다. 실제 터널 프로세스 종료·새 주소 게시·원격 agent 재접속·결과 왕복을 수동 등록 없이 검증했다. 인증 정보는 Git에 포함하지 않는다.
+팀원이 각자 TCAD 실험을 수행하고 **입력 덱·실행 조건·원시 결과·검증·분석**을 함께 공유하는 저장소다. 결과를 처음 보는 팀원도 조건과 근거를 확인하고 재현할 수 있도록 기록한다.
 
-**2026-11-20 후속 실행:** [명시 바이어스 복구 실험](md/연구계획/명시바이어스_복구실험_20261120.md). 새 실행 `gaa_continuation_explicit_20261120T063127Z`의 12개 덱을 제출했고, 15:34 KST 실제 ATLAS screen3개 실행·9개 대기 및 독립 scheduler를 확인했다. 최대3개 병렬, 덱/전체 기한 없음. 아래48개는 이전 계획의 분석이며 새 결과와 구분한다.
+## 처음 온 팀원
 
-**2026-11-20 최신 확인:** [전체 결과 분석](md/연구결과_총분석_20261120.md). agent 통신을 복구하고 예정 만료 기한을 제거했다. 15:03 KST 원격 확인에서 세 계획 48개 작업은 수치 게이트 통과28/실패14/보류6이며 실행 중인 작업은 없다. 기준 메시 비교는 통과했지만 전체 연구·물리 보정은 미완료다. 아래 11/16~18 진행 문구는 과거 기록이다. [무기한 통신 운용](md/통신무기한운용_20261120.md).
+1. [팀원 시작 안내](md/협업/README.md)와 [본인 폴더](연구/팀원실험/README.md)를 확인한다.
+2. [VS Code와 AI로 사용](md/협업/VSCode와_AI.md) 또는 [AI 없이 사용: VS Code·터미널·웹](md/협업/AI없이_GitHub.md)을 따라 한다.
+3. [실험 공유 규칙](md/협업/실험공유규칙.md)에 따라 사전계획을 먼저 작성한다.
+4. 본인 작업 브랜치에 commit·push하고 PR로 검토받은 뒤 main에 반영한다.
 
-## 빠른 길찾기
-
-| 찾는 자료 | 위치 |
-| --- | --- |
-| 발표 자료·입문 리서치·발표 대본 | [md/발표자료](md/발표자료/) |
-| 후속 야간 실험 계획 | [md/연구계획](md/연구계획/) |
-| 실행·연결 운용 안내 | 아래의 인계 문서와 `md/` 운용 문서 |
-| 실행 중 자동화 | `python/automation/`, `python/presentation_connection_guard.py`, `python/presentation_remote_snapshot.py` |
-| 발표 생성·검증·이미지 도구 | `python/presentation/` |
-| 실행 ID별 입력 덱 | `연구/01_GAA_IdVg/tcad/` |
-| 회수 근거·검증 기록 | `검증/`, `연구/01_GAA_IdVg/검증/` |
-| 발표용 이미지 | [그림/발표선정_20261118](그림/발표선정_20261118/) |
-
-실행 중인 프로그램과 원시 자료의 경로는 유지했다. `.local/`은 임시 회수·중계 상태용이며 Git에서 제외한다. 11/18 후속 실행 ID는 `gaa_continuation_20261118T053927Z`이며 아래의 11/16 상태 문구는 과거 기록이다.
-
-**새 채팅·새 세션:** [5항목 인계 문서](md/새세션_인계.md) → [화면 조작 없는 야간 운용](md/무인야간운용.md). 11/17 상태와 새 실행은 이 두 문서를 우선한다. 기존 아래 11/16 상태는 당시 기록이다.
-
-개인적으로 GAA 소자 구조를 만들고 치수를 바꾸어 성능을 평가하는 연구 저장소다. Git·VS Code·Codex로 입력과 분석을 관리하고, 학내 Linux의 Silvaco DevEdit 3D/ATLAS에서 3차원 구조·전기 특성을 계산한다.
-
-**2026-11-16: 실제3D 구조·평형 계산과 저 Vds의 짧은5점 Id–Vg 시험(r03)을 완료했다. 저/고 Vds 전체 sweep을 제출했으며 최종 성능·메시·양자 보정 검증은 미완료다.** 비공개 상태를 유지하며 부원 권한은 아직 변경하지 않았다. live 상태는 `control.py status`, 결과 요약은 runtime의 `latest_summary.json`을 확인한다.
-
-[최신: 무제한 야간 계산·접속 감시](md/무제한야간실행.md): 34개 덱, 최대 3개 동시 실행, 계산 시간 제한 없음. 실제 계산 및 검증은 진행 중이다.
-
-## 읽는 순서
-
-1. [처음 저장한 실행 프롬프트](md/실행프롬프트.md)
-2. [화면을 점유하지 않는 자동화](md/백그라운드자동화.md)
-   · [토큰 절약 운영](md/토큰절약운영.md)
-   · [순차·병렬 의존성 스케줄러](md/의존성스케줄러.md)
-3. [첫 소자의 설계와 사전 목표](연구/01_GAA_IdVg/md/설계와목표.md)
-4. [주요 참조 문헌과 코드 문법 출처](문헌/README.md)
-5. [실행/검증 상태](연구/01_GAA_IdVg/검증/상태.json), [접근 권한 방안](md/접근권한.md)
+2026-11-25 GitHub **공개 전환과 main 보호 설정을 완료**했다. 팀원 쓰기 권한은 GitHub 아이디를 받은 뒤 초대할 예정이며, 공개 전환만으로 쓰기 권한이 생기지는 않는다. [접근 설정·대기 사항](md/협업/설정변경_20261125.md)과 [팀원명단](md/협업/팀원명단.md)을 확인한다. GitHub 접근만으로 TCAD 서버 계정이나 라이선스를 이용할 수 있는 것은 아니다.
 
 ## 폴더 지도
 
 ```text
-README.md / AGENTS.md / .gitignore / .gitattributes
-md/                         실행 프롬프트, 권한, 작업 방식
-문헌/                       출처와 사용 위치
-python/automation/          백그라운드 controller, agent, 전송 계층
+README.md / AGENTS.md         팀 입구 / 작업 규칙
+.github/                     PR·Issue 양식, 검토 담당자
+md/
+  협업/                      AI 사용·미사용 안내, 제출 규칙, 팀원 명단
+  양식/실험/                 사전계획·실행·결과·검증 문서의 빈 양식
+  운영/                      기존 운영 자료를 연결하는 색인
+  발표자료/                  입문 설명·발표 자료
+  연구계획/                  공동 연구 주제와 사전 목표
+python/
+  collaboration/             새 실험 폴더 생성·정적 검사
+  automation/                기존 원격 자동화(운영자 관리)
+  maintenance/               보관·공개 전환 점검 도구
 연구/
-  01_GAA_IdVg/
-    md/                     구조·모델·정의·사전 목표
-    tcad/                   DevEdit 3D + ATLAS 덱/JSON 사양
-    python/                 덱 생성, 원격 실행, 수치 판독/그래프
-    검증/                   로컬 검증 기록과 실제 실행 상태
-    그림/                   검토한 결과 그림
-  02_치수변화/               첫 기준 소자 검증 후 시작
-.local/                     Git 제외: 패키지, 원시 회수 자료, 로컬 임시물
+  01_GAA_IdVg/               기존 공통 기준 소자와 실행 ID별 근거
+  02_치수변화/               후속 공동 주제
+  팀원실험/
+    곽민재/ 권도현/ 윤석영/ 박선우/ 진/
+      주제/실행ID/
+        README.md
+        md/                  사전계획·실행정보·결과요약
+        tcad/                실제 입력 덱과 사양
+        python/              분석 코드
+        검증/raw/            작은 원시 로그·export
+        그림/                근거와 연결된 그림
+검증/                        기존 연구·운영 검증 자료
+그림/                        공동 그림
+문헌/                        출처와 사용 위치
+.local/                      Git 제외: 로컬 회수·임시 상태
 ```
 
-토큰·bootstrap·중계 runtime은 `.local/`보다도 바깥인 `%LOCALAPPDATA%/TCAD_PRIVATE/`에 저장한다. 원시 TCAD 구조/대용량 ZIP은 Git에서 제외한다. 공개 상태를 임의로 바꾸지 않는다.
+새 팀 실험은 이름/주제/실행 ID로 분리했다. 기존 실행 덱·로그·자동화가 참조하는 경로는 유지했다. 운영 기록은 [운영 색인](md/운영/README.md), 전환 전 설명은 [보관한 기존 README](md/기존README_20261125.md)에서 볼 수 있다.
 
-## 실행
+## 새 실험 만들기
 
-Windows의 실제 Python3.11 또는 `py -3.11`을 사용한다. 이 PC의 `python` 명령은 다른 실행 파일을 가리킬 수 있다. 분석/전송은 표준 라이브러리를 쓰며 `--plot`만 matplotlib가 필요하다.
+저장소 루트에서 본인 이름·주제·새 ID로 실행한다. Python이 없으면 [양식 폴더](md/양식/실험/README.md)를 같은 구조로 복사한다.
 
 ```powershell
-cd C:\dev\gaa
-py -3.11 연구/01_GAA_IdVg/python/generate.py
-py -3.11 연구/01_GAA_IdVg/python/generate.py --smoke
-py -3.11 연구/01_GAA_IdVg/python/generate.py --fine
-py -3.11 -m unittest discover -s 연구/01_GAA_IdVg/python -p "test_*.py" -v
-py -3.11 -m unittest discover -s python/automation -p "test_*.py" -v
+py -3.11 python/collaboration/new_run.py --member 권도현 --topic gate_length --run-id 20261125_lg40_r01
+py -3.11 python/collaboration/check_workspace.py
 ```
 
-백그라운드 세션 시작 예시(기존 공식 바이너리 경로를 지정):
+생성 도구는 문서와 폴더만 만든다. 정적 검사는 실제 Silvaco 실행·수치·물리 검증이 아니다. 수정해 재실행할 때는 새 ID를 쓴다. `.str`·`.zip`·20 MiB 초과 원본은 승인된 별도 위치에 보관하고 크기·SHA-256·접근 조건을 기록한다. 비밀번호·토큰·라이선스는 올리지 않는다.
 
-```powershell
-py -3.11 python/automation/control.py start --cloudflared C:/Users/MinjaeKwak/AppData/Local/TCAD_PRIVATE/tools/cloudflared-2026.10.7.exe
-py -3.11 python/automation/control.py status
-```
+## 기존 연구와 운영
 
-최초 등록은 `status`가 표시하는 Git 밖 `bootstrap.txt`와 `token.txt`를 이용해 기존 MobaXterm Linux shell에서 한 번 한다. remote Python의 CA 경로가 맞지 않으면 검증된 공개 root CA를 `start --ca-pem <파일>`로 지정한다. TLS 검증을 끄지 않는다. 자동화가 이 PC의 화면/입력 장치를 대신 조작하지 않는다.
+- [기준 소자 설계·사전 목표](연구/01_GAA_IdVg/md/설계와목표.md)
+- [2026-11-24 전체 결과와 연구 방향](md/GAA_전체결과와_연구방향_20261124.md) — 해당 날짜의 분석 기록
+- [연구 계획](md/연구계획/) · [발표·입문 자료](md/발표자료/) · [문헌](문헌/README.md)
+- [기존 자동화 설명](python/automation/README.md) · [무기한 통신 운용](md/통신무기한운용_20261120.md)
+- [이번 작업의 실행 프롬프트](md/협업체계_실행프롬프트_20261125.md)
 
-이후에는 다음 CLI만 사용한다. `status`에서 실제 agent 등록을 확인하고 preflight 결과를 검토한 후 다음 단계를 보낸다. 예시 작업 ID는 새 실행마다 바꾼다.
-
-```powershell
-py -3.11 python/automation/control.py queue --job gaa_preflight_r01 --mode preflight
-py -3.11 python/automation/control.py status
-py -3.11 python/automation/control.py collect --job gaa_preflight_r01
-py -3.11 python/automation/control.py queue --job gaa_smoke_r01 --mode smoke
-py -3.11 python/automation/control.py collect --job gaa_smoke_r01
-py -3.11 python/automation/control.py queue --job gaa_full_r01 --mode full --stage-timeout 1800
-py -3.11 python/automation/control.py collect --job gaa_full_r01
-py -3.11 python/automation/control.py queue --job gaa_fine_r01 --mode fine --stage-timeout 3600
-py -3.11 python/automation/control.py request-stop
-```
-
-회수 자료의 `.local/collected/<job>/gaa/execution/`에 export가 있으면 아래 분석을 실행한다. 출력 폴더가 이미 있으면 덮어쓰지 않고 다른 경로를 쓴다.
-
-```powershell
-py -3.11 연구/01_GAA_IdVg/python/analyze.py .local/collected/gaa_full_r01/gaa/execution --out .local/analysis/gaa_full_r01 --plot
-```
-
-실행 도구의 return code, 수렴/오류 로그, 실제 구조, 전류 그리드/단위/KCL, 메시와 물리 모델을 따로 판정한다. 로컬 합성 시험 통과는 Silvaco 문법·라이선스·소자 성능의 증명이 아니다. 저장소에 없는 Id–Vg 값을 결과처럼 사용하지 않는다.
+실제 출력 없이 측정값이나 Id–Vg를 만들지 않는다. 단일 소자의 A와 게이트 둘레로 정규화한 A/um를 구별한다. 정상 종료·수치 검사·메시 수렴·물리 보정·연구 목표 충족은 각각 판정한다. 기존 문서의 진행 상태는 기록 시각 기준이며 현재 상태를 의미하지 않는다.
